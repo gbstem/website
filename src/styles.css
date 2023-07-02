@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Mono&display=swap');
+
+.navbar-brand {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  color: white;
+  text-transform: lowercase;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.rounded-div-blue {
+  background-color: blue;
+  border-radius: 20px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.rounded-div-green {
+  background-color: green;
+  border-radius: 20px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.square-cropped-image {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover; 
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}

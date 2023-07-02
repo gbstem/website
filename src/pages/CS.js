@@ -1,0 +1,172 @@
+
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ScratchImage1 from '../images/cs/Screenshot (87).png';
+import ScratchImage2 from '../images/cs/Screenshot (100).png';
+import ScratchImage3 from '../images/cs/Screenshot (90).png';
+import PythonImage1 from '../images/cs/Python2.png';
+import PythonImage2 from '../images/cs/Python.png';
+import JavaImage1 from '../images/cs/Screenshot (99).png';
+import JavaImage2 from '../images/cs/Java1.png'
+import JavaImage3 from '../images/cs/Java2.png'
+
+const CS = () => {
+  return (
+    <div>
+
+      <main>
+        <section className="banner nbimg">
+          <h1>Computer Science Track</h1>
+        </section>
+
+        <section id="cs">
+          <div className="container">
+            <p>We offer four introductory courses in the computer science track: Scratch, Python, Java, and web development with HTML and CSS. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
+            <div className="main" id="cs">
+              <h1>Our classes are as follows:</h1>
+              <p><a href="#scratch">Scratch</a></p>
+              <p><a href="#python-i">Python I</a></p>
+              <p><a href="#python-ii">Python II</a></p>
+              <p><a href="#java">Java</a></p>
+              <p><a href="#web">Web development</a></p>
+            </div>
+
+            <div className="container">
+              <div className="main" id="scratch">
+                <div className="row">
+                  <div className="col">
+                    <h1>Scratch</h1>
+                    <p>Our introductory Scratch course is generally recommended for younger students (grades 2-5) but we have a large range of students taking this class from K-8. Ideal for students who have no coding experience, this class will provide a strong foundation to simple programming logic through hands-on activites and games. Through interactive group work, students engage in team problem-solving, developing skills in both collaboration and comuter science. This course will go in depth to all the Scratch functions and will equip students with the skills necessary to make projects on their own. Key projects in this course include a guess my number game (with sensing), a maze game, choose your own adventure game.</p>
+                    <ul>
+                      <li>Module 1: Scratch environment (website overview)</li>
+                      <li>Module 2: Motion (coordinate plane overview)</li>
+                      <li>Module 3: Looks and Sounds Complete Overview</li>
+                      <li>Module 4: Loops</li>
+                      <li>Module 5: Conditionals with Sensing</li>
+                      <li>Module 6: Conditionals with Operators</li>
+                      <li>Module 7: String Manipulation from User Input</li>
+                      <li>Module 8 : Variables</li>
+                      <li>Module 9: Clones and Broadcasting</li>
+                      <li>Module 10: Blocks</li>
+                    </ul>
+                  </div>
+
+                  <div className="col">
+                    <p><i>Ana, Grade 3</i></p>
+                    <img src={ScratchImage1} alt="Scratch Project 1" className="img-fluid" />
+                    <p><i>Emma and Jacob, Grade 2</i></p>
+                    <img src={ScratchImage2} alt="Scratch Project 2" className="img-fluid" />
+                    <p><i>Hee-Seo, Grade 4</i></p>
+                    <img src={ScratchImage3} alt="Scratch Project 3" className="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main" id="python-i">
+                <div className="row">
+                  <div className="col">
+                    <h1>Python I</h1>
+                    <p>Our introductory Python course is recommended for highly motivated 6-8th graders (or younger students with high math ability), or students with sufficient programming background in Scratch. The course will cover the fundamentals of Python and will serve as an introduction to text-based languages. Through project-based learning, students learn valuable programming skills by working on mini-projects, often collaborating with students in their class. These projects serve the purpose of developing skills in programming logic, including understanding of common algorithms like "finding the largest number" and "summing all numbers in a list". Projects in this course include hangman, tic-tac-toe, rock-paper-scissors, and a shopping game.</p>
+                    <ul>
+                      <li>Module 1: Introduction to Python</li>
+                      <li>Module 2: Variables and Data Types</li>
+                      <li>Module 3: If-Else Statements</li>
+                      <li>Module 4: String Methods</li>
+                      <li>Module 5: Functions</li>
+                      <li>Module 6: While Loops</li>
+                      <li>Module 7: For Loops</li>
+                      <li>Module 8: Lists</li>
+                      <li>Module 9: 2D Arrays and Nested Iteration</li>
+                      <li>Module 10: Dictionaries</li>
+                      <li>Module 11: Introduction to Python Libraries</li>
+                    </ul>
+                  </div>
+
+                  <div className="col">
+                    <p><i>Liam, Grade 6</i></p>
+                    <img src={PythonImage1} alt="Python Project 1" className="img-fluid" />
+                    <p><i>Adam, Grade 8</i></p>
+                    <img src={PythonImage2} alt="Python Project 2" className="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main" id="python-ii">
+                <div className="row">
+                  <div className="col">
+                    <h1>Python II</h1>
+                    <p>
+                      Our Python II course is recommended for highly driven 6-8 graders with a robust understanding of the basics of Python (which can be achieved by taking Python I). The course will utilize the skills taught in the introductory Python course to cover different applications of Python. Through project-based learning, students will dive deeper into Python programming by working on projects, and collaborating with students in their class. These projects will help build a robust base for future exploration of Python application, such as Object-oriented Programming, more complex algorithms, APIs, and Data Science.
+                    </p>
+                    <ul>
+                      <li>Module 1: Introduction/Review of Python 1</li>
+                      <li>Module 2: Object-oriented Programming</li>
+                      <li>Module 3: If-Else Statements</li>
+                      <li>Module 3: Algorithms</li>
+                      <li>Module 4: APIs</li>
+                      <li>Module 5: Data Science</li>
+                      <li>Module 6: Final Project</li>
+                    </ul>
+                  </div>
+                  <div className="col">
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="main" id="java">
+                <div className="row">
+                  <div className="col">
+                    <h1>Java</h1>
+                    <p>Our introductory Java course is recommended for students in grades 6-8 with previous text-based programming experience and/or a very strong foundation in math through operations with decimals, fractions, and negative numbers. The course provides students with a strong foundation in one of the most common programming languages used today. It approaches Java from a functional programming perspective, giving students a true understanding of how the internal structures of Java function. Through projects and games like Mastermind as well as thorough coverage of foundational computer science topics such as data structures and algorithms, this course will set students well on their way to becoming skilled Java developers.</p>
+                    <ul>
+                      <li>Module 1: Data Definitions</li>
+                      <li>Module 2: Classes</li>
+                      <li>Module 3: Interfaces</li>
+                      <li>Module 4: Methods</li>
+                      <li>Module 5: Lists</li>
+                      <li>Module 6: Recursion</li>
+                      <li>Module 7: Abstract Classes</li>
+                      <li>Module 8: Array Lists</li>
+                      <li>Module 9: Loops</li>
+                      <li>Module 10: Searching</li>
+                      <li>Module 11: Sorting</li>
+                      <li>Module 12: Arrays</li>
+                    </ul>
+                  </div>
+
+                  <div className="col">
+                    <p><i>Yuen Kai, Grade 8</i></p>
+                    <img src={JavaImage1} alt="Java Project 1" className="img-fluid" />
+                    <img src={JavaImage2} alt="Java Project 2" className="img-fluid" />
+                    <img src={JavaImage3} alt="Java Project 3" className="img-fluid" />
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="main" id="web">
+                <div className="row">
+                  <div className="col">
+                    <h1>Web Development</h1>
+                    <p>Our introductory Web Development course is recommended for students in grades 6-8 (or younger students with high math ability) who are interested in the design and functionality aspects of programming. The course will cover the fundamentals of website development using vanilla HTML, CSS, and JavaScript. Students will explore the various tools, vocabulary, and components used in the field and learn how each element functions together to create a fully-functional web application. Through creating their own landing pages, photography sites, and personal portfolios, using the skills taught, students will equip all the skills necessary to make further projects on their own.</p>
+                    <ul>
+                      <li>Week 1-3: HTML</li>
+                      <li>Week 4-6: CSS</li>
+                      <li>Week 7-9: Javascript</li>
+                      <li>Week 10-12: Final project</li>
+                    </ul>
+                  </div>
+                  <div className="col">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+export default CS;
