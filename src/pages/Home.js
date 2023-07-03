@@ -1,5 +1,4 @@
 import React from 'react';
-import Banner from '../images/banner.png';
 import HomeIntro from './HomeComponents/Intro';
 import WhatWeTeach from './HomeComponents/WhatWeTeach';
 import HowItWorks from './HomeComponents/HowItWorks';
@@ -20,7 +19,6 @@ function Home() {
     <div>
 
       <div className="d-flex w-100 justify-content-center mb-5" >
-        {/* <img src={Banner} alt="Banner" className="w-100" /> */}
         <Slideshow slides={[inperson1, inperson2, inperson3, inperson4, inperson5, inperson6]} banner={true} />
       </div>
       <HomeIntro />
