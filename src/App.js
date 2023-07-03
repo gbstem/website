@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Route, Link, Routes, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Route, Link, Routes } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -26,7 +27,6 @@ function App() {
   return (
 
     <HashRouter>
-
       <Navbar variant="dark" expand="lg" style={{ backgroundColor: '#1D2256' }}>
         <Navbar.Brand as={Link} to="/" className="ms-5" style={{ fontWeight: 700 }}>
           <img
@@ -88,10 +88,7 @@ function App() {
       </Routes>
       <Footer />
       <ScrollToTop />
-
-    </HashRouter>
-
-
+    </HashRouter >
   );
 }
 
