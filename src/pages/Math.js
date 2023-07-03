@@ -119,7 +119,7 @@ function Math() {
 
         {
           math.map((courseInfo, index) => (
-            <div id={`math${index + 1}`} className="mb-5">
+            <div id={`math${index + 1}`} className="mb-5" key={index}>
               <Course courseInfo={courseInfo} />
             </div>
           ))

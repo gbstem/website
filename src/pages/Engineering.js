@@ -48,7 +48,7 @@ function Engineering() {
 
         {
           engineering.map((courseInfo, index) => (
-            <div id={`engineering${index + 1}`} className="mb-5">
+            <div id={`engineering${index + 1}`} className="mb-5" key={index}>
               <Course courseInfo={courseInfo} />
             </div>
           ))
