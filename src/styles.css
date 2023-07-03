@@ -2,11 +2,12 @@
 
 .navbar-brand {
   font-family: 'Space Mono', monospace;
-  font-size: 24px;
+  font-size: 40px;
 }
 
 .navbar-nav .nav-link {
   font-family: 'Space Mono', monospace;
+  font-weight: 700;
   font-size: 20px;
   color: white;
   text-transform: lowercase;
@@ -19,14 +20,14 @@
 }
 
 .rounded-div-blue {
-  background-color: blue;
+  background-color: #67aeda;
   border-radius: 20px;
   padding: 10px;
   display: inline-block;
 }
 
 .rounded-div-green {
-  background-color: green;
+  background-color: #4CAF50;
   border-radius: 20px;
   padding: 10px;
   display: inline-block;
@@ -42,7 +43,57 @@
   object-fit: cover; 
 }
 
+.banner {
+  width: 100%;
+  height: auto; 
+  objectFit: cover;
+}
+
+.dropdown-item {
+  background-color: #1D2256;
+  color: white;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  background-color: #1D2256;
+  border-radius: 10px;
 }

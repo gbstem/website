@@ -1,4 +1,6 @@
+import React from "react";
 import Course from "./Course";
+
 
 const math = [
   {
@@ -95,11 +97,17 @@ const math = [
 function Math() {
   return (
     <div>
-      <h1>Math</h1>
+      <div className="text-center m-5">
+        <h1>Math Track</h1>
+      </div>
       <div className="container">
-        <p>We are offering five different mathematics courses during the spring semester. Each course teaches enrichment topics and content outside of the standard school curriculum. There is an emphasis on creative thinking, problem-solving, and competition math strategies. Each class will also feature fun brainteasers and logic puzzles. All courses will be largely problem-based, with a short lesson at the beginning. </p>
-        <h1>Each math course is broken down into two semesters with different content. If you child was enrolled for a math course during the Fall semester, they should enroll in a second semester of that same course during Spring. All of the course descriptions have been updated. </h1>
-        <p>Please check the course descriptions and the FAQ before enrolling your child in a program. We are so excited to be able to work with your family this fall!</p>
+        <div className="mb-5">
+          <p>We are offering five different mathematics courses during the spring semester. Each course teaches enrichment topics and content outside of the standard school curriculum. There is an emphasis on creative thinking, problem-solving, and competition math strategies. Each class will also feature fun brainteasers and logic puzzles. All courses will be largely problem-based, with a short lesson at the beginning. </p>
+          <p style={{
+            fontWeight: "bold"
+          }}>Each math course is broken down into two semesters with different content. If you child was enrolled for a math course during the Fall semester, they should enroll in a second semester of that same course during Spring. All of the course descriptions have been updated. </p>
+          <p>Please check the course descriptions and the FAQ before enrolling your child in a program. We are so excited to be able to work with your family this fall!</p>
+        </div>
         <div className="main" id="math">
           <h1>Our classes are as follows: </h1>
           <p><a href="#math1">Mathematics I (recommended for K-2)</a></p>
@@ -111,7 +119,9 @@ function Math() {
 
         {
           math.map((courseInfo, index) => (
-            <Course courseInfo={courseInfo} id={`math${index + 1}`} />
+            <div id={`math${index + 1}`} className="mb-5">
+              <Course courseInfo={courseInfo} />
+            </div>
           ))
         }
 

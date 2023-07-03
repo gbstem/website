@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles.css'
 
+
 // Import your page components
 import Home from './pages/Home';
 import Team from './pages/Team';
@@ -17,35 +18,49 @@ import Engineering from './pages/Engineering';
 import Science from './pages/Science';
 import Donate from './pages/Donate';
 import Footer from './pages/Footer';
+import penguin from './images/icons/penguin.png';
+import ScrollToTop from './ScrollToTop';
+
 
 function App() {
   return (
 
     <Router>
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand as={Link} to="/">gbSTEM</Navbar.Brand>
+      <Navbar variant="dark" expand="lg" style={{ backgroundColor: '#1D2256' }}>
+        <Navbar.Brand as={Link} to="/" className="ms-5" style={{ fontWeight: 700 }}>
+          <img
+            alt=""
+            src={penguin}
+            width="200"
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <NavDropdown title="About" id="about-dropdown">
               <NavDropdown.Item as={Link} to="/team">Team</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/mission">Missions</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/mission">Mission</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/testimonials">Testimonials</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/faq">FAQ</Nav.Link>
-            <NavDropdown title="Programs" id="programs-dropdown">
+            <NavDropdown title="Programs" id="programs-dropdown" >
               <NavDropdown.Item as={Link} to="/cs">Computer Science</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/math">Math</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/engineering">Engineering</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/science">Science</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="https://instructor.gbstem.org">
+            <Nav.Link as={Link} to="https://instructor.gbstem.org"
+              target='_blank'
+            >
               <div className="rounded-div-blue">
                 Apply to Teach
               </div>
             </Nav.Link>
-            <Nav.Link as={Link} to="https://student.gbstem.org">
+            <Nav.Link as={Link} to="https://student.gbstem.org"
+              target='_blank'
+            >
               <div className="rounded-div-blue">
                 Register
               </div>
@@ -71,6 +86,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </Router>
 
 

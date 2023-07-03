@@ -4,7 +4,7 @@ import quote from "../../images/quote.png";
 
 function WhatPeopleSay() {
   return (
-    <div className="container mb-5">
+    <div className="container pb-5 pt-5">
       <div className="mb-5">
         <br />
         <div style={{ width: 100 }}>

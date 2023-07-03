@@ -15,14 +15,14 @@ const CS = () => {
     <div>
 
       <main>
-        <section className="banner nbimg">
+        <div className="text-center m-5">
           <h1>Computer Science Track</h1>
-        </section>
+        </div>
 
         <section id="cs">
           <div className="container">
             <p>We offer four introductory courses in the computer science track: Scratch, Python, Java, and web development with HTML and CSS. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
-            <div className="main" id="cs">
+            <div className="mb-5" id="cs">
               <h1>Our classes are as follows:</h1>
               <p><a href="#scratch">Scratch</a></p>
               <p><a href="#python-i">Python I</a></p>

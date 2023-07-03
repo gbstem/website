@@ -138,24 +138,29 @@ function QuestionAnswerPair(question, answer, id) {
 function Faq() {
   return (
     <div>
-      <section className="banner nbimg">
-        <h1>FREQUENTLY ASKED QUESTIONS</h1>
-      </section>
+      <div className="text-center m-5">
+        <h1>Frequently Asked Questions</h1>
+      </div>
       <div className="container">
         <h1>General</h1>
-        <div className="accordion" >
+        <div className="accordion mb-3" >
           {general.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-general`))}
         </div>
         <h1>Computer Science</h1>
-        <div className="accordion" >
+        <div className="accordion mb-3" >
           {computerScience.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-cs`))}
         </div>
         <h1>Mathematics</h1>
-        <div className="accordion" >
+        <div className="accordion mb-3" >
           {math.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-math`))}
         </div>
+
+        <h1>Engineering</h1>
+        <div className="accordion mb-3" >
+          {engineering.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-engineering`))}
+        </div>
         <h1>Other</h1>
-        <div className="accordion" >
+        <div className="accordion mb-3" >
           {other.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-other`))}
         </div>
       </div>

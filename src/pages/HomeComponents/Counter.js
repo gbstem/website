@@ -26,7 +26,7 @@ function Counter() {
   }, []);
 
   return (
-    <div className="container mb-5">
+    <div className="container p-5 text-white">
       <div className="row">
         {counters.map((counter, index) => (
           <div key={index} className="col-3 text-center">

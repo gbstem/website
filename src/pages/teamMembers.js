@@ -1,4 +1,4 @@
-import yuenler from '../images/headshots/yuenler.jpg';
+import yuenler from '../images/headshots/yuenler.JPG';
 import sarah from '../images/headshots/sarah.jpg';
 import dea from '../images/headshots/dea.jpg';
 import michael from '../images/headshots/michael.jpg';
@@ -39,7 +39,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: yuenler,
     bio:
-      "Yuen Ler is a sophomore at Harvard, concentrating in Computer Science and Statistics. He loves coding, and he has a particular interest in developing mobile apps and conducting machine learning research. Yuen Ler founded gbSTEM in March of 2020 with the goal of increasing access to STEM education in his community. In his free time, Yuen Ler enjoys acting, running, and performing magic tricks.",
+      "Yuen Ler is a junior at Harvard studying computer Science and statistics. Yuen Ler founded gbSTEM in March of 2020 with the goal of increasing access to STEM education in his community. In his free time, Yuen Ler enjoys dancing, running, and performing magic tricks.",
     role: 'Co-president',
   },
   {

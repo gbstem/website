@@ -4,23 +4,12 @@ import { Link } from "react-router-dom";
 import slide1 from "../../images/zoomScreenshots/Screenshot (1).png";
 import slide2 from "../../images/zoomScreenshots/Screenshot (2).png";
 import slide3 from "../../images/zoomScreenshots/Screenshot (4).png";
+import Slideshow from "../../Components/Slideshow";
 
 function OurMission() {
   const slides = [slide1, slide2, slide3];
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [slides.length]);
-
   return (
-    <div className="container mb-5">
+    <div className="container pb-5 pt-5">
       <div>
         <div className="row">
           <div className="col-md-6">
@@ -38,25 +27,7 @@ function OurMission() {
           </div>
 
           <div className="col-md-6">
-            <div>
-              <div >
-                {slides.map((slide, index) => (
-                  <div
-                    key={index}
-                    className={`mySlides ${index === currentSlide ? "active" : ""}`}
-                  >
-                    {index === currentSlide && (
-                      <>
-                        <div >
-                          {index + 1} / {slides.length}
-                        </div>
-                        <img src={slide} alt={`Slide ${index + 1}`} className="img-fluid" />
-                      </>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Slideshow slides={slides} />
           </div>
         </div>
       </div>

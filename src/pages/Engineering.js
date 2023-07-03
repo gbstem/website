@@ -33,11 +33,13 @@ const engineering = [
 function Engineering() {
   return (
     <div>
-      <h1>Engineering</h1>
+      <div className="text-center m-5">
+        <h1>Engineering Track</h1>
+      </div>
       <div className="container">
         <p>We are offering 3 different engineering courses during the spring semester. Please check the course descriptions before enrolling in an engineering course.
         </p>
-        <div className="main" id="math">
+        <div className="mb-5" id="math">
           <h1>Our classes are as follows: </h1>
           <p><a href="#engineering1">Engineering I (recommended for grades 3-5)</a></p>
           <p><a href="#engineering2">Engineering II (recommended for grades 6-8 or for those who have taken Engineering I)</a></p>
@@ -46,12 +48,14 @@ function Engineering() {
 
         {
           engineering.map((courseInfo, index) => (
-            <Course courseInfo={courseInfo} id={`engineering${index + 1}`} />
+            <div id={`engineering${index + 1}`} className="mb-5">
+              <Course courseInfo={courseInfo} />
+            </div>
           ))
         }
 
       </div>
-    </div>
+    </div >
   );
 }
 

@@ -24,7 +24,7 @@ const Profile = ({ name, school, graduationYear, profilePic, bio, role }) => {
       <p>{`${school} ${graduationYear}`}</p>
       <p>{role.toUpperCase()}</p>
       <button className="btn btn-primary" onClick={handleClick}>
-        Click to View Bio
+        View Bio
       </button>
       {
         showModal && (
@@ -55,7 +55,9 @@ const Team = () => {
 
   return (
     <div className="teams-page">
-      <h1>Our Team</h1>
+      <div className="text-center m-5">
+        <h1>Our Team</h1>
+      </div>
       <div className="row">
         {teamMembers.map((member, index) => (
           <Profile

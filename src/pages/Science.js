@@ -17,11 +17,15 @@ const science = [
 function Science() {
   return (
     <div>
-      <h1>Science Track</h1>
+      <div className="text-center m-5">
+        <h1>Science Track</h1>
+      </div>
       <div className="container">
         {
           science.map((courseInfo, index) => (
-            <Course courseInfo={courseInfo} id={`science${index + 1}`} />
+            <div id={`science${index + 1}`} className="mb-5">
+              <Course courseInfo={courseInfo} />
+            </div>
           ))
         }
 

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function WhatWeTeach() {
 
   return (
-    <div className="container mb-5">
+    <div className="container pb-5 pt-5">
       <div >
         <h1 className="text-center">What we teach</h1>
         <div className="row">

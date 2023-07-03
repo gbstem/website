@@ -16,7 +16,7 @@ function Course({ courseInfo }) {
     <div className="row">
       <div className="col">
         <h1>{courseInfo.courseName}</h1>
-        <h1>Are you ready?</h1>
+        <h2>Are you ready?</h2>
         {
           description1List.length > 0 ?
             <div>
@@ -32,7 +32,7 @@ function Course({ courseInfo }) {
             : <p>{courseInfo.description1}</p>
         }
 
-        <h1>What will this course cover?</h1>
+        <h2>What will this course cover?</h2>
         {
           description2List.length > 0 ?
             <div>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function HowItWorks() {
   return (
     <div>
-      <div className="container mb-5">
+      <div className="container pb-5 pt-5">
         <div className="row">
           <div className="col-md-6">
             <h1 className="text-center">How it works</h1>
@@ -15,7 +15,7 @@ function HowItWorks() {
               creativity, problem-solving, and collaboration in order to foster a welcoming environment where
               students can form lasting friendships.
             </p>
-            <Link to="/logistics" className="text-decoration-none btn btn-primary m-2">
+            <Link to="/faq" className="text-decoration-none btn btn-primary m-2">
               Learn more
             </Link>
 
