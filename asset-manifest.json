@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b564e11e.css",
-    "main.js": "/static/js/main.80a858a6.js",
+    "main.js": "/static/js/main.c5ed555b.js",
     "static/js/787.a75a7cf2.chunk.js": "/static/js/787.a75a7cf2.chunk.js",
     "static/media/AvashyaSingh.jpeg": "/static/media/AvashyaSingh.6767d2d766e8a50b794e.jpeg",
     "static/media/DevanAgrawal.png": "/static/media/DevanAgrawal.4347547be2a68b7801b5.png",
@@ -49,7 +49,6 @@
     "static/media/Screenshot (90).png": "/static/media/Screenshot (90).6449e7c2b84787ce01a4.png",
     "static/media/sudeep.JPG": "/static/media/sudeep.efc20400366c73178e33.JPG",
     "static/media/AllenYu.jpg": "/static/media/AllenYu.19f1a0fe5c6dd716dcd3.jpg",
-    "static/media/banner.png": "/static/media/banner.77e7ba0ff5e2a8d18efe.png",
     "static/media/sarah.jpg": "/static/media/sarah.9320173e981b18d9b44d.jpg",
     "static/media/math1.jpg": "/static/media/math1.4b89836e0f72c290b5f5.jpg",
     "static/media/JueWang.png": "/static/media/JueWang.b8d27832efd2d9d9e5ed.png",
@@ -70,11 +69,11 @@
     "static/media/li.svg": "/static/media/li.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/fb.svg": "/static/media/fb.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
     "main.b564e11e.css.map": "/static/css/main.b564e11e.css.map",
-    "main.80a858a6.js.map": "/static/js/main.80a858a6.js.map",
+    "main.c5ed555b.js.map": "/static/js/main.c5ed555b.js.map",
     "787.a75a7cf2.chunk.js.map": "/static/js/787.a75a7cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b564e11e.css",
-    "static/js/main.80a858a6.js"
+    "static/js/main.c5ed555b.js"
   ]
 }
