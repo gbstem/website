@@ -44,7 +44,7 @@ const teamMembers = [
   },
   {
     name: 'Sarah Meyer',
-    school: 'Worcester State University',
+    school: 'Worcester Polytechnic University',
     graduationYear: '‘27',
     profilePic: sarah,
     role: 'Co-president',
@@ -68,7 +68,7 @@ const teamMembers = [
   },
   {
     name: 'Nathaniel Parry Luff',
-    school: 'Northeastern University',
+    school: 'UMass Amherst',
     graduationYear: '‘27',
     profilePic: nathaniel,
     role: 'Vice President',

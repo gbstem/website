@@ -17,7 +17,6 @@ import inperson6 from '../images/in-person/inperson6.JPG';
 function Home() {
   return (
     <div>
-
       <div className="d-flex w-100 justify-content-center mb-5" >
         <Slideshow slides={[inperson1, inperson2, inperson3, inperson4, inperson5, inperson6]} banner={true} />
       </div>
