@@ -14,7 +14,7 @@ function Course({ courseInfo }) {
 
   return (
     <div className="row">
-      <div className="col">
+      <div className="col-md-6">
         <h1>{courseInfo.courseName}</h1>
         <h2>Are you ready?</h2>
         {
@@ -48,7 +48,7 @@ function Course({ courseInfo }) {
             : <p>{courseInfo.description2}</p>
         }
       </div>
-      <div className="col">
+      <div className="col-md-6">
         {
           courseInfo.images?.map((image, index) => (
             <img src={image} alt="Course" className="img-fluid" />

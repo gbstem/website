@@ -29,7 +29,7 @@ function Counter() {
     <div className="container p-5 text-white">
       <div className="row">
         {counters.map((counter, index) => (
-          <div key={index} className="col-3 text-center">
+          <div key={index} className="col-md-3 text-center">
             <div className="counter display-4" data-target={counter.target}>
               {counter.value}
             </div>

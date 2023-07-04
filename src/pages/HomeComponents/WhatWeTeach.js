@@ -13,13 +13,13 @@ function WhatWeTeach() {
       <div >
         <h1 className="text-center">What we teach</h1>
         <div className="row">
-          <div className="col d-flex justify-content-center align-items-center flex-column m-4">
+          <div className="col-md-6 d-flex justify-content-center align-items-center flex-column p-4">
             <img src={csGraphic} alt="Computer Science" className="img-fluid mb-2" />
             <Link to="/cs" className="btn btn-primary">
               Computer Science
             </Link>
           </div>
-          <div className="col d-flex justify-content-center align-items-center flex-column m-4">
+          <div className="col-md-6 d-flex justify-content-center align-items-center flex-column p-4">
             <img src={mathGraphic} alt="Mathematics" className="img-fluid mb-2" />
             <Link to="/math" className="btn btn-primary">
               Mathematics
@@ -27,13 +27,13 @@ function WhatWeTeach() {
           </div>
         </div>
         <div className="row">
-          <div className="col d-flex justify-content-center align-items-center flex-column m-4">
+          <div className="col-md-6 d-flex justify-content-center align-items-center flex-column p-4">
             <img src={engineeringGraphic} alt="Engineering" className="img-fluid mb-2" />
             <Link to="/engineering" className="btn btn-primary">
               Engineering
             </Link>
           </div>
-          <div className="col d-flex justify-content-center align-items-center flex-column m-4">
+          <div className="col-md-6 d-flex justify-content-center align-items-center flex-column p-4">
             <img src={scienceGraphic} alt="Science" className="img-fluid mb-2" />
             <Link to="/science" className="btn btn-primary">
               Science

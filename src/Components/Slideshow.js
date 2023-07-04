@@ -15,7 +15,7 @@ function Slideshow({ slides, banner }) {
 
   return (
     <div
-      style={banner ? { width: '100%', height: '30em', overflow: 'hidden' } : {}}>
+      style={banner ? { width: '100%', maxHeight: '30em', overflow: 'hidden' } : {}}>
       {slides.map((slide, index) => (
         <div
           key={index}

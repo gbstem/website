@@ -13,7 +13,7 @@ function HomeIntro() {
         >form</a>.
       </p>
       <div className="row">
-        <div className="col d-flex justify-content-center align-items-center flex-column">
+        <div className="col-md-6 p-3 d-flex justify-content-center align-items-center flex-column">
           <p>
             <strong>Parents and K-8 Students </strong>
           </p>
@@ -21,7 +21,7 @@ function HomeIntro() {
             Register
           </a>
         </div>
-        <div className="col d-flex justify-content-center align-items-center flex-column">
+        <div className="col-md-6 p-3 d-flex justify-content-center align-items-center flex-column">
           <p>
             <strong>High School and College Students </strong>
           </p>

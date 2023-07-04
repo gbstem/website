@@ -32,9 +32,9 @@ const CS = () => {
             </div>
 
             <div className="container">
-              <div className="main" id="scratch">
+              <div className="main mb-5" id="scratch">
                 <div className="row">
-                  <div className="col">
+                  <div className="col-md-6">
                     <h1>Scratch</h1>
                     <p>Our introductory Scratch course is generally recommended for younger students (grades 2-5) but we have a large range of students taking this class from K-8. Ideal for students who have no coding experience, this class will provide a strong foundation to simple programming logic through hands-on activites and games. Through interactive group work, students engage in team problem-solving, developing skills in both collaboration and comuter science. This course will go in depth to all the Scratch functions and will equip students with the skills necessary to make projects on their own. Key projects in this course include a guess my number game (with sensing), a maze game, choose your own adventure game.</p>
                     <ul>
@@ -51,7 +51,7 @@ const CS = () => {
                     </ul>
                   </div>
 
-                  <div className="col">
+                  <div className="col-md-6">
                     <p><i>Ana, Grade 3</i></p>
                     <img src={ScratchImage1} alt="Scratch Project 1" className="img-fluid" />
                     <p><i>Emma and Jacob, Grade 2</i></p>
@@ -62,9 +62,9 @@ const CS = () => {
                 </div>
               </div>
 
-              <div className="main" id="python-i">
+              <div className="main mb-5" id="python-i">
                 <div className="row">
-                  <div className="col">
+                  <div className="col-md-6">
                     <h1>Python I</h1>
                     <p>Our introductory Python course is recommended for highly motivated 6-8th graders (or younger students with high math ability), or students with sufficient programming background in Scratch. The course will cover the fundamentals of Python and will serve as an introduction to text-based languages. Through project-based learning, students learn valuable programming skills by working on mini-projects, often collaborating with students in their class. These projects serve the purpose of developing skills in programming logic, including understanding of common algorithms like "finding the largest number" and "summing all numbers in a list". Projects in this course include hangman, tic-tac-toe, rock-paper-scissors, and a shopping game.</p>
                     <ul>
@@ -82,7 +82,7 @@ const CS = () => {
                     </ul>
                   </div>
 
-                  <div className="col">
+                  <div className="col-md-6">
                     <p><i>Liam, Grade 6</i></p>
                     <img src={PythonImage1} alt="Python Project 1" className="img-fluid" />
                     <p><i>Adam, Grade 8</i></p>
@@ -91,9 +91,9 @@ const CS = () => {
                 </div>
               </div>
 
-              <div className="main" id="python-ii">
+              <div className="main mb-5" id="python-ii">
                 <div className="row">
-                  <div className="col">
+                  <div className="col-md-6">
                     <h1>Python II</h1>
                     <p>
                       Our Python II course is recommended for highly driven 6-8 graders with a robust understanding of the basics of Python (which can be achieved by taking Python I). The course will utilize the skills taught in the introductory Python course to cover different applications of Python. Through project-based learning, students will dive deeper into Python programming by working on projects, and collaborating with students in their class. These projects will help build a robust base for future exploration of Python application, such as Object-oriented Programming, more complex algorithms, APIs, and Data Science.
@@ -108,15 +108,15 @@ const CS = () => {
                       <li>Module 6: Final Project</li>
                     </ul>
                   </div>
-                  <div className="col">
+                  <div className="col-md-6">
                   </div>
                 </div>
               </div>
 
 
-              <div className="main" id="java">
+              <div className="main mb-5" id="java">
                 <div className="row">
-                  <div className="col">
+                  <div className="col-md-6">
                     <h1>Java</h1>
                     <p>Our introductory Java course is recommended for students in grades 6-8 with previous text-based programming experience and/or a very strong foundation in math through operations with decimals, fractions, and negative numbers. The course provides students with a strong foundation in one of the most common programming languages used today. It approaches Java from a functional programming perspective, giving students a true understanding of how the internal structures of Java function. Through projects and games like Mastermind as well as thorough coverage of foundational computer science topics such as data structures and algorithms, this course will set students well on their way to becoming skilled Java developers.</p>
                     <ul>
@@ -135,7 +135,7 @@ const CS = () => {
                     </ul>
                   </div>
 
-                  <div className="col">
+                  <div className="col-md-6">
                     <p><i>Yuen Kai, Grade 8</i></p>
                     <img src={JavaImage1} alt="Java Project 1" className="img-fluid" />
                     <img src={JavaImage2} alt="Java Project 2" className="img-fluid" />
@@ -145,9 +145,9 @@ const CS = () => {
               </div>
 
 
-              <div className="main" id="web">
+              <div className="main mb-5" id="web">
                 <div className="row">
-                  <div className="col">
+                  <div className="col-md-6">
                     <h1>Web Development</h1>
                     <p>Our introductory Web Development course is recommended for students in grades 6-8 (or younger students with high math ability) who are interested in the design and functionality aspects of programming. The course will cover the fundamentals of website development using vanilla HTML, CSS, and JavaScript. Students will explore the various tools, vocabulary, and components used in the field and learn how each element functions together to create a fully-functional web application. Through creating their own landing pages, photography sites, and personal portfolios, using the skills taught, students will equip all the skills necessary to make further projects on their own.</p>
                     <ul>
@@ -157,7 +157,7 @@ const CS = () => {
                       <li>Week 10-12: Final project</li>
                     </ul>
                   </div>
-                  <div className="col">
+                  <div className="col-md-6">
                   </div>
                 </div>
               </div>
