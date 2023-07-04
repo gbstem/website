@@ -44,7 +44,7 @@ const teamMembers = [
   },
   {
     name: 'Sarah Meyer',
-    school: 'Worcester Polytechnic University',
+    school: 'Worcester Polytechnic Institute',
     graduationYear: '‘27',
     profilePic: sarah,
     role: 'Co-president',
