@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Carousel } from "react-bootstrap";
 
 function Slideshow({ slides, banner }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,29 +16,27 @@ function Slideshow({ slides, banner }) {
   }, [slides.length]);
 
   return (
-    <div
-      style={banner ? { width: '100%', maxHeight: '30em', overflow: 'hidden' } : {}}>
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`mySlides ${index === currentSlide ? "active" : ""} w-100`}
-          style={{
-            opacity: index === currentSlide ? 1 : 0,
-            transition: "opacity 1s ease-in-out",
-          }}
-        >
-          {index === currentSlide && (
-            <>
-              {!banner &&
-                <div >
-                  {index + 1} / {slides.length}
-                </div>
-              }
-              <img src={slide} alt={`Slide ${index + 1}`} className="img-fluid banner" />
-            </>
-          )}
-        </div>
-      ))}
+    <div style={banner ? {
+      width: '100%',
+      height: 0,
+      paddingBottom: "30%",
+      overflow: 'hidden'
+    } : {}}>
+      <Carousel interval={3000} activeIndex={currentSlide} controls={false}>
+        {slides.map((slide, index) => (
+          <Carousel.Item key={index}>
+            <div
+              className="d-block w-100"
+            >
+              <img
+                src={slide}
+                alt={`Slide ${index + 1}`}
+                className="img-fluid banner"
+              />
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </div>
   );
 }
