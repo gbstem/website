@@ -23,7 +23,7 @@ function Science() {
       <div className="container">
         {
           science.map((courseInfo, index) => (
-            <div id={`science${index + 1}`} className="mb-5" key={index}>
+            <div id={`science${index + 1}`} className="mb-3 pt-3" key={index}>
               <Course courseInfo={courseInfo} />
             </div>
           ))

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Course from "./Course";
 
 
@@ -95,6 +95,14 @@ const math = [
 ]
 
 function Math() {
+  const math1Ref = useRef(null);
+  const math2Ref = useRef(null);
+  const math3Ref = useRef(null);
+  const math4Ref = useRef(null);
+  const math5Ref = useRef(null);
+
+  const refs = [math1Ref, math2Ref, math3Ref, math4Ref, math5Ref];
+
   return (
     <div>
       <div className="text-center m-5">
@@ -110,16 +118,43 @@ function Math() {
         </div>
         <div className="main" id="math">
           <h1>Our classes are as follows: </h1>
-          <p><a href="#math1">Mathematics I (recommended for K-2)</a></p>
+          {/* <p><a href="#math1">Mathematics I (recommended for K-2)</a></p>
           <p><a href="#math2">Mathematics II (recommended for 2-4)</a></p>
           <p><a href="#math3">Mathematics III (recommended for 4-6)</a></p>
           <p><a href="#math4">Mathematics IV (recommended for 6-8)</a></p>
-          <p><a href="#math5">Mathematics V (recommended for advanced 6-8th graders)</a></p>
+          <p><a href="#math5">Mathematics V (recommended for advanced 6-8th graders)</a></p> */}
+
+          <p>
+            <button className="btn btn-link" onClick={() => {
+              math1Ref.current.scrollIntoView({ behavior: "smooth" });
+            }}>Mathematics I (recommended for K-2)</button>
+          </p>
+          <p>
+            <button className="btn btn-link" onClick={() => {
+              math2Ref.current.scrollIntoView({ behavior: "smooth" });
+            }}>Mathematics II (recommended for 2-4)</button>
+          </p>
+          <p>
+            <button className="btn btn-link" onClick={() => {
+              math3Ref.current.scrollIntoView({ behavior: "smooth" });
+            }}>Mathematics III (recommended for 4-6)</button>
+          </p>
+          <p>
+            <button className="btn btn-link" onClick={() => {
+              math4Ref.current.scrollIntoView({ behavior: "smooth" });
+            }}>Mathematics IV (recommended for 6-8)</button>
+          </p>
+          <p>
+            <button className="btn btn-link" onClick={() => {
+              math5Ref.current.scrollIntoView({ behavior: "smooth" });
+            }}>Mathematics V (recommended for advanced 6-8th graders)</button>
+          </p>
+
         </div>
 
         {
           math.map((courseInfo, index) => (
-            <div id={`math${index + 1}`} className="mb-5" key={index}>
+            <div id={`math${index + 1}`} ref={refs[index]} className="mb-3 pt-3" key={index}>
               <Course courseInfo={courseInfo} />
             </div>
           ))

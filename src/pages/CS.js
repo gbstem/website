@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ScratchImage1 from '../images/cs/Screenshot (87).png';
 import ScratchImage2 from '../images/cs/Screenshot (100).png';
@@ -11,6 +11,14 @@ import JavaImage2 from '../images/cs/Java1.png'
 import JavaImage3 from '../images/cs/Java2.png'
 
 const CS = () => {
+
+  const scratchRef = useRef(null);
+  const pythonRef = useRef(null);
+  const python2Ref = useRef(null);
+  const javaRef = useRef(null);
+  const webRef = useRef(null);
+
+
   return (
     <div>
 
@@ -24,15 +32,28 @@ const CS = () => {
             <p>We offer four introductory courses in the computer science track: Scratch, Python, Java, and web development with HTML and CSS. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
             <div className="mb-5" id="cs">
               <h1>Our classes are as follows:</h1>
-              <p><a href="#scratch">Scratch</a></p>
-              <p><a href="#python-i">Python I</a></p>
-              <p><a href="#python-ii">Python II</a></p>
-              <p><a href="#java">Java</a></p>
-              <p><a href="#web">Web development</a></p>
+              <p><button className="btn btn-link" onClick={() => scratchRef.current.scrollIntoView({ behavior: "smooth" })}
+              > Scratch</button></p>
+              <p><button
+                className='btn btn-link'
+                onClick={() => pythonRef.current.scrollIntoView({ behavior: "smooth" })}
+              >Python I</button></p>
+              <p><button
+                className='btn btn-link'
+                onClick={() => python2Ref.current.scrollIntoView({ behavior: "smooth" })}
+              >Python II</button></p>
+              <p><button
+                className='btn btn-link'
+                onClick={() => javaRef.current.scrollIntoView({ behavior: "smooth" })}
+              >Java</button></p>
+              <p><button
+                className='btn btn-link'
+                onClick={() => webRef.current.scrollIntoView({ behavior: "smooth" })}
+              >Web development</button></p>
             </div>
 
             <div className="container">
-              <div className="main mb-5" id="scratch">
+              <div className="main mb-5" id="scratch" ref={scratchRef}>
                 <div className="row">
                   <div className="col-md-6">
                     <h1>Scratch</h1>
@@ -62,7 +83,7 @@ const CS = () => {
                 </div>
               </div>
 
-              <div className="main mb-5" id="python-i">
+              <div className="main mb-5" id="python-i" ref={pythonRef}>
                 <div className="row">
                   <div className="col-md-6">
                     <h1>Python I</h1>
@@ -91,7 +112,7 @@ const CS = () => {
                 </div>
               </div>
 
-              <div className="main mb-5" id="python-ii">
+              <div className="main mb-5" id="python-ii" ref={python2Ref}>
                 <div className="row">
                   <div className="col-md-6">
                     <h1>Python II</h1>
@@ -114,7 +135,7 @@ const CS = () => {
               </div>
 
 
-              <div className="main mb-5" id="java">
+              <div className="main mb-5" id="java" ref={javaRef}>
                 <div className="row">
                   <div className="col-md-6">
                     <h1>Java</h1>
@@ -145,7 +166,7 @@ const CS = () => {
               </div>
 
 
-              <div className="main mb-5" id="web">
+              <div className="main mb-5" id="web" ref={webRef}>
                 <div className="row">
                   <div className="col-md-6">
                     <h1>Web Development</h1>
@@ -165,7 +186,7 @@ const CS = () => {
           </div>
         </section>
       </main>
-    </div>
+    </div >
   );
 }
 

@@ -80,17 +80,19 @@ const testimonials = [
 
 function Testimonial(props) {
   return (
-    <div className="col-md-5 p-5 m-5"
-      style={{
-        border: '5px solid #1D2256',
-        borderRadius: '20px',
-      }}
-    >
-      <div >
-        <p>{props.text}</p>
-      </div>
-      <div >
-        <p>{`-- ${props.author}`}</p>
+    <div className="col-md-5 ">
+      <div className="p-4 m-4"
+        style={{
+          border: '5px solid #1D2256',
+          borderRadius: '20px',
+        }}
+      >
+        <div >
+          <p>{props.text}</p>
+        </div>
+        <div >
+          <p>{`-- ${props.author}`}</p>
+        </div>
       </div>
     </div>
   )

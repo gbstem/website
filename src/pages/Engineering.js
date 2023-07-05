@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import Course from "./Course";
 import eng1 from '../images/engineering/eng1.png'
 import eng2 from '../images/engineering/eng2.png'
@@ -31,6 +32,12 @@ const engineering = [
 ]
 
 function Engineering() {
+  const engineering1Ref = useRef(null);
+  const engineering2Ref = useRef(null);
+  const engineering3Ref = useRef(null);
+  const refs = [engineering1Ref, engineering2Ref, engineering3Ref];
+
+
   return (
     <div>
       <div className="text-center m-5">
@@ -41,14 +48,21 @@ function Engineering() {
         </p>
         <div className="mb-5" id="math">
           <h1>Our classes are as follows: </h1>
-          <p><a href="#engineering1">Engineering I (recommended for grades 3-5)</a></p>
-          <p><a href="#engineering2">Engineering II (recommended for grades 6-8 or for those who have taken Engineering I)</a></p>
-          <p><a href="#engineering3">Engineering III (recommended for those who have taken Engineering II)</a></p>
+          <p>
+            <button className="btn btn-link" onClick={() => engineering1Ref.current.scrollIntoView({ behavior: "smooth" })}>Engineering I (recommended for grades 3-5)</button>
+          </p>
+          <p>
+            <button className="btn btn-link" onClick={() => engineering2Ref.current.scrollIntoView({ behavior: "smooth" })}>Engineering II (recommended for grades 6-8 or for those who have taken Engineering I)</button>
+          </p>
+          <p>
+            <button className="btn btn-link" onClick={() => engineering3Ref.current.scrollIntoView({ behavior: "smooth" })}>Engineering III (recommended for those who have taken Engineering II)</button>
+          </p>
+
         </div>
 
         {
           engineering.map((courseInfo, index) => (
-            <div id={`engineering${index + 1}`} className="mb-5" key={index}>
+            <div id={`engineering${index + 1}`} ref={refs[index]} className="mb-3 pt-3" key={index}>
               <Course courseInfo={courseInfo} />
             </div>
           ))

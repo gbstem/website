@@ -38,28 +38,28 @@ function App() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="mr-auto align-items-end">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <NavDropdown title="About" id="about-dropdown">
+            <NavDropdown title="About" id="about-dropdown" className="text-end">
               <NavDropdown.Item as={Link} to="/team">Team</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/mission">Mission</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/testimonials">Testimonials</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/faq">FAQ</Nav.Link>
-            <NavDropdown title="Programs" id="programs-dropdown" >
+            <NavDropdown title="Programs" id="programs-dropdown" className="text-end" >
               <NavDropdown.Item as={Link} to="/cs">Computer Science</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/math">Math</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/engineering">Engineering</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/science">Science</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="https://instructor.gbstem.org"
+            <Nav.Link as={Link} to="https://instructor.gbstem.org/signup"
               target='_blank'
             >
               <div className="rounded-div-blue">
                 Apply to Teach
               </div>
             </Nav.Link>
-            <Nav.Link as={Link} to="https://student.gbstem.org"
+            <Nav.Link as={Link} to="https://student.gbstem.org/signup"
               target='_blank'
             >
               <div className="rounded-div-blue">

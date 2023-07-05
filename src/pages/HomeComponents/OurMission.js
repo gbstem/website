@@ -12,7 +12,7 @@ function OurMission() {
     <div className="container pb-5 pt-5">
       <div>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 mb-5">
             <h1 className="text-center">Our mission</h1>
             <p>
               We believe that everyone should have the opportunity to build strong foundational skills in

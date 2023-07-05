@@ -50,14 +50,31 @@
 }
 
 .dropdown-item {
+  color: white;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+.dropdown-menu {
   background-color: #1D2256;
   color: white;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
 }
 
+
+@media (max-width: 991.98px) {
+  .dropdown-menu {
+    text-align: right;
+  }
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.accordion-button {
   font-size: 1.2rem;
 }
 
@@ -96,4 +113,8 @@ strong {
   font-size: 1.2rem;
   background-color: #1D2256;
   border-radius: 10px;
+}
+
+.btn-link {
+  background-color: transparent;
 }
