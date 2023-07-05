@@ -1,6 +1,6 @@
 {
   "name": "gbstem-website",
-  "homepage": "https://gbstem.github.io",
+  "homepage": "https://gbstem.org",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
