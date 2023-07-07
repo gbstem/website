@@ -52,7 +52,7 @@ const CS = () => {
               >Web development</button></p>
             </div>
 
-            <div className="container">
+            <div>
               <div className="main mb-5" id="scratch" ref={scratchRef}>
                 <div className="row">
                   <div className="col-md-6">
