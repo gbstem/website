@@ -210,7 +210,7 @@ const teamMembers = [
     graduationYear: "‘24",
     profilePic: erika,
     role: "Python Curriculum Developer",
-    bio: "Hi, my name is Erika, and I am a junior at Milton Academy. I am gbSTEM's web development curriculum developer. Besides web development, I am interested in the intersection of neuroscience and AI. I found my passion for computer science in my elementary school's scratch-based 'Hour of Code' and have continued using programming to create since then. When I'm not programming, I enjoy hiking, baking, or reading."
+    bio: "Erika is a senior at Milton Academy. They began working on gbSTEM’s leadership team as a Web Development curriculum developer and now are a Python curriculum developer. They enjoy the mutual relationship between biology (particularly neuroscience) and ML as well as policy discussions on how to ensure AI best serves us all. When not programming, they can be found hiking, crocheting, and reading."
   },
   {
     name: "Eric Perreault",
@@ -246,19 +246,19 @@ const teamMembers = [
   },
   {
     name: "Oscar Ji",
-    school: "Wayland High School",
-    graduationYear: "‘23",
+    school: "St Andrew's School",
+    graduationYear: "‘24",
     profilePic: oscar,
     role: "Engineering Co-Director",
-    bio: "Hi, I'm Oscar. I joined gbSTEM last semester as an Engineering I instructor. I am interested in molecular biology and mechanical engineering. It is super cool to see how different parts interact with each other and produce positive effects."
+    bio: "Oscar is a senior at St. Andrew's School. He joined gbSTEM last year and has been an instructor, curriculum developer, and co-director of the engineering track. He is interested in genetics and mechanical engineering.",
   },
   {
     name: "Grace Qiu",
-    school: "",
-    graduationYear: "",
+    school: "Worcester Academy",
+    graduationYear: "‘26",
     profilePic: placeholder,
     role: "Engineering I & II Curriculum Developer",
-    bio: "",
+    bio: "Grace is a sophomore at Worcester Academy. She first began working at gbSTEM in 2022 as an Engineering I instructor. She has experience teaching students of all different ages, and wants to work in the STEM field. Her favorite hobbies are swimming, art, and music. Grace is excited to become an engineering curriculum developer this year, and looks forward to working with everyone!",
   },
   {
     name: "Devan Agrawal",
