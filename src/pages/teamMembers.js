@@ -235,7 +235,7 @@ const teamMembers = [
     profilePic: placeholder,
     role: "Web Curriculum Developer",
     bio: ""
-  },
+  }, 
   {
     name: "Michelle Li",
     school: "Brookline High School",
