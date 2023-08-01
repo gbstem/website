@@ -278,7 +278,7 @@ const teamMembers = [
   },
   {
     name: "Suzanna Kopans",
-    school: "Arlington High School",
+    school: "Arlington High School", 
     graduationYear: "‘24",
     profilePic: suzanna,
     role: "Science Curriculum Developer",
