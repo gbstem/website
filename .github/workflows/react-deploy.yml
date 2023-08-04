@@ -27,6 +27,9 @@ jobs:
 
     - name: Deploy
       run: |
+        git config --global user.name 'kchenturtles'
+        git config --global user.email 'kendree.chen@gmail.com'
+        git remote set-url origin https://github.com/gbstem/website.git
         npm run deploy
       env:
         CI: false
