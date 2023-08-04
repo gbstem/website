@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4660204b.css",
-    "main.js": "/static/js/main.f7a75165.js",
+    "main.js": "/static/js/main.9b47992f.js",
     "static/js/787.a75a7cf2.chunk.js": "/static/js/787.a75a7cf2.chunk.js",
     "static/media/DevanAgrawal.png": "/static/media/DevanAgrawal.4347547be2a68b7801b5.png",
     "static/media/MichelleYang.jpg": "/static/media/MichelleYang.64c3b8a9df46cbc763eb.jpg",
@@ -11,6 +11,7 @@
     "static/media/Screenshot (4).png": "/static/media/Screenshot (4).54ae8af341c15b0d0dbf.png",
     "static/media/JoeyMussalli.jpg": "/static/media/JoeyMussalli.35861463c5460b7e2566.jpg",
     "static/media/Screenshot (2).png": "/static/media/Screenshot (2).239219d2ecbeb5c62986.png",
+    "static/media/Tumi.jpg": "/static/media/Tumi.40bab209fd94b7b27c0d.jpg",
     "static/media/ElenaFerrari.jpg": "/static/media/ElenaFerrari.8f86693474fa6b6b5a9f.jpg",
     "static/media/inperson2.JPG": "/static/media/inperson2.92627e700da5e650440a.JPG",
     "static/media/inperson5.JPG": "/static/media/inperson5.6ca35deeca541eabe858.JPG",
@@ -23,7 +24,6 @@
     "static/media/eng1.png": "/static/media/eng1.12ea7bf9e3b3dcc894bb.png",
     "static/media/inperson4.JPG": "/static/media/inperson4.71d32da0e70846d11cdc.JPG",
     "static/media/glance.png": "/static/media/glance.1ead945882e05bd10164.png",
-    "static/media/TumiseOgunyankin.png": "/static/media/TumiseOgunyankin.542b87fde084e8ba2440.png",
     "static/media/MichaelBolgov.jpg": "/static/media/MichaelBolgov.62b9f4c373f81143083c.jpg",
     "static/media/MichelleLi.jpg": "/static/media/MichelleLi.65029d173748e6304c3b.jpg",
     "static/media/yuenler.jpg": "/static/media/yuenler.39d3f937238e25087203.jpg",
@@ -33,8 +33,8 @@
     "static/media/dea.jpg": "/static/media/dea.d28ac01415af7fa26f0d.jpg",
     "static/media/Screenshot (100).png": "/static/media/Screenshot (100).ac0425cbd6148842cc76.png",
     "static/media/eng4.png": "/static/media/eng4.ab37a2ae6e66cc45c939.png",
-    "static/media/science1.svg": "/static/media/science1.17efa2a7630cc6d716cc430203317bec.svg",
     "static/media/SuzannaKopans.jpg": "/static/media/SuzannaKopans.24116770d4606fd3e726.jpg",
+    "static/media/science1.svg": "/static/media/science1.1f77978a58e7f65cd711f25a462af7dd.svg",
     "static/media/inperson1.jpeg": "/static/media/inperson1.d27adacfdb8160a3e4c8.jpeg",
     "static/media/RitikaRoy.jpg": "/static/media/RitikaRoy.49958c5e42956cef9b9f.jpg",
     "static/media/OscarJi.jpeg": "/static/media/OscarJi.6a9b8121194fec65710b.jpeg",
@@ -64,11 +64,11 @@
     "static/media/li.svg": "/static/media/li.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/fb.svg": "/static/media/fb.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
     "main.4660204b.css.map": "/static/css/main.4660204b.css.map",
-    "main.f7a75165.js.map": "/static/js/main.f7a75165.js.map",
+    "main.9b47992f.js.map": "/static/js/main.9b47992f.js.map",
     "787.a75a7cf2.chunk.js.map": "/static/js/787.a75a7cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4660204b.css",
-    "static/js/main.f7a75165.js"
+    "static/js/main.9b47992f.js"
   ]
 }
