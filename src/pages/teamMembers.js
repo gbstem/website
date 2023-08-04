@@ -18,7 +18,7 @@ import alice from '../images/headshots/AliceLin.jpeg';
 import erika from '../images/headshots/ErikaDrisko.jpg';
 import eric from '../images/headshots/EricPerreault.jpg';
 import devan from '../images/headshots/DevanAgrawal.png';
-import tumi from '../images/headshots/TumiseOgunyankin.png';
+import tumi from '../images/headshots/Tumi.jpg';
 import oscar from '../images/headshots/OscarJi.jpeg';
 import elena from '../images/headshots/ElenaFerrari.jpg';
 import ritika from '../images/headshots/RitikaRoy.jpg';
@@ -226,7 +226,7 @@ const teamMembers = [
     graduationYear: "‘24",
     profilePic: tumi,
     role: "Python Curriculum Developer",
-    bio: "I enjoy reading mystery novels and building with Legos."
+    bio: "Tumi began volunteering at gbSTEM in the Fall of 2022 starting as a Python ll instructor and Engineering l instructor. She joined the leadership team during the Spring of 2023 serving as a Python ll Curriculum Developer and she continues to hold this position. As a curriculum developer, she ensures that the lesson plans are engaging and comprehensible for both instructors and students by incorporating slideshows, demonstration code, and much more. In her free time, Tumi enjoys building Lego sets, reading mystery novels, as well as learning about robotics and electronics."
   },
   {
     name: "Maxwell Yu",
