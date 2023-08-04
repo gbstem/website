@@ -186,7 +186,7 @@ const teamMembers = [
     graduationYear: '‘24',
     profilePic: jun,
     role: 'Computer Science Co-Director',
-    bio: 'Jun is a Junior at Newton North High School. After starting off with Scratch in third grade, he became interested in coding. In middle school, he familiarized himself with Python, C, C++, Swift, and web design. In his free time, Jun likes to participate in school clubs, code, run track, and listen to music.',
+    bio: 'Jun is a Senior at Newton North High School. After starting off with Scratch in third grade, he became interested in coding. In middle school, he familiarized himself with Python, C, C++, Swift, and web design. In his free time, Jun likes to participate in school clubs, hang out with friends, run track, and listen to music.',
   },
   {
     name: 'Ingrid Hsu',
