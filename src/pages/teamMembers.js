@@ -25,6 +25,8 @@ import ritika from '../images/headshots/RitikaRoy.jpg';
 import vedi from '../images/headshots/VediRaval.jpeg';
 import suzanna from '../images/headshots/SuzannaKopans.jpg';
 import ingrid from '../images/headshots/ingrid.jpg';
+import jaan from '../images/headshots/JaanSrimurthy.png';
+import vivian from '../images/headshots/VivianRacine.jpeg';
 
 
 const teamMembers = [
@@ -86,11 +88,11 @@ const teamMembers = [
   },
   {
     name: 'Vivian Racine',
-    school: '',
-    graduationYear: '',
-    profilePic: placeholder,
+    school: 'North Attleboro High School',
+    graduationYear: '‘24',
+    profilePic: vivian,
     role: 'Outreach & Events Director',
-    bio: '',
+    bio: 'Vivian is a senior at North Attleboro High School. Prior to her current role, she was an instructor at gbSTEM. She loves teaching as she is also a swim instructor, lifeguard and camp counselor. In her free time, she enjoys swimming, drawing, and baking.',
   },
   {
     name: 'Joey Mussalli',
@@ -174,11 +176,11 @@ const teamMembers = [
   },
   {
     name: 'Jaan Srimurthy',
-    school: '',
-    graduationYear: '',
-    profilePic: placeholder,
+    school: 'Brookline High School',
+    graduationYear: '‘24',
+    profilePic: jaan,
     role: 'Math V Curriculum Developer',
-    bio: '',
+    bio: 'Jaan is a senior at Brookline high school. He began working at GbStem in his sophomore year, teaching mathematics, python and scratch. He is interested in mathematics, computer science, linguistics and bridge. He also has two dogs.',
   },
   {
     name: 'Jun Moon',
