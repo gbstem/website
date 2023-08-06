@@ -2,7 +2,7 @@ import yuenler from '../images/headshots/yuenler.jpg';
 import sarah from '../images/headshots/sarah.jpg';
 import dea from '../images/headshots/dea.jpg';
 import michael from '../images/headshots/MichaelBolgov.jpg';
-import sudeep from '../images/headshots/sudeep.JPG';
+import sudeep from '../images/headshots/sudeep.jpg';
 import nathaniel from '../images/headshots/nathaniel.jpeg';
 import allen from '../images/headshots/AllenYu.jpg';
 import sophia from '../images/headshots/SophiaSu.jpg';
@@ -132,7 +132,7 @@ const teamMembers = [
     graduationYear: '‘24',
     profilePic: allen,
     role: 'Math Co-Director',
-    bio: 'Allen is a junior at Brookline High School. He is deeply interested in STEM and likes to apply mathematical skills to science, and he also loves to write and edit, as a news editor, for his school newspaper. Some activities he enjoys engaging in during his free time are journaling, partaking in tennis, and playing piano. His favorite musical piece is Nocturne, Op. 9 No. 2 by Frédéric Chopin.',
+    bio: 'Allen is a senior at Brookline High School. He is deeply interested in STEM and likes to apply mathematical skills to science, and he also loves to write and edit for his school newspaper. Some activities he enjoys engaging in during his free time are journaling, partaking in tennis, and playing piano. His favorite musical piece is Nocturne, Op. 9 No. 2 by Frédéric Chopin.',
   },
   {
     name: 'Sudeep Chitrothu',
@@ -196,7 +196,7 @@ const teamMembers = [
     graduationYear: '‘24',
     profilePic: ingrid,
     role: 'Computer Science Co-Director & Scratch Curriculum Developer',
-    bio: 'Ingrid is a junior at Milton Academy. Her interest in coding began through Scratch in elementary school, and now she works with mostly Java and Python in high school. In her free time she enjoys hiking, painting, and spending time with friends and family.',
+    bio: 'Ingrid is a senior at Milton Academy. Her interest in coding began through Scratch in elementary school, and now she works with mostly Java and Python in high school. In her free time she enjoys hiking, painting, and spending time with friends and family.',
   },
   {
     name: "Alice Lin",
@@ -204,7 +204,7 @@ const teamMembers = [
     graduationYear: "‘24",
     profilePic: alice,
     role: "Java Curriculum Developer",
-    bio: "Alice is a junior at Noble and Greenough. She first started coding in elementary school on Scratch, and quickly became very passionate about programming. She moved on to learn Java, Python, and HTML, CSS, and JavaScript. In her free time she enjoys making music, running, and baking."
+    bio: "Alice is a junior at Nobles and Greenough. She first started coding in elementary school on Scratch, and quickly became very passionate about programming. She moved on to learn Java, Python, and HTML, CSS, and JavaScript. In her free time she enjoys making music, running, and baking."
   },
   {
     name: "Erika Drisko",
@@ -240,11 +240,11 @@ const teamMembers = [
   }, 
   {
     name: "Michelle Li",
-    school: "Brookline High School",
-    graduationYear: "‘23",
+    school: "Wellesley College",
+    graduationYear: "‘27",
     profilePic: michelleL,
     role: "Engineering Co-Director",
-    bio: "Hello! I'm Michelle, a senior at Brookline High School. I started out at gbSTEM as a Scratch instructor and went on to help found the engineering track. I love engineering because it allows me to combine my passions for math, science, and art to design potential solutions for issues that I care about. My other interests include fencing, reading, and both playing and listening to music."
+    bio: 'Michelle is a freshman at Wellesley College and a graduate of Brookline High School. She started out at gbSTEM as a Scratch instructor and went on to help found the engineering track. She loves engineering because it allows her to combine her passions for math, science, and art to design potential solutions for issues that she cares about. Her other interests include fencing, reading fantasy novels, and both playing and listening to music.',
   },
   {
     name: "Oscar Ji",
