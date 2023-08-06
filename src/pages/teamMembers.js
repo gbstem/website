@@ -2,7 +2,7 @@ import yuenler from '../images/headshots/yuenler.jpg';
 import sarah from '../images/headshots/sarah.jpg';
 import dea from '../images/headshots/dea.jpg';
 import michael from '../images/headshots/MichaelBolgov.jpg';
-import sudeep from '../images/headshots/sudeep.jpg';
+import sudeep from '../images/headshots/SudeepC.jpg';
 import nathaniel from '../images/headshots/nathaniel.jpeg';
 import allen from '../images/headshots/AllenYu.jpg';
 import sophia from '../images/headshots/SophiaSu.jpg';
