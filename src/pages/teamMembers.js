@@ -148,7 +148,7 @@ const teamMembers = [
     graduationYear: '‘24',
     profilePic: michelleY,
     role: 'Math I Curriculum Developer',
-    bio: 'Michelle is a junior at Brookline High. She began working with gbSTEM in the spring of 2021 as a math instructor, and has been a math curriculum developer for the past few semesters. She is passionate about making STEM education more accessible and enjoyable to everyone, especially younger students. Outside of gbSTEM Michelle is the co-captains of her school\'s science olympiad team. In her free time she enjoys playing the violin and piano, reading, playing video games, and browsing random Wikipedia articles.',
+    bio: "Michelle is a senior at Brookline High School. She began working with gbSTEM in the spring of 2021 as a math instructor and has been a math curriculum developer for the past three semesters. They are passionate about making STEM more accessible and engaging for others, especially younger students. Outside of gbSTEM, Michelle is a co-captain of her school's Science Olympiad team. In their free time, she enjoys playing the violin and piano, reading, playing video games, and browsing the web.",
   },
   {
     name: 'Elizabeth Qian-Tsuchida',
@@ -204,7 +204,7 @@ const teamMembers = [
     graduationYear: "‘24",
     profilePic: alice,
     role: "Java Curriculum Developer",
-    bio: "Alice is a junior at Nobles and Greenough. She first started coding in elementary school on Scratch, and quickly became very passionate about programming. She moved on to learn Java, Python, and HTML, CSS, and JavaScript. In her free time she enjoys making music, running, and baking."
+    bio: "Alice is a senior at Nobles and Greenough. She first started coding in elementary school on Scratch, and quickly became very passionate about programming. She moved on to learn Java, Python, and HTML, CSS, and JavaScript. In her free time she enjoys making music, running, and baking."
   },
   {
     name: "Erika Drisko",
