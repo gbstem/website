@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.4660204b.css",
-    "main.js": "/static/js/main.5f63e8e9.js",
+    "main.js": "/static/js/main.c2d4583d.js",
     "static/js/787.a75a7cf2.chunk.js": "/static/js/787.a75a7cf2.chunk.js",
     "static/media/DevanAgrawal.png": "/static/media/DevanAgrawal.4347547be2a68b7801b5.png",
     "static/media/MichelleYang.jpg": "/static/media/MichelleYang.f009802abb6a71c5c875.jpg",
     "static/media/ErikaDrisko.jpg": "/static/media/ErikaDrisko.559d62ed53c13f44e204.jpg",
     "static/media/kendree.jpeg": "/static/media/kendree.f0d3aae2423ecd99da68.jpeg",
+    "static/media/dea.jpg": "/static/media/dea.90d5ffe13fc937fee8d8.jpg",
     "static/media/Screenshot (1).png": "/static/media/Screenshot (1).f4afaf3d52cead86eaf0.png",
     "static/media/Screenshot (4).png": "/static/media/Screenshot (4).54ae8af341c15b0d0dbf.png",
     "static/media/JoeyMussalli.jpg": "/static/media/JoeyMussalli.35861463c5460b7e2566.jpg",
@@ -31,7 +32,6 @@
     "static/media/VediRaval.jpeg": "/static/media/VediRaval.f34f77e79136a66fdebd.jpeg",
     "static/media/cs1.png": "/static/media/cs1.736602a488ffde87cabf.png",
     "static/media/Screenshot (87).png": "/static/media/Screenshot (87).7c89e50b59a7467d9340.png",
-    "static/media/dea.jpg": "/static/media/dea.d28ac01415af7fa26f0d.jpg",
     "static/media/Screenshot (100).png": "/static/media/Screenshot (100).ac0425cbd6148842cc76.png",
     "static/media/eng4.png": "/static/media/eng4.ab37a2ae6e66cc45c939.png",
     "static/media/SuzannaKopans.jpg": "/static/media/SuzannaKopans.24116770d4606fd3e726.jpg",
@@ -66,11 +66,11 @@
     "static/media/li.svg": "/static/media/li.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/fb.svg": "/static/media/fb.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
     "main.4660204b.css.map": "/static/css/main.4660204b.css.map",
-    "main.5f63e8e9.js.map": "/static/js/main.5f63e8e9.js.map",
+    "main.c2d4583d.js.map": "/static/js/main.c2d4583d.js.map",
     "787.a75a7cf2.chunk.js.map": "/static/js/787.a75a7cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4660204b.css",
-    "static/js/main.5f63e8e9.js"
+    "static/js/main.c2d4583d.js"
   ]
 }
