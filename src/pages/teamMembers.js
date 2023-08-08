@@ -108,7 +108,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: simon,
     role: 'Events',
-    bio: 'I joined gbSTEM because I want to get involved and contribute my passion to the greater Boston community. I teach mathematics because I love to learn mathematics through exploration-based learning. I play chess, saxophone, and tennis in my free time.',
+    bio: 'Simon started at gbSTEM as a Python I and Environmental Science instructor and recently was the Math V Curriculum Developer and Python II Instructor. His academic interests are in economics and machine learning. In his free time, he plays the saxophone, tennis, and chess'
   },
   {
     name: 'Vedi Raval',
