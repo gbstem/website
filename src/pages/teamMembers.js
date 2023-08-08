@@ -60,7 +60,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: dea,
     role: 'Co-President',
-    bio: 'Dea Pance is currently a sophomore at Newton North High School. She has been taking Russian Math classes since fifth grade and currently takes calculus and physics courses with Johns Hopkins University CTY. She is also a 2022 Harvard Women in Business BOLD Ambassador. Last Summer, she participated in an international study-abroad program, focusing on mathematics, robotics, and French at TASIS. Outside of school, she enjoys playing the piano, writing, and dancing.',
+    bio: 'Dea is a junior at Newton North High School. She joined gbSTEM as a math instructor in 2021 and worked as Events Director before assuming her current role. She discovered a strong passion for math in elementary school when she started taking Russian Math classes. Currently completing calculus and chemistry courses with Johns Hopkins University, Dea plans to pursue a career in biochemistry. Last summer, she participated in an university program focusing on disease, physiology, and chemistry. Outside of school, she enjoys playing the piano, writing, and dancing.'
   },
   {
     name: 'Nathaniel Parry Luff',
