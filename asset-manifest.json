@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4660204b.css",
-    "main.js": "/static/js/main.c2d4583d.js",
+    "main.js": "/static/js/main.66726873.js",
     "static/js/787.a75a7cf2.chunk.js": "/static/js/787.a75a7cf2.chunk.js",
     "static/media/DevanAgrawal.png": "/static/media/DevanAgrawal.4347547be2a68b7801b5.png",
     "static/media/MichelleYang.jpg": "/static/media/MichelleYang.f009802abb6a71c5c875.jpg",
@@ -13,11 +13,11 @@
     "static/media/JoeyMussalli.jpg": "/static/media/JoeyMussalli.35861463c5460b7e2566.jpg",
     "static/media/Screenshot (2).png": "/static/media/Screenshot (2).239219d2ecbeb5c62986.png",
     "static/media/Tumi.jpg": "/static/media/Tumi.40bab209fd94b7b27c0d.jpg",
-    "static/media/ElenaFerrari.jpg": "/static/media/ElenaFerrari.8f86693474fa6b6b5a9f.jpg",
     "static/media/inperson2.JPG": "/static/media/inperson2.92627e700da5e650440a.JPG",
     "static/media/inperson5.JPG": "/static/media/inperson5.6ca35deeca541eabe858.JPG",
     "static/media/eng2.png": "/static/media/eng2.fe5fb736ffb884796bd7.png",
     "static/media/inperson6.JPG": "/static/media/inperson6.2a1b8a0ad72c2ff86af3.JPG",
+    "static/media/ElenaFerrari.jpg": "/static/media/ElenaFerrari.2cec33c4d7c4aa08a34d.jpg",
     "static/media/inperson3.JPG": "/static/media/inperson3.25beba0ee28eb2b0b89c.JPG",
     "static/media/JunMoon.jpeg": "/static/media/JunMoon.865020711c5cd671036f.jpeg",
     "static/media/ElizabethQian-Tsuchida.png": "/static/media/ElizabethQian-Tsuchida.95b92c6b716b3a7117e6.png",
@@ -29,6 +29,7 @@
     "static/media/MichelleLi.jpg": "/static/media/MichelleLi.65029d173748e6304c3b.jpg",
     "static/media/SudeepC.jpg": "/static/media/SudeepC.2f39fe1c9fbf943f601c.jpg",
     "static/media/yuenler.jpg": "/static/media/yuenler.39d3f937238e25087203.jpg",
+    "static/media/EmilyMa.jpg": "/static/media/EmilyMa.dcc24084e4b9c8768673.jpg",
     "static/media/VediRaval.jpeg": "/static/media/VediRaval.f34f77e79136a66fdebd.jpeg",
     "static/media/cs1.png": "/static/media/cs1.736602a488ffde87cabf.png",
     "static/media/Screenshot (87).png": "/static/media/Screenshot (87).7c89e50b59a7467d9340.png",
@@ -66,11 +67,11 @@
     "static/media/li.svg": "/static/media/li.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/fb.svg": "/static/media/fb.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
     "main.4660204b.css.map": "/static/css/main.4660204b.css.map",
-    "main.c2d4583d.js.map": "/static/js/main.c2d4583d.js.map",
+    "main.66726873.js.map": "/static/js/main.66726873.js.map",
     "787.a75a7cf2.chunk.js.map": "/static/js/787.a75a7cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4660204b.css",
-    "static/js/main.c2d4583d.js"
+    "static/js/main.66726873.js"
   ]
 }
