@@ -27,6 +27,7 @@ import suzanna from '../images/headshots/SuzannaKopans.jpg';
 import ingrid from '../images/headshots/ingrid.jpg';
 import jaan from '../images/headshots/JaanSrimurthy.png';
 import vivian from '../images/headshots/VivianRacine.jpeg';
+import emily from '../images/headshots/EmilyMa.jpg';
 
 
 const teamMembers = [
@@ -168,11 +169,11 @@ const teamMembers = [
   },
   {
     name: 'Emily Ma',
-    school: '',
-    graduationYear: '',
-    profilePic: placeholder,
+    school: 'Milton Academy',
+    graduationYear: '‘25',
+    profilePic: emily,
     role: 'Math IV Curriculum Developer',
-    bio: '',
+    bio: 'Emily is a junior at Milton Academy. She was a Math IV instructor for three semesters and is excited to apply her experience to her role as a Math IV curriculum developer. She has always had a passion for STEM and enjoys sharing her passion with others. In her free time, she enjoys dancing, listening to music, and hanging out with her friends.',
   },
   {
     name: 'Jaan Srimurthy',
@@ -276,7 +277,7 @@ const teamMembers = [
     graduationYear: "‘24",
     profilePic: elena,
     role: "Science Co-Director",
-    bio: "Elena is a junior at Milton Academy. At gbSTEM, she is a Science track director and curriculum developer, and has previously taught Engineering II. She enjoys working with gbSTEM because of her passion for accessible, engaging science education. She discovered her interest in science through academic classes, extracurriculars, and personal curiosity. Elena is a member of her school’s Girls Advancing in STEM club and science magazine, and is most interested in physics, biology, and environmental studies. Outside of STEM, she enjoys creative writing, reading, running, and swimming."
+    bio: "Elena is a senior at Milton Academy interested in environmental science, biology, and physics. At gbSTEM, she is a Science track director and curriculum developer, and has previously taught Engineering II. Elena is a NOAA Ocean Guardian Youth Ambassador and enjoys participating in STEM initiatives in her school and beyond. She also loves creative writing, reading, running, and swimming.",
   },
   {
     name: "Suzanna Kopans",
