@@ -28,6 +28,7 @@ import ingrid from '../images/headshots/ingrid.jpg';
 import jaan from '../images/headshots/JaanSrimurthy.png';
 import vivian from '../images/headshots/VivianRacine.jpeg';
 import emily from '../images/headshots/EmilyMa.jpg';
+import maxwell from '../images/headshots/MaxwellYu.jpg';
 
 
 const teamMembers = [
@@ -235,9 +236,9 @@ const teamMembers = [
     name: "Maxwell Yu",
     school: "Boston University Academy",
     graduationYear: "‘25",
-    profilePic: placeholder,
+    profilePic: maxwell,
     role: "Web Curriculum Developer",
-    bio: ""
+    bio: "Maxwell joined gbSTEM in 2022 as a web development instructor. He first started teaching himself to code when he was six years old and is now experienced with HTML/CSS/JS, Java, C#, C++, Python, Powershell, and R. He maintains multiple professional websites, including that of his robotics team. He has also reached the silver division of the USA Computing Olympiad and worked as a data science intern at a neurobiology lab. He is eager to share his passion for coding, encouraging students to explore computer science independently and think critically to solve problems    "
   }, 
   {
     name: "Michelle Li",
