@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4660204b.css",
-    "main.js": "/static/js/main.66726873.js",
+    "main.js": "/static/js/main.05a8dfa0.js",
     "static/js/787.a75a7cf2.chunk.js": "/static/js/787.a75a7cf2.chunk.js",
     "static/media/DevanAgrawal.png": "/static/media/DevanAgrawal.4347547be2a68b7801b5.png",
     "static/media/MichelleYang.jpg": "/static/media/MichelleYang.f009802abb6a71c5c875.jpg",
@@ -33,6 +33,7 @@
     "static/media/VediRaval.jpeg": "/static/media/VediRaval.f34f77e79136a66fdebd.jpeg",
     "static/media/cs1.png": "/static/media/cs1.736602a488ffde87cabf.png",
     "static/media/Screenshot (87).png": "/static/media/Screenshot (87).7c89e50b59a7467d9340.png",
+    "static/media/MaxwellYu.jpg": "/static/media/MaxwellYu.a77815bdb3408ab5ec2c.jpg",
     "static/media/Screenshot (100).png": "/static/media/Screenshot (100).ac0425cbd6148842cc76.png",
     "static/media/eng4.png": "/static/media/eng4.ab37a2ae6e66cc45c939.png",
     "static/media/SuzannaKopans.jpg": "/static/media/SuzannaKopans.24116770d4606fd3e726.jpg",
@@ -67,11 +68,11 @@
     "static/media/li.svg": "/static/media/li.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/fb.svg": "/static/media/fb.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
     "main.4660204b.css.map": "/static/css/main.4660204b.css.map",
-    "main.66726873.js.map": "/static/js/main.66726873.js.map",
+    "main.05a8dfa0.js.map": "/static/js/main.05a8dfa0.js.map",
     "787.a75a7cf2.chunk.js.map": "/static/js/787.a75a7cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4660204b.css",
-    "static/js/main.66726873.js"
+    "static/js/main.05a8dfa0.js"
   ]
 }
