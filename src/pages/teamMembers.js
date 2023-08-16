@@ -70,7 +70,7 @@ const teamMembers = [
     graduationYear: '‘27',
     profilePic: nathaniel,
     role: 'Vice President',
-    bio: 'Nathaniel is a senior at Brookline Highschool. He became interested in programming in elementary school after experimenting with Scratch and HTML. During quarantine in 2020, Nathaniel learned Python and learned the basics of machine learning at a summer camp he attended. To this day, Nathaniel has wanted to help people get into coding and has a focus in machine learning. In his free time, Nathaniel likes to code, write, row, and bike.',
+    bio: 'Nathaniel is a freshman at the University of Massachusetts-Amherst. He became interested in programming in elementary school after experimenting with Scratch and HTML. During quarantine in 2020, Nathaniel learned Python and learned the basics of machine learning at a summer camp he attended. To this day, Nathaniel has wanted to help people get into coding and has a focus in machine learning. In his free time, Nathaniel likes to code, write, row, and bike.',
   },
   {
     name: 'Kendree Chen',
