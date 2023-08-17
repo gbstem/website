@@ -29,6 +29,7 @@ import jaan from '../images/headshots/JaanSrimurthy.png';
 import vivian from '../images/headshots/VivianRacine.jpeg';
 import emily from '../images/headshots/EmilyMa.jpg';
 import maxwell from '../images/headshots/MaxwellYu.jpg';
+import brady from '../images/headshots/BradyPayne.jpg';
 
 
 const teamMembers = [
@@ -82,11 +83,11 @@ const teamMembers = [
   },
   {
     name: 'Brady Payne',
-    school: '',
-    graduationYear: '',
-    profilePic: placeholder,
+    school: 'Milton Academy',
+    graduationYear: '‘25',
+    profilePic: brady,
     role: 'Outreach & Events Director',
-    bio: '',
+    bio: 'Brady is a junior at Milton Academy. He started working with gbSTEM spring 2022 as a math teacher, and currently holds the position of co-director of the outreach/events team. In his free time he enjoys running and playing the guitar.',
   },
   {
     name: 'Vivian Racine',
@@ -222,7 +223,7 @@ const teamMembers = [
     graduationYear: "‘24",
     profilePic: eric,
     role: "Python Curriculum Developer",
-    bio: "Eric Perreault is a Junior at Milton Academy. He previously worked as a Scratch instructor for gbSTEM, and is currently a Python II developer. Outside of school, he enjoys playing the piano, running track, and spending time with friends."
+    bio: "Eric Perreault is a senior at Milton Academy. He previously worked as a Scratch instructor for gbSTEM, and is currently a Python II developer. Outside of school, he enjoys playing the piano, running track, and spending time with friends.",
   },
   {
     name: "Tumi Ogunyankin",
