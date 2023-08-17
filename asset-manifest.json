@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4660204b.css",
-    "main.js": "/static/js/main.465fd7df.js",
+    "main.js": "/static/js/main.82a1facf.js",
     "static/js/787.a75a7cf2.chunk.js": "/static/js/787.a75a7cf2.chunk.js",
     "static/media/DevanAgrawal.png": "/static/media/DevanAgrawal.4347547be2a68b7801b5.png",
     "static/media/MichelleYang.jpg": "/static/media/MichelleYang.f009802abb6a71c5c875.jpg",
@@ -25,6 +25,7 @@
     "static/media/eng1.png": "/static/media/eng1.12ea7bf9e3b3dcc894bb.png",
     "static/media/inperson4.JPG": "/static/media/inperson4.71d32da0e70846d11cdc.JPG",
     "static/media/glance.png": "/static/media/glance.1ead945882e05bd10164.png",
+    "static/media/BradyPayne.jpg": "/static/media/BradyPayne.0c0d0287088e1fd454f7.jpg",
     "static/media/MichaelBolgov.jpg": "/static/media/MichaelBolgov.62b9f4c373f81143083c.jpg",
     "static/media/MichelleLi.jpg": "/static/media/MichelleLi.65029d173748e6304c3b.jpg",
     "static/media/SudeepC.jpg": "/static/media/SudeepC.2f39fe1c9fbf943f601c.jpg",
@@ -68,11 +69,11 @@
     "static/media/li.svg": "/static/media/li.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/fb.svg": "/static/media/fb.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
     "main.4660204b.css.map": "/static/css/main.4660204b.css.map",
-    "main.465fd7df.js.map": "/static/js/main.465fd7df.js.map",
+    "main.82a1facf.js.map": "/static/js/main.82a1facf.js.map",
     "787.a75a7cf2.chunk.js.map": "/static/js/787.a75a7cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4660204b.css",
-    "static/js/main.465fd7df.js"
+    "static/js/main.82a1facf.js"
   ]
 }
