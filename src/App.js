@@ -52,18 +52,12 @@ function App() {
               <NavDropdown.Item as={Link} to="/engineering">Engineering</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/science">Science</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="https://instructor.gbstem.org/signup"
+
+            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
               <div className="rounded-div-blue">
-                Apply to Teach
-              </div>
-            </Nav.Link>
-            <Nav.Link as={Link} to="https://student.gbstem.org/signup"
-              target='_blank'
-            >
-              <div className="rounded-div-blue">
-                Register
+                apply
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/donate">
