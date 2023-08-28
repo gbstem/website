@@ -4,7 +4,7 @@ const general = [
   {
     question: "How do I register for the program?",
     answer:
-      "The registration form must be submitted by March 4th, 2023. No late submissions will be accepted. We will contact you shortly after the deadline with more logistics about the semester. Before you submit the registration form, please read through all the courses carefully. Before enrolling your child in a class, make sure that they fulfill all of the course's prerequisites and are ready to take the class.",
+      "The registration form must be submitted by September 20th, 2023. No late submissions will be accepted. We will contact you shortly after the deadline with more logistics about the semester. Before you submit the registration form, please read through all the courses carefully. Before enrolling your child in a class, make sure that they fulfill all of the course's prerequisites and are ready to take the class.",
   },
   {
     question: "What tracks do gbSTEM offer?",
@@ -29,7 +29,7 @@ const general = [
   {
     question: "When does the program start and end?",
     answer:
-      "gbSTEM's Spring 2023 semester will run from March 12th to June 10th. For most classes, the final week will consist of final projects. We will also hold student and parent orientations the week before classes begin.",
+      "gbSTEM's Fall 2023 semester will run from September 24th to December 23rd. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
   },
   {
     question: "What grade levels is gbSTEM for?",
@@ -110,7 +110,7 @@ const other = [
   {
     question: "I am a high school student. How can I apply to become an instructor for gbSTEM?",
     answer:
-      "Thank you for your interest! Please fill out our application form [here](application.html).",
+      "Thank you for your interest! Please fill out our application in our portal! Fall 2023 Applications are due by September 15th.",
   },
 ];
 
