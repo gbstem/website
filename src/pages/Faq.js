@@ -38,7 +38,7 @@ const general = [
   {
     question: "Can I join the Computer Science, Mathematics, Engineering, and Science track all at once?",
     answer:
-      "Yes, you may register for up to four different courses. However, you need to be sure that you are able to manage the time commitment of at least 2 hours per week per lesson.",
+      "You may register for up to two different courses. However, you need to be sure that you are able to manage the time commitment of at least 2 hours per week per course.",
   },
 ]
 
