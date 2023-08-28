@@ -7,10 +7,10 @@ function HomeIntro() {
       <p>
         The Greater Boston STEM Program (gbSTEM) delivers free introductory computer science, math,
         engineering, and science enrichment to elementary and middle school students. The gbSTEM fall 2023
-        semester registration is now open! To register, go to <a
+        semester registration is now open! To register, go to this <a
           href="https://portal.gbstem.org/signup"
           target="_blank" rel="noopener noreferrer"
-        >form</a>.
+        >link</a>.
       </p>
       <div className="row">
         <div className="col-md-6 p-3 d-flex justify-content-center align-items-center flex-column">
