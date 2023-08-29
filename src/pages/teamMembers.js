@@ -30,6 +30,7 @@ import vivian from '../images/headshots/VivianRacine.jpeg';
 import emily from '../images/headshots/EmilyMa.jpg';
 import maxwell from '../images/headshots/MaxwellYu.jpg';
 import brady from '../images/headshots/BradyPayne.jpg';
+import grace from '../images/headshots/GraceQiu.png';
 
 
 const teamMembers = [
@@ -261,7 +262,7 @@ const teamMembers = [
     name: "Grace Qiu",
     school: "Worcester Academy",
     graduationYear: "‘26",
-    profilePic: placeholder,
+    profilePic: grace,
     role: "Engineering I & II Curriculum Developer",
     bio: "Grace is a sophomore at Worcester Academy. She first began working at gbSTEM in 2022 as an Engineering I instructor. She has experience teaching students of all different ages, and wants to work in the STEM field. Her favorite hobbies are swimming, art, and music. Grace is excited to become an engineering curriculum developer this year, and looks forward to working with everyone!",
   },
