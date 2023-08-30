@@ -5,9 +5,9 @@ import Course from "./Course";
 const math = [
   {
     courseName: "Mathematics I",
-    description1: '*Basic familiarity with 1-digit addition, subtraction, and multiplication
-    *Ability to identify common 2-dimensional shapes(squares, circles, stars, etc.) and calculate rectangular Area and Perimiter *Ability to solve basic riddles using problem-solving strategies',
-    description2: '* Addition+Subtraction
+    description1: `*Basic familiarity with 1-digit addition, subtraction, and multiplication
+    *Ability to identify common 2-dimensional shapes(squares, circles, stars, etc.) and calculate rectangular Area and Perimiter *Ability to solve basic riddles using problem-solving strategies`,
+    description2: `* Addition+Subtraction
     * Place Value and Rounding Numbers
     * Multiplication
     * Place Value/Rounding Numbers
@@ -19,15 +19,15 @@ const math = [
     * Math in Nature
     * Graphs: making and interpreting graphs
     * Math Games: Practice with past topics using math games
-    *Final Project: A project where students apply their new math skills!',
+    *Final Project: A project where students apply their new math skills!`,
   },
   {
     courseName: "Mathematics II",
-    description1: '* Comfortable with 1-digit multiplication and division
+    description1: `* Comfortable with 1-digit multiplication and division
     *Ability to confidently solve problems involving addition and subtraction
     *Comfortable with majority of Math I topics
-    *Ready for an introduction to operation-based topics',
-    description2: '
+    *Ready for an introduction to operation-based topics`,
+    description2: `
     *A Deeper Dive into Division and Multiplication: An exploration on how to multiply and divide larger numbers
     *Challenging Addition and Subtraction
     *Order of Operations + Exponents
@@ -38,15 +38,15 @@ const math = [
     *Skip Counting
     *Tesselations: Mobius Strips + Klein Bottles
     *Units of Measurements (feet, inches, cm, etc.)
-    *Final Project: A project where students apply their new math skills!'
+    *Final Project: A project where students apply their new math skills!`
   },
   {
     courseName: "Mathematics III",
-    description1: '*Comfortable with 2-digit multiplication and basic long division
+    description1: `*Comfortable with 2-digit multiplication and basic long division
     * Basic familiarity with 1-Step and 2-Step Equations
     *Comfortable with area and perimeter of basic shapes/solids
-    *Comfortable with majority of Math II topics',
-    description2: '*Division Review
+    *Comfortable with majority of Math II topics`,
+    description2: `*Division Review
     *Three-digit Addition and Subtraction
     *Logic Puzzles
     *Exponents: Concept + Squaring and Cubing
@@ -57,16 +57,16 @@ const math = [
     *Decimals
     *Units of Measurement for Volume (cups, liters, tablespoons, etc.)
     *Honeycomb Conjecture
-    *Final Project: A project where students apply their new math skills!'
+    *Final Project: A project where students apply their new math skills!`
   },
   {
     courseName: "Mathematics IV",
-    description1: '*Comfortable with multiplying and dividing decimals, fractions, and numbers
+    description1: `*Comfortable with multiplying and dividing decimals, fractions, and numbers
     *Able to find area and perimeter of irregular shapes
     *Comfortable with 1-Step equations, 2-Step equations, and Order of Operations
     *Comfortable with majority of topics listed in Math III
-    *Ready to take on middle school level math',
-    description2: '*Exponents: rules
+    *Ready to take on middle school level math`,
+    description2: `*Exponents: rules
     *Roots and Radicals: square roots + simplifying
     *Fibonacci + Golden Ratio + Pascal Triangle
     *Volume of Complex Shapes
@@ -76,17 +76,17 @@ const math = [
     *Divisibility Rules
     *Systems of Equations: Solving with substitutions, graphing (includes word problems)
     *Koch Snowflakes + Fractals + Absolute Value
-    *Final Project: A project where students apply their new math skills!'
+    *Final Project: A project where students apply their new math skills!`
   },
   {
     courseName: "Mathematics V",
-    description1: '*This course will equip students with the skills to be successful in math competitions such as the American Math Competition (AMC), IMLEM, and MathCounts. This class will be mostly problem-based, and our instructors will have been very successful in past math competitions. This course will be fast-paced.
+    description1: `*This course will equip students with the skills to be successful in math competitions such as the American Math Competition (AMC), IMLEM, and MathCounts. This class will be mostly problem-based, and our instructors will have been very successful in past math competitions. This course will be fast-paced.
     *Ability to think deeply about new, complicated concepts
     *Strong critical thinking and reasoning skills
     *Familiarity with the middle school math curriculum, and preferably has taken advanced classes throughout middle school
     *Comfortable with the majority of topics listed in Math IV
-    *Ready for a fast-paced, advanced, and competitive math-based course',
-    description2: '*Trigonometry: Unit circle, radians, right traingle ratios, function properties, law of sine and cosine
+    *Ready for a fast-paced, advanced, and competitive math-based course`,
+    description2: `*Trigonometry: Unit circle, radians, right traingle ratios, function properties, law of sine and cosine
     *Factoring Polynomials
     *Function Graphs and Transformations
     *Modular Arithmetic
@@ -94,7 +94,7 @@ const math = [
     *Principle of Inclusion and Exlusion
     *Probability
     *Limits
-    *Final Project: A project where students apply their new math skills!'
+    *Final Project: A project where students apply their new math skills!`
   }
 ]
 
