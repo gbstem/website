@@ -44,7 +44,7 @@ function Engineering() {
         <h1>Engineering Track</h1>
       </div>
       <div className="container">
-        <p>We are offering 3 different engineering courses during the spring semester. Please check the course descriptions before enrolling in an engineering course.
+        <p>We are offering 3 different engineering courses during the fall semester. Please check the course descriptions before enrolling in an engineering course.
         </p>
         <div className="mb-5" id="math">
           <h1>Our classes are as follows: </h1>
