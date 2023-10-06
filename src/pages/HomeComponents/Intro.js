@@ -6,9 +6,9 @@ function HomeIntro() {
     <div className="container mb-5">
       <p>
         The Greater Boston STEM Program (gbSTEM) delivers free introductory computer science, math,
-        engineering, and science enrichment to elementary and middle school students. Unfortunately, the registration for the Fall 2023 semester has ended. The gbSTEM Spring 2024
-        semester registration will open in February 2024.
-        To be notified when registration opens, fill out this <a
+        engineering, and science enrichment to elementary and middle school students. Unfortunately, the registrations/applications for the Fall 2023 semester have ended. The gbSTEM Spring 2024
+        semester registrations/applications will open in February 2024.
+        To be notified when registrations/applications open, fill out this <a
           href="https://forms.gle/ejSvEu2cwwdovUg18"
           target="_blank" rel="noopener noreferrer"
         >form</a>.
