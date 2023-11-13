@@ -33,12 +33,12 @@ function App() {
             alt=""
             src={penguin}
             width="200"
-            className="d-inline-block align-top"
+            className="d-inline-block align-center"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="mr-auto align-items-end">
+          <Nav className="mr-auto align-items-center">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <NavDropdown title="About" id="about-dropdown" className="text-end">
               <NavDropdown.Item as={Link} to="/team">Team</NavDropdown.Item>
@@ -56,7 +56,7 @@ function App() {
             <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
-              <div className="rounded-div-blue">
+              <div className="rounded-div-blue align-center">
                 apply
               </div>
             </Nav.Link>
