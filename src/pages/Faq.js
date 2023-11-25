@@ -9,7 +9,7 @@ const general = [
   {
     question: "What subjects does gbSTEM offer?",
     answer:
-      "We offer four different subjects (with many courses in each subject): computer science, mathematics, engineering, and science. Please refer to the Classes tab for details on all courses.",
+      "We offer four different subjects (with many courses in each subject): computer science, mathematics, engineering, and science. Please refer to the Programs tab for details on all courses.",
   },
   {
     question: "How much do lessons cost?",
@@ -19,7 +19,7 @@ const general = [
   {
     question: "How will lessons be conducted?",
     answer:
-      "All sessions will be conducted remotely via Zoom, in groups of about 5-10 students. We will also be offering some in-person sessions, but this option will be limited. See our Classes tab to see what content is covered in each lesson. Visit our logistics tab for more information.",
+      "All sessions will be conducted remotely via Zoom, in groups of about 5-10 students. We will also be offering some in-person sessions, but this option will be limited. See our Programs tab to see what content is covered in each lesson. Visit our logistics tab for more information.",
   },
   {
     question: "How frequently do lessons take place?",
