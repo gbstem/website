@@ -4,12 +4,12 @@ const general = [
   {
     question: "How do I register for the program?",
     answer:
-      "The registration form must be submitted by September 20th, 2023. No late submissions will be accepted. We will contact you shortly after the deadline with more logistics about the semester. Before you submit the registration form, please read through all the courses carefully. Before enrolling your child in a class, make sure that they fulfill all of the course's prerequisites and are ready to take the class.",
+      "Unfortunately, the student registrations for the Fall 2023 semester have ended. The gbSTEM Spring 2024 semester registrations will open in February 2024. To be notified when registration opens, fill out the form in our home tab.",
   },
   {
-    question: "What tracks do gbSTEM offer?",
+    question: "What subjects does gbSTEM offer?",
     answer:
-      "We offer four different tracks for this program: computer science, mathematics, engineering, and science. Please refer to the Classes tab for details on both tracks.",
+      "We offer four different subjects (with many courses in each subject): computer science, mathematics, engineering, and science. Please refer to the Classes tab for details on all courses.",
   },
   {
     question: "How much do lessons cost?",
@@ -33,7 +33,7 @@ const general = [
   },
   {
     question: "What grade levels is gbSTEM for?",
-    answer: "We have courses designed for all students K-8.",
+    answer: "We have various courses designed for students ranging from K-8. You should choose courses that correspond with your student's age. Students of different ages will not be placed in the same class.",
   },
   {
     question: "Can I join the Computer Science, Mathematics, Engineering, and Science track all at once?",
@@ -46,7 +46,7 @@ const computerScience = [
   {
     question: "Do I need any prior coding experience?",
     answer:
-      "No prior coding experience is needed -- we welcome coders of all skill levels! In fact, most of our students have not coded before participating in the gbSTEM program.",
+      "No prior coding experience is needed -- we welcome coders of all skill levels! In fact, most of our students have not coded before participating in the gbSTEM program. Choose the course that corresponds with your student's age and ability level!",
   },
   {
     question: "I have a bit of coding experience. Should I still join the program?",
@@ -56,7 +56,7 @@ const computerScience = [
   {
     question: "Which programming languages are offered?",
     answer:
-      "We offer introductory courses in Scratch, Python, Java, and web development with HTML and CSS.",
+      "We offer introductory courses in Scratch, Python, Java, and Web Development (with HTML, CSS, and JavaScript).",
   },
   {
     question: "Which programming language should I pick?",
@@ -64,9 +64,9 @@ const computerScience = [
       "We suggest picking the courses that interest you! Typically, Scratch is the easiest language to learn, followed by Python and Web Development (HTML and CSS), followed by Java. We also offer multiple course levels for some languages. Visit our CS courses page to learn more about our courses!",
   },
   {
-    question: "Do I need to take the Scratch course before taking the Python/Java course?",
+    question: "Do I need to take the Scratch course before taking the Python I/Java course?",
     answer:
-      "No, each of our courses are introductory and stand-alone. However, if you have experience in Scratch and/or already have a grasp on some programming concepts, you may be able to proceed faster when taking the Python/Java courses.",
+      "No, those courses are introductory and stand-alone. However, if you have experience in Scratch and/or already have a grasp on some programming concepts, you may be able to proceed faster when taking the Python I/Java courses.",
   },
   {
     question: "What does a typical lesson in the Computer Science track look like?",
@@ -80,7 +80,7 @@ const math = [
   {
     question: "Can I enroll my student at a Math level higher than what's recommended?",
     answer:
-      "Yes, but we recommend enrolling in the level that corresponds to the student's ability level.",
+      "Yes, but we recommend enrolling in the level that corresponds to the student's age and ability level.",
   },
   {
     question: "Can I learn competition math / math not covered in typical K-12 school curricula?",
@@ -90,7 +90,12 @@ const math = [
   {
     question: "What does a typical lesson in the Mathematics track look like?",
     answer:
-      "We will begin with a brief lecture; this will last about ten minutes. Afterwards, students will work on problems, either individually or in groups. They can receive help and support from the instructor at any point during the lesson.",
+      "We will begin with a brief lecture; this will last about 15-30 minutes. Afterwards, students will work on problems, either individually or in groups. They can receive help and support from the instructor at any point during the lesson.",
+  },
+  {
+    question: "My student takes math courses outside of school, should I still enroll in gbSTEM?",
+    answer:
+      "Yes! We welcome students of all math backgrounds! Our courses teach material not typically convered in school and after-school programs. More mathematically advanced middle school students are welcome to take Math V.",
   }
 ];
 
