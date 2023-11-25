@@ -49,6 +49,11 @@ const computerScience = [
       "No prior coding experience is needed -- we welcome coders of all skill levels! In fact, most of our students have not coded before participating in the gbSTEM program. Choose the course that corresponds with your student's age and ability level!",
   },
   {
+    question: "Does Python II require prior coding experience?",
+    answer:
+      "Yes, Python II requires some prior knowledge. Students should be comfortable with most topics covered in our Python I course before enrolling in Python II. Visit the CS tab under Programs for more information about Python II.",
+  },
+  {
     question: "I have a bit of coding experience. Should I still join the program?",
     answer:
       "Yes! If you are already familiar with coding basics, you may be able to enroll in a more difficult course such as Python II or Java.",
@@ -101,14 +106,19 @@ const math = [
 
 const engineering = [
   {
-    question: "Does Engineering II require prior engineering experience?",
-    answer: "No.",
+    question: "Does Engineering I or II require prior engineering experience?",
+    answer: "No, these courses are meant to introduce students to the world of engineering! Please choose the course that corresponds to your student's age.",
   },
   {
     question: "Does Engineering III require prior engineering experience?",
     answer:
       "We expect most students in Engineering III to have already taken Engineering II.",
   },
+  {
+    question: "What does a typical lesson in the Engineering track look like?",
+    answer:
+      "We will begin with a brief lecture; this will last about 15-30 minutes. Afterwards, students will work on hands-on projects. They can receive help and support from the instructor at any point during the lesson.",
+  }
 ]
 
 const other = [
