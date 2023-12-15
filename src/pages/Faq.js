@@ -121,6 +121,23 @@ const engineering = [
   }
 ]
 
+const science = [
+  {
+    question: "Does my student need prior science experience to enroll in Environmental Science?",
+    answer: "No! Environmental Science introduces students to elements of chemistry and biology in its curriculum, and no prior skills are required.",
+  },
+  {
+    question: "What does a typical lesson in the Science track look like?",
+    answer:
+      "Classes usually begin with a brief, lecture-style introduction to new topics, after which students will work on projects, activities, or hands-on labs. Instructors are available to support and answer questions at any point during the lesson.",
+  },
+  {
+    question: "Will Environmental Science help students in school?",
+    answer:
+      "The Environmental Science curriculum includes elements of physics, chemistry, and biology that will expose many students to these fields earlier than their school might. Additionally, Environmental Science is often not covered in school curricula at all, and is vital to understanding of Earth's climate.",
+  }
+]
+
 const other = [
   {
     question: "I am a high school student. How can I apply to become an instructor for gbSTEM?",
