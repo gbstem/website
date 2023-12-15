@@ -6,7 +6,7 @@ const math = [
   {
     courseName: "Mathematics I",
     description1: `*Basic familiarity with 1-digit addition, subtraction, and multiplication
-    *Ability to identify common 2-dimensional shapes(squares, circles, stars, etc.) and calculate rectangular Area and Perimiter *Ability to solve basic riddles using problem-solving strategies`,
+    *Ability to identify common 2-dimensional shapes(squares, circles, stars, etc.) and calculate rectangular Area and perimeter *Ability to solve basic riddles using problem-solving strategies`,
     description2: `* Addition+Subtraction
     * Place Value and Rounding Numbers
     * Multiplication
@@ -15,7 +15,7 @@ const math = [
     * Word Problems
     * Puzzles and Games
     * Shapes: Basic shapes and shapes in nature
-    * Area and Perimiter of rectangles
+    * Area and perimeter of rectangles
     * Math in Nature
     * Graphs: making and interpreting graphs
     * Math Games: Practice with past topics using math games
@@ -34,7 +34,7 @@ const math = [
     *One- and Two-Step Equations
     *Distributive Property
     *Two-step Word Problems
-    *Area and Perimiter of triangles and trapezoids
+    *Area and perimeter of triangles and trapezoids
     *Skip Counting
     *Tesselations: Mobius Strips + Klein Bottles
     *Units of Measurements (feet, inches, cm, etc.)
@@ -51,7 +51,7 @@ const math = [
     *Logic Puzzles
     *Exponents: Concept + Squaring and Cubing
     *Properties of Shapes
-    *Area and Perimiter of Irregular Polygons
+    *Area and perimeter of Irregular Polygons
     *Pythagorean Theorem
     *Complicated Word Problems (2+ steps)
     *Decimals
