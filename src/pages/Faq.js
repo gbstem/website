@@ -46,7 +46,7 @@ const computerScience = [
   {
     question: "Do I need any prior coding experience?",
     answer:
-      "No prior coding experience is needed -- we welcome coders of all skill levels! In fact, most of our students have not coded before participating in the gbSTEM program. Choose the course that corresponds with your student's age and ability level!",
+      "No prior coding experience is needed for our 4 foundational courses— we welcome coders of all skill levels! In fact, most of our students have not coded before participating in the gbSTEM program. Choose the course that corresponds with your student's age and ability level!",
   },
   {
     question: "Does Python II require prior coding experience?",
