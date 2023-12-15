@@ -100,7 +100,7 @@ const math = [
   {
     question: "My student takes math courses outside of school, should I still enroll in gbSTEM?",
     answer:
-      "Yes! We welcome students of all math backgrounds! Our courses teach material not typically convered in school and after-school programs. More mathematically advanced middle school students are welcome to take Math V.",
+      "Yes! We welcome students of all math backgrounds! Our courses teach material not typically covered in school and after-school programs. More mathematically advanced middle school students are welcome to take Math V.",
   }
 ];
 
