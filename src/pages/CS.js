@@ -29,7 +29,7 @@ const CS = () => {
 
         <section id="cs">
           <div className="container">
-            <p>We offer four introductory courses in the computer science track: Scratch, Python, Java, and web development with HTML and CSS. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
+            <p>We offer four introductory courses in the computer science track: Scratch, Python, Java, and web development with HTML and CSS. We also offer a more advanced course in Python, called Python II. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
             <div className="mb-5" id="cs">
               <h1>Our classes are as follows:</h1>
               <p><button className="btn btn-link" onClick={() => scratchRef.current.scrollIntoView({ behavior: "smooth" })}
@@ -61,14 +61,13 @@ const CS = () => {
                     <ul>
                       <li>Module 1: Scratch environment (website overview)</li>
                       <li>Module 2: Motion (coordinate plane overview)</li>
-                      <li>Module 3: Looks and Sounds Complete Overview</li>
-                      <li>Module 4: Loops</li>
+                      <li>Module 3: Looks and Sounds</li>
+                      <li>Module 4: Loops and Control Blocks</li>
                       <li>Module 5: Conditionals with Sensing</li>
-                      <li>Module 6: Conditionals with Operators</li>
-                      <li>Module 7: String Manipulation from User Input</li>
-                      <li>Module 8 : Variables</li>
+                      <li>Module 6: Conditionals with Operators and Variables</li>
                       <li>Module 9: Clones and Broadcasting</li>
-                      <li>Module 10: Blocks</li>
+                      <li>Module 10: Refining Code</li>
+                      <li>Module 11: Final Projects</li>
                     </ul>
                   </div>
 
@@ -117,16 +116,14 @@ const CS = () => {
                   <div className="col-md-6">
                     <h1>Python II</h1>
                     <p>
-                      Our Python II course is recommended for highly driven 6-8 graders with a robust understanding of the basics of Python (which can be achieved by taking Python I). The course will utilize the skills taught in the introductory Python course to cover different applications of Python. Through project-based learning, students will dive deeper into Python programming by working on projects, and collaborating with students in their class. These projects will help build a robust base for future exploration of Python application, such as Object-oriented Programming, more complex algorithms, APIs, and Data Science.
+                      Our Python II course is recommended for highly driven 6-8 graders with a robust understanding of the basics of Python (which can be achieved by taking Python I). The course will utilize the skills taught in the introductory Python course to cover different applications of Python. Through project-based learning, students will dive deeper into Python programming by working on projects, and collaborating with students in their class. These projects will help build a robust base for future exploration of Python application, such as Object-oriented Programming, more complex algorithms, and Data Science/Machine Learning.
                     </p>
                     <ul>
                       <li>Module 1: Introduction/Review of Python 1</li>
                       <li>Module 2: Object-oriented Programming</li>
-                      <li>Module 3: If-Else Statements</li>
                       <li>Module 3: Algorithms</li>
-                      <li>Module 4: APIs</li>
-                      <li>Module 5: Data Science</li>
-                      <li>Module 6: Final Project</li>
+                      <li>Module 4: Data Science</li>
+                      <li>Module 5: Final Project</li>
                     </ul>
                   </div>
                   <div className="col-md-6">
@@ -141,18 +138,17 @@ const CS = () => {
                     <h1>Java</h1>
                     <p>Our introductory Java course is recommended for students in grades 6-8 with previous text-based programming experience and/or a very strong foundation in math through operations with decimals, fractions, and negative numbers. The course provides students with a strong foundation in one of the most common programming languages used today. It approaches Java from a functional programming perspective, giving students a true understanding of how the internal structures of Java function. Through projects and games like Mastermind as well as thorough coverage of foundational computer science topics such as data structures and algorithms, this course will set students well on their way to becoming skilled Java developers.</p>
                     <ul>
-                      <li>Module 1: Data Definitions</li>
-                      <li>Module 2: Classes</li>
-                      <li>Module 3: Interfaces</li>
-                      <li>Module 4: Methods</li>
-                      <li>Module 5: Lists</li>
-                      <li>Module 6: Recursion</li>
-                      <li>Module 7: Abstract Classes</li>
-                      <li>Module 8: Array Lists</li>
-                      <li>Module 9: Loops</li>
-                      <li>Module 10: Searching</li>
-                      <li>Module 11: Sorting</li>
-                      <li>Module 12: Arrays</li>
+                      <li>Module 1: Java Basics</li>
+                      <li>Module 2: Loops</li>
+                      <li>Module 3: Arrays</li>
+                      <li>Module 4: Methods/Functions</li>
+                      <li>Module 5: Classes</li>
+                      <li>Module 6: Methods in Classes</li>
+                      <li>Module 7: Array Lists</li>
+                      <li>Module 8: Strings</li>
+                      <li>Module 9: Recursion and Graphics</li>
+                      <li>Module 10: Data Structures</li>
+                      <li>Module 12: Object-Oriented programming</li>
                     </ul>
                   </div>
 
@@ -172,10 +168,12 @@ const CS = () => {
                     <h1>Web Development</h1>
                     <p>Our introductory Web Development course is recommended for students in grades 6-8 (or younger students with high math ability) who are interested in the design and functionality aspects of programming. The course will cover the fundamentals of website development using vanilla HTML, CSS, and JavaScript. Students will explore the various tools, vocabulary, and components used in the field and learn how each element functions together to create a fully-functional web application. Through creating their own landing pages, photography sites, and personal portfolios, using the skills taught, students will equip all the skills necessary to make further projects on their own.</p>
                     <ul>
-                      <li>Week 1-3: HTML</li>
-                      <li>Week 4-6: CSS</li>
-                      <li>Week 7-9: Javascript</li>
-                      <li>Week 10-12: Final project</li>
+                      <li>Module 1-2: HTML</li>
+                      <li>Module 3-4: CSS</li>
+                      <li>Module 5-6: Javascript</li>
+                      <li>Module 7: Objects, strings, and arrays</li>
+                      <li>Module 8: DOM manipulation</li>
+                      <li>Module 9: HTML Form Elements</li>
                     </ul>
                   </div>
                   <div className="col-md-6">
