@@ -6,7 +6,7 @@ const math = [
   {
     courseName: "Mathematics I",
     description1: `*Basic familiarity with 1-digit addition, subtraction, and multiplication
-    *Ability to identify common 2-dimensional shapes(squares, circles, stars, etc.) and calculate rectangular Area and perimeter *Ability to solve basic riddles using problem-solving strategies`,
+    *Ability to identify common 2-dimensional shapes(squares, circles, stars, etc.) *Ability to solve basic riddles using problem-solving strategies`,
     description2: `* Addition+Subtraction
     * Place Value and Rounding Numbers
     * Multiplication
@@ -86,15 +86,16 @@ const math = [
     *Familiarity with the middle school math curriculum, and preferably has taken advanced classes throughout middle school
     *Comfortable with the majority of topics listed in Math IV
     *Ready for a fast-paced, advanced, and competitive math-based course`,
-    description2: `*Trigonometry: Unit circle, radians, right traingle ratios, function properties, law of sine and cosine
+    description2: `*Trigonometry: Unit circle, radians vs. degrees, graphs of trigonometric identities, right triangle ratios, trigonometric identities, law of sines, law of cosines
     *Factoring Polynomials
     *Function Graphs and Transformations
     *Modular Arithmetic
     *Combinations and Permutations
-    *Principle of Inclusion and Exlusion
+    *Principle of Inclusion and Exclusion
     *Probability
+    *Bases and Parametric Equations
     *Limits
-    *Final Project: A project where students apply their new math skills!`
+    *Final Project: A project where students apply their new math skills.`
   }
 ]
 
