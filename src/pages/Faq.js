@@ -33,7 +33,7 @@ const general = [
   },
   {
     question: "What grade levels is gbSTEM for?",
-    answer: "We have various courses designed for students ranging from K-8. You should choose courses that correspond with your student's age. Students of different ages will not be placed in the same class.",
+    answer: "We have various courses designed for students ranging from K-8. You should choose courses that correspond with your student's age. Classes will be generally grouped by age.",
   },
   {
     question: "Can I join the Computer Science, Mathematics, Engineering, and Science track all at once?",
