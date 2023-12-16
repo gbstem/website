@@ -191,6 +191,10 @@ function Faq() {
         <div className="accordion mb-3" >
           {engineering.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-engineering`))}
         </div>
+        <h1>Science</h1>
+        <div className="accordion mb-3" >
+          {science.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-science`))}
+        </div>
         <h1>Other</h1>
         <div className="accordion mb-3" >
           {other.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-other`))}
