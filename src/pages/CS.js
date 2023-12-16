@@ -148,7 +148,7 @@ const CS = () => {
                       <li>Module 8: Strings</li>
                       <li>Module 9: Recursion and Graphics</li>
                       <li>Module 10: Data Structures</li>
-                      <li>Module 12: Object-Oriented programming</li>
+                      <li>Module 11: Object-Oriented programming</li>
                     </ul>
                   </div>
 
