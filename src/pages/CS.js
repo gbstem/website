@@ -166,7 +166,7 @@ const CS = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <h1>Web Development</h1>
-                    <p>Our introductory Web Development course is recommended for students in grades 6-8 (or younger students with high math ability) who are interested in the design and functionality aspects of programming. The course will cover the fundamentals of website development using vanilla HTML, CSS, and JavaScript. Students will explore the various tools, vocabulary, and components used in the field and learn how each element functions together to create a fully-functional web application. Through creating their own landing pages, photography sites, and personal portfolios, using the skills taught, students will equip all the skills necessary to make further projects on their own.</p>
+                    <p>Our introductory Web Development course is recommended for students in grades 5-8 (or with a strong CS or Math background) who are interested in design and user-facing applications of programming. The course will cover the fundamentals of website development using vanilla HTML, CSS, and JavaScript. Students will explore various tools, vocabulary, and components used in the field and learn how each element functions together in a fully functional web application. By creating landing pages, photography sites, and personal portfolios, students will become familiar with all the skills necessary to build any web project on their own.</p>
                     <ul>
                       <li>Module 1-2: HTML</li>
                       <li>Module 3-4: CSS</li>
