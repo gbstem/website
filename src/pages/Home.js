@@ -12,6 +12,7 @@ import inperson3 from '../images/in-person/inperson3.JPG';
 import inperson4 from '../images/in-person/inperson4.JPG';
 import inperson5 from '../images/in-person/inperson5.JPG';
 import inperson6 from '../images/in-person/inperson6.JPG';
+import Colleges from './Colleges';
 
 
 function Home() {
@@ -29,6 +30,7 @@ function Home() {
         <WhatPeopleSay />
       </div>
       <OurMission />
+      <Colleges />
       <div style={{ backgroundColor: '#1D2256' }}>
         <Counter />
       </div>

@@ -118,3 +118,23 @@ strong {
 .btn-link {
   background-color: transparent;
 }
+
+.scrolling-wrapper {
+  display: flex;
+  overflow-x: hidden; /* Changed from auto to hidden to disable manual scrolling */
+  scroll-behavior: smooth;
+  white-space: nowrap; /* Ensures inline-block elements stay in a single line */
+}
+
+.college-logo {
+  display: inline-block; /* Changed from flex to inline-block for continuous scrolling */
+  width: 150px; /* Adjust as needed */
+  margin-right: 20px; /* Adjust spacing between logos */
+  text-align: center;
+}
+
+.college-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
