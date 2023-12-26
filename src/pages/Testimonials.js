@@ -80,21 +80,20 @@ const testimonials = [
 
 function Testimonial(props) {
   return (
-    <div className="col-md-5 ">
-      <div className="p-4 m-4"
+      <div className="p-4"
         style={{
           border: '5px solid #1D2256',
-          borderRadius: '20px',
+          borderRadius: '20px', width: "30rem",
+          height: "auto", flex: "2 0 auto", backgroundColor:"#f8f8f8"
         }}
       >
-        <div >
+        <div>
           <p>{props.text}</p>
         </div>
         <div >
           <p>{`-- ${props.author}`}</p>
         </div>
       </div>
-    </div>
   )
 }
 
@@ -106,7 +105,7 @@ function Testimonials() {
         <h1>What People Say</h1>
       </div>
 
-      <div className="row">
+      <div style = {{display:"flex", flexWrap: "wrap", gap: "3rem", marginBottom:"5rem"}}>
         {
           testimonials.map((testimonial, index) => {
             return (
