@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import li from '../images/icons/li.svg';
-import fb from '../images/icons/fb.svg';
-import tw from '../images/icons/tw.svg';
-import ig from '../images/icons/ig.svg';
+import { Linkedin } from 'react-feather';
+import { Instagram } from 'react-feather';
+import { Twitter } from 'react-feather';
+import { Facebook } from 'react-feather';
 
 const Footer = () => {
   return (
@@ -15,10 +15,10 @@ const Footer = () => {
           </a>
           <div className="row justify-content-center">
             <ul className="clear socials mt-4 d-flex justify-content-center">
-              <li className="mx-2"><a href="https://facebook.com/The-Greater-Boston-STEM-Program-104063908337961" target="_blank" rel="noreferrer"><img src={fb} alt="Facebook" /></a></li>
-              <li className="mx-2"><a href="https://twitter.com/gbstemprogram" target="_blank" rel="noreferrer"><img src={tw} alt="Twitter" /></a></li>
-              <li className="mx-2"><a href="https://www.instagram.com/gbstem/" target="_blank" rel="noreferrer"><img src={ig} alt="Instagram" /></a></li>
-              <li className="mx-2"><a href="https://www.linkedin.com/company/gbstem-program" target="_blank" rel="noreferrer"><img src={li} alt="LinkedIn" /></a></li>
+              <li className="mx-2"><a href="https://facebook.com/The-Greater-Boston-STEM-Program-104063908337961" target="_blank" rel="noreferrer"><Facebook width = {35} height = {35}/></a></li>
+              <li className="mx-2"><a href="https://twitter.com/gbstemprogram" target="_blank" rel="noreferrer"><Twitter width = {35} height = {35}/></a></li>
+              <li className="mx-2"><a href="https://www.instagram.com/gbstem/" target="_blank" rel="noreferrer"><Instagram width = {35} height = {35}/></a></li>
+              <li className="mx-2"><a href="https://www.linkedin.com/company/gbstem-program" target="_blank" rel="noreferrer"><Linkedin width = {35} height = {35}/></a></li>
             </ul>
           </div>
         </div>
