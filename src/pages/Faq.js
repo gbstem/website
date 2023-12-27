@@ -149,7 +149,7 @@ const other = [
 
 function QuestionAnswerPair(question, answer, id) {
   return (
-    <div className="accordion-item">
+    <div className="accordion-item" style = {{width:"60rem", margin: "auto"}}>
       <h2 className="accordion-header" id={`heading${id}`}>
         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${id}`} aria-expanded="false" aria-controls={`collapse${id}`}>
           {question}
@@ -174,29 +174,29 @@ function Faq() {
         <h1>Frequently Asked Questions</h1>
       </div>
       <div className="container">
-        <h1>General</h1>
+        <h2 style = {{margin: "auto", width: "fit-content", padding:"rem"}}>General</h2>
         <div className="accordion mb-3" >
           {general.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-general`))}
         </div>
-        <h1>Computer Science</h1>
+        <h2 style = {{margin: "auto", width: "fit-content", padding:"1.5rem"}}>Computer Science</h2>
         <div className="accordion mb-3" >
           {computerScience.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-cs`))}
         </div>
-        <h1>Mathematics</h1>
+        <h2  style = {{margin: "auto", width: "fit-content", padding:"1.5rem"}}>Mathematics</h2>
         <div className="accordion mb-3" >
           {math.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-math`))}
         </div>
 
-        <h1>Engineering</h1>
+        <h2  style = {{margin: "auto", width: "fit-content", padding:"1.5rem"}}>Engineering</h2>
         <div className="accordion mb-3" >
           {engineering.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-engineering`))}
         </div>
-        <h1>Science</h1>
+        <h2  style = {{margin: "auto", width: "fit-content", padding:"1.5rem"}}>Science</h2>
         <div className="accordion mb-3" >
           {science.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-science`))}
         </div>
-        <h1>Other</h1>
-        <div className="accordion mb-3" >
+        <h2  style = {{margin: "auto", width: "fit-content", padding:"1.5rem"}}>Other</h2>
+        <div className="accordion mb-3" style = {{paddingBottom:"5rem"}}>
           {other.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-other`))}
         </div>
       </div>
