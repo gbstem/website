@@ -84,7 +84,7 @@ function Testimonial(props) {
         style={{
           border: '5px solid #1D2256',
           borderRadius: '20px', width: "30rem",
-          height: "auto", flex: "2 0 auto", backgroundColor:"#f8f8f8"
+          height: "auto", flex: "2 0 auto"
         }}
       >
         <div>
