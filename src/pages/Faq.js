@@ -174,7 +174,7 @@ function Faq() {
         <h1>Frequently Asked Questions</h1>
       </div>
       <div className="container">
-        <h2 style = {{margin: "auto", width: "fit-content", padding:"rem"}}>General</h2>
+        <h2 style = {{margin: "auto", width: "fit-content", padding:"1.5rem"}}>General</h2>
         <div className="accordion mb-3" >
           {general.map((pair, index) => QuestionAnswerPair(pair.question, pair.answer, `${index}-general`))}
         </div>
