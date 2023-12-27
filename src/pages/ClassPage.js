@@ -17,8 +17,8 @@ const ClassPage = (props) => {
                     <div style={{ backgroundColor: "#f2f2f2", paddingTop: "1rem", paddingBottom: "0.25rem" }}>
                         <div className="container">
                             <ul style={{ display: "flex", flexWrap: "wrap", gap: "2rem", justifyContent: "center", color: "rgb(29, 34, 86)" }}>
-                                <li>13 Weeks</li>
-                                <li>26 Classes</li>
+                                <li>16 Weeks</li>
+                                <li>32 Classes</li>
                                 <li>{props.online === true ? "Online Lessons" : "Online And In-Person Classes Offered"}</li>
                                 <li>Recommended for grades {props.gradeRange}</li>
                             </ul>
