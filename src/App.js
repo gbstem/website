@@ -13,15 +13,33 @@ import Team from './pages/Team';
 import Mission from './pages/Mission';
 import Testimonials from './pages/Testimonials';
 import FAQ from './pages/Faq';
-import CS from './pages/CS';
-import Math from './pages/Math';
-import Engineering from './pages/Engineering';
-import Science from './pages/Science';
+import CS from './pages/CS/CS';
+import PythonI from './pages/CS/PythonI';
+import Scratch from './pages/CS/Scratch';
+import Math from './pages/Math/Math';
+import Engineering from './pages/Engineering/Engineering';
+import Engineering1 from './pages/Engineering/Engineering1';
+import Engineering2 from './pages/Engineering/Engineering2';
+import Engineering3 from './pages/Engineering/Engineering3';
+import ScienceTrack from './pages/Science/ScienceTrack';
+import ScienceClass from './pages/Science/ScienceClass';
 import Donate from './pages/Donate';
 import Footer from './pages/Footer';
 import penguin from './images/icons/penguin.png';
 import ScrollToTop from './ScrollToTop';
-
+import Java from './pages/CS/Java';
+import WebDev from './pages/CS/WebDev';
+import PythonII from './pages/CS/PythonII';
+import Math1A from './pages/Math/Math1A';
+import Math1B from './pages/Math/Math1B';
+import Math2A from './pages/Math/Math2A';
+import Math2B from './pages/Math/Math2B';
+import Math3A from './pages/Math/Math3A';
+import Math3B from './pages/Math/Math3B';
+import Math4A from './pages/Math/Math4A';
+import Math4B from './pages/Math/Math4B';
+import Math5A from './pages/Math/Math5A';
+import Math5B from './pages/Math/Math5B';
 
 function App() {
   return (
@@ -56,12 +74,12 @@ function App() {
             <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
-              <div className="rounded-div-blue align-center">
+              <div className="rounded-div-blue align-center button">
                 apply
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/donate">
-              <div className="rounded-div-green">
+              <div className="rounded-div-green button">
                 Donate
               </div>
             </Nav.Link>
@@ -75,9 +93,28 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/cs" element={<CS />} />
+          <Route path="/cs/scratch" element={<Scratch />} />
+          <Route path="/cs/python1" element={<PythonI />} />
+          <Route path="/cs/java" element={<Java />} />
+          <Route path="/cs/webdev" element={<WebDev />} />
+          <Route path="/cs/python2" element={<PythonII />} />
         <Route path="/math" element={<Math />} />
+          <Route path="/math/math1a" element={<Math1A />} />
+          <Route path="/math/math1b" element={<Math1B />} />
+          <Route path="/math/math2a" element={<Math2A />} />
+          <Route path="/math/math2b" element={<Math2B />} />
+          <Route path="/math/math3a" element={<Math3A />} />
+          <Route path="/math/math3b" element={<Math3B />} />
+          <Route path="/math/math4a" element={<Math4A />} />
+          <Route path="/math/math4b" element={<Math4B />} />
+          <Route path="/math/math5a" element={<Math5A />} />
+          <Route path="/math/math5b" element={<Math5B />} />
         <Route path="/engineering" element={<Engineering />} />
-        <Route path="/science" element={<Science />} />
+          <Route path="/engineering/engineering1" element={<Engineering1 />} />
+          <Route path="/engineering/engineering2" element={<Engineering2 />} />
+          <Route path="/engineering/engineering3" element={<Engineering3 />} />
+        <Route path="/science" element={<ScienceTrack />} />
+          <Route path="/science/science1" element={<ScienceClass />} />
         <Route path="/donate" element={<Donate />} />
       </Routes>
       <Footer />
