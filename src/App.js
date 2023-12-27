@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles.css'
 
-
 // Import your page components
 import Home from './pages/Home';
 import Team from './pages/Team';
