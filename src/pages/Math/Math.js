@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ArrowDown from '../../images/icons/thin-arrow-left-down.svg';
 import ArrowLeftRight from '../../images/icons/rightArrow.png';
+import ClassHoverButton from "../../Components/ClassHoverButton";
 
 function Math() {
 
@@ -28,35 +29,35 @@ function Math() {
             <div style={{ borderWidth: "5px", borderStyle: "none", color: "black", borderRadius: "25px", padding: "1.25rem 0.5rem", width: "15rem", textAlign: "center" , fontSize:"1.5rem", fontWeight: "500"}}>Spring Classes</div>
           </div>
           <div style={{ display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#4CAF50", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonGreen"><Link to="math1a" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonGreen">Math I A</Link></div>
+          <ClassHoverButton link = "math1a" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Math I A"/>
             <img alt="left/right arrow" src={ArrowLeftRight} style={{ width: "3rem", height: "4rem" }} />
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#4CAF50", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonGreen"><Link to="math1b" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonGreen">Math I B</Link></div>
+            <ClassHoverButton link = "math1b" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Math I B"/>
           </div>
           <div style={{ margin: "auto", width: "fit-content" }}><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "3rem" }} /></div>
           <div style={{ display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#67aeda", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonBlue"><Link to="math2a" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonBlue">Math II A</Link></div>
+          <ClassHoverButton link = "math2a" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Math II A"/>
             <div>
               <img alt="left/right arrow" src={ArrowLeftRight} style={{ width: "3rem", height: "4rem" }} />
             </div>
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#67aeda", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonBlue"><Link to="math2b" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonBlue">Math II B</Link></div>
+            <ClassHoverButton link = "math2b" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Math II B"/>
           </div>
           <div style={{ margin: "auto", width: "fit-content" }}><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "3rem" }} /></div>
           <div style={{ display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#ffc819", borderRadius: "25px", padding: "2.5rem 1rem", width: "15rem", textAlign: "center"}} className="fillButtonYellow" > <Link to="math3a" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonYellow">Math III A</Link></div>
+          <ClassHoverButton link = "math3a" color = "#ffc819" fillButtonColor = "fillButtonYellow" className = "Math III A"/>
             <img alt="left/right arrow" src={ArrowLeftRight} style={{ width: "3rem", height: "4rem" }} />
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#ffc819", borderRadius: "25px", padding: "2.5rem 1rem", width: "15rem", textAlign: "center"}} className="fillButtonYellow" > <Link to="math3b" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonYellow">Math III B</Link></div>
+            <ClassHoverButton link = "math3b" color = "#ffc819" fillButtonColor = "fillButtonYellow" className = "Math III B"/>
           </div>
           <div style={{ margin: "auto", width: "fit-content" }}><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "3rem" }} /></div>
           <div style={{ display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#4CAF50", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonGreen"><Link to="math4a" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonGreen">Math IV A</Link></div>
+          <ClassHoverButton link = "math4a" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Math IV A"/>
             <img alt="left/right arrow" src={ArrowLeftRight} style={{ width: "3rem", height: "4rem" }} />
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#4CAF50", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonGreen"><Link to="math4b" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonGreen">Math IV B</Link></div>
+            <ClassHoverButton link = "math4b" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Math IV B"/>
           </div>
           <div style={{ margin: "auto", width: "fit-content" }}><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "3rem" }} /></div>
           <div style={{ display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#67aeda", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonBlue"><Link to="math5a" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonBlue">Math V A</Link></div>
+          <ClassHoverButton link = "math5a" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Math V A"/>
              <img alt="left/right arrow" src={ArrowLeftRight} style={{ width: "3rem", height: "4rem" }} />
-            <div style={{ borderWidth: "5px", borderStyle: "solid", color: "#67aeda", borderRadius: "25px", padding: "2.25rem 0.5rem", width: "15rem", textAlign: "center" }} className="fillButtonBlue"><Link to="math5b" style={{ fontWeight: "500", fontSize: "1.25rem" }} className="link fillButtonBlue">Math V B</Link></div>
+             <ClassHoverButton link = "math5b" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Math V B"/>
           </div>
         </div>
 

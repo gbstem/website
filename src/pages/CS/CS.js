@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ArrowDown from '../../images/icons/arrow-down.svg';
 import ArrowLeftRight from '../../images/icons/arrow-left-right.svg';
 import {Link} from 'react-router-dom';
+import ClassHoverButton from '../../Components/ClassHoverButton';
 
 const CS = () => {
   return (
@@ -20,20 +21,18 @@ const CS = () => {
           <h2 className = "text-center p-5">Typical Class Progression</h2>
 
           <div style = {{margin: "auto", marginTop: "1rem", marginBottom: "6rem"}}>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color:"#ffc819", borderRadius: "25px", padding:"2.5rem 1rem", width: "15rem", textAlign:"center", margin: "auto"}} className = "fillButtonYellow" > <Link to="scratch" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonYellow">Scratch</Link></div>
+          <ClassHoverButton link = "scratch" color = "#ffc819" fillButtonColor = "fillButtonYellow" className = "Scratch"/>
           <div style = {{margin: "auto", width: "fit-content"}}><img alt = "down arrow" src = {ArrowDown} style = {{width: "3rem", height:"5rem"}}/></div>
           <div style = {{display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center"}}>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color: "#4CAF50", borderRadius: "25px", padding:"2.25rem 0.5rem", width: "15rem", textAlign:"center"}} className = "fillButtonGreen"><Link to="python1" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonGreen">Python I</Link></div>
+          <ClassHoverButton link = "python1" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Python I"/>
           <img alt = "left/right arrow" src = {ArrowLeftRight} style = {{width: "3rem", height:"3rem"}}/>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color: "#4CAF50", borderRadius: "25px", padding:"2.25rem 0.5rem", width: "15rem", textAlign:"center"}}className = "fillButtonGreen"><Link to="java" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonGreen">Java</Link></div>
+          <ClassHoverButton link = "java" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Java"/>
           </div>
           <div style = {{margin: "auto", width: "fit-content"}}><img alt = "down arrow" src = {ArrowDown} style = {{width: "3rem", height:"5rem"}}/></div>
           <div style = {{display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center"}}>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color: "#67aeda", borderRadius: "25px", padding:"2.25rem 0.5rem", width: "15rem", textAlign:"center"}} className = "fillButtonBlue"><Link to="python2" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonBlue">Python II</Link></div>
-          <div>
+          <ClassHoverButton link = "python2" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Python II"/>
           <img alt = "left/right arrow" src = {ArrowLeftRight} style = {{width: "3rem", height:"3rem"}}/>
-          </div>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color: "#67aeda", borderRadius: "25px", padding:"2.25rem 0.5rem", width: "15rem", textAlign:"center"}} className = "fillButtonBlue"><Link to="webdev" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonBlue">Web Development</Link></div>
+          <ClassHoverButton link = "webdev" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Web Development"/>
           </div>
           </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ArrowDown from '../../images/icons/arrow-down.svg';
 import {Link} from 'react-router-dom';
+import ClassHoverButton from '../../Components/ClassHoverButton';
 
 const Engineering = () => {
   return (
@@ -18,11 +19,11 @@ const Engineering = () => {
           <h2 className = "text-center p-5">Typical Class Progression</h2>
 
           <div style = {{margin: "auto", marginTop: "1rem", marginBottom: "6rem"}}>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color:"#ffc819", borderRadius: "25px", padding:"2.5rem 1rem", fontSize: "1.5rem", width: "15rem", textAlign:"center", margin: "auto"}} className = "fillButtonYellow"><Link to="engineering1" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonYellow">Engineering I</Link></div>
+          <ClassHoverButton link = "engineering1" color = "#ffc819" fillButtonColor = "fillButtonYellow" className = "Engineering I"/>
           <div style = {{margin: "auto", width: "fit-content"}}><img alt = "down arrow" src = {ArrowDown} style = {{width: "3rem", height:"5rem"}}/></div>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color: "#4CAF50", borderRadius: "25px", padding:"2.25rem 0.5rem", fontSize: "1.5rem", width: "15rem", textAlign:"center", margin: "auto"}} className = "fillButtonGreen"><Link to="engineering2" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonGreen">Engineering II</Link></div>
+          <ClassHoverButton link = "engineering2" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Engineering II"/>
           <div style = {{margin: "auto", width: "fit-content"}}><img alt = "down arrow" src = {ArrowDown} style = {{width: "3rem", height:"5rem"}}/></div>
-          <div style = {{borderWidth:"5px", borderStyle: "solid", color: "#67aeda", borderRadius: "25px", padding:"2.25rem 0.5rem", fontSize: "1.5rem", width: "15rem", textAlign:"center", margin: "auto"}} className = "fillButtonBlue"><Link to="engineering3" style = {{fontWeight:"500", fontSize:"1.25rem"}} className = "link fillButtonBlue">Engineering III</Link></div>
+          <ClassHoverButton link = "engineering3" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Engineering III"/>
           </div>
 
           <p>
