@@ -20,9 +20,7 @@ function Colleges() {
   return (
     <div className="container pb-5 pt-5">
       <h1 className="text-center">Where our instructors are now</h1>
-      <p className="text-center">
-        As an organization that has run for over 4 years, our extensive network of instructor alumni has progressed to some of the world's top colleges. Here's a glimpse of where some of our former instructors are now.
-      </p>
+
       <div className="scrolling-wrapper">
         {colleges.map((college, index) => (
           <div key={index} className="college-logo">
