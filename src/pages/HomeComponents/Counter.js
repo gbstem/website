@@ -4,7 +4,7 @@ function Counter() {
   const [counters, setCounters] = useState([
     { label: "Students", target: 1000, value: 0 },
     { label: "Instructors", target: 200, value: 0 },
-    { label: "Courses Offered", target: 14, value: 0 },
+    { label: "Courses Offered", target: 19, value: 0 },
     { label: "% Volunteer Driven", target: 100, value: 0 }
   ]);
 
@@ -31,7 +31,7 @@ function Counter() {
         {counters.map((counter, index) => (
           <div key={index} className="col-md-3 text-center">
             <div className="counter display-4" data-target={counter.target}>
-              {counter.value}
+              {counter.value} <span style = {{marginLeft:"-1rem"}}>{counter.label === "Students" || counter.label === "Instructors" ? "+" : ""}</span>
             </div>
             <h3>{counter.label}</h3>
           </div>

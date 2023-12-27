@@ -40,7 +40,7 @@ function WhatPeopleSay() {
         their classes and want to learn more." 
       </p>
 
-      <Link to="/testimonials" className="btn btn-primary my-3">Read More<ArrowRight/></Link>
+      <div style = {{marginLeft:"auto", marginRight:"2rem", width:"fit-content"}}><Link to="/testimonials" className="btn btn-primary my-3">Read More<ArrowRight/></Link></div>
       </div>
       
     </div>
