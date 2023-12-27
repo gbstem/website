@@ -40,7 +40,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: yuenler,
     role: 'Co-president',
-    bio: "Yuen Ler is a junior at Harvard studying computer Science and statistics. Yuen Ler founded gbSTEM in March of 2020 with the goal of increasing access to STEM education in his community. In his free time, Yuen Ler enjoys dancing, running, and performing magic tricks.",
+    bio: "Yuen Ler is a junior at Harvard studying computer science and statistics. Yuen Ler founded gbSTEM in March of 2020 with the goal of increasing access to STEM education in his community.",
   },
   {
     name: 'Sarah Meyer',
@@ -106,7 +106,7 @@ const teamMembers = [
     role: 'Events',
     bio: 'Joey is currently a junior at Milton Academy. He has been a gbSTEM instructor and curriculum developer for two years. Joey is currently taking Advanced Statistics and Multivariable Calculus. He also enjoys computer programming and robotics.',
   },
-  { 
+  {
     name: 'Simon Farruqui',
     school: 'Milton Academy',
     graduationYear: '‘25',
@@ -129,7 +129,7 @@ const teamMembers = [
     profilePic: ritika,
     role: 'Communications',
     bio: 'Ritika is a Junior at Bishop Feehan High School. She has enjoyed math and coding since elementary school and is proficient in Python, Java, Javascript, HTML, and PHP. This past year, she has learned the basics of Machine Learning. She extends this interest in STEM as a member of her school’s top level Math Team, and as a Captain of her school’s Robotics team for the third Consecutive year. She actively participates in Hackathons and science fairs, and was recognized with the National Grid Engineering Award. Outside of STEM she is a member of her school’s Cross Country team, and String Ensemble. In her free time, she is an avid runner, plays violin, reading, 3D printing, and spending time with friends.',
-    },
+  },
   {
     name: 'Allen Yu',
     school: 'Brookline High School',
@@ -241,7 +241,7 @@ const teamMembers = [
     profilePic: maxwell,
     role: "Web Curriculum Developer",
     bio: "Maxwell joined gbSTEM in 2022 as a web development instructor. He first started teaching himself to code when he was six years old and is now experienced with HTML/CSS/JS, Java, C#, C++, Python, Powershell, and R. He maintains multiple professional websites, including that of his robotics team. He has also reached the silver division of the USA Computing Olympiad and worked as a data science intern at a neurobiology lab. He is eager to share his passion for coding, encouraging students to explore computer science independently and think critically to solve problems    "
-  }, 
+  },
   {
     name: "Michelle Li",
     school: "Wellesley College",
@@ -284,7 +284,7 @@ const teamMembers = [
   },
   {
     name: "Suzanna Kopans",
-    school: "Arlington High School", 
+    school: "Arlington High School",
     graduationYear: "‘24",
     profilePic: suzanna,
     role: "Science Curriculum Developer",
