@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ArrowDown from '../../images/icons/arrow-down.svg';
 import ArrowLeftRight from '../../images/icons/arrow-left-right.svg';
