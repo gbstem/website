@@ -33,6 +33,21 @@
   display: inline-block;
 }
 
+.fillButtonYellow:hover {
+  background-color: #ffc819;
+  color: white;
+}
+
+.fillButtonGreen:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.fillButtonBlue:hover {
+  background-color: #67aeda;
+  color: white;
+}
+
 .square-cropped-image {
   border-radius: 50%;
   display: block;
@@ -46,7 +61,7 @@
 .banner {
   width: 100%;
   height: auto; 
-  objectFit: cover;
+  object-fit: cover;
 }
 
 .dropdown-item {
@@ -61,7 +76,6 @@
   font-family: 'Space Mono', monospace;
   font-weight: 700;
 }
-
 
 @media (max-width: 991.98px) {
   .dropdown-menu {
@@ -78,9 +92,22 @@ p {
   font-size: 1.2rem;
 }
 
+.button:hover {
+  opacity:0.5;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+}
+
 a {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
+  color:inherit;
 }
 
 li {
@@ -136,5 +163,22 @@ strong {
 .college-logo img {
   max-width: 100%;
   height: auto;
+}
+
+.svg-container { 
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
+	vertical-align: middle; 
+	overflow: hidden; 
+  background: #f5f3e7;
+}
+
+.svg-content { 
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
