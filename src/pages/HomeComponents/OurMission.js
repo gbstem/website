@@ -13,7 +13,7 @@ function OurMission() {
       <div>
         <div className="row">
           <div className="col-md-6 mb-5">
-            <h1 className="text-center">Our mission</h1>
+            <h1 className="text-center">Our Mission</h1>
             <p>
               We believe that everyone should have the opportunity to build strong foundational skills in
               computer science, math, and engineering, no matter what their background or location is.
