@@ -14,11 +14,11 @@ const Footer = () => {
             <u>contact@gbstem.org</u>
           </a>
           <div className="row justify-content-center">
-            <ul className="clear socials mt-4 d-flex justify-content-center">
-              <li className="mx-2"><a href="https://facebook.com/The-Greater-Boston-STEM-Program-104063908337961" target="_blank" rel="noreferrer"><Facebook width = {35} height = {35}/></a></li>
-              <li className="mx-2"><a href="https://twitter.com/gbstemprogram" target="_blank" rel="noreferrer"><Twitter width = {35} height = {35}/></a></li>
-              <li className="mx-2"><a href="https://www.instagram.com/gbstem/" target="_blank" rel="noreferrer"><Instagram width = {35} height = {35}/></a></li>
-              <li className="mx-2"><a href="https://www.linkedin.com/company/gbstem-program" target="_blank" rel="noreferrer"><Linkedin width = {35} height = {35}/></a></li>
+            <ul className="clear socials mt-4 d-flex justify-content-center" style = {{color: "blue", listStyleType: "none"}}>
+              <li className="mx-3"><a href="https://facebook.com/The-Greater-Boston-STEM-Program-104063908337961" target="_blank" rel="noreferrer"><Facebook width = {35} height = {35}/></a></li>
+              <li className="mx-3"><a href="https://twitter.com/gbstemprogram" target="_blank" rel="noreferrer"><Twitter width = {35} height = {35}/></a></li>
+              <li className="mx-3"><a href="https://www.instagram.com/gbstem/" target="_blank" rel="noreferrer"><Instagram width = {35} height = {35}/></a></li>
+              <li className="mx-3"><a href="https://www.linkedin.com/company/gbstem-program" target="_blank" rel="noreferrer"><Linkedin width = {35} height = {35}/></a></li>
             </ul>
           </div>
         </div>
