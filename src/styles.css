@@ -70,6 +70,16 @@
   font-weight: 700;
 }
 
+.classButton {
+  width:10rem;
+}
+
+@media(min-width:580px) {
+  .classButton {
+    width:15rem;
+  }
+}
+
 .dropdown-menu {
   background-color: #1D2256;
   color: white;
