@@ -83,8 +83,7 @@ function Testimonial(props) {
       <div className="p-4"
         style={{
           border: '5px solid #1D2256',
-          borderRadius: '20px', maxWidth:"25rem",
-          alignSelf:"stretch", justifySelf:"stretch", 
+          borderRadius: '20px', maxWidth:"35rem", flexGrow:"2"
         }}
       >
         <div>
