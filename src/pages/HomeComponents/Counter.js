@@ -31,7 +31,7 @@ function Counter() {
         {counters.map((counter, index) => (
           <div key={index} className="col-md-3 text-center">
             <div className="counter display-4" data-target={counter.target}>
-              {counter.value} <span style = {{marginLeft:"-1rem"}}>{counter.label === "Students" || counter.label === "Instructors" ? "+" : ""}</span>
+              {counter.value} <span style = {{marginLeft:"-0.5rem"}}>{counter.label === "Students" || counter.label === "Instructors" ? "+" : ""}</span>
             </div>
             <h3>{counter.label}</h3>
           </div>
