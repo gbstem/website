@@ -149,7 +149,7 @@ const other = [
 
 function QuestionAnswerPair(question, answer, id) {
   return (
-    <div className="accordion-item" style = {{width:"60rem", margin: "auto"}}>
+    <div className="accordion-item" style = {{maxWidth:"60rem", margin: "auto"}}>
       <h2 className="accordion-header" id={`heading${id}`}>
         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${id}`} aria-expanded="false" aria-controls={`collapse${id}`}>
           {question}

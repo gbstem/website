@@ -33,8 +33,8 @@ function HowItWorks() {
           </div>
 
           <div className="col-md-6">
-            <div className="mt-4">
-              <img src={glance} alt="At a Glance" className="img-fluid" style = {{height: "30rem", marginLeft:"3rem"}} />
+            <div className="mt-4" style = {{display: "flex", justifyContent:"center"}}>
+              <img src={glance} alt="At a Glance" className="img-fluid" style = {{height: "30rem"}} />
             </div>
           </div>
         </div>

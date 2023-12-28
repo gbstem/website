@@ -83,8 +83,8 @@ function Testimonial(props) {
       <div className="p-4"
         style={{
           border: '5px solid #1D2256',
-          borderRadius: '20px', width: "30rem",
-          height: "auto", flex: "2 0 auto"
+          borderRadius: '20px', maxWidth:"25rem",
+          alignSelf:"stretch", justifySelf:"stretch", 
         }}
       >
         <div>
@@ -105,7 +105,7 @@ function Testimonials() {
         <h1>What People Say</h1>
       </div>
 
-      <div style = {{display:"flex", flexWrap: "wrap", gap: "3rem", marginBottom:"5rem"}}>
+      <div style = {{display:"flex", flexWrap: "wrap", gap: "3rem",  width: "fit-content", marginLeft: "auto", marginRight:"auto", marginBottom:"5rem", alignItems:"stretch", justifyContent:"center", justifyItems:"stretch"}}>
         {
           testimonials.map((testimonial, index) => {
             return (
