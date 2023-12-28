@@ -20,12 +20,21 @@ function Colleges() {
   return (
     <div className="container pb-5 pt-5">
       <h1 className="text-center">Instructor Matriculation</h1>
-      <div className="scrolling-wrapper">
+      <div style = {{margin: "0 auto", whiteSpace: "nowrap", overflow: "hidden"}}>
+        <span style = {{display:"inline-block", animationName: "slide-then-hide", animationDuration: "10s", animationTimingFunction: "linear", animationIterationCount: "infinite", animationFillMode: "forwards"}}>
         {colleges.map((college, index) => (
           <div key={index} className="college-logo">
             <img src={college.logo} alt="College Logo" />
           </div>
         ))}
+        </span>
+        <span style = {{display:"inline-block", animationName: "slide-then-hide", animationDuration: "10s", animationTimingFunction: "linear", animationIterationCount: "infinite", animationFillMode: "forwards"}}>
+        {colleges.map((college, index) => (
+          <div key={index} className="college-logo">
+            <img src={college.logo} alt="College Logo" />
+          </div>
+        ))}
+        </span>
       </div>
     </div>
   );
