@@ -3,7 +3,6 @@ import sarah from '../images/headshots/sarah.jpg';
 import dea from '../images/headshots/dea.jpg';
 import michael from '../images/headshots/MichaelBolgov.jpg';
 import sudeep from '../images/headshots/SudeepC.jpg';
-import nathaniel from '../images/headshots/nathaniel.jpeg';
 import allen from '../images/headshots/AllenYu.jpg';
 import sophia from '../images/headshots/SophiaSu.jpg';
 import elizabeth from '../images/headshots/ElizabethQian-Tsuchida.png';
@@ -31,7 +30,6 @@ import emily from '../images/headshots/EmilyMa.jpg';
 import maxwell from '../images/headshots/MaxwellYu.jpg';
 import brady from '../images/headshots/BradyPayne.jpg';
 import grace from '../images/headshots/GraceQiu.png';
-
 
 const teamMembers = [
   {
@@ -71,15 +69,6 @@ const teamMembers = [
     team: "presidents",
   },
   {
-    name: 'Nathaniel Parry Luff',
-    school: 'UMass Amherst',
-    graduationYear: '‘27',
-    profilePic: nathaniel,
-    role: 'Vice President',
-    bio: 'Nathaniel is a freshman at the University of Massachusetts-Amherst. He became interested in programming in elementary school after experimenting with Scratch and HTML. During quarantine in 2020, Nathaniel learned Python and learned the basics of machine learning at a summer camp he attended. To this day, Nathaniel has wanted to help people get into coding and has a focus in machine learning. In his free time, Nathaniel likes to code, write, row, and bike.',
-    team: "presidents",
-  },
-  {
     name: 'Kendree Chen',
     school: 'Boston University Academy',
     graduationYear: '‘25',
@@ -93,7 +82,7 @@ const teamMembers = [
     school: 'Milton Academy',
     graduationYear: '‘25',
     profilePic: brady,
-    role: 'Outreach & Events Director',
+    role: 'Outreach Director',
     bio: 'Brady is a junior at Milton Academy. He started working with gbSTEM spring 2022 as a math teacher, and currently holds the position of co-director of the outreach/events team. In his free time he enjoys running and playing the guitar.',
     team: "outreach & events",
   },
@@ -102,7 +91,7 @@ const teamMembers = [
     school: 'North Attleboro High School',
     graduationYear: '‘24',
     profilePic: vivian,
-    role: 'Outreach & Events Director',
+    role: 'Outreach Director',
     bio: 'Vivian is a senior at North Attleboro High School. Prior to her current role, she was an instructor at gbSTEM. She loves teaching as she is also a swim instructor, lifeguard and camp counselor. In her free time, she enjoys swimming, drawing, and baking.',
     team: "outreach & events",
   },
@@ -111,26 +100,8 @@ const teamMembers = [
     school: 'Milton Academy',
     graduationYear: '‘25',
     profilePic: joey,
-    role: 'Events',
+    role: 'Events Associate',
     bio: 'Joey is currently a junior at Milton Academy. He has been a gbSTEM instructor and curriculum developer for two years. Joey is currently taking Advanced Statistics and Multivariable Calculus. He also enjoys computer programming and robotics.',
-    team: "outreach & events",
-  },
-  {
-    name: 'Simon Farruqui',
-    school: 'Milton Academy',
-    graduationYear: '‘25',
-    profilePic: simon,
-    role: 'Events',
-    bio: 'Simon started at gbSTEM as a Python I and Environmental Science instructor and recently was the Math V Curriculum Developer and Python II Instructor. His academic interests are in economics and machine learning. In his free time, he plays the saxophone, tennis, and chess',
-    team: "outreach & events",
-  },
-  {
-    name: 'Vedi Raval',
-    school: 'Milford High School',
-    graduationYear: '‘25',
-    profilePic: vedi,
-    role: 'Communications',
-    bio: 'Vedi is a junior at Milford High School. She has always had a passion for STEM and hopes to help other kids find similar passions as well. Outside of gbSTEM, Vedi enjoys playing and listening to music, swimming, and watching sports.',
     team: "outreach & events",
   },
   {
@@ -138,8 +109,17 @@ const teamMembers = [
     school: 'Bishop Feehan High School',
     graduationYear: '‘25',
     profilePic: ritika,
-    role: 'Communications',
+    role: 'Communications Associate',
     bio: 'Ritika is a Junior at Bishop Feehan High School. She has enjoyed math and coding since elementary school and is proficient in Python, Java, Javascript, HTML, and PHP. This past year, she has learned the basics of Machine Learning. She extends this interest in STEM as a member of her school’s top level Math Team, and as a Captain of her school’s Robotics team for the third Consecutive year. She actively participates in Hackathons and science fairs, and was recognized with the National Grid Engineering Award. Outside of STEM she is a member of her school’s Cross Country team, and String Ensemble. In her free time, she is an avid runner, plays violin, reading, 3D printing, and spending time with friends.',
+    team: "outreach & events",
+  },
+  {
+    name: 'Vedi Raval',
+    school: 'Milford High School',
+    graduationYear: '‘25',
+    profilePic: vedi,
+    role: 'Partnership Lead',
+    bio: 'Vedi is a junior at Milford High School. She has always had a passion for STEM and hopes to help other kids find similar passions as well. Outside of gbSTEM, Vedi enjoys playing and listening to music, swimming, and watching sports.',
     team: "outreach & events",
   },
   {
@@ -219,7 +199,7 @@ const teamMembers = [
     school: 'Milton Academy',
     graduationYear: '‘24',
     profilePic: ingrid,
-    role: 'Computer Science Co-Director & Scratch Curriculum Developer',
+    role: 'Computer Science Co-Director',
     bio: 'Ingrid is a senior at Milton Academy. Her interest in coding began through Scratch in elementary school, and now she works with mostly Java and Python in high school. In her free time she enjoys hiking, painting, and spending time with friends and family.',
     team: "computer science",
   },
@@ -228,7 +208,7 @@ const teamMembers = [
     school: "Nobles and Greenough",
     graduationYear: "‘24",
     profilePic: alice,
-    role: "Java Curriculum Developer",
+    role: "Python I & II Curriculum Developer",
     bio: "Alice is a senior at Nobles and Greenough. She first started coding in elementary school on Scratch, and quickly became very passionate about programming. She moved on to learn Java, Python, and HTML, CSS, and JavaScript. In her free time she enjoys making music, running, and baking.",
     team: "computer science",
   },
@@ -237,17 +217,8 @@ const teamMembers = [
     school: "Milton Academy",
     graduationYear: "‘24",
     profilePic: erika,
-    role: "Python Curriculum Developer",
+    role: "Python I & II Curriculum Developer",
     bio: "Erika is a senior at Milton Academy. They began working on gbSTEM’s leadership team as a Web Development curriculum developer and now are a Python curriculum developer. They enjoy the mutual relationship between biology (particularly neuroscience) and ML as well as policy discussions on how to ensure AI best serves us all. When not programming, they can be found hiking, crocheting, and reading.",
-    team: "computer science",
-  },
-  {
-    name: "Eric Perreault",
-    school: "Milton Academy",
-    graduationYear: "‘24",
-    profilePic: eric,
-    role: "Python Curriculum Developer",
-    bio: "Eric Perreault is a senior at Milton Academy. He previously worked as a Scratch instructor for gbSTEM, and is currently a Python II developer. Outside of school, he enjoys playing the piano, running track, and spending time with friends.",
     team: "computer science",
   },
   {
@@ -255,7 +226,7 @@ const teamMembers = [
     school: "Timberlane Regional High School",
     graduationYear: "‘24",
     profilePic: tumi,
-    role: "Python Curriculum Developer",
+    role: "Python I & II Curriculum Developer",
     bio: "Tumi began volunteering at gbSTEM in the Fall of 2022 starting as a Python II instructor and Engineering I instructor. She joined the leadership team during the Spring of 2023 serving as a Python ll Curriculum Developer and she continues to hold this position. As a curriculum developer, she ensures that the lesson plans are engaging and comprehensible for both instructors and students by incorporating slideshows, demonstration code, and much more. In her free time, Tumi enjoys building Lego sets, reading mystery novels, as well as learning about robotics and electronics.",
     team: "computer science",
   },
@@ -269,12 +240,12 @@ const teamMembers = [
     team: "computer science",
   },
   {
-    name: "Michelle Li",
-    school: "Wellesley College",
-    graduationYear: "‘27",
-    profilePic: michelleL,
+    name: "Devan Agrawal",
+    school: "Milton Academy",
+    graduationYear: "‘25",
+    profilePic: devan,
     role: "Engineering Co-Director",
-    bio: 'Michelle is a freshman at Wellesley College and a graduate of Brookline High School. She started out at gbSTEM as a Scratch instructor and went on to help found the engineering track. She loves engineering because it allows her to combine her passions for math, science, and art to design potential solutions for issues that she cares about. Her other interests include fencing, reading fantasy novels, and both playing and listening to music.',
+    bio: "Devan is a Junior at Milton Academy. He began learning Java in 4th grade and started instructing and TAing Java courses in 7th grade, which sparked his interest in teaching. At gbSTEM, Devan developed and taught the Python II course and is now a curriculum developer for Engineering III. In his free time, Devan likes to swim, play squash, do robotics, and play spirited card games with his family.",
     team: "engineering",
   },
   {
@@ -293,15 +264,6 @@ const teamMembers = [
     profilePic: grace,
     role: "Engineering I & II Curriculum Developer",
     bio: "Grace is a sophomore at Worcester Academy. She first began working at gbSTEM in 2022 as an Engineering I instructor. She has experience teaching students of all different ages, and wants to work in the STEM field. Her favorite hobbies are swimming, art, and music. Grace is excited to become an engineering curriculum developer this year, and looks forward to working with everyone!",
-    team: "engineering",
-  },
-  {
-    name: "Devan Agrawal",
-    school: "Milton Academy",
-    graduationYear: "‘25",
-    profilePic: devan,
-    role: "Engineering III Curriculum Developer",
-    bio: "Devan is a Junior at Milton Academy. He began learning Java in 4th grade and started instructing and TAing Java courses in 7th grade, which sparked his interest in teaching. At gbSTEM, Devan developed and taught the Python II course and is now a curriculum developer for Engineering III. In his free time, Devan likes to swim, play squash, do robotics, and play spirited card games with his family.",
     team: "engineering",
   },
   {
