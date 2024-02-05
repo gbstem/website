@@ -8,14 +8,10 @@ import sophia from '../images/headshots/SophiaSu.jpg';
 import elizabeth from '../images/headshots/ElizabethQian-Tsuchida.png';
 import joey from '../images/headshots/JoeyMussalli.jpg';
 import placeholder from '../images/headshots/Placeholder.jpg';
-import simon from '../images/headshots/SimonFarruqui.png';
-import michelleY from '../images/headshots/MichelleYang.jpg';
-import michelleL from '../images/headshots/MichelleLi.jpg';
 import jun from '../images/headshots/JunMoon.jpeg';
 import kendree from '../images/headshots/kendree.jpeg';
 import alice from '../images/headshots/AliceLin.jpeg';
 import erika from '../images/headshots/ErikaDrisko.jpg';
-import eric from '../images/headshots/EricPerreault.jpg';
 import devan from '../images/headshots/DevanAgrawal.png';
 import tumi from '../images/headshots/Tumi.jpg';
 import oscar from '../images/headshots/OscarJi.jpeg';
@@ -24,12 +20,15 @@ import ritika from '../images/headshots/RitikaRoy.jpg';
 import vedi from '../images/headshots/VediRaval.jpeg';
 import suzanna from '../images/headshots/SuzannaKopans.jpg';
 import ingrid from '../images/headshots/ingrid.jpg';
-import jaan from '../images/headshots/JaanSrimurthy.png';
 import vivian from '../images/headshots/VivianRacine.jpeg';
 import emily from '../images/headshots/EmilyMa.jpg';
 import maxwell from '../images/headshots/MaxwellYu.jpg';
 import brady from '../images/headshots/BradyPayne.jpg';
 import grace from '../images/headshots/GraceQiu.png';
+import emmarose from '../images/headshots/EmmaRose.jpg';
+import anshika from '../images/headshots/AnshikaSrivastava.jpeg';
+import bella from '../images/headshots/BellaDeLemos.jpg';
+import tolu from '../images/headshots/ToluAdeyefa.jpg';
 
 const teamMembers = [
   {
@@ -74,7 +73,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: kendree,
     role: 'Vice President',
-    bio: 'Kendree learned to code as a fourth grader in FIRST Lego League. Now, she is a member of her high school robotics team and works in the programming, electrical, and mechanical divisions. She has taught Java for three years at KTBYTE Computer Science Academy. She has completed math classes through Multivariate Calculus, and currently is taking math classes at Boston University. In her spare time, she enjoys knitting, cooking, gardening, photography, and building websites with HTML, CSS, and JavaScript.',
+    bio: 'Kendree is a junior at Boston University Academy. She learned to code as a fourth grader in FIRST Lego League. Now, she leads the programming, electrical, and mechanical divisions of her high school FIRST Robotics team. She has taught Java for five years at KTBYTE Computer Science Academy. She has completed math classes through Multivariate Calculus, and currently is taking math classes at Boston University. In her spare time, she enjoys crocheting and building websites with HTML, CSS, and JavaScript.',
     team: "presidents",
   },
   {
@@ -114,12 +113,30 @@ const teamMembers = [
     team: "outreach & events",
   },
   {
+    name: 'Anshika Srivastava',
+    school: 'Westford Academy',
+    graduationYear: '‘25',
+    profilePic: anshika,
+    role: 'Communications Associate',
+    bio: 'Anshika Srivastava is a junior at Westford Academy. She has had a deep passion for science and the medical field ever since she was young and she loves helping out her community! She has been working with GbSTEM for 2 years now, as an Environmental Science and Math 2 Teacher and loves working with the kids and encouraging their passion for the STEM field. She is heavily involved in the science field herself as she runs a medical club at her school and leads over 60 students in competing internationally.  She also participates in national competitions while volunteering at hospitals on the side. She has been recognized with multiple math awards, the Presidential Volunteer Award, and is 2x Gold Medalist in many Taekwondo competitions. In her free time she enjoys playing on the Varsity Girls Tennis Team, shopping with her friends, and reading!',
+    team: "outreach & events",
+  },
+  {
     name: 'Vedi Raval',
     school: 'Milford High School',
     graduationYear: '‘25',
     profilePic: vedi,
     role: 'Partnership Lead',
     bio: 'Vedi is a junior at Milford High School. She has always had a passion for STEM and hopes to help other kids find similar passions as well. Outside of gbSTEM, Vedi enjoys playing and listening to music, swimming, and watching sports.',
+    team: "outreach & events",
+  },
+  {
+    name: 'EmmaRose Zilla',
+    school: 'Milton Academy',
+    graduationYear: '‘26',
+    profilePic: emmarose,
+    role: 'Partnership Lead',
+    bio: 'EmmaRose is currently a sophomore at Milton Academy. She started working with gbSTEM in 2023 as a Math IV instructor and currently works as the partnership lead. EmmaRose is deeply passionate about STEM, particularly in the realm of chemistry, and plans to pursue a career in medicine. Outside gbSTEM, she is a competitive swimmer with a passion for reading, creative writing, and spending time with her friends and family.',
     team: "outreach & events",
   },
   {
@@ -141,12 +158,12 @@ const teamMembers = [
     team: "math",
   },
   {
-    name: 'Michelle Yang',
-    school: 'Brookline High School',
-    graduationYear: '‘24',
-    profilePic: michelleY,
+    name: 'Bella De Lemos',
+    school: 'Boston University Academy',
+    graduationYear: '‘25',
+    profilePic: bella,
     role: 'Math I Curriculum Developer',
-    bio: "Michelle is a senior at Brookline High School. She began working with gbSTEM in the spring of 2021 as a math instructor and has been a math curriculum developer for the past three semesters. They are passionate about making STEM more accessible and engaging for others, especially younger students. Outside of gbSTEM, Michelle is a co-captain of her school's Science Olympiad team. In their free time, she enjoys playing the violin and piano, reading, playing video games, and browsing the web.",
+    bio: "Bella is currently a junior at Boston University Academy, and began working for gbSTEM in the fall of 2022. She has previously worked as both a Math I, and Engineering I instructor, and is very passionate about providing a safe and fun learning environment for students. Outside of gbSTEM, Bella tutors in both Chemistry and Geometry, works as a tour guide for her school, and runs her schools Latin American Student Association. In her free time, she thoroughly enjoys reading, playing the cello, and creative writing.",
     team: "math",
   },
   {
@@ -177,12 +194,12 @@ const teamMembers = [
     team: "math",
   },
   {
-    name: 'Jaan Srimurthy',
-    school: 'Brookline High School',
-    graduationYear: '‘24',
-    profilePic: jaan,
+    name: 'Tolu Adeyefa',
+    school: 'Milton Academy',
+    graduationYear: '‘25',
+    profilePic: tolu,
     role: 'Math V Curriculum Developer',
-    bio: 'Jaan is a senior at Brookline high school. He began working at GbStem in his sophomore year, teaching mathematics, python and scratch. He is interested in mathematics, computer science, linguistics and bridge. He also has two dogs.',
+    bio: 'Tolu has been volunteering with gbSTEM for 3 semesters in both the math and environmental science departments. She is really excited to move into creating lessons for Math V! In her free time, she enjoys running, baking, reading, and playing board games.',
     team: "math",
   },
   {
