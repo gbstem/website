@@ -29,6 +29,8 @@ import emmarose from '../images/headshots/EmmaRose.jpg';
 import anshika from '../images/headshots/AnshikaSrivastava.jpeg';
 import bella from '../images/headshots/BellaDeLemos.jpg';
 import tolu from '../images/headshots/ToluAdeyefa.jpg';
+import meghan from '../images/headshots/MeghanGardner.jpg';
+import aanshi from '../images/headshots/AanshiAgrawal.jpg';
 
 const teamMembers = [
   {
@@ -92,6 +94,15 @@ const teamMembers = [
     profilePic: vivian,
     role: 'Outreach Director',
     bio: 'Vivian is a senior at North Attleboro High School. Prior to her current role, she was an instructor at gbSTEM. She loves teaching as she is also a swim instructor, lifeguard and camp counselor. In her free time, she enjoys swimming, drawing, and baking.',
+    team: "outreach & events",
+  },
+  {
+    name: 'Aanshi Agrawal',
+    school: 'North Attleboro High School',
+    graduationYear: '2025',
+    profilePic: aanshi,
+    role: 'Events Associate',
+    bio: 'Aanshi is a junior at North Attleboro High School. Prior to being an events associate, she was a math instructor for two semesters. She really enjoys being part of the gbSTEM team because it allows her to share her passion for STEM with others. Besides gbSTEM, she is the leader of her school math league team and science club. In her free time she enjoys playing tennis, listening to music and hanging out with friends!',
     team: "outreach & events",
   },
   {
@@ -284,11 +295,20 @@ const teamMembers = [
     team: "engineering",
   },
   {
+    name: "Meghan Gardner",
+    school: "Westford Academy",
+    graduationYear: "‘24",
+    profilePic: meghan,
+    role: "Engineering III Curriculum Developer",
+    bio: "Meghan is a senior at Westford Academy. This is her third year teaching through gbSTEM’s engineering program, and her first time acting as a curriculum developer. Meghan has always had a passion for science, and hopes to pursue a degree in biology in college next year. In her free time she enjoys playing basketball, drawing, baking, and hiking up mountains with friends and family.",
+    team: "engineering",
+  },
+  {
     name: "Elena Ferrari",
     school: "Milton Academy",
     graduationYear: "‘24",
     profilePic: elena,
-    role: "Science Co-Director",
+    role: "Science Director",
     bio: "Elena is a senior at Milton Academy interested in environmental science, biology, and physics. At gbSTEM, she is a Science track director and curriculum developer, and has previously taught Engineering II. Elena is a NOAA Ocean Guardian Youth Ambassador and enjoys participating in STEM initiatives in her school and beyond. She also loves creative writing, reading, running, and swimming.",
     team: "science",
   },
