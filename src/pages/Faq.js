@@ -4,7 +4,7 @@ const general = [
   {
     question: "How do I register for the program?",
     answer:
-      "Click the register button and fill our your info on the portal!",
+      "Click the register button on our homepage and fill out your info on the portal!",
   },
   {
     question: "What subjects does gbSTEM offer?",
