@@ -4,7 +4,7 @@ const general = [
   {
     question: "How do I register for the program?",
     answer:
-      "Unfortunately, the student registrations for the Fall 2023 semester have ended. The gbSTEM Spring 2024 semester registrations will open in February 2024. To be notified when registration opens, fill out the form in our home tab.",
+      "Click the register button and fill our your info on the portal!",
   },
   {
     question: "What subjects does gbSTEM offer?",
@@ -29,7 +29,7 @@ const general = [
   {
     question: "When does the program start and end?",
     answer:
-      "gbSTEM's Fall 2023 semester will run from September 24th to December 23rd. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
+      "gbSTEM's Spring 2023 semester will run from March 17th to June 15th. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
   },
   {
     question: "What grade levels is gbSTEM for?",
