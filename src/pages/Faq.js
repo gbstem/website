@@ -29,7 +29,7 @@ const general = [
   {
     question: "When does the program start and end?",
     answer:
-      "gbSTEM's Spring 2023 semester will run from March 17th to June 15th. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
+      "gbSTEM's Spring 2024 semester will run from March 17th to June 15th. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
   },
   {
     question: "What grade levels is gbSTEM for?",
@@ -142,7 +142,7 @@ const other = [
   {
     question: "I am a high school student. How can I apply to become an instructor for gbSTEM?",
     answer:
-      "Thank you for your interest! Please fill out our application in our portal! Fall 2023 Applications are due by September 15th.",
+      "Thank you for your interest! Please fill out our application in our portal! Spring 2024 Applications are due by March 2nd.",
   },
 ];
 
