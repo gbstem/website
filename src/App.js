@@ -70,7 +70,7 @@ function App() {
               <NavDropdown.Item as={Link} to="/science">Science</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link as={Link} to="https://portal.gbstem.org/"
+            <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
               target='_blank'
             >
               <div className="rounded-div-blue align-center button">

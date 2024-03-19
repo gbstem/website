@@ -142,7 +142,10 @@ const other = [
   {
     question: "I am a high school student. How can I apply to become an instructor for gbSTEM?",
     answer:
-      "Thank you for your interest! Please fill out our application in our portal! Spring 2024 Applications are due by March 2nd.",
+      `Thank you for your interest! The spring semester is already under way, but applications will soon open for the fall semester. In the meantime, fill out this ${<a
+      href="https://forms.gle/ejSvEu2cwwdovUg18"
+      target="_blank" rel="noopener noreferrer"
+    >form</a>} to be notified when applications open!`
   },
 ];
 
