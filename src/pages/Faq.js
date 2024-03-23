@@ -4,7 +4,10 @@ const general = [
   {
     question: "How do I register for the program?",
     answer:
-      "Click the register button on our homepage and fill out your info on the portal!",
+      `Thank you for your interest! The spring semester is already under way, but registrations will soon open for the fall semester. In the meantime, fill out this ${<a
+      href="https://forms.gle/ejSvEu2cwwdovUg18"
+      target="_blank" rel="noopener noreferrer"
+    >form</a>} to be notified when registrations open!`
   },
   {
     question: "What subjects does gbSTEM offer?",
