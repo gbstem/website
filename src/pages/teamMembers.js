@@ -187,15 +187,6 @@ const teamMembers = [
     team: "math",
   },
   {
-    name: 'Sophia Su',
-    school: 'Brookline High School',
-    graduationYear: '‘25',
-    profilePic: sophia,
-    role: 'Math III Curriculum Developer',
-    bio: 'Sophia Su is a junior at Brookline High School. She has been an instructor at gbSTEM for three years and is the current Math III curriculum developer. In her free time, Sophia likes to watch sad movies and bake banana bread!',
-    team: "math",
-  },
-  {
     name: 'Emily Ma',
     school: 'Milton Academy',
     graduationYear: '‘25',
@@ -310,15 +301,6 @@ const teamMembers = [
     profilePic: elena,
     role: "Science Director",
     bio: "Elena is a senior at Milton Academy interested in environmental science, biology, and physics. At gbSTEM, she is a Science track director and curriculum developer, and has previously taught Engineering II. Elena is a NOAA Ocean Guardian Youth Ambassador and enjoys participating in STEM initiatives in her school and beyond. She also loves creative writing, reading, running, and swimming.",
-    team: "science",
-  },
-  {
-    name: "Suzanna Kopans",
-    school: "Arlington High School",
-    graduationYear: "‘24",
-    profilePic: suzanna,
-    role: "Science Curriculum Developer",
-    bio: "Suzanna is a senior at Arlington High School. She began working at gbSTEM last fall as a Math I tutor and absolutely loved teaching her students about all things math-related. This semester, she’s looking forward to developing curriculum for the science track.",
     team: "science",
   }
 ];
