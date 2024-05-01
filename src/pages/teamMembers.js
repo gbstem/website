@@ -4,7 +4,6 @@ import dea from '../images/headshots/dea.jpg';
 import michael from '../images/headshots/MichaelBolgov.jpg';
 import sudeep from '../images/headshots/SudeepC.jpg';
 import allen from '../images/headshots/AllenYu.jpg';
-import sophia from '../images/headshots/SophiaSu.jpg';
 import elizabeth from '../images/headshots/ElizabethQian-Tsuchida.png';
 import joey from '../images/headshots/JoeyMussalli.jpg';
 import placeholder from '../images/headshots/Placeholder.jpg';
@@ -18,7 +17,6 @@ import oscar from '../images/headshots/OscarJi.jpeg';
 import elena from '../images/headshots/ElenaFerrari.jpg';
 import ritika from '../images/headshots/RitikaRoy.jpg';
 import vedi from '../images/headshots/VediRaval.jpeg';
-import suzanna from '../images/headshots/SuzannaKopans.jpg';
 import ingrid from '../images/headshots/ingrid.jpg';
 import vivian from '../images/headshots/VivianRacine.jpeg';
 import emily from '../images/headshots/EmilyMa.jpg';
@@ -31,6 +29,7 @@ import bella from '../images/headshots/BellaDeLemos.jpg';
 import tolu from '../images/headshots/ToluAdeyefa.jpg';
 import meghan from '../images/headshots/MeghanGardner.jpg';
 import aanshi from '../images/headshots/AanshiAgrawal.jpg';
+import jack from '../images/headshots/jack.jpg';
 
 const teamMembers = [
   {
@@ -301,6 +300,15 @@ const teamMembers = [
     profilePic: elena,
     role: "Science Director",
     bio: "Elena is a senior at Milton Academy interested in environmental science, biology, and physics. At gbSTEM, she is a Science track director and curriculum developer, and has previously taught Engineering II. Elena is a NOAA Ocean Guardian Youth Ambassador and enjoys participating in STEM initiatives in her school and beyond. She also loves creative writing, reading, running, and swimming.",
+    team: "science",
+  },
+  {
+    name: "Jack Conway",
+    school: "Boston University Academy",
+    graduationYear: "‘26",
+    profilePic: jack,
+    role: "Physics Curriculum Developer",
+    bio: "Jack is a sophmore at Boston University Academy. He first taught for gbSTEM as a scratch instructor in the fall of 2023. Jack initially taught himself scratch and the basics of python, and then took coding classes at iCode in Wellesley. Jack is now the physics curriculum developer for gbSTEM. Outside of gbSTEM, he plays basketball, runs cross country, plays tennis, and leads his school’s chess team.",
     team: "science",
   }
 ];
