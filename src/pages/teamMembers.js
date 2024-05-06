@@ -308,7 +308,7 @@ const teamMembers = [
     graduationYear: "‘26",
     profilePic: jack,
     role: "Physics Curriculum Developer",
-    bio: "Jack is a sophmore at Boston University Academy. He first taught for gbSTEM as a scratch instructor in the fall of 2023. Jack initially taught himself scratch and the basics of python, and then took coding classes at iCode in Wellesley. Jack is now the physics curriculum developer for gbSTEM. Outside of gbSTEM, he plays basketball, runs cross country, plays tennis, and leads his school’s chess team.",
+    bio: "Jack is a sophmore at Boston University Academy. He first taught for gbSTEM as a Scratch instructor in the fall of 2023. Jack initially taught himself Scratch and the basics of Python, and then took coding classes at iCode in Wellesley. Jack is now the physics curriculum developer for gbSTEM. Outside of gbSTEM, he plays basketball, runs cross country, plays tennis, and leads his school’s chess team.",
     team: "science",
   }
 ];
