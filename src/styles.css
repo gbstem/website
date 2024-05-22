@@ -36,16 +36,19 @@
 .fillButtonYellow:hover {
   background-color: #ffc819;
   color: white;
+  border-color:#ffc819;
 }
 
 .fillButtonGreen:hover {
   background-color: #4CAF50;
   color: white;
+  border-color:#4CAF50;
 }
 
 .fillButtonBlue:hover {
   background-color: #67aeda;
   color: white;
+  border-color: #67aeda;
 }
 
 .square-cropped-image {

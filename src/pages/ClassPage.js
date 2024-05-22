@@ -45,7 +45,7 @@ const ClassPage = (props) => {
                         <h2>{props.includeExampleProjects ? "Example Projects and Materials" : ""}</h2>
                     </div>
                     <div style={props.includeExampleProjects ? { height: "30rem", marginBottom: "5rem" } : { marginBottom: "-10rem" }}><Slideshow slides={props.slides} captions={props.slideCaptions} imageStyling={{ height: "30rem", width: "auto", objectFit: "cover" }} captionStyling={{ textAlign: "center", fontSize: "1.125rem", fontStyle: "italic" }} /></div>
-                    <div className="button" style={{ margin: "auto", width: "fit-content", marginTop: "7rem", marginBottom: "2rem" }}><Link to="https://forms.gle/ejSvEu2cwwdovUg18" className="btn btn-primary">Register For This Class</Link></div>
+                    <div style={{ margin: "auto", width: "fit-content", marginTop: "7rem", marginBottom: "2rem" }}><Link to="https://forms.gle/ejSvEu2cwwdovUg18" className="btn btn-primary">Register For This Class</Link></div>
                     <div style={{ margin: "auto", width: "fit-content", marginBottom: "7rem", color: "blue" }}>
                         <Link to={props.trackPage}>Back To Courses Page</Link>
                     </div>
