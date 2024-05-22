@@ -73,12 +73,12 @@ function App() {
             <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
               target='_blank'
             >
-              <div className="rounded-div-blue align-center button">
+              <div className="rounded-div-blue align-center">
                 apply
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/donate">
-              <div className="rounded-div-green button">
+              <div className="rounded-div-green">
                 Donate
               </div>
             </Nav.Link>

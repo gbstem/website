@@ -21,7 +21,7 @@ function OurMission() {
               the STEM fields of science, computer science, math, and engineering, no matter their background or location.
             </p>
 
-            <div className="button" style = {{marginLeft: "auto"}}>
+            <div style = {{marginLeft: "auto"}}>
               <Link to="/mission" className="btn btn-primary" style = {{display: "flex", alignItems:"center", width:"fit-content"}}>
                 Learn More<ArrowRight/>
               </Link>
