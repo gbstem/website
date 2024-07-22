@@ -33,6 +33,13 @@
   display: inline-block;
 }
 
+.rounded-div-gray {
+  background-color: #aaaaaa;
+  border-radius: 20px;
+  padding: 10px;
+  display: inline-block;
+}
+
 .fillButtonYellow:hover {
   color: #ffc819;
   background-color:  transparent !important;
