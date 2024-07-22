@@ -6,7 +6,7 @@ function HomeIntro() {
     <div className="container mb-5">
       <p style = {{fontSize:"1.25rem"}}>
         The Greater Boston STEM Program (gbSTEM) delivers free introductory computer science, math,
-        engineering, and science enrichment to elementary and middle school students. <br/> The spring semester has now begun! Instructor applications and student registrations for the next semester will open in the fall.
+        engineering, and science enrichment to elementary and middle school students. <br/> The spring semester has ended. Instructor applications and student registrations for the next semester will open in the fall.
         To be notified when fall registrations/applications open, fill out this <a
           href="https://forms.gle/ejSvEu2cwwdovUg18"
           target="_blank" rel="noopener noreferrer"

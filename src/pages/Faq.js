@@ -4,7 +4,7 @@ const general = [
   {
     question: "How do I register for the program?",
     answer:
-      `Thank you for your interest! The spring semester is already under way, but registrations will soon open for the fall semester. In the meantime, fill out the form on our home page to be notified when registrations open!`
+      `Thank you for your interest! The spring semester is over now, and registrations will soon open for the fall semester. In the meantime, fill out the form on our home page to be notified when registrations open!`
   },
   {
     question: "What subjects does gbSTEM offer?",
@@ -142,7 +142,7 @@ const other = [
   {
     question: "I am a high school student. How can I apply to become an instructor for gbSTEM?",
     answer:
-      `Thank you for your interest! The spring semester is already under way, but applications will soon open for the fall semester. In the meantime, fill out the form on our homepage to be notified when applications open!`
+      `Thank you for your interest! The spring semester is over now, and applications will soon open for the fall semester. In the meantime, fill out the form on our homepage to be notified when applications open!`
   },
 ];
 
