@@ -3,9 +3,9 @@ import sarah from '../images/headshots/sarah.jpg';
 import dea from '../images/headshots/dea.jpg';
 import michael from '../images/headshots/MichaelBolgov.jpg';
 import sudeep from '../images/headshots/SudeepC.jpg';
-import allen from '../images/headshots/AllenYu.jpg';
+import allen from '../images/headshots/Allen.jpg';
 import placeholder from '../images/headshots/Placeholder.jpg';
-import kendree from '../images/headshots/kendree.jpeg';
+import kendree from '../images/headshots/kendreeC.jpg';
 import devan from '../images/headshots/DevanAgrawal.png';
 import tumi from '../images/headshots/Tumi.jpg';
 import ritika from '../images/headshots/RitikaRoy.jpg';
@@ -15,7 +15,7 @@ import emily from '../images/headshots/EmilyMa.jpg';
 import maxwell from '../images/headshots/MaxwellYu.jpg';
 import brady from '../images/headshots/BradyPayne.jpg';
 import grace from '../images/headshots/GraceQiu.png';
-import emmarose from '../images/headshots/emmaRose.jpg';
+import emmarose from '../images/headshots/emma.jpg';
 import anshika from '../images/headshots/AnshikaSrivastava.jpeg';
 import bella from '../images/headshots/BellaDeLemos.jpg';
 import tolu from '../images/headshots/ToluAdeyefa.jpg';
@@ -160,11 +160,11 @@ const teamMembers = [
   },
   {
     name: 'Allen Yu',
-    school: '',
+    school: 'Tufts University',
     graduationYear: '‘28',
     profilePic: allen,
     role: 'Math Co-Director',
-    bio: 'Allen is a freshman at . He is deeply interested in STEM and likes to apply mathematical skills to science, and he also loves to write and edit for his school newspaper. Some activities he enjoys engaging in during his free time are journaling, partaking in tennis, and playing piano. His favorite musical piece is Nocturne, Op. 9 No. 2 by Frédéric Chopin.',
+    bio: 'Allen is a freshman at Tufts University studying chemical engineering. He was a gbSTEM python instructor prior to assuming his current role. Outside of gbSTEM, he loves to write articles and short stories to be published online, play tennis, and listen to classical pieces, such as Nocturne, Op. 9 No. 2 by Frédéric Chopin.',
     team: "math",
   },
   {
