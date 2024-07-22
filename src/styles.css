@@ -34,20 +34,20 @@
 }
 
 .fillButtonYellow:hover {
-  background-color: #ffc819;
-  color: white;
+  color: #ffc819;
+  background-color:  transparent !important;
   border-color:#ffc819;
 }
 
 .fillButtonGreen:hover {
-  background-color: #4CAF50;
-  color: white;
+  color: #4CAF50;
+  background-color: transparent !important;
   border-color:#4CAF50;
 }
 
 .fillButtonBlue:hover {
-  background-color: #67aeda;
-  color: white;
+  color: #67aeda;
+  background-color: transparent !important;
   border-color: #67aeda;
 }
 
