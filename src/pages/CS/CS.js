@@ -37,7 +37,7 @@ const CS = () => {
           </div>
 
           <p>
-            We recommend students younger than 5th grade begin with Scratch, while those in 6th-8th grade should begin with a Level 2 class.
+            We recommend students younger than 5th grade begin with Scratch, while those in 6th-8th grade should begin with Python I or Java.
           </p>
 
           <h2 className = "text-center p-5">Learn About A Class:</h2>
