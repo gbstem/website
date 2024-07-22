@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import teamMembers from './teamMembers';
 import '../styles.css'
 
-const teams = ['presidents', 'outreach & events', 'math', 'engineering', 'computer science', 'science'];
+const teams = ['presidents', 'advisors', 'outreach & events', 'math', 'engineering', 'computer science', 'science'];
 
 // Profile component
 const Profile = ({ name, school, graduationYear, profilePic, bio, role }) => {
@@ -61,7 +61,7 @@ const Team = () => {
       <div>
         {teams.map((team) => {
           return (<div style={{ margin: "auto", width: "fit-content" }}>
-            <h2 className='text-center p-3' style={{ marginTop: "7rem", marginBottom: "2rem", textTransform: "capitalize", rTopWidth: "0px"}}>{team} <span>{team === "presidents" ? "" : "Team"}</span></h2>
+            <h2 className='text-center p-3' style={{ marginTop: "7rem", marginBottom: "2rem", textTransform: "capitalize", rTopWidth: "0px"}}>{team} <span>{team === "presidents" || team === "advisors" ? "" : "Team"}</span></h2>
             <div className="row" style={{ display: "flex", flexWrap: "wrap", gap: "2rem", justifyContent: "center", margin: "auto" }}>
               {
                 teamMembers.map((member, index) => {
