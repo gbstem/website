@@ -84,6 +84,16 @@
   width:10rem;
 }
 
+.donation-banner {
+  background-color: #67aeda;
+  font-size: larger;
+  padding: 1rem;
+  font-family: 'Space Mono', monospace;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 0 10px #000000;
+}
+
 @media(min-width:580px) {
   .classButton {
     width:15rem;

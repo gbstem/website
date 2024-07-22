@@ -91,6 +91,7 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      {/* <div className = "donation-banner">Time is running out: Help us keep our STEM education free and accessible to all. A similar for-profit program would cost anywhere from $1000 to over $1400 per student for one semester. We understand that this is unaffordable for many families, which is why it is so important for our program to remain accessible to all, regardless of their ability to pay. At gbSTEM, a contribution of just $200 can fund nearly 15% of our operating costs for one semester. All donations are tax-deductible. You can make a donation <Link href = "https://paypal.com/us/fundraiser/charity/4605663">here</Link>, or read more about the benefits of making a donation <Link href = "/donate">here.</Link></div> */}
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
