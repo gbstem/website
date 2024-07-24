@@ -8,7 +8,7 @@ import placeholder from '../images/headshots/Placeholder.jpg';
 import kendree from '../images/headshots/kendreeC.jpg';
 import devan from '../images/headshots/DevanAgrawal.png';
 import tumi from '../images/headshots/Tumi.jpg';
-import ritika from '../images/headshots/RitikaRoy.jpg';
+import ritika from '../images/headshots/Ritika.jpg';
 import vedi from '../images/headshots/VediRaval.jpeg';
 import ingrid from '../images/headshots/ingrid.jpg';
 import emily from '../images/headshots/EmilyMa.jpg';
@@ -21,6 +21,11 @@ import bella from '../images/headshots/BellaDeLemos.jpg';
 import tolu from '../images/headshots/ToluAdeyefa.jpg';
 import jack from '../images/headshots/jack.jpg';
 import diya from '../images/headshots/DiyaGadodia.jpg';
+import aly from '../images/headshots/AlyLay.jpg';
+import ajay from '../images/headshots/ajay.jpg';
+import freya from '../images/headshots/FreyaShah.jpeg';
+import daniella from '../images/headshots/DaniellaSherman.png';
+import vickie from '../images/headshots/VickieMao.jpg';
 
 const teamMembers = [
   {
@@ -29,7 +34,7 @@ const teamMembers = [
     graduationYear: '‘27',
     profilePic: michael,
     role: 'Co-President',
-    bio: "Michael is a first-year student at UChicago majoring in Molecular Engineering. He has been a gbSTEM math instructor, curriculum developer, and assistant director at gbSTEM prior to assuming his current role. Michael currently works as a research assistant intern at a lab affiliated with Harvard Medical School and Boston Children's Hospital studying possible treatments for Sickle Cell Disease. In his free time, Michael enjoys reading, playing  piano, acting, and playing tennis.",
+    bio: "Michael is a second-year student at UChicago majoring in Molecular Engineering. He has been a gbSTEM math instructor, curriculum developer, and assistant director at gbSTEM prior to assuming his current role. Michael currently works as a research assistant intern at a lab affiliated with Harvard Medical School and Boston Children's Hospital studying possible treatments for Sickle Cell Disease. In his free time, Michael enjoys reading, playing  piano, acting, and playing tennis.",
     team: "presidents",
   },
   {
@@ -38,16 +43,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: dea,
     role: 'Co-President',
-    bio: 'Dea is a junior at Newton North High School. She joined gbSTEM as a math instructor in 2021 and worked as Events Director before assuming her current role. She discovered a strong passion for math in elementary school when she started taking Russian Math classes. Currently completing calculus and chemistry courses with Johns Hopkins University, Dea plans to pursue a career in biochemistry. Last summer, she participated in an university program focusing on disease, physiology, and chemistry. Outside of school, she enjoys playing the piano, writing, and dancing.',
-    team: "presidents",
-  },
-  {
-    name: 'Kendree Chen',
-    school: 'Boston University Academy',
-    graduationYear: '‘25',
-    profilePic: kendree,
-    role: 'Co-President',
-    bio: 'Kendree is a junior at Boston University Academy. She joined gbSTEM as a Scratch instructor and was a Scratch instructor and CS director before becoming a president. She is the captain of her school FIRST Robotics Competition team, and has taught Java for seven years at KTBYTE Computer Science Academy. She has completed math classes through Multivariate Calculus, and currently is taking math classes at Boston University. In her spare time, she enjoys crocheting and building websites with HTML, CSS, and JavaScript.',
+    bio: 'Dea is a senior at Newton North High School. She joined gbSTEM as a math instructor in 2021 and worked as Events Director before assuming her current role. She discovered a strong passion for math in elementary school when she started taking Russian Math classes. Currently completing calculus and chemistry courses with Johns Hopkins University, Dea plans to pursue a career in biochemistry. Last summer, she participated in an university program focusing on disease, physiology, and chemistry. Outside of school, she enjoys playing the piano, writing, and dancing.',
     team: "presidents",
   },
   {
@@ -117,9 +113,9 @@ const teamMembers = [
     name: 'Aly Lay',
     school: 'Arlington High School',
     graduationYear: '‘27',
-    profilePic: placeholder,
+    profilePic: aly,
     role: 'Events Associate',
-    bio: '',
+    bio: 'Aly Lay is currently a sophomore at Arlington High School. Before taking on the role of Events Associate she taught at gbSTEM as a math instructor. In her free time, she loves to compete on her school Speech and Debate team and always enjoys diving into a good book!',
     team: "outreach & events",
   },
   {
@@ -198,9 +194,9 @@ const teamMembers = [
     name: 'Vickie Mao',
     school: 'Milton Academy',
     graduationYear: '‘25',
-    profilePic: placeholder,
+    profilePic: vickie,
     role: 'Math IV Curriculum Developer',
-    bio: '',
+    bio: 'Vickie is currently a junior at Milton Academy. She has had a passion for math and science since she was young and has joined gbSTEM in 2024 as a math instructor. Currently, she is working as a math IV curriculum developer through which she wishes to share her excitement for problem solving. Outside of gbSTEM, she enjoys reading, playing volleyball and spending time in nature.',
     team: "math",
   },
   {
@@ -225,23 +221,23 @@ const teamMembers = [
     name: 'Ajay Wadhwani',
     school: 'Boston University Academy',
     graduationYear: '‘25',
-    profilePic: placeholder,
+    profilePic: ajay,
     role: 'Computer Science Co-Director',
-    bio: '',
+    bio: 'Ajay Wadhwani is a senior at Boston University Academy. He learned to code from an early age with Scratch and has developed his skills over the years. He has taken math up to multivariate calculus and is now taking math classes at Boston University. Ajay has worked as a python instructor for two semesters at gbSTEM and is currently working as a CS director. In his free time, he enjoys playing piano, skateboarding and spending time with friends.',
     team: "computer science",
   },
   {
     name: "Freya Shah",
     school: "Chelmsford High School",
     graduationYear: "‘26",
-    profilePic: placeholder,
+    profilePic: freya,
     role: "Scratch I & II Curriculum Developer",
-    bio: "",
+    bio: "Freya is a sophomore at Chelmsford High School. She taught Scratch for gbSTEM in the spring semester of 2024. She started learning how to code a few year ago, but dove deeper into Python recently. She has enjoyed taking math and science classes, taking Russian Math classes outside of school. She is an avid member in her school's science, math, robotics, and speech and debate team. Outside of school, she enjoys singing, playing the guitar, and hanging out with friends.",
     team: "computer science",
   },
   {
     name: "Tumi Ogunyankin",
-    school: "",
+    school: "Princeton University",
     graduationYear: "‘28",
     profilePic: tumi,
     role: "Python I & II Curriculum Developer",
@@ -263,7 +259,7 @@ const teamMembers = [
     graduationYear: "‘26",
     profilePic: grace,
     role: "Engineering Co-Director",
-    bio: "Grace is a junior at Worcester Academy. She first began working at gbSTEM in 2022 as an Engineering I instructor. She has experience teaching students of all different ages, and wants to work in the STEM field. Her favorite hobbies are swimming, art, and music. Grace is excited to become an engineering curriculum developer this year, and looks forward to working with everyone!",
+    bio: "Grace is a junior at Mass Academy. She first began working at gbSTEM in 2022 as an Engineering I instructor. She has experience teaching students of all ages and wants to work in the STEM field. Her favorite hobbies are swimming, art, and music. Grace is excited to become the engineering director this year, and looks forward to working with everyone!",
     team: "engineering",
   },
   {
@@ -315,9 +311,9 @@ const teamMembers = [
     name: "Daniella Sherman",
     school: "Amherst Regional High School",
     graduationYear: "‘25",
-    profilePic: placeholder,
+    profilePic: daniella,
     role: "Environmental Science Curriculum Developer",
-    bio: "",
+    bio: "Daniella is a senior at Amherst Regional High School. Prior to her current position at gbSTEM, Daniella was an Engineering II instructor. Her passion for the environment and solutions to better our planet's health has been a core interest of hers since she was young. Daniella founded and continues to lead the Environmental Science & Action Club at her school to bring awareness and take steps within her community to combat climate change. In her free time, Daniella enjoys playing tennis, going on runs, and spending time with her two dogs!",
     team: "science",
   },
   {
