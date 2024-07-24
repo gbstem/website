@@ -196,7 +196,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: bella,
     role: 'Math III Curriculum Developer',
-    bio: "Bella is currently a senior at Boston University Academy, and began working for gbSTEM in the fall of 2022. She has previously worked as both a Math I, and Engineering I instructor, and is very passionate about providing a safe and fun learning environment for students. Outside of gbSTEM, Bella tutors in both Chemistry and Geometry, works as a tour guide for her school, and runs her schools Latin American Student Association. In her free time, she thoroughly enjoys reading, playing the cello, and creative writing.",
+    bio: "Bella is currently a senior at Boston University Academy. She began working for gbSTEM in the fall of 2022. She has previously worked as both a Math I, and Engineering I instructor, and is very passionate about providing a safe and fun learning environment for students. Outside of gbSTEM, Bella tutors in both Chemistry and Geometry, works as a tour guide for her school, and runs her schools Latin American Student Association. In her free time, she thoroughly enjoys reading, playing the cello, and creative writing.",
     team: "math",
   },
   {
@@ -232,7 +232,7 @@ const teamMembers = [
     graduationYear: '‘25',
     profilePic: ajay,
     role: 'Computer Science Co-Director',
-    bio: 'Ajay Wadhwani is a senior at Boston University Academy. He learned to code from an early age with Scratch and has developed his skills over the years. He has taken math up to multivariate calculus and is now taking math classes at Boston University. Ajay has worked as a python instructor for two semesters at gbSTEM and is currently working as a CS director. In his free time, he enjoys playing piano, skateboarding and spending time with friends.',
+    bio: 'Ajay is a senior at Boston University Academy. He learned to code from an early age with Scratch and has developed his skills over the years. He has taken math up to multivariate calculus and is now taking math classes at Boston University. Ajay has worked as a python instructor for two semesters at gbSTEM and is currently working as a CS director. In his free time, he enjoys playing piano, skateboarding and spending time with friends.',
     team: "computer science",
   },
   {
