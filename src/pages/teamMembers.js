@@ -38,6 +38,15 @@ const teamMembers = [
     team: "presidents",
   },
   {
+    name: 'Kendree Chen',
+    school: 'Boston University Academy',
+    graduationYear: '‘25',
+    profilePic: kendree,
+    role: 'Co-President',
+    bio: 'Kendree is a senior at Boston University Academy. She joined gbSTEM as a Scratch instructor and was a Scratch instructor and CS director before becoming a president. She is the captain of her school FIRST Robotics Competition team, and has taught Java for seven years at KTBYTE Computer Science Academy. She has completed math classes through Multivariate Calculus, and currently is taking math classes at Boston University. In her spare time, she enjoys crocheting and building websites with HTML, CSS, and JavaScript.',
+    team: "presidents",
+  },
+  {
     name: 'Dea Pance',
     school: 'Newton North High School',
     graduationYear: '‘25',
