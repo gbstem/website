@@ -219,7 +219,7 @@ const teamMembers = [
   },
   {
     name: 'Ingrid Hsu',
-    school: '',
+    school: 'Swarthmore College',
     graduationYear: '‘28',
     profilePic: ingrid,
     role: 'Computer Science Co-Director',
