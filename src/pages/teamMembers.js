@@ -26,6 +26,9 @@ import ajay from '../images/headshots/ajay.jpg';
 import freya from '../images/headshots/FreyaShah.jpeg';
 import daniella from '../images/headshots/DaniellaSherman.png';
 import vickie from '../images/headshots/VickieMao.jpg';
+import sarahK from '../images/headshots/SarahKopp.jpg';
+import aaryan from '../images/headshots/AaryanAnjna.jpg';
+import ryan from '../images/headshots/Ryan.jpg';
 
 const teamMembers = [
   {
@@ -113,9 +116,9 @@ const teamMembers = [
     name: 'Aaryan Anjna',
     school: 'Johnson and Wales University',
     graduationYear: '‘28',
-    profilePic: placeholder,
+    profilePic: aaryan,
     role: 'Events Associate',
-    bio: '',
+    bio: 'Aaryan is a rising freshman at Johnson and Wales University. In high school, he took leadership in many clubs and activities including Math League, Science Club, Robotics Club, Coding club and more. He was most intrigued with coding though, as it allowed one to express their abilities and thoughts into a code that ran! His journey started with AP Computer Science, and then went on with a full course of Python at Harvard. He went along to join gbSTEM to share the knowledge with all willing to learn, and help guide the way to future stars! Other than academics, he loves playing and watching tennis, soccer, cricket, football, and etc.',
     team: "outreach & events",
   },
   {
@@ -140,9 +143,9 @@ const teamMembers = [
     name: 'Sarah Kopp',
     school: 'North Attleboro High School',
     graduationYear: '‘25',
-    profilePic: placeholder,
+    profilePic: sarahK,
     role: 'Communications Associate',
-    bio: '',
+    bio: 'Sarah is a rising senior at North Attleboro High School, and she is very excited to further her role in gbSTEM as a communications associate. Sarah started working with gbSTEM in the spring semester as a Math instructor to fuel her passion for both STEM and teaching. Outside of gbSTEM she volunteers at her local hospital and runs her school crochet club. In her down time, she enjoys reading, baking, and spending time with family and friends.',
     team: "outreach & events",
   },
   {
@@ -185,9 +188,9 @@ const teamMembers = [
     name: 'Ryan Farokhzad',
     school: 'Milton Academy',
     graduationYear: '‘25',
-    profilePic: placeholder,
+    profilePic: ryan,
     role: 'Math II Curriculum Developer',
-    bio: "",
+    bio: " Ryan is a senior at Milton Academy, where he loves Chemistry, Mathematics, and Psychology. He joined gbSTEM in 2023 as a scratch instructor and shortly after became a Math II instructor. Currently, Ryan is a Math II curriculum developer, and he hopes to create an engaging, fun, and complex curriculum. In his free time, he enjoys playing squash, tennis, and kiteboarding.",
     team: "math",
   },
   {
@@ -241,7 +244,7 @@ const teamMembers = [
     graduationYear: "‘26",
     profilePic: freya,
     role: "Scratch I & II Curriculum Developer",
-    bio: "Freya is a sophomore at Chelmsford High School. She taught Scratch for gbSTEM in the spring semester of 2024. She started learning how to code a few year ago, but dove deeper into Python recently. She has enjoyed taking math and science classes, taking Russian Math classes outside of school. She is an avid member in her school's science, math, robotics, and speech and debate team. Outside of school, she enjoys singing, playing the guitar, and hanging out with friends.",
+    bio: "Freya is a junior at Chelmsford High School. She taught Scratch for gbSTEM in the spring semester of 2024. She started learning how to code a few year ago, but dove deeper into Python recently. She has enjoyed taking math and science classes, taking Russian Math classes outside of school. She is an avid member in her school's science, math, robotics, and speech and debate team. Outside of school, she enjoys singing, playing the guitar, and hanging out with friends.",
     team: "computer science",
   },
   {
