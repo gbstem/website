@@ -226,7 +226,7 @@ const teamMembers = [
     graduationYear: '‘28',
     profilePic: ingrid,
     role: 'Computer Science Co-Director',
-    bio: 'Ingrid is a senior at Milton Academy. Her interest in coding began through Scratch in elementary school, and now she works with mostly Java and Python in high school. In her free time she enjoys hiking, painting, and spending time with friends and family.',
+    bio: 'Ingrid is a freshman at Swarthmore College. Her interest in coding began through Scratch in elementary school, and now she works with mostly Java and Python in high school. In her free time she enjoys hiking, painting, and spending time with friends and family.',
     team: "computer science",
   },
   {
