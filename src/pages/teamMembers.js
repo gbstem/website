@@ -29,6 +29,8 @@ import vickie from '../images/headshots/VickieMao.jpg';
 import sarahK from '../images/headshots/SarahKopp.jpg';
 import aaryan from '../images/headshots/AaryanAnjna.jpg';
 import ryan from '../images/headshots/Ryan.jpg';
+import ethan from '../images/headshots/EthanQianTsuchida.jpg';
+import bhavi from '../images/headshots/BhaviMood.jpg';
 
 const teamMembers = [
   {
@@ -285,20 +287,20 @@ const teamMembers = [
   },
   {
     name: "Ethan Qian-Tsuchida",
-    school: "Commonwealth School",
+    school: "Newton South High School",
     graduationYear: "‘26",
-    profilePic: placeholder,
+    profilePic: ethan,
     role: "Engineering I & II Curriculum Developer",
-    bio: "",
+    bio: "Ethan has enjoyed all STEM subjects since forever, leaning into math and coding. He has taught scratch and math classes, qualified for AIME, and created his own math competition style test as a sophomore. He has experience in CAD and C with his engineering club where he built, coded, and launched a model rocket that collected data while airborne. Outside of school he is a competitive swimmer ranked top 50 for 2026 grads in MA and a cello player.",
     team: "engineering",
   },
   {
     name: "Bhavi Mood",
     school: "North Attleboro High School",
     graduationYear: "‘26",
-    profilePic: placeholder,
+    profilePic: bhavi,
     role: "Engineering III Curriculum Developer",
-    bio: "",
+    bio: "Bhavi is a junior at North Attleboro High School. He is the current Engineering III curriculum developer for gbSTEM and has previously served as an Engineering I instructor. Additionally, Bhavi is a varsity tennis player, student representative to the North Attleboro School Committee, and co-founder of the NASTP Digital Literacy volunteer initiative.",
     team: "engineering",
   },
   {
