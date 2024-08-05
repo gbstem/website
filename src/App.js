@@ -91,17 +91,17 @@ function App() {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto align-items-center">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <NavDropdown title="About" id="about-dropdown" className="text-end">
-              <NavDropdown.Item as={Link} to="/team">Team</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/mission">Mission</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/testimonials">Testimonials</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/faq">FAQ</NavDropdown.Item>
+            <NavDropdown title="About" id="about-dropdown" className="text-center">
+              <NavDropdown.Item as={Link} to="/team" className="text-center text-lg-start">Team</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/mission" className="text-center text-lg-start">Mission</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/testimonials" className="text-center text-lg-start">Testimonials</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/faq" className="text-center text-lg-start">FAQ</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Programs" id="programs-dropdown" className="text-end" >
-              <NavDropdown.Item as={Link} to="/cs">Computer Science</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/math">Math</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/engineering">Engineering</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/science">Science</NavDropdown.Item>
+            <NavDropdown title="Programs" id="programs-dropdown" className="text-center" >
+              <NavDropdown.Item as={Link} to="/cs" className="text-center text-lg-start">Computer Science</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/math" className="text-center text-lg-start">Math</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/engineering" className="text-center text-lg-start">Engineering</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/science" className="text-center text-lg-start">Science</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="https://gbstem.myspreadshop.com/all">Shop</Nav.Link>
             <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
