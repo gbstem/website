@@ -43,22 +43,25 @@ import Math5B from './pages/Math/Math5B';
 function App() {
   const [show, setShow] = useState(false);
   const banners = [{
-    text: "Time is running out: Help us keep our STEM education free and accessible to all",
+    text: "Time is running out: Help us keep our STEM education free and accessible to all.",
     link: "",
     linkText: "Read More",
     onClick: true,
+    color: '#ffc819'
   },
   {
     text: "gbSTEM merchandise is now available for purchase! Support us by checking out",
     link: "https://gbstem.myspreadshop.com/all",
-    linkText: "our Spreadshop store!",
+    linkText: "our Spreadshop store.",
     onClick: false,
+    color: '#4CAF50'
   },
   {
     text: "Applications to teach for returning instructors are now open! Apply",
     link: "https://portal.gbstem.org",
-    linkText: "here",
+    linkText: "here.",
     onClick: false,
+    color: '#67aeda'
   }
   ]
   const [index, setIndex] = useState(0);
@@ -66,7 +69,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
@@ -123,7 +126,7 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>      
-      <div className = "donation-banner"> {banners[index].text} {banners[index].onClick ? <Link onClick = {() => setShow(true)}>{banners[index].linkText}</Link> : <a href={banners[index].link} rel="noreferrer" target="_blank">{banners[index].linkText}</a> }</div>
+      <div className = "donation-banner" style = {{backgroundColor: `${banners[index].color}`}}> {banners[index].text} {banners[index].onClick ? <Link onClick = {() => setShow(true)}>{banners[index].linkText}</Link> : <a href={banners[index].link} rel="noreferrer" target="_blank">{banners[index].linkText}</a> }</div>
        <Modal 
        show={show}
         backdrop="static"
