@@ -107,17 +107,17 @@ function App() {
             <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
               target='_blank'
             >
-              <div className="rounded-div-gray align-center">
+              <div className="rounded-div-blue align-center">
                 sign up
               </div>
             </Nav.Link>
-            <Nav.Link as={Link} to="https://portal.gbstem.org/signin"
+            {/* <Nav.Link as={Link} to="https://portal.gbstem.org/signin"
               target='_blank'
             >
               <div className="rounded-div-blue align-center">
                 portal
               </div>
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link as={Link} to="/donate">
               <div className="rounded-div-green">
                 Donate
