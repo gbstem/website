@@ -31,6 +31,7 @@ import aaryan from '../images/headshots/AaryanAnjna.jpg';
 import ryan from '../images/headshots/Ryan.jpg';
 import ethan from '../images/headshots/EthanQianTsuchida.jpg';
 import bhavi from '../images/headshots/BhaviMood.jpg';
+import anshu from '../images/headshots/anshu.jpeg';
 
 const teamMembers = [
   {
@@ -136,9 +137,9 @@ const teamMembers = [
     name: 'Anshu Anjna',
     school: 'UMass Amherst',
     graduationYear: '‘28',
-    profilePic: placeholder,
+    profilePic: anshu,
     role: 'Communications Associate',
-    bio: '',
+    bio: 'Anshu is a rising freshman at UMass Amherst. She joined gbSTEM as a Scratch co-instructor and then a Python I instructor. She was also the founder of Coding Club at her high school and in leadership positions of Science Club and Math League. In her free time, she enjoys reading, watching movies and going hiking with friends! ',
     team: "outreach & events",
   },
   {
