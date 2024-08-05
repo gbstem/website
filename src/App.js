@@ -1,7 +1,7 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { HashRouter } from "react-router-dom";
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles.css'
@@ -41,8 +41,39 @@ import Math5A from './pages/Math/Math5A';
 import Math5B from './pages/Math/Math5B';
 
 function App() {
-  return (
+  const [show, setShow] = useState(false);
+  const banners = [{
+    text: "Time is running out: Help us keep our STEM education free and accessible to all",
+    link: "",
+    linkText: "Read More",
+    onClick: true,
+  },
+  {
+    text: "gbSTEM merchandise is now available for purchase! Support us by checking out",
+    link: "https://gbstem.myspreadshop.com/all",
+    linkText: "our Spreadshop store!",
+    onClick: false,
+  },
+  {
+    text: "Applications to teach for returning instructors are now open! Apply",
+    link: "https://portal.gbstem.org",
+    linkText: "here",
+    onClick: false,
+  }
+  ]
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [banners.length]);
+
+  return (
     <HashRouter>
       <Navbar variant="dark" expand="lg" style={{ backgroundColor: '#1D2256' }}>
         <Navbar.Brand as={Link} to="/" className="ms-5" style={{ fontWeight: 700 }}>
@@ -61,19 +92,20 @@ function App() {
               <NavDropdown.Item as={Link} to="/team">Team</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/mission">Mission</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/testimonials">Testimonials</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/faq">FAQ</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/faq">FAQ</Nav.Link>
             <NavDropdown title="Programs" id="programs-dropdown" className="text-end" >
               <NavDropdown.Item as={Link} to="/cs">Computer Science</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/math">Math</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/engineering">Engineering</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/science">Science</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="https://gbstem.myspreadshop.com/all">Shop</Nav.Link>
             <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
               target='_blank'
             >
               <div className="rounded-div-gray align-center">
-                apply
+                sign up
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="https://portal.gbstem.org/signin"
@@ -90,8 +122,19 @@ function App() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
-      {/* <div className = "donation-banner">Time is running out: Help us keep our STEM education free and accessible to all. A similar for-profit program would cost anywhere from $1000 to over $1400 per student for one semester. We understand that this is unaffordable for many families, which is why it is so important for our program to remain accessible to all, regardless of their ability to pay. At gbSTEM, a contribution of just $200 can fund nearly 15% of our operating costs for one semester. All donations are tax-deductible. You can make a donation <Link href = "https://paypal.com/us/fundraiser/charity/4605663">here</Link>, or read more about the benefits of making a donation <Link href = "/donate">here.</Link></div> */}
+      </Navbar>      
+      <div className = "donation-banner"> {banners[index].text} {banners[index].onClick ? <Link onClick = {() => setShow(true)}>{banners[index].linkText}</Link> : <a href={banners[index].link} rel="noreferrer" target="_blank">{banners[index].linkText}</a> }</div>
+       <Modal 
+       show={show}
+        backdrop="static"
+        keyboard={false}>
+        <Modal.Header closeButton onClick={() => setShow(false)}>
+          <Modal.Title>Time is running out to help us keep STEM education accessible for all.</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>A similar for-profit program would cost anywhere from $1000 to over $1400 per student for one semester. We understand that this is unaffordable for many families, which is why it is so important for our program to remain accessible to all, regardless of their ability to pay. At gbSTEM, a contribution of just $200 can fund nearly 15% of our operating costs for one semester. All donations are tax-deductible. You can purchase our merchandise to support us <a href="https://gbstem.myspreadshop.com/all">here</a>, make a donation <a href = "https://paypal.com/us/fundraiser/charity/4605663">here</a>, or read more about the benefits of making a donation <a href = "/donate">here.</a></p>
+        </Modal.Body>
+      </Modal>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
