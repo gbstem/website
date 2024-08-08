@@ -17,8 +17,8 @@ function Math() {
           <p style={{
             fontWeight: "bold"
           }}>Math classes have a separate fall and spring curriculum for each level. For example, we offer Math 1a in the Fall and Math 1b in the Spring.
-            Students from Spring 2023 should take the “a” version of the next level course. For example, if you completed Math 1b in the spring, you should proceed to Math 2a.
-            Students from Fall 2022 should continue with the “b” version of the course you were previously enrolled in. Since we don’t offer the b version of math courses in the fall, we recommend waiting until the spring to enroll in a math course. </p>
+            Students from Spring 2024 should take the “a” version of the next level course. For example, if you completed Math 1b in the spring, you should proceed to Math 2a.
+            Students from Fall 2023 should continue with the “b” version of the course you were previously enrolled in. Since we don’t offer the b version of math courses in the fall, we recommend waiting until the spring to enroll in a math course if the last course you took was an 'a' course. </p>
         </div>
 
         <h2 className="text-center p-3">Typical Class Progression</h2>
