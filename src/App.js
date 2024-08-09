@@ -66,7 +66,7 @@ function App() {
   },
   {
     text: "NEW FOR FALL 2024: gbSTEM is now offering a Lego Robotics program! Learn more",
-    link: "/robotics",
+    link: "/#/robotics",
     linkText: "here.",
     onClick: false,
     color: '#bf60bf'
