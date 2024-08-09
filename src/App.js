@@ -69,7 +69,7 @@ function App() {
     link: "/robotics",
     linkText: "here.",
     onClick: false,
-    color: '#aaaaaa'
+    color: '#bf60bf'
   }
   ]
   const [index, setIndex] = useState(0);
