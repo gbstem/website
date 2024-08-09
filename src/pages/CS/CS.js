@@ -55,6 +55,7 @@ const CS = () => {
             <Link to= "/engineering" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#ffc819", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Engineering Track </Link>
             <Link to= "/math" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#aaaaaa", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Math Track </Link>
             <Link to= "/science" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#4CAF50", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Science Track </Link>
+            <Link to= "/robotics" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#bf60bf", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Robotics Program </Link>
           </div>
           </div>
         </section>

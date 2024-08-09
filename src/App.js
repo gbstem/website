@@ -39,6 +39,7 @@ import Math4A from './pages/Math/Math4A';
 import Math4B from './pages/Math/Math4B';
 import Math5A from './pages/Math/Math5A';
 import Math5B from './pages/Math/Math5B';
+import Robotics from './pages/Robotics/Robotics';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -62,6 +63,13 @@ function App() {
     linkText: "here.",
     onClick: false,
     color: '#67aeda'
+  },
+  {
+    text: "NEW FOR FALL 2024: gbSTEM is now offering a Lego Robotics program! Learn more",
+    link: "/robotics",
+    linkText: "here.",
+    onClick: false,
+    color: '#aaaaaa'
   }
   ]
   const [index, setIndex] = useState(0);
@@ -102,6 +110,7 @@ function App() {
               <NavDropdown.Item as={Link} to="/math" className="text-center text-lg-start">Math</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/engineering" className="text-center text-lg-start">Engineering</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/science" className="text-center text-lg-start">Science</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/robotics" className="text-center text-lg-start">Robotics</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="https://gbstem.myspreadshop.com/all">Shop</Nav.Link>
             <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
@@ -168,6 +177,7 @@ function App() {
         <Route path="/science" element={<ScienceTrack />} />
           <Route path="/science/science1" element={<ScienceClass />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/robotics" element={<Robotics />} />
       </Routes>
       <Footer />
       <ScrollToTop />
