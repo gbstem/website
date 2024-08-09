@@ -32,6 +32,8 @@ import ryan from '../images/headshots/Ryan.jpg';
 import ethan from '../images/headshots/EthanQianTsuchida.jpg';
 import bhavi from '../images/headshots/BhaviMood.jpg';
 import anshu from '../images/headshots/anshu.jpeg';
+import pragnya from '../images/headshots/pragnya.jpg';
+import tylina from '../images/headshots/tylina.jpg';
 
 const teamMembers = [
   {
@@ -74,9 +76,9 @@ const teamMembers = [
     name: 'Tylina Khamphavong',
     school: 'Worcester Academy',
     graduationYear: '‘25',
-    profilePic: placeholder,
+    profilePic: tylina,
     role: 'Vice President',
-    bio: '',
+    bio: 'Tylina is a senior at Worcester Academy. She joined gbSTEM as a math instructor in 2022 and has since then been an in-person instructor at the Cambridge Public Library teaching engineering. In school Tylina is captain of the Debate Team and is highly involved with Student Leadership. As well as being captain of her crew team, she loves running and staying active. She volunteers/works at her local Senior Home in the Memory Care unit. In her free time Tylina likes to read, listen to music, and hang out with friends.',
     team: "presidents",
   },
   {
@@ -164,9 +166,9 @@ const teamMembers = [
     name: 'Pragnyasri Sakar',
     school: 'Newton North High School',
     graduationYear: '‘26',
-    profilePic: placeholder,
+    profilePic: pragnya,
     role: 'Partnership Lead',
-    bio: '',
+    bio: 'Pragnya and is a junior at Newton North High School. She has a passion for the STEM field and particularly enjoys biology and computer programming. In her free time, she likes to sing, read, and paint.',
     team: "outreach & events",
   },
   {
