@@ -104,7 +104,7 @@ function App() {
               <NavDropdown.Item as={Link} to="/team" className="text-center text-lg-start">Team</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/mission" className="text-center text-lg-start">Mission</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/testimonials" className="text-center text-lg-start">Testimonials</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/reports">Reports</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/reports" className="text-center text-lg-start">Reports</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/faq" className="text-center text-lg-start">FAQ</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Programs" id="programs-dropdown" className="text-center" >
