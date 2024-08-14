@@ -14,7 +14,7 @@ function Reports() {
         <div>
         gbSTEM is pleased to present our Impact Report for the 2023-2024 school year!
         </div>
-        <Button onClick = {() => window.open('www.gbstem.org/reports/gbstem-impact.pdf')} style = {{width: "fit-content", fontSize: "1rem", marginTop: "2rem"}}>Read it here</Button>
+        <Button href = {'https://www.gbstem.org/reports/gbstem-impact.pdf'} style = {{width: "fit-content", fontSize: "1rem", marginTop: "2rem"}}>Read it here</Button>
       </Card>
     </div>
     </div>
