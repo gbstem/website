@@ -40,6 +40,7 @@ import Math4B from './pages/Math/Math4B';
 import Math5A from './pages/Math/Math5A';
 import Math5B from './pages/Math/Math5B';
 import Robotics from './pages/Robotics/Robotics';
+import Reports from './pages/Reports';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -103,6 +104,7 @@ function App() {
               <NavDropdown.Item as={Link} to="/team" className="text-center text-lg-start">Team</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/mission" className="text-center text-lg-start">Mission</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/testimonials" className="text-center text-lg-start">Testimonials</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/reports">Reports</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/faq" className="text-center text-lg-start">FAQ</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Programs" id="programs-dropdown" className="text-center" >
@@ -153,6 +155,7 @@ function App() {
         <Route path="/mission" element={<Mission />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/reports" element={<Reports />} />
         <Route path="/cs" element={<CS />} />
           <Route path="/cs/scratch" element={<Scratch />} />
           <Route path="/cs/python1" element={<PythonI />} />
