@@ -1,12 +1,8 @@
 import React from "react";
-import impact2023_2024 from "../reports/gbstem-impact.pdf";
-import Modal from 'react-bootstrap/Modal';
-
 import Button from 'react-bootstrap/Button';
 import { Card } from "react-bootstrap";
 
 function Reports() {
-  const [dialog, setDialog] = React.useState(false);
 
   return (
     <div className="container">
@@ -18,21 +14,8 @@ function Reports() {
         <div>
         gbSTEM is pleased to present our Impact Report for the 2023-2024 school year!
         </div>
-        <Button onClick = {() => setDialog(true)} style = {{width: "fit-content", fontSize: "1rem", marginTop: "2rem"}}>Read it here</Button>
+        <Button onClick = {() => window.open('www.gbstem.org/reports/gbstem-impact.pdf')} style = {{width: "fit-content", fontSize: "1rem", marginTop: "2rem"}}>Read it here</Button>
       </Card>
-      <Modal 
-       show={dialog}
-        backdrop="static"
-        keyboard={false}
-        className="report"
-        style={{borderRadius: "1rem"}}>
-        <Modal.Header closeButton onClick={() => setDialog(false)} style = {{height: "0", border: "none"}}>
-        </Modal.Header>
-      <div style={{margin: "2rem", marginTop: "0rem", height: "45rem"}}>
-      <iframe src={ impact2023_2024 + "#view=Fit&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0&frameborder=0"} width = "100%" height = "700rem" style={{borderStyle:"solid", borderWidth:"1px", borderColor:"gray", objectFit: "contain", "--webkit-overflow-scrolling": "touch!important"}}>
-      </iframe>
-      </div>
-      </Modal>
     </div>
     </div>
   )
