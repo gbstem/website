@@ -28,8 +28,8 @@ function Reports() {
         style={{borderRadius: "1rem"}}>
         <Modal.Header closeButton onClick={() => setDialog(false)} style = {{height: "0", border: "none"}}>
         </Modal.Header>
-      <div style={{margin: "2rem", marginTop: "0rem"}}>
-      <iframe src={ impact2023_2024 + "#view=Fit&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0&frameborder=0"} width = "100%" height = "700rem" style={{borderStyle:"solid", borderWidth:"1px", borderColor:"gray", objectFit: "contain"}}>
+      <div style={{margin: "2rem", marginTop: "0rem", height: "45rem"}}>
+      <iframe src={ impact2023_2024 + "#view=Fit&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0&frameborder=0"} width = "100%" height = "700rem" style={{borderStyle:"solid", borderWidth:"1px", borderColor:"gray", objectFit: "contain", "--webkit-overflow-scrolling": "touch!important"}}>
       </iframe>
       </div>
       </Modal>
