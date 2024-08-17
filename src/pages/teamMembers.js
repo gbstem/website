@@ -9,7 +9,7 @@ import kendree from '../images/headshots/kendreeC.jpg';
 import devan from '../images/headshots/DevanAgrawal.png';
 import tumi from '../images/headshots/Tumi.jpg';
 import ritika from '../images/headshots/Ritika.jpg';
-import vedi from '../images/headshots/VediRaval.jpeg';
+import vedi from '../images/headshots/vedi.jpg';
 import ingrid from '../images/headshots/ingrid.jpg';
 import emily from '../images/headshots/EmilyMa.jpg';
 import maxwell from '../images/headshots/MaxwellYu.jpg';
