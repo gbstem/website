@@ -126,7 +126,7 @@ function App() {
               target='_blank'
             >
               <div className="rounded-div-blue align-center">
-                portal
+                sign up
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/donate">
