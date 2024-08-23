@@ -45,13 +45,13 @@ import Reports from './pages/Reports';
 function App() {
   const [show, setShow] = useState(false);
   const banners = [
-  //   {
-  //   text: "Time is running out: Help us keep our STEM education free and accessible to all.",
-  //   link: "",
-  //   linkText: "Read More",
-  //   onClick: true,
-  //   color: '#ffc819'
-  // },
+    {
+    text: "Student registrations are now open! Register",
+    link: "https://portal.gbstem.org",
+    linkText: "here",
+    onClick: true,
+    color: '#ffc819'
+  },
   {
     text: "gbSTEM merchandise is now available for purchase! Support us by checking out",
     link: "https://gbstem.myspreadshop.com/all",
@@ -60,7 +60,7 @@ function App() {
     color: '#4CAF50'
   },
   {
-    text: "Applications to teach for returning instructors are now open! Apply",
+    text: "Applications to teach for instructors are now open! Apply",
     link: "https://portal.gbstem.org",
     linkText: "here.",
     onClick: false,
@@ -71,7 +71,7 @@ function App() {
     link: "/#/robotics",
     linkText: "here.",
     onClick: false,
-    color: '#ffc819'
+    color: '#bf60bf'
   }
   ]
   const [index, setIndex] = useState(0);
