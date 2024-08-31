@@ -123,7 +123,7 @@ function App() {
                 sign up
               </div>
             </Nav.Link> */}
-            <Nav.Link as={Link} to="https://portal.gbstem.org/signin"
+            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
               <div className="rounded-div-blue align-center">
