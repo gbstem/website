@@ -7,7 +7,7 @@ function HomeIntro() {
       <p style = {{fontSize:"1.25rem"}}>
         The Greater Boston STEM Program (gbSTEM) delivers free introductory computer science, math,
         engineering, and science enrichment to elementary and middle school students.</p> 
-        <p>The fall semester will run from Sunday, September 29th to Saturday, December 21st. <br/> Instructor applications and student registrations are now open! Instructor applications close on Thursday, September 12th. Student registrations close Friday, September 20th.
+        <p>The fall semester will run from Sunday, September 29th to Saturday, December 21st. <br/> Instructor applications and student registrations are now open! Instructor applications close on Tuesday, September 17th. Student registrations close Friday, September 20th.
         {/* To be notified when registrations and applications open, fill out this <a
           href="https://forms.gle/ejSvEu2cwwdovUg18"
           target="_blank" rel="noopener noreferrer"
