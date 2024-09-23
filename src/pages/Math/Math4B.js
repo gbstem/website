@@ -23,7 +23,7 @@ const modules = ['Graphing Functions',
     'Distance, Time, and Speed Word Problems',
     'Properties of Numbers',
     'Final Project']
-const gradeRange = "6-8";
+const gradeRange = "4-8";
 const onlineOnly = true;
 const includeExampleProjects = false;
 

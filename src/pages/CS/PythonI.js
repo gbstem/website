@@ -11,7 +11,7 @@ const prerequisites = "Students taking this class are required either to fall in
 const slides = [process.env.PUBLIC_URL+'/cs/Python2.png', process.env.PUBLIC_URL+ '/cs/Python.png'];
 const slideCaptions = ['Liam, Grade 6','Adam, Grade 8'];
 const modules = ['Introduction to Python', 'Variables and Data Types', 'If-Else Statements', 'String Methods', 'Functions', 'While Loops', 'For Loops', 'Lists', '2D Arrays and Nested Iteration', 'Dictionaries', 'Using Python Libraries', 'Final Project'];
-const gradeRange = "6-8";
+const gradeRange = "3-7";
 const onlineOnly = true;
 const includeExampleProjects = true;
 

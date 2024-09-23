@@ -20,7 +20,7 @@ const modules = ['Scratch environment (website overview)',
     'Clones and Broadcasting',
     'Refining Code',
     'Final Project'];
-const gradeRange = "2-5";
+const gradeRange = "1-6";
 const onlineOnly = false;
 const includeExampleProjects = true;
 

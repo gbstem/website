@@ -11,7 +11,7 @@ const prerequisites = "We recommend this course for anyone who is passionate abo
 const slides = [process.env.PUBLIC_URL+'/science/coral.jpeg', process.env.PUBLIC_URL+ '/science/oxbow.jpg', process.env.PUBLIC_URL + './science/snail.jpg'];
 const slideCaptions = ['', '', ''];
 const modules = ['Climate Change', 'Plastic and the Oceans', 'Deforestation and Forest Fires'];
-const gradeRange = "K-5";
+const gradeRange = "5-8";
 const onlineOnly = true;
 const includeExampleProjects = true;
 

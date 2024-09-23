@@ -24,7 +24,7 @@ const modules = ['Addition and Subtraction',
     'Graphs',
     'Math Games',
     'Final Project']
-const gradeRange = "K-2";
+const gradeRange = "1-3";
 const onlineOnly = true;
 const includeExampleProjects = false;
 

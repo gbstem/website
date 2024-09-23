@@ -23,7 +23,7 @@ const modules = ['Review of Addition and Subtraction',
     'Money and Time',
     'Build-A-House Project',
     'Final Project']
-const gradeRange = "K-2";
+const gradeRange = "1-3";
 const onlineOnly = true;
 const includeExampleProjects = false;
 

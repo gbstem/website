@@ -12,7 +12,7 @@ const prerequisites = "Students taking this class must be comfortable calculatin
 const slides = [process.env.PUBLIC_URL+'/engineering/eng1.png', process.env.PUBLIC_URL+ '/engineering/eng2.png'];
 const slideCaptions = ['Engineering 2 Student','Engineering 2 Student'];
 const modules = ['The Basics of Engineering', 'Wind Tunnels', 'Data Analysis and Graphing', 'Biomimicry', 'Technical Drawing', 'Thermodynamics', 'Final Project'];
-const gradeRange = "6-8";
+const gradeRange = "5-7";
 const onlineOnly = true;
 const includeExampleProjects = true;
 

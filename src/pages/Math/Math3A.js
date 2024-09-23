@@ -24,7 +24,7 @@ const modules = ['Division Review',
     'Volumetric Units of Measurement',
     'Honeycomb Conjecture and Math Games',
     'Final Project']
-const gradeRange = "4-6";
+const gradeRange = "3-5";
 const onlineOnly = true;
 const includeExampleProjects = false;
 

@@ -23,7 +23,7 @@ const modules = ['Fractions and Decimals',
     'Estimating Answers',
     'Angles in Standard Polygons',
     'Final Project']
-const gradeRange = "4-6";
+const gradeRange = "3-5";
 const onlineOnly = true;
 const includeExampleProjects = false;
 

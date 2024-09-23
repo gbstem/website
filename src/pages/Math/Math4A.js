@@ -24,7 +24,7 @@ const modules = ['Exponents',
     'Systems of Equations Continued',
     'Fractals: The Koch Snowflake',
     'Final Project']
-const gradeRange = "6-8";
+const gradeRange = "4-8";
 const onlineOnly = true;
 const includeExampleProjects = false;
 
