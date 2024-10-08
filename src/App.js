@@ -45,34 +45,13 @@ import Reports from './pages/Reports';
 function App() {
   const [show, setShow] = useState(false);
   const banners = [
-    {
-    text: "Student registrations are now open! Register",
-    link: "https://portal.gbstem.org",
-    linkText: "here",
-    onClick: true,
-    color: '#ffc819'
-  },
   {
     text: "gbSTEM merchandise is now available for purchase! Support us by checking out",
     link: "https://gbstem.myspreadshop.com/all",
     linkText: "our Spreadshop store.",
     onClick: false,
-    color: '#4CAF50'
+    color: '#ffc819'
   },
-  {
-    text: "Applications to teach for instructors are now open! Apply",
-    link: "https://portal.gbstem.org",
-    linkText: "here.",
-    onClick: false,
-    color: '#67aeda'
-  },
-  {
-    text: "NEW FOR FALL 2024: gbSTEM is now offering a Lego Robotics program! Learn more",
-    link: "/#/robotics",
-    linkText: "here.",
-    onClick: false,
-    color: '#bf60bf'
-  }
   ]
   const [index, setIndex] = useState(0);
 
@@ -123,7 +102,7 @@ function App() {
                 sign up
               </div>
             </Nav.Link> */}
-            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
+            <Nav.Link as={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSdKlEDGGKCc7bB7Xvlm3zOnhgh37MusQ_uU_6paHAhpHIDgXw/viewform?usp=sf_link"
               target='_blank'
             >
               <div className="rounded-div-blue align-center">
