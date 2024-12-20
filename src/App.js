@@ -117,7 +117,7 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>      
-      <div className = "donation-banner" style = {{backgroundColor: `${banners[index].color}`}}> {banners[index].text} {banners[index].onClick ? <Link onClick = {() => setShow(true)}>{banners[index].linkText}</Link> : <a href={banners[index].link} rel="noreferrer" target="_blank">{banners[index].linkText}</a> }</div>
+      {/* <div className = "donation-banner" style = {{backgroundColor: `${banners[index].color}`}}> {banners[index].text} {banners[index].onClick ? <Link onClick = {() => setShow(true)}>{banners[index].linkText}</Link> : <a href={banners[index].link} rel="noreferrer" target="_blank">{banners[index].linkText}</a> }</div> */}
        <Modal 
        show={show}
         backdrop="static"
