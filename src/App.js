@@ -95,18 +95,18 @@ function App() {
               <NavDropdown.Item as={Link} to="/robotics" className="text-center text-lg-start">Robotics</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="https://gbstem.myspreadshop.com/all">Shop</Nav.Link>
-            {/* <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
+            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
               <div className="rounded-div-blue align-center">
                 sign up
               </div>
-            </Nav.Link> */}
-            <Nav.Link as={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSdKlEDGGKCc7bB7Xvlm3zOnhgh37MusQ_uU_6paHAhpHIDgXw/viewform?usp=sf_link"
+            </Nav.Link>
+            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
-              <div className="rounded-div-blue align-center">
-                sign up
+              <div className="rounded-div-gray align-center">
+                apply
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/donate">
