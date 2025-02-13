@@ -18,7 +18,7 @@ function HomeIntro() {
           <p>
             <strong>Parents and K-8 Students </strong>
           </p>
-          <a className="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdKlEDGGKCc7bB7Xvlm3zOnhgh37MusQ_uU_6paHAhpHIDgXw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+          <a className="btn btn-primary" href="https://portal.gbstem.org/signup" target="_blank" rel="noopener noreferrer">
             Register
           </a>
         </div>
@@ -26,7 +26,7 @@ function HomeIntro() {
           <p>
             <strong>Instructor Applicants (High School or Older)</strong>
           </p>
-          <a className="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdKlEDGGKCc7bB7Xvlm3zOnhgh37MusQ_uU_6paHAhpHIDgXw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+          <a className="btn btn-primary" href="https://portal.gbstem.org/signup" target="_blank" rel="noopener noreferrer">
             Apply to teach
           </a>
         </div>
