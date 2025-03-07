@@ -16,7 +16,7 @@ function HomeIntro() {
       <div className="row">
         <div className="col-md-6 p-3 d-flex justify-content-center align-items-center flex-column">
           <p>
-            <strong>Parents and K-8 Students </strong>
+            <strong>Parents and 1-8 Students </strong>
           </p>
           <a className="btn btn-primary" href="https://portal.gbstem.org/signup" target="_blank" rel="noopener noreferrer">
             Register
