@@ -95,18 +95,18 @@ function App() {
               <NavDropdown.Item as={Link} to="/robotics" className="text-center text-lg-start">Robotics</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="https://gbstem.myspreadshop.com/all">Shop</Nav.Link>
-            {/* <Nav.Link as={Link} to="https://forms.gle/ejSvEu2cwwdovUg18"
+            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
               <div className="rounded-div-blue align-center">
                 sign up
               </div>
-            </Nav.Link> */}
-            <Nav.Link as={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSdKlEDGGKCc7bB7Xvlm3zOnhgh37MusQ_uU_6paHAhpHIDgXw/viewform?usp=sf_link"
+            </Nav.Link>
+            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
               target='_blank'
             >
-              <div className="rounded-div-blue align-center">
-                sign up
+              <div className="rounded-div-gray align-center">
+                apply
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/donate">
@@ -117,7 +117,7 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>      
-      <div className = "donation-banner" style = {{backgroundColor: `${banners[index].color}`}}> {banners[index].text} {banners[index].onClick ? <Link onClick = {() => setShow(true)}>{banners[index].linkText}</Link> : <a href={banners[index].link} rel="noreferrer" target="_blank">{banners[index].linkText}</a> }</div>
+      {/* <div className = "donation-banner" style = {{backgroundColor: `${banners[index].color}`}}> {banners[index].text} {banners[index].onClick ? <Link onClick = {() => setShow(true)}>{banners[index].linkText}</Link> : <a href={banners[index].link} rel="noreferrer" target="_blank">{banners[index].linkText}</a> }</div> */}
        <Modal 
        show={show}
         backdrop="static"

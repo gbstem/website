@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 
 function Counter() {
   const [counters, setCounters] = useState([
-    { label: "Students", target: 1000, value: 0 },
-    { label: "Instructors", target: 200, value: 0 },
-    { label: "Courses Offered", target: 19, value: 0 },
+    { label: "Students", target: 2000, value: 0 },
+    { label: "Instructors", target: 400, value: 0 },
+    { label: "Courses Offered", target: 20, value: 0 },
     { label: "% Volunteer Driven", target: 100, value: 0 }
   ]);
 
