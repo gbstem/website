@@ -4,7 +4,7 @@ const general = [
   {
     question: "How do I register for the program?",
     answer:
-      `Thank you for your interest! The spring semester is over now, and registrations will soon open for the fall semester. In the meantime, fill out the form on our home page to be notified when registrations open!`
+      `Thank you for your interest! The spring semester registration is now closed, and registrations will open for the fall semester in August. In the meantime, fill out the form on our home page to be notified when registrations open!`
   },
   {
     question: "What subjects does gbSTEM offer?",
@@ -29,7 +29,7 @@ const general = [
   {
     question: "When does the program start and end?",
     answer:
-      "gbSTEM's Spring 2024 semester will run from March 17th to June 15th. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
+      "gbSTEM's Spring 2025 semester will run from March 16th, 2025 to June 14th, 2025. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
   },
   {
     question: "What grade levels is gbSTEM for?",
@@ -142,7 +142,7 @@ const other = [
   {
     question: "I am a high school student. How can I apply to become an instructor for gbSTEM?",
     answer:
-      `Thank you for your interest! The spring semester is over now, and applications will soon open for the fall semester. In the meantime, fill out the form on our homepage to be notified when applications open!`
+      `Thank you for your interest! The spring semester application window is over now, and applications will open for the fall semester in August. In the meantime, fill out the form on our homepage to be notified when applications open!`
   },
 ];
 
