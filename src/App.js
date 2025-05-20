@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { HashRouter } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Modal, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles.css'
@@ -9,7 +9,6 @@ import './styles.css'
 // Import your page components
 import Home from './pages/Home';
 import Team from './pages/Team';
-import Mission from './pages/Mission';
 import Testimonials from './pages/Testimonials';
 import FAQ from './pages/Faq';
 import CS from './pages/CS/CS';
@@ -132,7 +131,6 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/mission" element={<Mission />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/reports" element={<Reports />} />
