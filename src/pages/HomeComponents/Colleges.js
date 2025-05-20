@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import '../../styles.css';
 
 function Colleges() {
@@ -18,28 +19,85 @@ function Colleges() {
     { name: 'Columbia', logo: 'https://admissions.ucr.edu/sites/default/files/styles/form_preview/public/2020-07/ucr-education-logo-columbia-university.png?itok=-0FD6Ma2' },
     { name: 'Princeton', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Princeton_seal.svg/140px-Princeton_seal.svg.png' },
     { name: 'UMass Amherst', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/UMass_Seal_Medium_PMS_202.png' },
-  ]
+  ];
 
   return (
-    <div className="container pb-5 pt-5">
-      <h1 className="text-center">Our Instructors Have Attended:</h1>
-      <div style = {{margin: "0 auto", whiteSpace: "nowrap", overflow: "hidden"}}>
-        <span style = {{display:"inline-block", animationName: "slide-then-hide", animationDuration: "10s", animationTimingFunction: "linear", animationIterationCount: "infinite", animationFillMode: "forwards"}}>
-        {colleges.map((college, index) => (
-          <div key={index} className="college-logo">
-            <img src={college.logo} alt="College Logo" />
+    <section className="py-5 bg-white border-top">
+      <Container>
+        <Row className="mb-5">
+          <Col className="text-center">
+            <h2 className="fw-bold">Our Instructors Have Attended</h2>
+            <p className="lead text-muted">Learn from students at top universities</p>
+          </Col>
+        </Row>
+
+        <div className="logo-carousel-container">
+          <div className="logo-carousel">
+            <div className="logo-slide">
+              {colleges.map((college, index) => (
+                <div key={`slide1-${index}`} className="logo-item">
+                  <div className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center" style={{ height: '120px', width: '200px' }}>
+                    <img 
+                      src={college.logo} 
+                      alt={`${college.name} Logo`} 
+                      title={college.name}
+                      className="img-fluid"
+                      style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="logo-slide">
+              {colleges.map((college, index) => (
+                <div key={`slide2-${index}`} className="logo-item">
+                  <div className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center" style={{ height: '120px', width: '200px' }}>
+                    <img 
+                      src={college.logo} 
+                      alt={`${college.name} Logo`} 
+                      title={college.name}
+                      className="img-fluid"
+                      style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-        </span>
-        <span style = {{display:"inline-block", animationName: "slide-then-hide", animationDuration: "10s", animationTimingFunction: "linear", animationIterationCount: "infinite", animationFillMode: "forwards"}}>
-        {colleges.map((college, index) => (
-          <div key={index} className="college-logo">
-            <img src={college.logo} alt="College Logo" />
-          </div>
-        ))}
-        </span>
-      </div>
-    </div>
+        </div>
+
+        <style jsx="true">{`
+          .logo-carousel-container {
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+          }
+          
+          .logo-carousel {
+            display: flex;
+            width: 100%;
+          }
+          
+          .logo-slide {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            padding-right: 0.5rem;
+          }
+          
+          .logo-item {
+            flex: 0 0 auto;
+            min-width: 200px;
+          }
+          
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+        `}</style>
+      </Container>
+    </section>
   );
 }
 

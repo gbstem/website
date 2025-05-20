@@ -1,40 +1,49 @@
 import React from "react";
+import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-
-import slide1 from "../../images/zoomScreenshots/Screenshot (1).png";
-import slide2 from "../../images/zoomScreenshots/Screenshot (2).png";
-import slide3 from "../../images/zoomScreenshots/Screenshot (4).png";
-import Slideshow from "../../Components/Slideshow";
 import { ArrowRight } from "react-feather";
+import slide1 from "../../images/zoomScreenshots/Screenshot (1).png";
 
 function OurMission() {
-  const slides = [slide1, slide2, slide3];
   return (
-    <div className="container pb-5 pt-5">
-      <div>
-        <div className="row">
-          <div className="col-md-6 mb-2">
-          <div style={{display: "flex", flexDirection:"column", justifyContent: "space-between", height: "100%", flexGrow: "1 1", paddingTop:"2rem", paddingBottom:"4rem", margin:"1.5rem"}}>
-            <h1 className="text-center">Our Mission</h1>
-            <p style = {{fontSize:"1.25rem", lineHeight:"2rem"}}>
-              We believe that everyone should have the opportunity to build strong foundational skills in
-              the STEM fields of science, computer science, math, and engineering, no matter their background or location.
-            </p>
-
-            <div style = {{marginLeft: "auto"}}>
-              <Link to="/mission" className="btn btn-primary" style = {{display: "flex", alignItems:"center", width:"fit-content"}}>
-                Learn More<ArrowRight/>
+    <section className="py-5 bg-white">
+      <Container>
+        <Row className="align-items-center g-5">
+          <Col lg={6}>
+            <div className="position-relative">
+              <div className="bg-primary rounded position-absolute" style={{ width: '90%', height: '90%', top: '10%', left: '10%', opacity: 0.1, zIndex: 0 }}></div>
+              <img 
+                src={slide1} 
+                alt="STEM Learning" 
+                className="img-fluid rounded shadow position-relative" 
+                style={{ zIndex: 1 }}
+              />
+              <div className="position-absolute" style={{ top: '-15px', left: '-15px', background: '#67aeda', width: '70px', height: '70px', borderRadius: '50%', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span className="text-white fs-1">💡</span>
+              </div>
+            </div>
+          </Col>
+          <Col lg={6}>
+            <div className="p-lg-4">
+              <h2 className="fw-bold mb-4">Our Mission</h2>
+              <p className="lead mb-4">
+                We believe that everyone should have the opportunity to build strong foundational skills in
+                the STEM fields of science, computer science, math, and engineering, no matter their background or location.
+              </p>
+              <p className="mb-5">
+                Our program is designed to make STEM education accessible and engaging for students,
+                preparing them for future academic and career success in an increasingly technological world.
+              </p>
+              <Link to="/mission" className="btn btn-primary px-4 py-2">
+                <span className="d-flex align-items-center">
+                  Learn More <ArrowRight size={18} className="ms-2" />
+                </span>
               </Link>
             </div>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <Slideshow slides={slides} />
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 }
 

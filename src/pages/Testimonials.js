@@ -1,6 +1,7 @@
 import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
-
+// Define all testimonials
 const testimonials = [
   {
     "text": "gbSTEM gave my daughter the opportunity to take her first steps in computer science and safe, welcoming, and fun environment. You sparked interest and curiosity in her. Every week she spent hours outside class working on her own Scratch projects in addition to the class projects. Thank you!",
@@ -48,7 +49,6 @@ const testimonials = [
   },
   {
     "text":
-
       "Elena and Yuen Ler are passionate about and dedicated to making a difference in the community and fostering a love for math and computer science. They create curriculum to motivate students to love their classes and want to learn more.",
     "author": "Parent of a 3rd grade student"
   },
@@ -78,50 +78,78 @@ const testimonials = [
   }
 ]
 
-function Testimonial(props) {
+// Testimonial card component
+function TestimonialCard({ text, author }) {
   return (
-      <div className="p-4"
-        style={{
-          border: '5px solid #1D2256',
-          borderRadius: '20px', maxWidth:"35rem", flexGrow:"2"
-        }}
-      >
-        <div>
-          <p>{props.text}</p>
+    <Card className="h-100 border-0 shadow-sm testimonial-card hover-effect">
+      <Card.Body className="p-4 d-flex flex-column">
+        <div className="position-relative mb-4">
+          <div style={{ 
+            fontSize: '72px', 
+            position: 'absolute', 
+            top: '-30px', 
+            left: '-10px', 
+            color: '#f8f9fa', 
+            zIndex: 0,
+            fontFamily: 'Georgia, serif'
+          }}>
+            "
+          </div>
+          <Card.Text 
+            className="position-relative" 
+            style={{ 
+              zIndex: 1, 
+              lineHeight: 1.6,
+              fontSize: '1rem',
+              fontStyle: 'italic'
+            }}
+          >
+            "{text}"
+          </Card.Text>
         </div>
-        <div >
-          <p>{`-- ${props.author}`}</p>
+        <div className="mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>
+          <p className="mb-0 fw-bold text-dark">{author}</p>
         </div>
-      </div>
-  )
+      </Card.Body>
+    </Card>
+  );
 }
 
+// Main Testimonials component
 function Testimonials() {
 
   return (
-    <div className="container">
-      <div className="text-center m-5">
-        <h1>What People Say</h1>
-      </div>
+    <Container className="py-5">
+      <Row className="mb-5">
+        <Col className="text-center">
+          <h2 className="fw-bold mb-3">What People Say</h2>
+          <p className="lead text-muted mb-5">Hear from our community of parents and students</p>
+        </Col>
+      </Row>
+      
+      <Row className="g-4">
+        {testimonials.map((testimonial, index) => (
+          <Col key={index} md={6} lg={4} className="mb-4">
+            <TestimonialCard
+              text={testimonial.text}
+              author={testimonial.author}
+            />
+          </Col>
+        ))}
+      </Row>
 
-      <div style = {{display:"flex", flexWrap: "wrap", gap: "3rem",  width: "fit-content", marginLeft: "auto", marginRight:"auto", marginBottom:"5rem", alignItems:"stretch", justifyContent:"center", justifyItems:"stretch"}}>
-        {
-          testimonials.map((testimonial, index) => {
-            return (
-              <Testimonial
-                key={index}
-                text={testimonial.text}
-                author={testimonial.author}
-              />
-            )
-          }
-          )
+      {/* Add custom CSS for animations */}
+      <style jsx="true">{`
+        .hover-effect {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-      </div>
-
-    </div>
+        .hover-effect:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+      `}</style>
+    </Container>
   );
-
 }
 
 export default Testimonials;

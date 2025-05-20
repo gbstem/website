@@ -86,7 +86,7 @@ const teamMembers = [
     school: 'Harvard University',
     graduationYear: '‘25',
     profilePic: yuenler,
-    role: 'Advisor and In-Person Director',
+    role: 'Advisor',
     bio: "Yuen Ler is a senior at Harvard studying computer science and statistics. Yuen Ler founded gbSTEM in March of 2020 with the goal of increasing access to STEM education in his community.",
     team: "advisors",
   },

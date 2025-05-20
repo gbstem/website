@@ -1,0 +1,66 @@
+/* Enforce strict max-width of 300px for all team member images */
+.team-member-image {
+  max-width: 300px !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Ensure all headshot images are perfectly circular */
+img[src*="headshots"] {
+  max-width: 300px !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.team-image-container {
+  max-width: 180px;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+/* Perfect circle container for team member images */
+.profile-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-card:hover .team-member-image {
+  transform: scale(1.08);
+}
+
+.team-section {
+  padding: 3rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-image-container {
+    max-width: 200px;
+  }
+}
