@@ -27,7 +27,7 @@ function Colleges() {
         <Row className="mb-5">
           <Col className="text-center">
             <h2 className="fw-bold">Our Instructors Have Attended</h2>
-            <p className="lead text-muted">Learn from students at top universities</p>
+            <p className="lead text-muted">Learn from talented high school students</p>
           </Col>
         </Row>
 
