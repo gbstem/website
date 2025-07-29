@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         <p className="text-white">The Greater Boston STEM Program is an independent non-profit 501(c)3 organization, EIN 88-1760321</p>
-        <small className="d-block mt-5 text-white">© 2023 The Greater Boston STEM Program, all rights reserved</small>
+        <small className="d-block mt-5 text-white">© 2025 The Greater Boston STEM Program, all rights reserved</small>
       </section>
     </footer>
   );

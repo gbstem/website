@@ -94,14 +94,14 @@ function App() {
               <NavDropdown.Item as={Link} to="/robotics" className="text-center text-lg-start">Robotics</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="https://gbstem.myspreadshop.com/all">Shop</Nav.Link>
-            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
+            <Nav.Link as={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSfRe7CVWxhOLb7mN20zER94-le4Wt-PCNX3Xd1iAJ53Ljh0ow/viewform?usp=sf_link"
               target='_blank'
             >
               <div className="rounded-div-blue align-center">
                 sign up
               </div>
             </Nav.Link>
-            <Nav.Link as={Link} to="https://portal.gbstem.org/signup"
+            <Nav.Link as={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSfRe7CVWxhOLb7mN20zER94-le4Wt-PCNX3Xd1iAJ53Ljh0ow/viewform?usp=sf_link"
               target='_blank'
             >
               <div className="rounded-div-gray align-center">

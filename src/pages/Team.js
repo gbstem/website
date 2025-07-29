@@ -19,7 +19,7 @@ const TeamMemberCard = ({ name, school, graduationYear, profilePic, bio, role })
   const handleImageLoad = () => setImageLoaded(true);
 
   return (
-    <Card className="team-member-card h-100 border-0 shadow-sm hover-effect" style={{ maxWidth: '300px' }}>
+    <Card className="team-member-card h-100 border-0 shadow-sm hover-effect" style={{ width: '300px' }}>
       <div className="profile-circle mx-auto mt-4 mb-3">
         <div className="team-image-container">
           <Card.Img 
@@ -54,15 +54,19 @@ const TeamMemberCard = ({ name, school, graduationYear, profilePic, bio, role })
         </div>
       </div>
 
-      <Card.Body className="text-center pb-4">
+      <Card.Body className="text-center pb-4 d-flex flex-column justify-content-between">
+        <div style={{ height: '140px' }}>
         <Card.Title as="h4" className="fw-bold mb-1">{name}</Card.Title>
         <p className="text-muted mb-1">{role}</p>
         <p className="small mb-3">{`${school} ${graduationYear}`}</p>
+        </div>
+        <div>
         <Button 
           onClick={handleClick} 
           className="rounded-pill px-4 py-1">
           View Bio
         </Button>
+        </div>
       </Card.Body>
 
       {/* Bio Modal */}
