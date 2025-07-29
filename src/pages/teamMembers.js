@@ -22,6 +22,9 @@ import millie from '../images/headshots/MillieHeredia.jpg';
 import nathan from '../images/headshots/NathanKessler.png';
 import ojaswinni from '../images/headshots/Ojaswinni.jpg';
 import sanaaya from '../images/headshots/SanaayaHora.jpg';
+import teddy from '../images/headshots/TeddyShi.png';
+import rupinika from '../images/headshots/RupinikaGolla.jpg';
+import sampreetha from '../images/headshots/Sampreetha.jpg';
 
 const teamMembers = [
   {
@@ -125,20 +128,20 @@ const teamMembers = [
   },
   {
     name: 'Sampreetha Srimam',
-    school: '',
-    graduationYear: '',
-    profilePic: placeholder,
+    school: 'Sharon High School',
+    graduationYear: '‘27',
+    profilePic: sampreetha,
     role: 'Events Associate',
-    bio: '',
+    bio: 'Sampreetha is a junior at Sharon High School. In her free time she loves to bake, read, and listen to music. She has a keen interest in STEM and has loved computer science ever since she was introduced to the coding language Python! As a second term events associate, she is looking forward to organizing more events!!',
     team: "outreach & events",
   },
   {
     name: 'Rupinika Golla',
-    school: '',
-    graduationYear: '',
-    profilePic: placeholder,
+    school: 'Milford High School',
+    graduationYear: '‘28',
+    profilePic: rupinika,
     role: 'Communications Associate',
-    bio: '',
+    bio: 'Rupinika is a sophomore at Milford High School. She joined gbSTEM in 2025 as a math instructor and enjoys helping younger students develop confidence in problem solving. She is passionate about math and computer science and hopes to pursue a career in a STEM-related field. Outside of gbSTEM, Rupinika enjoys playing the guitar, violin, and tennis.',
     team: "outreach & events",
   },
    {
@@ -235,9 +238,9 @@ const teamMembers = [
     name: "Teddy Shi",
     school: "Boston University Academy",
     graduationYear: "‘27",
-    profilePic: placeholder,
+    profilePic: teddy,
     role: "Scratch I Curriculum Developer",
-    bio: "",
+    bio: "Teddy is a junior at Boston University Academy. He first began working at gbSTEM in 2024. He has experience teaching students of many ages. In his free time, he enjoys playing volleyball, doing photography and participating in his school robotics team. Teddy is excited to work with everyone in the upcoming semester!",
     team: "computer science",
   },
   {
