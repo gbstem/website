@@ -13,7 +13,7 @@ function HowItWorks() {
             <h1 className="text-center">How It Works</h1>
             <p className="lead">
               All classes are 100% free and will be conducted either remotely via Zoom or in-person in groups of about
-              5-10 students. Each class will meet for two 45-60 minute sessions every week. We emphasize
+              5-10 students. Each class will meet for one 45-60 minute session per week. We emphasize
               creativity, problem-solving, and collaboration in order to foster a welcoming environment where
               students can form lasting friendships.
             </p>

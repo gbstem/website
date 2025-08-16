@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Alert } from 'react-bootstrap';
+import { semesterStartDate, upcomingSemester, registrationEndsDate, latestSemester, instructorAppsDueDate, formLink, registrationOpen } from "../../Constants";
 
 function HomeIntro() {
   return (
@@ -11,12 +12,12 @@ function HomeIntro() {
               <Card.Body className="p-4">
                 <h2 className="text-center mb-4">Registration Information</h2>
                 <Alert variant="info">
-                  <p className="mb-0">The Spring Semester registration is now closed. Registrations for the Fall semester will open in August.</p>
+                  <p className="mb-0">{registrationOpen ? `Registration for the gbSTEM ${upcomingSemester} semester is currently underway. Register to be a student by ${registrationEndsDate.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${instructorAppsDueDate.toLocaleDateString()}.` : `The ${latestSemester} semester registration is now closed. Registrations for the ${upcomingSemester} semester will open on ${semesterStartDate.toLocaleDateString()}.`}</p>
                 </Alert>
-                <p className="mb-4">
-                  If you are interested in gbSTEM's programs or hope to apply next semester as an instructor, please join our mailing list <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKlEDGGKCc7bB7Xvlm3zOnhgh37MusQ_uU_6paHAhpHIDgXw/viewform?usp=sf_link" className="fw-bold">here</a>.
+                <p className={`mb-4 ${!registrationOpen ? "" : "d-none"}`}>
+                  If you are interested in gbSTEM's programs or hope to apply next semester as an instructor, please join our mailing list <a href={formLink} className="fw-bold" target="_blank" rel="noopener noreferrer">here</a>.
                 </p>
-                <Row className="g-4">
+                <Row className={`g-4 ${registrationOpen ? "" : "d-none"}`}>
                   <Col md={6}>
                     <div className="text-center p-4 h-100 bg-light rounded">
                       <h5 className="mb-3">Parents and 1-8 Students</h5>
