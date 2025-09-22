@@ -2,9 +2,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ArrowDown from '../../images/icons/arrow-down.svg';
-import ArrowLeftRight from '../../images/icons/arrow-left-right.svg';
-import {Link} from 'react-router-dom';
 import ClassHoverButton from '../../Components/ClassHoverButton';
+import PageButton from '../../Components/PageButton';
 
 const CS = () => {
   return (
@@ -16,47 +15,41 @@ const CS = () => {
 
         <section id="cs">
           <div className="container my-5">
-          <p>We offer four introductory courses in the computer science track: Scratch, Python, Java, and Web Development. We also offer Python II, a more advanced Python course. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
-          
-          <h2 className = "text-center p-5">Typical Class Progression</h2>
+            <p>We offer five course levels in the computer science track: Scratch, Scratch 2, Python 1, Python 2, and Web Development. Each course takes place in two parts: a fall "A" section, and a continuing spring "B" section. Note that the A section must be taken before the B section. The A section is only offered in the fall, and the B section is only offered in the spring. Students should take the B class after the A class. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
 
-          <div style = {{margin: "auto", marginTop: "1rem", marginBottom: "6rem"}}>
-          <ClassHoverButton link = "scratch" color = "#ffc819" fillButtonColor = "fillButtonYellow" className = "Scratch"/>
-          <div style = {{margin: "auto", width: "fit-content"}}><img alt = "down arrow" src = {ArrowDown} style = {{width: "3rem", height:"5rem"}}/></div>
-          <div style = {{display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center"}}>
-          <ClassHoverButton link = "python1" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Python I"/>
-          <img alt = "left/right arrow" src = {ArrowLeftRight} style = {{width: "3rem", height:"3rem"}}/>
-          <ClassHoverButton link = "java" color = "#4CAF50" fillButtonColor = "fillButtonGreen" className = "Java"/>
-          </div>
-          <div style = {{margin: "auto", width: "fit-content"}}><img alt = "down arrow" src = {ArrowDown} style = {{width: "3rem", height:"5rem"}}/></div>
-          <div style = {{display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center"}}>
-          <ClassHoverButton link = "python2" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Python II"/>
-          <img alt = "left/right arrow" src = {ArrowLeftRight} style = {{width: "3rem", height:"3rem"}}/>
-          <ClassHoverButton link = "webdev" color = "#67aeda" fillButtonColor = "fillButtonBlue" className = "Web Development"/>
-          </div>
+            <h2 className="text-center p-5">Typical Class Progression</h2>
+            <div className="d-flex flex-nowrap justify-content-center align-items-center">
+              <ClassHoverButton link="scratch" color="#ffd233" className="Scratch 1a" />
+              <ClassHoverButton link="scratch" color="#ffc819" className="Scratch 1b" />
+              <ClassHoverButton link="scratch" color="#ffb347" className="Scratch 2a" />
+              <ClassHoverButton link="scratch" color="#ff8c00" className="Scratch 2b" />
+            </div>
+            <div className="d-flex justify-content-center my-3"><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "5rem" }} /></div>
+            <div className="d-flex flex-nowrap justify-content-center align-items-center">
+              <ClassHoverButton link="python1" color="#66BB6A" className="Python 1a" />
+              <ClassHoverButton link="python1" color="#4CAF50" className="Python 1b" />
+              <ClassHoverButton link="python2" color="#388E3C" className="Python 2a" />
+              <ClassHoverButton link="python2" color="#2E7D32" className="Python 2b" />
+            </div>
+            <div className="d-flex justify-content-center my-1 fs-3 fw-semibold">OR</div>
+            <div className="d-flex flex-nowrap justify-content-center align-items-center">
+              <ClassHoverButton link="python1" color="#66BB6A" className="Python 1a" />
+              <ClassHoverButton link="python1" color="#4CAF50" className="Python 1b" />
+              <ClassHoverButton link="webdev" color="#67aeda" className="Web Development A" />
+              <ClassHoverButton link="webdev" color="#2A7DBE" className="Web Development B" />
+            </div>
           </div>
 
-          <p>
-            We recommend students younger than 5th grade begin with Scratch, while those in 6th-8th grade should begin with Python I or Java.
+          <p className="container my-5">
+            We recommend students younger than 5th grade begin with Scratch, while those in 6th-8th grade should begin with Python. Those who have completed Scratch 2b should proceed to Python 1a.
           </p>
 
-          <h2 className = "text-center p-5">Learn About A Class:</h2>
-          <div style = {{display: "flex", flexWrap: "wrap", justifyContent: "center", marginBottom:"2rem", gap:"3rem", color:"blue"}}>
-            <Link to= "scratch" style = {{fontSize:"1.5rem"}} className = "button"> Scratch </Link>
-            <Link to= "python1" style = {{fontSize:"1.5rem"}} className = "button"> Python I </Link>
-            <Link to= "java" style = {{fontSize:"1.5rem"}} className = "button"> Java </Link>
-            <Link to= "python2" style = {{fontSize:"1.5rem"}} className = "button"> Python II </Link>
-            <Link to= "webdev" style = {{fontSize:"1.5rem"}} className = "button"> Web Development </Link>
-
-          </div>
-
-          <h2 className = "text-center p-5">Explore Other Tracks:</h2>
-          <div style = {{display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2rem", marginBottom:"6rem"}}>
-            <Link to= "/engineering" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#ffc819", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Engineering Track </Link>
-            <Link to= "/math" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#aaaaaa", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Math Track </Link>
-            <Link to= "/science" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#4CAF50", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Science Track </Link>
-            <Link to= "/robotics" className = "button" style = {{borderRadius: "20px", padding: "1.5rem", backgroundColor: "#bf60bf", color: "white", textDecoration:"none", fontSize:"1.25rem"}}> Robotics Program </Link>
-          </div>
+          <h2 className="text-center p-5">Explore Other Tracks:</h2>
+          <div className="d-flex flex-wrap justify-content-center mb-5 gap-4">
+            <PageButton link="/engineering" color="#ffc819" className="Engineering Track" />
+            <PageButton link="/math" color="#aaaaaa" className="Math Track" />
+            <PageButton link="/science" color="#4CAF50" className="Science Track" />
+            <PageButton link="/robotics" color="#bf60bf" className="Robotics Program" />
           </div>
         </section>
       </main>
