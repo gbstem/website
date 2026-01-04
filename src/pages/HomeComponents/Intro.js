@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Alert } from 'react-bootstrap';
-import { semesterStartDate, upcomingSemester, registrationEndsDate, latestSemester, instructorAppsDueDate, formLink, registrationOpen } from "../../Constants";
+import { semesterStartDate, semesterEndDate, upcomingSemester, registrationEndsDate, latestSemester, instructorAppsDueDate, formLink, registrationOpen, registrationOpenDate } from "../../Constants";
 
 function HomeIntro() {
   return (
@@ -11,8 +11,9 @@ function HomeIntro() {
             <Card className="border-0 shadow-sm">
               <Card.Body className="p-4">
                 <h2 className="text-center mb-4">Registration Information</h2>
+                <p>{`The ${upcomingSemester} semester will run from ${semesterStartDate.toLocaleDateString()} to ${semesterEndDate.toLocaleDateString()}!`}</p>
                 <Alert variant="info">
-                  <p className="mb-0">{registrationOpen ? `Registration for the gbSTEM ${upcomingSemester} semester is currently underway. Register to be a student by ${registrationEndsDate.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${instructorAppsDueDate.toLocaleDateString()}.` : `The ${latestSemester} semester registration is now closed. Registrations for the ${upcomingSemester} semester will open on ${semesterStartDate.toLocaleDateString()}.`}</p>
+                  <p className="mb-0">{registrationOpen ? `Registration for the gbSTEM ${upcomingSemester} semester is currently underway. Register to be a student by ${registrationEndsDate.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${instructorAppsDueDate.toLocaleDateString()}.` : `The ${latestSemester} semester registration is now closed. Registrations for the ${upcomingSemester} semester will open on ${registrationOpenDate.toLocaleDateString()}.`}</p>
                 </Alert>
                 <p className={`mb-4 ${!registrationOpen ? "" : "d-none"}`}>
                   If you are interested in gbSTEM's programs or hope to apply next semester as an instructor, please join our mailing list <a href={formLink} className="fw-bold" target="_blank" rel="noopener noreferrer">here</a>.
