@@ -15,17 +15,14 @@ const Engineering = () => {
 
         <section id="cs">
           <div className="container my-5">
-          <p>We are offering 3 different engineering courses during the fall semester: Engineering I, II, and III. Engineering classes help students develop a wide variety of skills, from problem-solving to an understanding of physics.</p>
+          <p>We offer 3 different engineering courses during each semester: Engineering 1, 2, and 3. Engineering classes help students develop a wide variety of skills, from problem-solving to an understanding of physics.</p>
           
           <h2 className = "text-center p-5">Typical Class Progression</h2>
 
           <div className="d-flex flex-nowrap justify-content-center align-items-center">
-            <ClassHoverButton link = "engineering1" color = "#ffdd53" className = "Engineering 1a"/>
-            <ClassHoverButton link = "engineering1" color = "#ffc819" className = "Engineering 1b"/>
-            <ClassHoverButton link = "engineering2" color = "#4CAF50" className = "Engineering 2a"/>
-            <ClassHoverButton link = "engineering2" color = "#388E3C" className = "Engineering 2b"/>
-            <ClassHoverButton link = "engineering3" color = "#67aeda" className = "Engineering 3a"/>
-            <ClassHoverButton link = "engineering3" color = "#4b8fc2" className = "Engineering 3b"/>
+            <ClassHoverButton link = "engineering1" color = "#ffc819" className = "Engineering 1"/>
+            <ClassHoverButton link = "engineering2" color = "#388E3C" className = "Engineering 2"/>
+            <ClassHoverButton link = "engineering3" color = "#67aeda" className = "Engineering 3"/>
           </div>
 
           <p className="mt-5">

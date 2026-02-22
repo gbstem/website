@@ -15,26 +15,23 @@ const CS = () => {
 
         <section id="cs">
           <div className="container my-5">
-            <p>We offer five course levels in the computer science track: Scratch, Scratch 2, Python 1, Python 2, and Web Development. Each course takes place in two parts: a fall "A" section, and a continuing spring "B" section. Note that the A section must be taken before the B section. The A section is only offered in the fall, and the B section is only offered in the spring. Students should take the B class after the A class. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
+            <p>We offer five course levels in the computer science track: Scratch, Scratch 2, Python 1, Python 2, and Web Development. Each course, with the exception of Scratch 1 and Python 1, takes place in two parts: a fall "A" section, and a continuing spring "B" section. Note that the A section must be taken before the B section. The A section is only offered in the fall, and the B section is only offered in the spring. Scratch 1 and Python 1 are offered every fall and every spring. Students should take the B class after the A class. Classes take a project-based learning approach as students will learn through collaborating and working with peers on mini-projects.</p>
 
             <h2 className="text-center p-5">Typical Class Progression</h2>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="scratch" color="#ffd233" className="Scratch 1a" />
-              <ClassHoverButton link="scratch" color="#ffc819" className="Scratch 1b" />
+              <ClassHoverButton link="scratch" color="#ffd233" className="Scratch 1" />
               <ClassHoverButton link="scratch" color="#ffb347" className="Scratch 2a" />
               <ClassHoverButton link="scratch" color="#ff8c00" className="Scratch 2b" />
             </div>
             <div className="d-flex justify-content-center my-3"><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "5rem" }} /></div>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="python1" color="#66BB6A" className="Python 1a" />
-              <ClassHoverButton link="python1" color="#4CAF50" className="Python 1b" />
+              <ClassHoverButton link="python1" color="#66BB6A" className="Python 1" />
               <ClassHoverButton link="python2" color="#388E3C" className="Python 2a" />
               <ClassHoverButton link="python2" color="#2E7D32" className="Python 2b" />
             </div>
             <div className="d-flex justify-content-center my-1 fs-3 fw-semibold">OR</div>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="python1" color="#66BB6A" className="Python 1a" />
-              <ClassHoverButton link="python1" color="#4CAF50" className="Python 1b" />
+              <ClassHoverButton link="python1" color="#66BB6A" className="Python 1" />
               <ClassHoverButton link="webdev" color="#67aeda" className="Web Development A" />
               <ClassHoverButton link="webdev" color="#2A7DBE" className="Web Development B" />
             </div>
