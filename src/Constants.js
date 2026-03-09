@@ -1,7 +1,7 @@
 export const semesterStartDate = new Date('2026-03-16');
 export const registrationOpenDate = new Date('2026-02-01');
 export const instructorAppsDueDate = new Date('2026-02-28')
-export const registrationEndsDate = new Date('2026-03-09')
+export const registrationEndsDate = new Date('2026-03-16')
 export const semesterEndDate = new Date('2026-06-14');
 export const latestSemester =  new Date().getMonth() < 9 && new Date().getMonth() >= 3 ? "spring" : "fall";
 export const upcomingSemester = latestSemester === "fall" ? "spring" : "fall";
