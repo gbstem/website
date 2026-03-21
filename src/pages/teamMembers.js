@@ -32,6 +32,10 @@ import luke from '../images/headshots/LukeMussalli.jpg';
 import zac from '../images/headshots/ZacLipchin.jpg';
 import aarav from '../images/headshots/AaravAgrawal.jpg';
 import leila from '../images/headshots/LeilaKoplan.jpg';
+import zizi from '../images/headshots/zizi.jpg';
+import zaria from '../images/headshots/zaria.jpg';
+import avishag from '../images/headshots/avishag.png';
+import dennis from '../images/headshots/dennis.jpg';
 
 const teamMembers = [
   {
@@ -98,15 +102,6 @@ const teamMembers = [
     team: "advisors",
   },
   {
-    name: 'Tylina Khamphavong',
-    school: 'George Washington University',
-    graduationYear: '‘29',
-    profilePic: tylina,
-    role: 'Advisor',
-    bio: 'Tylina is a freshman at George Washington University. She joined gbSTEM as a math instructor in 2022 and has since then been an in-person instructor at the Cambridge Public Library teaching engineering. In school Tylina is captain of the Debate Team and is highly involved with Student Leadership. As well as being captain of her crew team, she loves running and staying active. She volunteers/works at her local Senior Home in the Memory Care unit. In her free time Tylina likes to read, listen to music, and hang out with friends.',
-    team: "advisors",
-  },
-  {
     name: 'Vedi Raval',
     school: 'Harvard University',
     graduationYear: '‘29',
@@ -149,6 +144,24 @@ const teamMembers = [
     profilePic: rupinika,
     role: 'Communications Associate',
     bio: 'Rupinika is a sophomore at Milford High School. She joined gbSTEM in 2025 as a math instructor and enjoys helping younger students develop confidence in problem solving. She is passionate about math and computer science and hopes to pursue a career in a STEM-related field. Outside of gbSTEM, Rupinika enjoys playing the guitar, violin, and tennis.',
+    team: "outreach & events",
+  },
+  {
+    name: 'Zizi Fan',
+    school: 'Boston University Accademy',
+    graduationYear: '‘28',
+    profilePic: zizi,
+    role: 'Communications Associate',
+    bio: 'Zizi is a sophomore at Boston University Academy. She first joined gbSTEM in 2025 as an in-person robotics instructor before becoming communications associate. Zizi has a deep passion for STEM, especially biology, and she wishes to pursue a career in medicine. In her free time, she enjoys dancing, watching dramas, and making clothes.',
+    team: "outreach & events",
+  },
+  {
+    name: 'Avishag Salzman',
+    school: 'Maimonides School',
+    graduationYear: '‘27',
+    profilePic: avishag,
+    role: 'Communications Associate',
+    bio: 'Avishag attends Maimonides School and has a deep interest in STEM, particularly math. She plans to pursue medicine and hopes to share her enthusiasm for learning with others. Outside of gbSTEM, Avishag loves cooking and playing with her bunnies.',
     team: "outreach & events",
   },
    {
@@ -197,12 +210,12 @@ const teamMembers = [
     team: "math",
   },
   {
-    name: 'Zac Lipchin',
-    school: 'Newton North High School',
-    graduationYear: '‘26',
-    profilePic: zac,
+    name: 'Zaria Wellesley',
+    school: 'Buckingham Browne & Nichols School',
+    graduationYear: '‘28',
+    profilePic: zaria,
     role: 'Math II Curriculum Developer',
-    bio: "Zac is a senior at Newton North High School and joined gbSTEM in 2023 as a math instructor. He loves math and is excited to create lessons for Math ii. He enjoys playing the drums, listening to music, and biking in his free time.",
+    bio: "Zaria is a sophomore at BB&N. She taught at gbSTEM as a substitute instructor and a Math II instructor before becoming a curriculum developer. At her school, she is a math peer tutor and leads a girls math club for elementary students. Zaria is very passionate about STEM and hopes to study medicine. In her free time, she runs track and cross country and enjoys spending time with her friends.",
     team: "math",
   },
   {
@@ -224,12 +237,12 @@ const teamMembers = [
     team: "math",
   },
   {
-    name: 'Nathan Kessler',
-    school: 'Newton North High School',
-    graduationYear: '‘26',
-    profilePic: nathan,
+    name: 'Meghanaa Balasubramani',
+    school: '',
+    graduationYear: '',
+    profilePic: placeholder,
     role: 'Math V Curriculum Developer',
-    bio: ' Nathan is a senior at Newton North High School and joined gbSTEM in 2024 as a CS and later math instructor. He enjoys math competitions and is excited for creating lessons for Math V. He enjoys reading, working out, and eating in his free time.',
+    bio: "",
     team: "math",
   },
   {
@@ -237,7 +250,7 @@ const teamMembers = [
     school: 'California Institute of Technology',
     graduationYear: '‘29',
     profilePic: maxwell,
-    role: 'Computer Science Director and Web Curriculum Developer',
+    role: 'Computer Science Director',
     bio: 'Maxwell joined gbSTEM in 2022 as a web development instructor. He first started teaching himself to code when he was six years old and is now experienced with HTML/CSS/JS, Java, C#, C++, Python, Powershell, and R. He maintains multiple professional websites, including that of his robotics team. He has also reached the silver division of the USA Computing Olympiad and worked as a data science intern at a neurobiology lab. He is eager to share his passion for coding, encouraging students to explore computer science independently and think critically to solve problems.',
     team: "computer science",
   },
@@ -251,12 +264,12 @@ const teamMembers = [
     team: "computer science",
   },
   {
-    name: "Freya Shah",
-    school: "Chelmsford High School",
-    graduationYear: "‘26",
-    profilePic: freya,
+    name: "Siddharth Monagari",
+    school: "",
+    graduationYear: "",
+    profilePic: placeholder,
     role: "Scratch II Curriculum Developer",
-    bio: "Freya is a senior at Chelmsford High School. She taught Scratch for gbSTEM in the spring semester of 2024. She started learning how to code a few year ago, but dove deeper into Python recently. She has enjoyed taking math and science classes, taking Russian Math classes outside of school. She is an avid member in her school's science, math, robotics, and speech and debate team. Outside of school, she enjoys singing, playing the guitar, and hanging out with friends.",
+    bio: "",
     team: "computer science",
   },
   {
@@ -278,6 +291,15 @@ const teamMembers = [
     team: "computer science",
   },
   {
+    name: "Dennis Zhou",
+    school: "Milton Academy",
+    graduationYear: "‘27",
+    profilePic: dennis,
+    role: "Web Curriculum Developer",
+    bio: "Dennis joined in 2023 as a web development instructor. He started learning how to code since he was seven years old. He is experienced in HTML/CSS/JS, Java, and Python. He has developed various apps and developed his own store website for a self-made clothing brand. He has interned at various companies including CodeWizardsHQ in developing a cybersecurity app. Outside of school, he loves to swim and go out with his friends.",
+    team: "computer science",
+  },
+  {
     name: "Grace Qiu",
     school: "Mass Academy",
     graduationYear: "‘26",
@@ -296,12 +318,21 @@ const teamMembers = [
     team: "engineering",
   },
   {
-    name: "Ojaswinni Upadhyay",
-    school: "Lexington High School",
-    graduationYear: "‘26",
-    profilePic: ojaswinni,
-    role: "Engineering I In-Person Curriculum Developer",
-    bio: "Ojaswinni is a senior attending Lexington High School. She is currently the Engineering 1 curriculum developer for both the online and in-person course. Some of her favorite subjects are math, physics, and astronomy. She loves going for night drives with her friends and observing the stars!",
+    name: "Anzar Ahmed",
+    school: "",
+    graduationYear: "",
+    profilePic: placeholder,
+    role: "Engineering I Curriculum Developer",
+    bio: "",
+    team: "engineering",
+  },
+     {
+    name: "Aarav Agrawal",
+    school: "Milton Academy",
+    graduationYear: "‘27",
+    profilePic: aarav,
+    role: "Engineering II Curriculum Developer",
+    bio: "In fourth grade Aarav began pursuing robotics at a competitive level, and since then, he has been fascinated by different topics in STEM. Starting during his sophomore year in high school, he began teaching engineering courses for gbSTEM, and since then, his passion for expanding stem education has only grown. Outside of school and gbSTEM, some of his favorite hobbies include playing tennis and programming.",
     team: "engineering",
   },
   {
@@ -309,7 +340,7 @@ const teamMembers = [
     school: "Nobles and Greenough School",
     graduationYear: "‘28",
     profilePic: sanaaya,
-    role: "Engineering I Curriculum Developer",
+    role: "Engineering III Curriculum Developer",
     bio: "Sanaaya is a sophomore at the Noble and Greenough School where her favorite classes are math and art. She joined gbSTEM as an engineering instructor and now is an engineering curriculum developer. Sanaaya has participated in First Lego League and VEX robotics competitions, and takes advanced math classes through the Russian School of Math. Outside of school, she loves to bake, read, and play basketball with her little brother.",
     team: "engineering",
   },
@@ -322,15 +353,6 @@ const teamMembers = [
   //   bio: "",
   //   team: "engineering",
   // },
-   {
-    name: "Aarav Agrawal",
-    school: "Milton Academy",
-    graduationYear: "‘27",
-    profilePic: aarav,
-    role: "Engineering III Curriculum Developer",
-    bio: "In fourth grade Aarav began pursuing robotics at a competitive level, and since then, he has been fascinated by different topics in STEM. Starting during his sophomore year in high school, he began teaching engineering courses for gbSTEM, and since then, his passion for expanding stem education has only grown. Outside of school and gbSTEM, some of his favorite hobbies include playing tennis and programming.",
-    team: "engineering",
-  },
   {
     name: 'Millie Heredia',
     school: 'Milton Academy',
