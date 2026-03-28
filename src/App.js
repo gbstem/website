@@ -14,6 +14,8 @@ import FAQ from './pages/Faq';
 import CS from './pages/CS/CS';
 import PythonI from './pages/CS/PythonI';
 import Scratch from './pages/CS/Scratch';
+import Scratch2 from './pages/CS/Scratch2';
+import Scratch3 from './pages/CS/Scratch3';
 import Math from './pages/Math/Math';
 import Engineering from './pages/Engineering/Engineering';
 import Engineering1 from './pages/Engineering/Engineering1';
@@ -25,9 +27,9 @@ import Donate from './pages/Donate';
 import Footer from './pages/Footer';
 import penguin from './images/icons/penguin.png';
 import ScrollToTop from './ScrollToTop';
-import Java from './pages/CS/Java';
 import WebDev from './pages/CS/WebDev';
 import PythonII from './pages/CS/PythonII';
+import PythonIII from './pages/CS/PythonIII';
 import Math1A from './pages/Math/Math1A';
 import Math1B from './pages/Math/Math1B';
 import Math2A from './pages/Math/Math2A';
@@ -136,11 +138,13 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/reports" element={<Reports />} />
         <Route path="/cs" element={<CS />} />
-          <Route path="/cs/scratch" element={<Scratch />} />
+          <Route path="/cs/scratch1" element={<Scratch />} />
+          <Route path="/cs/scratch2" element={<Scratch2 />} />
+          <Route path="/cs/scratch3" element={<Scratch3 />} />
           <Route path="/cs/python1" element={<PythonI />} />
-          <Route path="/cs/java" element={<Java />} />
-          <Route path="/cs/webdev" element={<WebDev />} />
           <Route path="/cs/python2" element={<PythonII />} />
+          <Route path="/cs/python3" element={<PythonIII />} />
+          <Route path="/cs/webdev" element={<WebDev />} />
         <Route path="/math" element={<Math />} />
           <Route path="/math/math1a" element={<Math1A />} />
           <Route path="/math/math1b" element={<Math1B />} />

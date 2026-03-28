@@ -19,21 +19,21 @@ const CS = () => {
 
             <h2 className="text-center p-5">Typical Class Progression</h2>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="scratch" color="#ffd233" className="Scratch 1" />
-              <ClassHoverButton link="scratch" color="#ffb347" className="Scratch 2a" />
-              <ClassHoverButton link="scratch" color="#ff8c00" className="Scratch 2b" />
+              <ClassHoverButton link="scratch1" color="#ffd233" className="Scratch 1" />
+              <ClassHoverButton link="scratch2" color="#ffb347" className="Scratch 2" />
+              <ClassHoverButton link="scratch3" color="#ff8c00" className="Scratch 3" />
             </div>
             <div className="d-flex justify-content-center my-3"><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "5rem" }} /></div>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
               <ClassHoverButton link="python1" color="#66BB6A" className="Python 1" />
-              <ClassHoverButton link="python2" color="#388E3C" className="Python 2a" />
-              <ClassHoverButton link="python2" color="#2E7D32" className="Python 2b" />
+              <ClassHoverButton link="python2" color="#388E3C" className="Python 2" />
+              <ClassHoverButton link="python3" color="#2E7D32" className="Python 3" />
             </div>
             <div className="d-flex justify-content-center my-1 fs-3 fw-semibold">OR</div>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
               <ClassHoverButton link="python1" color="#66BB6A" className="Python 1" />
-              <ClassHoverButton link="webdev" color="#67aeda" className="Web Development A" />
-              <ClassHoverButton link="webdev" color="#2A7DBE" className="Web Development B" />
+              <ClassHoverButton link="python2" color="#388E3C" className="Python 2" />
+              <ClassHoverButton link="webdev" color="#2A7DBE" className="Web Development" />
             </div>
           </div>
 
