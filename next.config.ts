@@ -21,10 +21,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  /* Enable this if you want to deploy the site as static pages,
-     but then the dev site will require manual reloading to pick up
-     changes
-  cacheComponents: true, */
   staticPageGenerationTimeout: 120,
 };
 
