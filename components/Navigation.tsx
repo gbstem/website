@@ -11,8 +11,8 @@ export default function Navigation() {
 
   return (
     <>
-      <Navbar variant="dark" expand="lg" style={{ backgroundColor: '#1D2256' }} collapseOnSelect>
-        <Navbar.Brand as={Link} href="/" className="ms-5" style={{ fontWeight: 700 }}>
+      <Navbar variant="dark" expand="md" style={{ backgroundColor: '#1D2256' }} collapseOnSelect>
+        <Navbar.Brand as={Link} href="/" className="ms-2 ms-xl-5" style={{ fontWeight: 700 }}>
           <Image
             alt="gbSTEM logo"
             src="/images/icons/penguin.png"
@@ -29,38 +29,38 @@ export default function Navigation() {
             </Nav.Link>
 
             <NavDropdown title="About" id="about-dropdown" className="text-center">
-              <NavDropdown.Item as={Link} href="/team" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/team" className="text-center text-md-start">
                 Team
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
                 href="/testimonials"
-                className="text-center text-lg-start"
+                className="text-center text-md-start"
               >
                 Testimonials
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/reports" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/reports" className="text-center text-md-start">
                 Reports
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/faq" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/faq" className="text-center text-md-start">
                 FAQ
               </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Programs" id="programs-dropdown" className="text-center">
-              <NavDropdown.Item as={Link} href="/cs" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/cs" className="text-center text-md-start">
                 Computer Science
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/math" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/math" className="text-center text-md-start">
                 Math
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/engineering" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/engineering" className="text-center text-md-start">
                 Engineering
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/science" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/science" className="text-center text-md-start">
                 Science
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/robotics" className="text-center text-lg-start">
+              <NavDropdown.Item as={Link} href="/robotics" className="text-center text-md-start">
                 Robotics
               </NavDropdown.Item>
             </NavDropdown>
