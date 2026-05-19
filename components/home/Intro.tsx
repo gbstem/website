@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import { Container, Row, Col, Card, Alert } from 'react-bootstrap';
-import { semesterStartDate, semesterEndDate, upcomingSemester, registrationEndsDate, latestSemester, instructorAppsDueDate, formLink, registrationOpen, registrationOpenDate } from "@/lib/constants";
+import { formLink, instructorAppsDueDate, latestSemester, registrationEndsDate, registrationOpen, registrationOpenDate, semesterEndDate, semesterStartDate, upcomingSemester } from "@/lib/constants";
+import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 
 function HomeIntro() {
   return (
@@ -17,7 +16,7 @@ function HomeIntro() {
                   <p className="mb-0">{registrationOpen ? `Registration for the gbSTEM ${upcomingSemester} semester is currently underway. Register to be a student by ${registrationEndsDate.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${instructorAppsDueDate.toLocaleDateString()}.` : `The ${latestSemester} semester registration is now closed. Registrations for the ${upcomingSemester} semester will open on ${registrationOpenDate.toLocaleDateString()}.`}</p>
                 </Alert>
                 <p className={`mb-4 ${!registrationOpen ? "" : "d-none"}`}>
-                  If you are interested in gbSTEM's programs or hope to apply next semester as an instructor, please join our mailing list <a href={formLink} className="fw-bold" target="_blank" rel="noopener noreferrer">here</a>.
+                  If you are interested in gbSTEM's programs or hope to apply next semester as an instructor, please join our mailing list <a href={formLink} className="fw-semibold" target="_blank" rel="noopener noreferrer">here</a>.
                 </p>
                 <Row className={`g-4 ${registrationOpen ? "" : "d-none"}`}>
                   <Col md={6}>
@@ -30,7 +29,7 @@ function HomeIntro() {
                   </Col>
                   <Col md={6}>
                     <div className="text-center p-4 h-100 bg-light rounded">
-                      <h5 className="mb-3">Instructor Applicants<br/>(High School or Older)</h5>
+                      <h5 className="mb-3">Instructor Applicants<br />(High School or Older)</h5>
                       <a className="btn btn-primary" href="https://portal.gbstem.org/signup" target="_blank" rel="noopener noreferrer">
                         Apply to teach
                       </a>

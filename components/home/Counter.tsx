@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { useEffect, useState } from "react";
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 function Counter() {
   const [counters, setCounters] = useState([
@@ -37,7 +37,7 @@ function Counter() {
       <Container>
         <Row className="mb-5">
           <Col className="text-center">
-            <h2 className="fw-bold">Our Impact</h2>
+            <h2 className="fw-semibold">Our Impact</h2>
             <p className="text-muted">Growing our community of STEM learners</p>
           </Col>
         </Row>
@@ -46,7 +46,7 @@ function Counter() {
             <Col md={6} lg={3} key={index}>
               <Card className="border-0 shadow-sm h-100 text-center">
                 <Card.Body className="d-flex flex-column justify-content-center p-4">
-                  <div className="counter-value display-4 fw-bold mb-2" style={{ color: '#67aeda' }}>
+                  <div className="counter-value display-4 fw-semibold mb-2" style={{ color: '#67aeda' }}>
                     {counter.value}{counter.suffix}
                   </div>
                   <Card.Title className="counter-label">{counter.label}</Card.Title>

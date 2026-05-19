@@ -1,8 +1,7 @@
 "use client";
 
-import React from 'react';
+import { computerScience, engineering, general, math, other, science } from '@/lib/faqData';
 import { Accordion, Container } from 'react-bootstrap';
-import { general, computerScience, math, engineering, science, other } from '@/lib/faqData';
 
 function QuestionAnswerAccordion({ data, eventKeyPrefix }: { data: any[], eventKeyPrefix: string }) {
   return (
@@ -23,7 +22,7 @@ export default function Faq() {
   return (
     <div className="pb-5">
       <div className="text-center m-5">
-        <h1 className="fw-bold">Frequently Asked Questions</h1>
+        <h1 className="fw-semibold">Frequently Asked Questions</h1>
       </div>
       <Container>
         <h2 style={{ margin: "auto", width: "fit-content", padding: "1.5rem" }}>General</h2>

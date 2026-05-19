@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import { Container, Row, Col, Card } from 'react-bootstrap';
 import Link from "next/link";
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import { ArrowRight } from "react-feather";
 
 function WhatPeopleSay() {
@@ -28,7 +27,7 @@ function WhatPeopleSay() {
       <Container>
         <Row className="mb-5">
           <Col className="text-center">
-            <h2 className="fw-bold mb-2">What People Say</h2>
+            <h2 className="fw-semibold mb-2">What People Say</h2>
             <p className="lead">Hear from our community of students, parents, and partners</p>
           </Col>
         </Row>
@@ -46,7 +45,7 @@ function WhatPeopleSay() {
                   </Card.Text>
                   <div className="d-flex mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>
                     <div>
-                      <div className="fw-bold">{testimonial.author}</div>
+                      <div className="fw-semibold">{testimonial.author}</div>
                       <div className="text-muted small">{testimonial.role}</div>
                     </div>
                   </div>

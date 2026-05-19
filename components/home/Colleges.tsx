@@ -1,6 +1,5 @@
 "use client";
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 
 function Colleges() {
@@ -27,7 +26,7 @@ function Colleges() {
       <Container>
         <Row className="mb-5">
           <Col className="text-center">
-            <h2 className="fw-bold">Our Instructors Have Attended</h2>
+            <h2 className="fw-semibold">Our Instructors Have Attended</h2>
             <p className="lead text-muted">Learn from talented high school students</p>
           </Col>
         </Row>
@@ -38,9 +37,9 @@ function Colleges() {
               {colleges.map((college, index) => (
                 <div key={`slide1-${index}`} className="logo-item">
                   <div className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center" style={{ height: '120px', width: '200px' }}>
-                    <img 
-                      src={college.logo} 
-                      alt={`${college.name} Logo`} 
+                    <img
+                      src={college.logo}
+                      alt={`${college.name} Logo`}
                       title={college.name}
                       className="img-fluid"
                       style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}
@@ -49,14 +48,14 @@ function Colleges() {
                 </div>
               ))}
             </div>
-            
+
             <div className="logo-slide">
               {colleges.map((college, index) => (
                 <div key={`slide2-${index}`} className="logo-item">
                   <div className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center" style={{ height: '120px', width: '200px' }}>
-                    <img 
-                      src={college.logo} 
-                      alt={`${college.name} Logo`} 
+                    <img
+                      src={college.logo}
+                      alt={`${college.name} Logo`}
                       title={college.name}
                       className="img-fluid"
                       style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}

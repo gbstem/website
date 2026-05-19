@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import { Container, Row, Col } from 'react-bootstrap';
 import Link from "next/link";
+import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowRight } from "react-feather";
 const slide1 = '/images/zoomScreenshots/Screenshot (1).png';
 
@@ -13,10 +12,10 @@ function OurMission() {
           <Col lg={6}>
             <div className="position-relative">
               <div className="bg-primary rounded position-absolute" style={{ width: '90%', height: '90%', top: '10%', left: '10%', opacity: 0.1, zIndex: 0 }}></div>
-              <img 
-                src={slide1} 
-                alt="STEM Learning" 
-                className="img-fluid rounded shadow position-relative" 
+              <img
+                src={slide1}
+                alt="STEM Learning"
+                className="img-fluid rounded shadow position-relative"
                 style={{ zIndex: 1 }}
               />
               <div className="position-absolute" style={{ top: '-15px', left: '-15px', background: '#67aeda', width: '70px', height: '70px', borderRadius: '50%', zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -26,7 +25,7 @@ function OurMission() {
           </Col>
           <Col lg={6}>
             <div className="p-lg-4">
-              <h2 className="fw-bold mb-4">Our Mission</h2>
+              <h2 className="fw-semibold mb-4">Our Mission</h2>
               <p className="lead mb-4">
                 We believe that everyone should have the opportunity to build strong foundational skills in
                 the STEM fields of science, computer science, math, and engineering, no matter their background or location.

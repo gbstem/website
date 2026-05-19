@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from 'react';
-import { Card, Button, Modal } from 'react-bootstrap';
 import Image from 'next/image';
+import { useState } from 'react';
+import { Button, Card, Modal } from 'react-bootstrap';
 
 interface TeamMemberCardProps {
   name: string;
@@ -27,25 +27,25 @@ export default function TeamMemberCard({ name, school, graduationYear, profilePi
     <Card className="team-member-card h-100 border-0 shadow-sm hover-effect" style={{ width: '300px' }}>
       <div className="profile-circle mx-auto mt-4 mb-3 position-relative">
         <div className="team-image-container h-100 w-100 position-relative">
-          <Image 
-            src={profilePic} 
+          <Image
+            src={profilePic}
             alt={name}
             fill
             sizes="180px"
             onLoad={handleImageLoad}
             className="team-member-image object-fit-cover"
-            style={{ 
+            style={{
               opacity: imageLoaded ? 1 : 0,
               transition: 'opacity 0.3s ease-in-out',
             }}
           />
           {!imageLoaded && (
-            <div className="image-placeholder" style={{ 
-              position: 'absolute', 
-              top: 0, 
-              left: 0, 
-              width: '100%', 
-              height: '100%', 
+            <div className="image-placeholder" style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -63,13 +63,13 @@ export default function TeamMemberCard({ name, school, graduationYear, profilePi
 
       <Card.Body className="text-center pb-4 d-flex flex-column justify-content-between">
         <div style={{ height: '140px' }}>
-          <Card.Title as="h4" className="fw-bold mb-1">{name}</Card.Title>
+          <Card.Title as="h4" className="fw-semibold mb-1">{name}</Card.Title>
           <p className="text-muted mb-1">{role}</p>
           <p className="small mb-3">{`${school} ${graduationYear}`}</p>
         </div>
         <div>
-          <Button 
-            onClick={handleClick} 
+          <Button
+            onClick={handleClick}
             className="rounded-pill px-4 py-1"
             style={{ backgroundColor: '#1D2256', borderColor: '#1D2256' }}>
             View Bio
