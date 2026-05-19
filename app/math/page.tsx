@@ -1,6 +1,7 @@
 const ArrowDown = '/images/icons/arrow-down.svg';
 import ClassHoverButton from '@/components/ClassHoverButton';
 import PageButton from '@/components/PageButton';
+import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 
 function Math() {
   return (
@@ -52,13 +53,7 @@ function Math() {
           class.
         </p>
 
-        <h2 className="text-center p-5">Explore Other Tracks:</h2>
-        <div className="d-flex flex-wrap justify-content-center mb-5 gap-4">
-          <PageButton link="/engineering" color="#ffc819" className="Engineering Track" />
-          <PageButton link="/math" color="#aaaaaa" className="Math Track" />
-          <PageButton link="/cs" color="#67aeda" className="Computer Science Track" />
-          <PageButton link="/robotics" color="#bf60bf" className="Robotics Program" />
-        </div>
+        <ExploreOtherTracks trackToOmit="/math" />
       </div>
     </div>
   );

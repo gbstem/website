@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 
 function Robotics() {
   return (
@@ -119,77 +120,7 @@ function Robotics() {
             Leadership and Organization
           </li>
         </ul>
-        <h2 className="text-center p-5">Explore Other Tracks:</h2>
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: '2rem',
-            marginBottom: '6rem',
-          }}
-        >
-          <Link
-            href="/engineering"
-            className="button"
-            style={{
-              borderRadius: '20px',
-              padding: '1.5rem',
-              backgroundColor: '#ffc819',
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '1.25rem',
-            }}
-          >
-            {' '}
-            Engineering Track{' '}
-          </Link>
-          <Link
-            href="/cs"
-            className="button"
-            style={{
-              borderRadius: '20px',
-              padding: '1.5rem',
-              backgroundColor: '#67aeda',
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '1.25rem',
-            }}
-          >
-            {' '}
-            Computer Science Track{' '}
-          </Link>
-          <Link
-            href="/science"
-            className="button"
-            style={{
-              borderRadius: '20px',
-              padding: '1.5rem',
-              backgroundColor: '#4CAF50',
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '1.25rem',
-            }}
-          >
-            {' '}
-            Science Track{' '}
-          </Link>
-          <Link
-            href="/math"
-            className="button"
-            style={{
-              borderRadius: '20px',
-              padding: '1.5rem',
-              backgroundColor: '#aaaaaa',
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '1.25rem',
-            }}
-          >
-            {' '}
-            Math Track{' '}
-          </Link>
-        </div>
+        <ExploreOtherTracks trackToOmit="/robotics" />
       </div>
     </div>
   );

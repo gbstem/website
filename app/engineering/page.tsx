@@ -1,5 +1,6 @@
 import ClassHoverButton from '@/components/ClassHoverButton';
 import PageButton from '@/components/PageButton';
+import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 
 const Engineering = () => {
   return (
@@ -30,13 +31,7 @@ const Engineering = () => {
               6th-8th grade can begin with Engineering II.
             </p>
 
-            <h2 className="text-center p-5">Explore Other Tracks:</h2>
-            <div className="d-flex flex-wrap justify-content-center mb-5 gap-4">
-              <PageButton link="/cs" color="#67aeda" className="Computer Science Track" />
-              <PageButton link="/math" color="#aaaaaa" className="Math Track" />
-              <PageButton link="/science" color="#4CAF50" className="Science Track" />
-              <PageButton link="/robotics" color="#bf60bf" className="Robotics Program" />
-            </div>
+            <ExploreOtherTracks trackToOmit="/engineering" />
           </div>
         </section>
       </main>

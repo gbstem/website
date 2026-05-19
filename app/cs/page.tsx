@@ -1,6 +1,7 @@
 const ArrowDown = '/images/icons/arrow-down.svg';
 import ClassHoverButton from '@/components/ClassHoverButton';
 import PageButton from '@/components/PageButton';
+import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 
 const CS = () => {
   return (
@@ -51,13 +52,7 @@ const CS = () => {
             Python 1a.
           </p>
 
-          <h2 className="text-center p-5">Explore Other Tracks:</h2>
-          <div className="d-flex flex-wrap justify-content-center mb-5 gap-4">
-            <PageButton link="/engineering" color="#ffc819" className="Engineering Track" />
-            <PageButton link="/math" color="#aaaaaa" className="Math Track" />
-            <PageButton link="/science" color="#4CAF50" className="Science Track" />
-            <PageButton link="/robotics" color="#bf60bf" className="Robotics Program" />
-          </div>
+          <ExploreOtherTracks trackToOmit="/cs" />
         </section>
       </main>
     </div>
