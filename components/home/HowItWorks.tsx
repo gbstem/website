@@ -2,6 +2,7 @@
 import React from 'react';
 const glance = '/images/glance.png';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'react-feather';
 
 function HowItWorks() {
@@ -56,11 +57,13 @@ function HowItWorks() {
 
           <div className="col-md-6">
             <div className="mt-4" style={{ display: 'flex', justifyContent: 'center' }}>
-              <img
+              <Image
                 src={glance}
                 alt="At a Glance"
                 className="img-fluid"
-                style={{ height: '30rem' }}
+                width={500}
+                height={480}
+                style={{ height: '30rem', width: 'auto' }}
               />
             </div>
           </div>

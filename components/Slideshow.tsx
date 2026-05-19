@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
+import Image from 'next/image';
 
 interface SlideshowProps {
   slides: string[];
@@ -48,10 +49,12 @@ export default function Slideshow({
         {slides.map((slide, index) => (
           <Carousel.Item key={index}>
             <div className="d-block w-100">
-              <img
+              <Image
                 src={slide}
                 alt={`Slide ${index + 1}`}
                 className="img-fluid banner"
+                width={1200}
+                height={800}
                 style={imageStyling}
               />
               <div style={captionStyling}>{captionSlides[currentSlide]}</div>

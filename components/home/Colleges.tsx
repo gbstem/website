@@ -1,61 +1,65 @@
 'use client';
+import Image from 'next/image';
 import { Col, Container, Row } from 'react-bootstrap';
 
 function Colleges() {
+  // For each of these, find the image on the web, then download them into our images/colleges folder
+  // so we don't break if those images are deleted or moved, and so we can get the benefits of
+  // next/image optimization.
   const colleges = [
-    { name: 'Harvard', logo: 'https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo.png' },
+    { name: 'Harvard', logo: '/images/colleges/harvard.png' },
     {
       name: 'MIT',
-      logo: 'https://download.logo.wine/logo/Massachusetts_Institute_of_Technology/Massachusetts_Institute_of_Technology-Logo.wine.png',
+      logo: '/images/colleges/mit.png',
     },
     {
       name: 'Tufts University',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Tufts_University_logo.png',
+      logo: '/images/colleges/tufts.png',
     },
     {
       name: 'University of Chicago',
-      logo: 'https://i0.wp.com/biocars.uchicago.edu/wp-content/uploads/2019/05/cropped-logo.png?ssl=1',
+      logo: '/images/colleges/uchicago.png',
     },
     {
       name: 'Brown University',
-      logo: 'https://smartwatermagazine.com/sites/default/files/brown_university_logo.jpg',
+      logo: '/images/colleges/brown.jpg',
     },
     {
       name: 'Boston University',
-      logo: 'https://content.sportslogos.net/logos/30/619/full/boston_university_terriers_logo_secondary_2015_sportslogosnet-5796.png//content.sportslogos.net/logos/30/619/full/boston_university_terriers_logo_secondary_2015_sportslogosnet-5796.png',
+      logo: '/images/colleges/bu.png',
     },
     {
       name: 'Northwestern University',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Northwestern_University.png',
+      logo: '/images/colleges/northwestern.png',
     },
     {
       name: 'Georgetown',
-      logo: 'https://www.georgetown.edu/wp-content/uploads/2019/10/Georgetown_logo_blueRGB.jpg',
+      logo: '/images/colleges/georgetown.jpg',
     },
     {
       name: 'NYU',
-      logo: 'https://yt3.ggpht.com/-RZYi5isxH_M/AAAAAAAAAAI/AAAAAAAAAAA/rmWpoe2qZzI/s900-c-k-no/photo.jpg',
+      logo: '/images/colleges/nyu.jpg',
     },
     {
       name: 'Worcester Polytechnic Institute',
-      logo: 'https://buildagrad.com/content/v2/images/wpi/WPI_Seal_FulClr.jpg',
+      logo: '/images/colleges/wpi.jpg',
     },
     {
       name: 'Swarthmore College',
-      logo: 'https://www.thecollegetour.com/wp-content/uploads/2022/08/swarthmore-college.png',
+      logo: '/images/colleges/swarthmore.png',
     },
-    { name: 'UCLA', logo: 'https://1000logos.net/wp-content/uploads/2017/11/UCLA-Logo.png' },
+    { name: 'UCLA', logo: '/images/colleges/ucla.png' },
     {
       name: 'Columbia',
-      logo: 'https://png.pngtree.com/png-clipart/20220530/original/pngtree-columbia-university-png-image_7775958.png',
+      logo: '/images/colleges/columbia.png',
     },
     {
       name: 'Princeton',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Princeton_Tigers_logo.svg/960px-Princeton_Tigers_logo.svg.png',
+      logo: '/images/colleges/princeton.png',
     },
     {
       name: 'UMass Amherst',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/UMass_Seal_Medium_PMS_202.png',
+      logo: '/images/colleges/umass.png',
     },
   ];
 
@@ -78,11 +82,13 @@ function Colleges() {
                     className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center"
                     style={{ height: '120px', width: '200px' }}
                   >
-                    <img
+                    <Image
                       src={college.logo}
                       alt={`${college.name} Logo`}
                       title={college.name}
                       className="img-fluid"
+                      width={160}
+                      height={80}
                       style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}
                     />
                   </div>
@@ -97,11 +103,13 @@ function Colleges() {
                     className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center"
                     style={{ height: '120px', width: '200px' }}
                   >
-                    <img
+                    <Image
                       src={college.logo}
                       alt={`${college.name} Logo`}
                       title={college.name}
                       className="img-fluid"
+                      width={160}
+                      height={80}
                       style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}
                     />
                   </div>

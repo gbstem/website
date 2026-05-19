@@ -1,5 +1,6 @@
 import ClassHoverButton from '@/components/ClassHoverButton';
 import React from 'react';
+import Image from 'next/image';
 import { interpolateColor } from '@/lib/colors';
 
 const ArrowDown = '/images/icons/arrow-down.svg';
@@ -42,7 +43,13 @@ export function ClassProgression({ items, gradient }: ClassProgressionProps) {
 export function ClassProgressionDownArrow() {
   return (
     <div className="d-flex justify-content-center my-3">
-      <img alt="down arrow" src={ArrowDown} style={{ width: '3rem', height: '5rem' }} />
+      <Image
+        alt="down arrow"
+        src={ArrowDown}
+        width={48}
+        height={80}
+        style={{ width: '3rem', height: '5rem' }}
+      />
     </div>
   );
 }

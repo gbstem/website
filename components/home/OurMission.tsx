@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowRight } from 'react-feather';
+import Image from 'next/image';
 const slide1 = '/images/zoomScreenshots/Screenshot (1).png';
 
 function OurMission() {
@@ -22,11 +23,13 @@ function OurMission() {
                   zIndex: 0,
                 }}
               ></div>
-              <img
+              <Image
                 src={slide1}
                 alt="STEM Learning"
                 className="img-fluid rounded shadow position-relative"
-                style={{ zIndex: 1 }}
+                width={600}
+                height={400}
+                style={{ zIndex: 1, width: '100%', height: 'auto' }}
               />
               <div
                 className="position-absolute"

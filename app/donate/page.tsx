@@ -1,5 +1,6 @@
 'use client';
 import DonationCalculator from '@/components/donate/DonationCalculator';
+import Image from 'next/image';
 const LittleBlue = '/images/penguin tiers/little-blue.png';
 const Magellanic = '/images/penguin tiers/magellanic.png';
 const King = '/images/penguin tiers/king.png';
@@ -86,9 +87,11 @@ function Donate() {
               }}
             >
               <div style={{ display: 'block' }}>
-                <img
+                <Image
                   alt="Little Blue Tier"
                   src={LittleBlue}
+                  width={112}
+                  height={112}
                   style={{ width: '7rem', height: '7rem' }}
                 />
                 <div>Little Blue Tier</div>
@@ -116,9 +119,11 @@ function Donate() {
               }}
             >
               <div style={{ display: 'block' }}>
-                <img
+                <Image
                   alt="Magellanic Tier"
                   src={Magellanic}
+                  width={128}
+                  height={128}
                   style={{ width: '8rem', height: '8rem' }}
                 />
                 <div>Magellanic Tier</div>
@@ -146,7 +151,13 @@ function Donate() {
               }}
             >
               <div style={{ display: 'block' }}>
-                <img alt="King Tier" src={King} style={{ width: '9rem', height: '9rem' }} />
+                <Image
+                  alt="King Tier"
+                  src={King}
+                  width={144}
+                  height={144}
+                  style={{ width: '9rem', height: '9rem' }}
+                />
                 <div>King Tier</div>
                 <div style={{ fontStyle: 'italic', fontSize: '1.25rem' }}>$2000+</div>
               </div>
@@ -172,7 +183,13 @@ function Donate() {
               }}
             >
               <div style={{ display: 'block' }}>
-                <img alt="Emperor Tier" src={Emperor} style={{ width: '10rem', height: '10rem' }} />
+                <Image
+                  alt="Emperor Tier"
+                  src={Emperor}
+                  width={160}
+                  height={160}
+                  style={{ width: '10rem', height: '10rem' }}
+                />
                 <div>Emperor Tier</div>
                 <div style={{ fontStyle: 'italic', fontSize: '1.25rem' }}>$5000+</div>
               </div>
