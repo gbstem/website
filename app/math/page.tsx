@@ -5,6 +5,12 @@ import {
 } from '@/components/ClassProgression';
 import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 import TrackPage from '@/components/TrackPage';
+import { constructSEO } from '@/lib/seo';
+
+export const metadata = constructSEO({
+  title: 'Math',
+  description: 'Explore our math programs',
+});
 
 function Math() {
   return (

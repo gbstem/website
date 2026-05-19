@@ -1,9 +1,10 @@
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
+import { constructSEO } from '@/lib/seo';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import type { Metadata } from 'next';
 import { Montserrat, Space_Mono } from 'next/font/google';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -16,11 +17,7 @@ const spaceMono = Space_Mono({
   variable: '--font-space-mono',
 });
 
-export const metadata: Metadata = {
-  title: 'gbSTEM - Greater Boston STEM Program',
-  description:
-    'Inspiring the Next Generation of STEM Innovators. The Greater Boston STEM Program delivers free introductory computer science, math, engineering, and science enrichment.',
-};
+export const metadata: Metadata = constructSEO();
 
 export default function RootLayout({
   children,

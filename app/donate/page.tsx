@@ -1,5 +1,10 @@
-'use client';
+import { constructSEO } from '@/lib/seo';
 import DonationCalculator from '@/components/donate/DonationCalculator';
+
+export const metadata = constructSEO({
+  title: 'Donate',
+  description: 'Support the Greater Boston STEM Program',
+});
 import SponsorshipTiers from '@/components/donate/SponsorshipTiers';
 
 const contributionBenefits = [

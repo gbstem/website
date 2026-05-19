@@ -1,6 +1,12 @@
 import { ClassProgression, TypicalClassProgression } from '@/components/ClassProgression';
 import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 import TrackPage from '@/components/TrackPage';
+import { constructSEO } from '@/lib/seo';
+
+export const metadata = constructSEO({
+  title: 'Science',
+  description: 'Explore our science programs',
+});
 
 const ScienceTrack = () => {
   return (

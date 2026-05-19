@@ -1,6 +1,12 @@
 import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 import TrackPage from '@/components/TrackPage';
 import { interpolateColor } from '@/lib/colors';
+import { constructSEO } from '@/lib/seo';
+
+export const metadata = constructSEO({
+  title: 'Robotics',
+  description: 'Explore our robotics programs',
+});
 
 function Robotics() {
   return (

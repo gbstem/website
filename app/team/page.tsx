@@ -1,6 +1,12 @@
 import TeamMemberCard from '@/components/team/TeamMemberCard';
+import { constructSEO } from '@/lib/seo';
 import teamMembers from '@/lib/teamMembers';
 import { Col, Container, Row } from 'react-bootstrap';
+
+export const metadata = constructSEO({
+  title: 'Our Team',
+  description: 'Meet the dedicated people behind gbSTEM',
+});
 
 const teams = [
   'presidents',

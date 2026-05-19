@@ -6,6 +6,12 @@ import {
 } from '@/components/ClassProgression';
 import ExploreOtherTracks from '@/components/ExploreOtherTracks';
 import TrackPage from '@/components/TrackPage';
+import { constructSEO } from '@/lib/seo';
+
+export const metadata = constructSEO({
+  title: 'Computer Science',
+  description: 'Explore our computer science programs',
+});
 
 const CS = () => {
   return (
