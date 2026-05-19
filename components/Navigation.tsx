@@ -17,7 +17,7 @@ export default function Navigation() {
             alt="gbSTEM logo"
             src="/images/icons/penguin.png"
             width={200}
-            height={56} // approximate height to maintain aspect ratio
+            height={79}
             className="d-inline-block align-center"
           />
         </Navbar.Brand>
