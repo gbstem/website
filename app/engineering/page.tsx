@@ -21,9 +21,9 @@ const Engineering = () => {
             <h2 className="text-center p-5">Typical Class Progression</h2>
 
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="engineering1" color="#ffc819" className="Engineering 1" />
-              <ClassHoverButton link="engineering2" color="#388E3C" className="Engineering 2" />
-              <ClassHoverButton link="engineering3" color="#67aeda" className="Engineering 3" />
+              <ClassHoverButton link="/engineering/engineering1" color="#ffc819" className="Engineering 1" />
+              <ClassHoverButton link="/engineering/engineering2" color="#388E3C" className="Engineering 2" />
+              <ClassHoverButton link="/engineering/engineering3" color="#67aeda" className="Engineering 3" />
             </div>
 
             <p className="mt-5">

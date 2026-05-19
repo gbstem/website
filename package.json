@@ -11,7 +11,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "cypress:run": "start-server-and-test start http://localhost:3000 cypress",
+    "cypress": "cypress run"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
@@ -31,6 +33,7 @@
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^15.15.0",
     "eslint": "^10",
     "eslint-config-next": "16.2.6",
     "eslint-config-prettier": "^10.1.8",
@@ -38,8 +41,9 @@
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "prettier": "^3.8.3",
+    "start-server-and-test": "^3.0.5",
     "tailwindcss": "^4",
-    "ts-jest": "^29.4.9",
+    "ts-jest": "^29.4.10",
     "typescript": "^6"
   }
 }

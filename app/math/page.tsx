@@ -29,21 +29,21 @@ function Math() {
 
         <div style={{ margin: 'auto', marginTop: '1rem', marginBottom: '6rem' }}>
           <div className="d-flex flex-nowrap justify-content-center align-items-center">
-            <ClassHoverButton link="math1a" color="#ffd233" className="Math 1a" />
-            <ClassHoverButton link="math1b" color="#ffc819" className="Math 1b" />
-            <ClassHoverButton link="math2a" color="#ffb347" className="Math 2a" />
-            <ClassHoverButton link="math2b" color="#ff8c00" className="Math 2b" />
+            <ClassHoverButton link="/math/math1a" color="#ffd233" className="Math 1a" />
+            <ClassHoverButton link="/math/math1b" color="#ffc819" className="Math 1b" />
+            <ClassHoverButton link="/math/math2a" color="#ffb347" className="Math 2a" />
+            <ClassHoverButton link="/math/math2b" color="#ff8c00" className="Math 2b" />
           </div>
           <div className="d-flex justify-content-center my-3">
             <img alt="down arrow" src={ArrowDown} style={{ width: '3rem', height: '5rem' }} />
           </div>
           <div className="d-flex flex-nowrap justify-content-center align-items-center">
-            <ClassHoverButton link="math3a" color="#66BB6A" className="Math 3a" />
-            <ClassHoverButton link="math3b" color="#388E3C" className="Math 3b" />
-            <ClassHoverButton link="math4a" color="#67aeda" className="Math 4a" />
-            <ClassHoverButton link="math4b" color="#4b8fc2" className="Math 4b" />
-            <ClassHoverButton link="math5a" color="#A97ABF" className="Math 5a" />
-            <ClassHoverButton link="math5b" color="#bf60bf" className="Math 5b" />
+            <ClassHoverButton link="/math/math3a" color="#66BB6A" className="Math 3a" />
+            <ClassHoverButton link="/math/math3b" color="#388E3C" className="Math 3b" />
+            <ClassHoverButton link="/math/math4a" color="#67aeda" className="Math 4a" />
+            <ClassHoverButton link="/math/math4b" color="#4b8fc2" className="Math 4b" />
+            <ClassHoverButton link="/math/math5a" color="#A97ABF" className="Math 5a" />
+            <ClassHoverButton link="/math/math5b" color="#bf60bf" className="Math 5b" />
           </div>
         </div>
 

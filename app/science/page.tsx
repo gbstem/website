@@ -27,20 +27,20 @@ const ScienceTrack = () => {
             <h2 className="text-center p-5">Typical Class Progression</h2>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
               <ClassHoverButton
-                link="science1"
+                link="/science/science1"
                 color="#66BB6A"
                 className="Environmental Science A"
               />
               <ClassHoverButton
-                link="science1"
+                link="/science/science1"
                 color="#4CAF50"
                 className="Environmental Science B"
               />
             </div>
             {/* <div className="d-flex justify-content-center my-3"><img alt="down arrow" src={ArrowDown} style={{ width: "3rem", height: "5rem" }} /></div>
             <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="science2" color="#388E3C" className="Physics A" />
-              <ClassHoverButton link="science2" color="#2E7D32" className="Physics B" />
+              <ClassHoverButton link="/science/science2" color="#388E3C" className="Physics A" />
+              <ClassHoverButton link="/science/science2" color="#2E7D32" className="Physics B" />
             </div> */}
 
             <ExploreOtherTracks trackToOmit="/science" />

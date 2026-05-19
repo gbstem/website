@@ -1,0 +1,203 @@
+yarn run v1.22.22
+$ start-server-and-test start http://localhost:3000 cypress
+1: starting server using command "npm run start"
+and when url "[ 'http://localhost:3000' ]" is responding with HTTP status code 200
+running tests using command "npm run cypress"
+
+npm warn Unknown env config "version-commit-hooks". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "version-tag-prefix". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "version-git-message". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "argv". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "version-git-tag". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> gbstem-website@3.0.0 start
+> next start
+
+npm warn Unknown env config "version-commit-hooks". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "version-tag-prefix". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "version-git-message". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "argv". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown env config "version-git-tag". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> gbstem-website@3.0.0 cypress
+> cypress run
+
+⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+Warning: The allowCypressEnv configuration option is enabled. This allows any browser code to read values from Cypress.env(). This is insecure and will be removed in a future major version.
+
+1. Replace Cypress.env() calls with cy.env() (for sensitive values) or Cypress.expose() (for public configuration)
+2. Set allowCypressEnv: false in your Cypress configuration to disable Cypress.env()
+
+Learn more: https://on.cypress.io/cypress-env-migration
+
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.15.0                                                                        │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v24.15.0 (/usr/bin/node)                                                       │
+  │ Specs:          1 found (basic-navigation.cy.ts)                                               │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  basic-navigation.cy.ts                                                          (1 of 1)
+
+
+  Basic Navigation
+    1) navigates from the Navigation Bar
+    2) navigates from the Home page
+    3) navigates from the Computer Science Track page
+    4) navigates from the Math Track page
+    5) navigates from the Engineering Track page
+    6) navigates from the Science Track page
+    ✓ navigates from the Robotics Track page (452ms)
+
+
+  1 passing (1m)
+  6 failing
+
+  1) Basic Navigation
+       navigates from the Navigation Bar:
+     AssertionError: Timed out retrying after 4000ms: expected 'https://docs.google.com/forms/u/3/d/e/1FAIpQLSfRe7CVWxhOLb7mN20zER94-le4Wt-PCNX3Xd1iAJ53Ljh0ow/viewform?usp=sf_link' to include 'gbstem.org'
+      at checkExternalLink (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:21:57)
+      at Context.eval (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:55:4)
+
+  2) Basic Navigation
+       navigates from the Home page:
+
+      Timed out retrying after 10000ms
+      + expected - actual
+
+      -'/'
+      +'/math'
+      
+      at checkInternalLink (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:11:48)
+      at Context.eval (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:67:4)
+
+  3) Basic Navigation
+       navigates from the Computer Science Track page:
+
+      Timed out retrying after 10000ms
+      + expected - actual
+
+      -'/python1'
+      +'/cs/python1'
+      
+      at checkInternalLink (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:11:48)
+      at Context.eval (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:74:4)
+
+  4) Basic Navigation
+       navigates from the Math Track page:
+
+      Timed out retrying after 10000ms
+      + expected - actual
+
+      -'/math1a'
+      +'/math/math1a'
+      
+      at checkInternalLink (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:11:48)
+      at Context.eval (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:85:4)
+
+  5) Basic Navigation
+       navigates from the Engineering Track page:
+
+      Timed out retrying after 10000ms
+      + expected - actual
+
+      -'/engineering1'
+      +'/engineering/engineering1'
+      
+      at checkInternalLink (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:11:48)
+      at Context.eval (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:94:4)
+
+  6) Basic Navigation
+       navigates from the Science Track page:
+
+      Timed out retrying after 10000ms
+      + expected - actual
+
+      -'/science1'
+      +'/science/science1'
+      
+      at checkInternalLink (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:11:48)
+      at Context.eval (webpack://gbstem-website/./cypress/e2e/basic-navigation.cy.ts:100:4)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        7                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      6                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  6                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 minute, 1 second                                                               │
+  │ Spec Ran:     basic-navigation.cy.ts                                                           │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/dmeyer246/main/website/cypress/screenshots/basic-navigation.cy.ts/Basic Na     (1280x720)
+     vigation -- navigates from the Navigation Bar (failed).png                                     
+  -  /home/dmeyer246/main/website/cypress/screenshots/basic-navigation.cy.ts/Basic Na     (1280x720)
+     vigation -- navigates from the Home page (failed).png                                          
+  -  /home/dmeyer246/main/website/cypress/screenshots/basic-navigation.cy.ts/Basic Na     (1280x720)
+     vigation -- navigates from the Computer Science Track page (failed).png                        
+  -  /home/dmeyer246/main/website/cypress/screenshots/basic-navigation.cy.ts/Basic Na     (1280x720)
+     vigation -- navigates from the Math Track page (failed).png                                    
+  -  /home/dmeyer246/main/website/cypress/screenshots/basic-navigation.cy.ts/Basic Na     (1280x720)
+     vigation -- navigates from the Engineering Track page (failed).png                             
+  -  /home/dmeyer246/main/website/cypress/screenshots/basic-navigation.cy.ts/Basic Na     (1280x720)
+     vigation -- navigates from the Science Track page (failed).png                                 
+
+
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  basic-navigation.cy.ts                   01:01        7        1        6        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     01:01        7        1        6        -        -  
+
+Error: Command failed with exit code 6: npm run cypress
+    at makeError (/home/dmeyer246/main/website/node_modules/execa/lib/error.js:60:11)
+    at handlePromise (/home/dmeyer246/main/website/node_modules/execa/index.js:118:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  shortMessage: 'Command failed with exit code 6: npm run cypress',
+  command: 'npm run cypress',
+  escapedCommand: '"npm run cypress"',
+  exitCode: 6,
+  signal: undefined,
+  signalDescription: undefined,
+  stdout: undefined,
+  stderr: undefined,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  killed: false
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
