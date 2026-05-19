@@ -1,7 +1,8 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import Home from '@/app/page';
 import HeroSection from '@/components/home/HeroSection';
+import Counter from '@/components/home/Counter';
 
 // Mock Next.js constants and image components to simplify tests
 jest.mock('@/lib/constants', () => ({
@@ -46,5 +47,24 @@ describe('HeroSection Component', () => {
       'href',
       'https://portal.gbstem.org/signup'
     );
+  });
+});
+
+describe('Counter Component', () => {
+  it('increments counters on interval', () => {
+    jest.useFakeTimers();
+    render(<Counter />);
+
+    // Advance timers past the initial setTimeout (500) and one setInterval (20)
+    act(() => {
+      jest.advanceTimersByTime(520);
+    });
+
+    // Students target is 2000, step is 20, so value should be 20+.
+    expect(screen.getByText(/20\+/)).toBeInTheDocument();
+    // Courses Offered target is 20, step is 1, so value should be 1.
+    expect(screen.getAllByText(/1/)[0]).toBeInTheDocument();
+
+    jest.useRealTimers();
   });
 });
