@@ -63,7 +63,7 @@ function HowItWorks() {
                 className="img-fluid"
                 width={500}
                 height={480}
-                style={{ height: '30rem', width: 'auto' }}
+                style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
               />
             </div>
           </div>

@@ -29,7 +29,7 @@ export function ClassProgression({
   gradient = ['#66BB6A', '#67aeda', '#bf60bf'],
 }: ClassProgressionProps) {
   return (
-    <div className="d-flex flex-nowrap justify-content-center align-items-center">
+    <div className="progression-row">
       {items.map((item, i) => {
         const color =
           items.length <= 1

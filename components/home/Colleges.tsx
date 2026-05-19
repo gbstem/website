@@ -89,7 +89,13 @@ function Colleges() {
                       className="img-fluid"
                       width={160}
                       height={80}
-                      style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}
+                      style={{
+                        width: 'auto',
+                        height: 'auto',
+                        maxHeight: '80px',
+                        maxWidth: '160px',
+                        objectFit: 'contain',
+                      }}
                     />
                   </div>
                 </div>
@@ -110,7 +116,13 @@ function Colleges() {
                       className="img-fluid"
                       width={160}
                       height={80}
-                      style={{ maxHeight: '80px', maxWidth: '160px', objectFit: 'contain' }}
+                      style={{
+                        width: 'auto',
+                        height: 'auto',
+                        maxHeight: '80px',
+                        maxWidth: '160px',
+                        objectFit: 'contain',
+                      }}
                     />
                   </div>
                 </div>
