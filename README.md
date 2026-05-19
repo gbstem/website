@@ -32,8 +32,17 @@ yarn install
 # run the development server
 yarn dev
 
-# run tests and verify coverage
-yarn test --coverage
+# automatically format code
+yarn format
+
+# check for style issues
+yarn lint
+
+# run unit tests
+yarn test
+
+# run real browser end-to-end integration tests
+yarn cypress
 
 # build for production
 yarn build
@@ -56,22 +65,28 @@ Below is an alphabetical list of the top-level directories and significant confi
 
 ### Directories
 
+- **`.husky/`**: Configuration for Husky, managing Git hooks like pre-commit formatting and linting.
 - **`__tests__/`**: Contains all of our Jest unit tests. Tests are organized generally by route or component domain (e.g. `programs.test.tsx`, `components.test.tsx`).
-
 - **`app/`**: The core Next.js App Router directory. This handles the application's URL routing. Each subdirectory (like `cs/`, `math/`) with a `page.tsx` file inside represents a distinct page on the site.
 - **`components/`**: Reusable React UI components that are imported across multiple pages (e.g., `Navigation.tsx`, `Footer.tsx`, `ClassPage.tsx`). Keeping logic componentized keeps our page files clean.
+- **`cypress/`**: Contains our Cypress end-to-end integration tests and configurations, verifying the live site functions correctly in a real browser.
 - **`lib/`**: Contains library utilities and centralized static data constants (like the lists of FAQ questions in `faqData.ts` and the team member information in `teamMembers.ts`).
 - **`public/`**: Static assets such as images, logos, and icons that can be accessed publicly by the browser.
 
 ### Files
 
-- **`.eslintrc.json`**: Configuration rules for ESLint, ensuring consistent code style and formatting across the project.
 - **`.gitignore`**: Specifies which files and directories Git should ignore (like `node_modules/` and `.next/`).
+- **`.prettierignore`**: Specifies which files and directories Prettier should ignore when formatting.
+- **`.prettierrc`**: Configuration rules for Prettier, ensuring consistent code formatting across the project.
+- **`AGENTS.md`**: Custom rules and guidelines for AI coding agents interacting with the repository.
+- **`cypress.config.ts`**: The configuration file for our Cypress end-to-end testing environment.
+- **`eslint.config.mjs`**: Configuration rules for ESLint, ensuring consistent code style and checking for common errors across the project.
 - **`jest.config.ts`**: The configuration file for our Jest testing environment, specifically tailored to work alongside Next.js.
 - **`jest.setup.ts`**: Initial setup code that runs before our Jest tests, importing tools like `@testing-library/jest-dom` for custom DOM matchers.
 - **`next-env.d.ts`**: Automatically generated TypeScript declaration file that ensures the Next.js types are picked up by the compiler. Do not edit manually.
-- **`next.config.mjs`**: General Next.js build and server configuration file.
+- **`next.config.ts`**: General Next.js build and server configuration file.
 - **`package.json`**: Defines the project's details, scripts (like `yarn dev`), and dependencies (the npm packages we rely on).
+- **`postcss.config.mjs`**: Configuration for PostCSS, typically used for transforming CSS with plugins.
 - **`README.md`**: You are reading this file! It contains the project's onboarding documentation.
 - **`tsconfig.json`**: Configuration settings for the TypeScript compiler, including our path aliases (like `@/` mapping to the root).
 - **`yarn.lock`**: An automatically generated file that locks down the exact versions of dependencies used, ensuring that all developers have identical, reproducible environments.

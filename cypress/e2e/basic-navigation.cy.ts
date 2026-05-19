@@ -11,13 +11,16 @@ describe('Basic Navigation', () => {
     expectedPath: string,
     expectedHeader: string | RegExp
   ) => {
-    // Click the visible link so we don't accidentally click hidden nav dropdowns
-    cy.get(selector).filter(':visible').first().click();
-    cy.location('pathname', { timeout: 10000 }).should('eq', expectedPath);
-    if (expectedHeader) {
-      cy.get('h1, h2').contains(expectedHeader).should('be.visible');
-    }
-    cy.go('back');
+    cy.location('pathname').then((initialPath) => {
+      // Click the visible link so we don't accidentally click hidden nav dropdowns
+      cy.get(selector).filter(':visible').first().click();
+      cy.location('pathname', { timeout: 10000 }).should('eq', expectedPath);
+      if (expectedHeader) {
+        cy.get('h1, h2').contains(expectedHeader).should('be.visible');
+      }
+      cy.go('back');
+      cy.location('pathname', { timeout: 10000 }).should('eq', initialPath);
+    });
   };
 
   const checkExternalLink = (selector: string, expectedUrlParts: string[]) => {

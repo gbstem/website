@@ -1,5 +1,5 @@
 'use client';
-import { registrationOpen } from '@/lib/constants';
+import { REGISTRATION_OPEN } from '@/lib/constants';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 const inperson1 = '/images/in-person/inperson1.jpeg';
 
@@ -29,14 +29,14 @@ function HeroSection() {
             </p>
             <div className="d-flex gap-3">
               <Button
-                disabled={!registrationOpen}
+                disabled={!REGISTRATION_OPEN}
                 size="lg"
                 href="https://portal.gbstem.org/signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="primary"
               >
-                {registrationOpen ? 'Register Here' : 'Registration Closed'}
+                {REGISTRATION_OPEN ? 'Register Here' : 'Registration Closed'}
               </Button>
             </div>
           </Col>

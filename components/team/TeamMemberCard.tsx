@@ -38,7 +38,7 @@ export default function TeamMemberCard({
       <div className="profile-circle mx-auto mt-4 mb-3 position-relative">
         <div className="team-image-container h-100 w-100 position-relative">
           <Image
-            src={profilePic}
+            src={`/images/headshots/${profilePic}`}
             alt={name}
             fill
             sizes="180px"

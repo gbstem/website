@@ -1,5 +1,6 @@
-import React from 'react';
-import { Linkedin, Instagram, Twitter, Facebook } from 'react-feather';
+import { Facebook, Instagram, Linkedin, Twitter } from 'react-feather';
+
+const COPYRIGHT_YEAR = new Date().getFullYear();
 
 const Footer = () => {
   return (
@@ -50,8 +51,8 @@ const Footer = () => {
           The Greater Boston STEM Program is an independent non-profit 501(c)3 organization, EIN
           88-1760321
         </p>
-        <small className="d-block mt-5 text-white" suppressHydrationWarning>
-          © {new Date().getFullYear()} The Greater Boston STEM Program, all rights reserved
+        <small className="d-block mt-5 text-white">
+          © {COPYRIGHT_YEAR} The Greater Boston STEM Program, all rights reserved
         </small>
       </section>
     </footer>

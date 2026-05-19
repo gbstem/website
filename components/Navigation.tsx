@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, Nav, NavDropdown, Modal } from 'react-bootstrap';
-import { registrationOpen, formLink, gbSTEMSignup, semesterInProgress } from '@/lib/constants';
+import { REGISTRATION_OPEN, FORM_LINK, GBSTEM_SIGNUP, SEMESTER_IN_PROGRESS } from '@/lib/constants';
 
 export default function Navigation() {
   const [show, setShow] = useState(false);
@@ -70,7 +70,7 @@ export default function Navigation() {
             </Nav.Link>
 
             <Nav.Link
-              href={registrationOpen ? gbSTEMSignup : formLink}
+              href={REGISTRATION_OPEN ? GBSTEM_SIGNUP : FORM_LINK}
               target="_blank"
               rel="noreferrer"
             >
@@ -79,17 +79,17 @@ export default function Navigation() {
 
             <Nav.Link
               href={
-                semesterInProgress
+                SEMESTER_IN_PROGRESS
                   ? 'https://portal.gbstem.org'
-                  : registrationOpen
-                    ? gbSTEMSignup
-                    : formLink
+                  : REGISTRATION_OPEN
+                    ? GBSTEM_SIGNUP
+                    : FORM_LINK
               }
               target="_blank"
               rel="noreferrer"
             >
               <div className="rounded-div-gray align-center">
-                {semesterInProgress ? 'portal' : 'apply'}
+                {SEMESTER_IN_PROGRESS ? 'portal' : 'apply'}
               </div>
             </Nav.Link>
 

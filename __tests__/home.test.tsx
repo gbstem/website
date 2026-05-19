@@ -5,17 +5,17 @@ import HeroSection from '@/components/home/HeroSection';
 
 // Mock Next.js constants and image components to simplify tests
 jest.mock('@/lib/constants', () => ({
-  registrationOpen: true,
-  semesterStartDate: new Date('2026-03-16'),
-  semesterEndDate: new Date('2026-06-14'),
-  latestSemester: 'spring',
-  upcomingSemester: 'fall',
-  registrationOpenDate: new Date('2026-02-01'),
-  instructorAppsDueDate: new Date('2026-02-28'),
-  registrationEndsDate: new Date('2026-03-16'),
-  semesterInProgress: false,
-  formLink: 'https://example.com/form',
-  gbSTEMSignup: 'https://portal.gbstem.org/signup',
+  REGISTRATION_OPEN: true,
+  SEMESTER_START_DATE: new Date('2026-03-16'),
+  SEMESTER_END_DATE: new Date('2026-06-14'),
+  LATEST_SEMESTER: 'spring',
+  UPCOMING_SEMESTER: 'fall',
+  REGISTRATION_OPEN_DATE: new Date('2026-02-01'),
+  INSTRUCTOR_APPS_DUE_DATE: new Date('2026-02-28'),
+  REGISTRATION_ENDS_DATE: new Date('2026-03-16'),
+  SEMESTER_IN_PROGRESS: false,
+  FORM_LINK: 'https://example.com/form',
+  GBSTEM_SIGNUP: 'https://portal.gbstem.org/signup',
 }));
 
 describe('Home Page', () => {

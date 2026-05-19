@@ -1,14 +1,14 @@
 'use client';
 import {
-  formLink,
-  instructorAppsDueDate,
-  latestSemester,
-  registrationEndsDate,
-  registrationOpen,
-  registrationOpenDate,
-  semesterEndDate,
-  semesterStartDate,
-  upcomingSemester,
+  FORM_LINK,
+  INSTRUCTOR_APPS_DUE_DATE,
+  LATEST_SEMESTER,
+  REGISTRATION_ENDS_DATE,
+  REGISTRATION_OPEN,
+  REGISTRATION_OPEN_DATE,
+  SEMESTER_END_DATE,
+  SEMESTER_START_DATE,
+  UPCOMING_SEMESTER,
 } from '@/lib/constants';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 
@@ -21,19 +21,19 @@ function HomeIntro() {
             <Card className="border-0 shadow-sm">
               <Card.Body className="p-4">
                 <h2 className="text-center mb-4">Registration Information</h2>
-                <p>{`The ${upcomingSemester} semester will run from ${semesterStartDate.toLocaleDateString()} to ${semesterEndDate.toLocaleDateString()}!`}</p>
+                <p>{`The ${UPCOMING_SEMESTER} semester will run from ${SEMESTER_START_DATE.toLocaleDateString()} to ${SEMESTER_END_DATE.toLocaleDateString()}!`}</p>
                 <Alert variant="info">
                   <p className="mb-0">
-                    {registrationOpen
-                      ? `Registration for the gbSTEM ${upcomingSemester} semester is currently underway. Register to be a student by ${registrationEndsDate.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${instructorAppsDueDate.toLocaleDateString()}.`
-                      : `The ${latestSemester} semester registration is now closed. Registrations for the ${upcomingSemester} semester will open on ${registrationOpenDate.toLocaleDateString()}.`}
+                    {REGISTRATION_OPEN
+                      ? `Registration for the gbSTEM ${UPCOMING_SEMESTER} semester is currently underway. Register to be a student by ${REGISTRATION_ENDS_DATE.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${INSTRUCTOR_APPS_DUE_DATE.toLocaleDateString()}.`
+                      : `The ${LATEST_SEMESTER} semester registration is now closed. Registrations for the ${UPCOMING_SEMESTER} semester will open on ${REGISTRATION_OPEN_DATE.toLocaleDateString()}.`}
                   </p>
                 </Alert>
-                <p className={`mb-4 ${!registrationOpen ? '' : 'd-none'}`}>
+                <p className={`mb-4 ${!REGISTRATION_OPEN ? '' : 'd-none'}`}>
                   If you are interested in gbSTEM&apos;s programs or hope to apply next semester as
                   an instructor, please join our mailing list{' '}
                   <a
-                    href={formLink}
+                    href={FORM_LINK}
                     className="fw-semibold"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -42,7 +42,7 @@ function HomeIntro() {
                   </a>
                   .
                 </p>
-                <Row className={`g-4 ${registrationOpen ? '' : 'd-none'}`}>
+                <Row className={`g-4 ${REGISTRATION_OPEN ? '' : 'd-none'}`}>
                   <Col md={6}>
                     <div className="text-center p-4 h-100 bg-light rounded">
                       <h5 className="mb-3">Parents and 1-8 Students</h5>
