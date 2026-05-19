@@ -14,7 +14,7 @@ const tiers = [
     image: LittleBlue,
     width: 112,
     height: 112,
-    imgStyle: { width: '7rem', height: '7rem' },
+    imgStyle: { width: '100%', height: 'auto', maxWidth: '7rem' },
     bgColor: '#eeeeee',
     alignItems: undefined,
   },
@@ -24,7 +24,7 @@ const tiers = [
     image: Magellanic,
     width: 128,
     height: 128,
-    imgStyle: { width: '8rem', height: '8rem' },
+    imgStyle: { width: '100%', height: 'auto', maxWidth: '8rem' },
     bgColor: '#5CBF60',
     alignItems: 'baseline',
   },
@@ -34,7 +34,7 @@ const tiers = [
     image: King,
     width: 144,
     height: 144,
-    imgStyle: { width: '9rem', height: '9rem' },
+    imgStyle: { width: '100%', height: 'auto', maxWidth: '9rem' },
     bgColor: '#ffd809',
     alignItems: 'baseline',
   },
@@ -44,7 +44,7 @@ const tiers = [
     image: Emperor,
     width: 160,
     height: 160,
-    imgStyle: { width: '10rem', height: '10rem' },
+    imgStyle: { width: '100%', height: 'auto', maxWidth: '10rem' },
     bgColor: '#67aeda',
     extraClass: 'sm',
     alignItems: 'baseline',
@@ -75,117 +75,92 @@ const benefits = [
 export default function SponsorshipTiers() {
   return (
     <div
-      className="container"
+      className="overflow-auto mb-5"
       style={{
-        fontSize: '1.5rem',
-        paddingLeft: '5rem',
-        paddingRight: '7rem',
+        fontSize: 'clamp(0.6rem, 2vw, 1.5rem)',
         textAlign: 'center',
         margin: 'auto',
       }}
     >
       <div
-        className="row"
-        style={{ borderColor: 'black', borderWidth: '0px', borderStyle: 'solid' }}
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
+          gap: '0',
+          minWidth: '576px', // Forces scroll only on extra small screens (< sm breakpoint)
+          margin: '0 auto',
+        }}
       >
         {/* Empty top-left cell */}
-        <div style={{ borderWidth: '1px', width: '10rem' }}></div>
+        <div style={{ border: '1px solid black' }}></div>
 
         {/* Tier Headers */}
         {tiers.map((tier) => (
           <div
             key={tier.name}
-            className={`col ${tier.extraClass || ''}`.trim()}
             style={{
-              borderColor: 'black',
-              borderWidth: '1px',
-              borderStyle: 'solid',
+              border: '1px solid black',
               backgroundColor: tier.bgColor,
               boxShadow: '0px 0px 5px black',
-              alignItems: tier.alignItems,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+              padding: '1.5rem 1rem',
             }}
           >
-            <div
-              style={{
-                display: 'flex',
-                height: '100%',
-                alignItems: 'end',
-                justifyContent: 'center',
-              }}
-            >
-              <div style={{ display: 'block' }}>
-                <Image
-                  alt={tier.name}
-                  src={tier.image}
-                  width={tier.width}
-                  height={tier.height}
-                  style={tier.imgStyle}
-                />
-                <div>{tier.name}</div>
-                <div style={{ fontStyle: 'italic', fontSize: '1.25rem' }}>{tier.price}</div>
-              </div>
-            </div>
+            <Image
+              alt={tier.name}
+              src={tier.image}
+              width={tier.width}
+              height={tier.height}
+              style={{ ...tier.imgStyle, marginBottom: '1rem' }}
+            />
+            <div className="fw-bold">{tier.name}</div>
+            <div style={{ fontStyle: 'italic', fontSize: '0.85em' }}>{tier.price}</div>
           </div>
         ))}
 
         {/* Benefits Rows */}
         {benefits.map((benefit) => (
           <React.Fragment key={benefit.name}>
-            <div className="w-100"></div>
             {/* Row Header */}
             <div
               style={{
-                borderColor: 'black',
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                width: '10rem',
-                height: '10rem',
+                border: '1px solid black',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '0.85em',
+                padding: '1.5rem 1rem',
               }}
             >
-              <div
-                style={{
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1.25rem',
-                }}
-              >
-                {benefit.name}
-              </div>
+              {benefit.name}
             </div>
 
             {/* Benefit Checkmarks */}
             {benefit.checks.map((checked, index) => (
               <div
                 key={index}
-                className="col"
                 style={{
-                  borderColor: 'black',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
+                  border: '1px solid black',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#1d2256',
+                  fontSize: '2.5em',
+                  fontWeight: '600',
+                  padding: '1rem',
                 }}
               >
-                <div
-                  style={{
-                    height: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#1d2256',
-                    fontSize: '5rem',
-                    fontWeight: '600',
-                  }}
-                >
-                  {checked ? (
-                    <>
-                      <span aria-hidden="true">X</span>
-                      <span className="visually-hidden">Included</span>
-                    </>
-                  ) : (
-                    ''
-                  )}
-                </div>
+                {checked ? (
+                  <>
+                    <span aria-hidden="true">X</span>
+                    <span className="visually-hidden">Included</span>
+                  </>
+                ) : (
+                  ''
+                )}
               </div>
             ))}
           </React.Fragment>

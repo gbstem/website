@@ -8,7 +8,11 @@ const description =
   'Scratch 1 is an introductory Scratch course meant to teach the fundamentals of programming in Scratch as well as programming in general. We start from the very basics of how to create elements in a project (sprites and backdrops) before moving onto a variety of programming concepts including loops, variables, conditionals, and more. At the end of the semester, students work for two weeks to create a final project demonstrating everything that they have learned.';
 const prerequisites =
   'Offered every term. Introductory block-based scripting course. No prior coding experience required; students should have basic computer proficiency.';
-const slides = ['/cs/Screenshot (87).png', '/cs/Screenshot (100).png', '/cs/Screenshot (90).png'];
+const slides = [
+  '/images/cs/Screenshot (87).png',
+  '/images/cs/Screenshot (100).png',
+  '/images/cs/Screenshot (90).png',
+];
 const slideCaptions = ['Ana, Grade 3', 'Emma and Jacob, Grade 2', 'Hee-Seo, Grade 4'];
 const modules = [
   'Scratch environment',

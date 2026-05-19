@@ -64,15 +64,13 @@ function Donate() {
       </a>
 
       <div
+        className="m-3 m-md-5 p-3 p-md-5"
         style={{
-          margin: '3rem',
-          marginRight: '4rem',
           borderRadius: '10px',
           borderWidth: '1px',
           boxShadow: '0px 1px 5px #1d2256',
           backgroundColor: 'aliceblue',
           borderStyle: 'solid',
-          padding: '3rem',
         }}
       >
         <DonationCalculator />

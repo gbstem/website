@@ -15,8 +15,11 @@ function QuestionAnswerAccordion({
       {data.map((pair, index) => (
         <Accordion.Item eventKey={`${eventKeyPrefix}-${index}`} key={index}>
           <Accordion.Header className="fs-5">{pair.question}</Accordion.Header>
-          <Accordion.Body>
-            <strong>{pair.answer}</strong>
+          <Accordion.Body
+            className="fw-semibold"
+            style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontSize: '19.2px' }}
+          >
+            {pair.answer}
           </Accordion.Body>
         </Accordion.Item>
       ))}

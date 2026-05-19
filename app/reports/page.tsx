@@ -23,6 +23,7 @@ function Reports() {
         }}
       >
         <Card
+          className="d-flex flex-column align-items-center text-center"
           style={{
             width: '18rem',
             padding: '1rem',

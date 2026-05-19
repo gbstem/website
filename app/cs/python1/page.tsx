@@ -7,7 +7,7 @@ const returnLink = '/cs';
 const description =
   'Python 1 is a comprehensive introductory course in Python. Students begin by translating Scratch-like block-based code to Python to gain familiarity with text-based coding. Students then learn to use the Turtle visual library before diving into computer science fundamentals such as variables, if-statements, and for-loops through fun and engaging projects like Guess My Number and MadLibs. Students then extend these skills with explorations in arrays and functions. The course ends with a final two-week project and a discussion of programming in the real world, including an introduction to AI.';
 const prerequisites = 'Offered every term. Prerequisite: Scratch 1.';
-const slides = ['/cs/Python2.png', '/cs/Python.png'];
+const slides = ['/images/cs/Python2.png', '/images/cs/Python.png'];
 const slideCaptions = ['Liam, Grade 6', 'Adam, Grade 8'];
 const modules = [
   'Introductory programming fundamentals',
