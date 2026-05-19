@@ -30,8 +30,8 @@ function HomeIntro() {
                   </p>
                 </Alert>
                 <p className={`mb-4 ${!registrationOpen ? '' : 'd-none'}`}>
-                  If you are interested in gbSTEM's programs or hope to apply next semester as an
-                  instructor, please join our mailing list{' '}
+                  If you are interested in gbSTEM&apos;s programs or hope to apply next semester as
+                  an instructor, please join our mailing list{' '}
                   <a
                     href={formLink}
                     className="fw-semibold"

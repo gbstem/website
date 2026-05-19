@@ -50,10 +50,10 @@ function WhatPeopleSay() {
                       opacity: 0.2,
                     }}
                   >
-                    "
+                    &quot;
                   </div>
                   <Card.Text className="mb-4 fs-5" style={{ lineHeight: 1.7 }}>
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </Card.Text>
                   <div className="d-flex mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>
                     <div>

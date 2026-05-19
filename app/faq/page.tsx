@@ -7,7 +7,7 @@ function QuestionAnswerAccordion({
   data,
   eventKeyPrefix,
 }: {
-  data: any[];
+  data: { question: string; answer: React.ReactNode }[];
   eventKeyPrefix: string;
 }) {
   return (

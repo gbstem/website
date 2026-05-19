@@ -12,61 +12,57 @@ export default function Navigation() {
   return (
     <>
       <Navbar variant="dark" expand="lg" style={{ backgroundColor: '#1D2256' }} collapseOnSelect>
-        <Link href="/" passHref legacyBehavior>
-          <Navbar.Brand className="ms-5" style={{ fontWeight: 700 }}>
-            <Image
-              alt="gbSTEM logo"
-              src="/images/icons/penguin.png"
-              width={200}
-              height={56} // approximate height to maintain aspect ratio
-              className="d-inline-block align-center"
-            />
-          </Navbar.Brand>
-        </Link>
+        <Navbar.Brand as={Link} href="/" className="ms-5" style={{ fontWeight: 700 }}>
+          <Image
+            alt="gbSTEM logo"
+            src="/images/icons/penguin.png"
+            width={200}
+            height={56} // approximate height to maintain aspect ratio
+            className="d-inline-block align-center"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto align-items-center w-100 justify-content-end">
-            <Link href="/" passHref legacyBehavior>
-              <Nav.Link>Home</Nav.Link>
-            </Link>
+            <Nav.Link as={Link} href="/">
+              Home
+            </Nav.Link>
 
             <NavDropdown title="About" id="about-dropdown" className="text-center">
-              <Link href="/team" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">Team</NavDropdown.Item>
-              </Link>
-              <Link href="/testimonials" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">
-                  Testimonials
-                </NavDropdown.Item>
-              </Link>
-              <Link href="/reports" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">Reports</NavDropdown.Item>
-              </Link>
-              <Link href="/faq" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">FAQ</NavDropdown.Item>
-              </Link>
+              <NavDropdown.Item as={Link} href="/team" className="text-center text-lg-start">
+                Team
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
+                href="/testimonials"
+                className="text-center text-lg-start"
+              >
+                Testimonials
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/reports" className="text-center text-lg-start">
+                Reports
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/faq" className="text-center text-lg-start">
+                FAQ
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Programs" id="programs-dropdown" className="text-center">
-              <Link href="/cs" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">
-                  Computer Science
-                </NavDropdown.Item>
-              </Link>
-              <Link href="/math" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">Math</NavDropdown.Item>
-              </Link>
-              <Link href="/engineering" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">
-                  Engineering
-                </NavDropdown.Item>
-              </Link>
-              <Link href="/science" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">Science</NavDropdown.Item>
-              </Link>
-              <Link href="/robotics" passHref legacyBehavior>
-                <NavDropdown.Item className="text-center text-lg-start">Robotics</NavDropdown.Item>
-              </Link>
+              <NavDropdown.Item as={Link} href="/cs" className="text-center text-lg-start">
+                Computer Science
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/math" className="text-center text-lg-start">
+                Math
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/engineering" className="text-center text-lg-start">
+                Engineering
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/science" className="text-center text-lg-start">
+                Science
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/robotics" className="text-center text-lg-start">
+                Robotics
+              </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="https://gbstem.myspreadshop.com/all" target="_blank" rel="noreferrer">

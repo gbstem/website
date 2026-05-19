@@ -20,7 +20,7 @@ function TestimonialCard({ text, author }: { text: string; author: string }) {
               fontFamily: 'Georgia, serif',
             }}
           >
-            "
+            &quot;
           </div>
           <Card.Text
             className="position-relative"
@@ -31,7 +31,7 @@ function TestimonialCard({ text, author }: { text: string; author: string }) {
               fontStyle: 'italic',
             }}
           >
-            "{text}"
+            &quot;{text}&quot;
           </Card.Text>
         </div>
         <div className="mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>

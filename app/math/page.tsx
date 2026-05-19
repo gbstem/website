@@ -11,14 +11,14 @@ function Math() {
     <TrackPage trackName="Math" color="#cccccc">
       <p>
         We offer five different mathematics course levels. Each course takes place in two parts: a
-        fall "A" section, and a continuing spring "B" section. Note that the A section must be taken
-        before the B section. The A section is only offered in the fall, and the B section is only
-        offered in the spring. Each course teaches enrichment topics and content outside of the
-        standard school curriculum. There is an emphasis on creative thinking, problem-solving, and
-        competition math strategies. Each class will also feature fun brainteasers and logic
-        puzzles. All courses will be largely problem-based, with a short lesson at the beginning.
-        The goal of the Math Track is to equip students with the critical thinking and
-        problem-solving skills that will help them succeed in middle school and beyond.
+        fall &quot;A&quot; section, and a continuing spring &quot;B&quot; section. Note that the A
+        section must be taken before the B section. The A section is only offered in the fall, and
+        the B section is only offered in the spring. Each course teaches enrichment topics and
+        content outside of the standard school curriculum. There is an emphasis on creative
+        thinking, problem-solving, and competition math strategies. Each class will also feature fun
+        brainteasers and logic puzzles. All courses will be largely problem-based, with a short
+        lesson at the beginning. The goal of the Math Track is to equip students with the critical
+        thinking and problem-solving skills that will help them succeed in middle school and beyond.
       </p>
 
       <TypicalClassProgression>

@@ -196,7 +196,7 @@ function Donate() {
                 fontSize: '1.25rem',
               }}
             >
-              Your Logo on gbSTEM's Website
+              Your Logo on gbSTEM&apos;s Website
             </div>
           </div>
           <div
@@ -576,8 +576,8 @@ function Donate() {
         </li>
         <li style={{ marginBottom: '1rem' }}>
           <strong>Buy Materials and Snacks for Classes:</strong> Creating an engaging and nurturing
-          learning environment is vital to fostering students' curiosity. Your support allows us to
-          provide the necessary materials and snacks for our in-person classes.
+          learning environment is vital to fostering students&apos; curiosity. Your support allows
+          us to provide the necessary materials and snacks for our in-person classes.
         </li>
         <li style={{ marginBottom: '1rem' }}>
           <strong>Provide Prizes at Community Events:</strong> By donating, you help us provide

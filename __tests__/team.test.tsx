@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Team from '@/app/team/page';
 
 jest.mock('@/components/team/TeamMemberCard', () => {
-  return function MockTeamMemberCard(props: any) {
+  return function MockTeamMemberCard(props: { name: string; role: string }) {
     return (
       <div data-testid="mock-team-member-card">
         {props.name} - {props.role}

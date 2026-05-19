@@ -13,7 +13,21 @@ const teams = [
 ];
 
 // Team Section component
-const TeamSection = ({ teamName, members }: { teamName: string; members: any[] }) => {
+const TeamSection = ({
+  teamName,
+  members,
+}: {
+  teamName: string;
+  members: {
+    name: string;
+    school: string;
+    graduationYear: string;
+    profilePic: string;
+    bio: string;
+    role: string;
+    linkedin?: string;
+  }[];
+}) => {
   return (
     <div className="team-section py-5">
       <Container>

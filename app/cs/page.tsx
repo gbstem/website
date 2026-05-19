@@ -13,12 +13,12 @@ const CS = () => {
       <p>
         We offer five course levels in the computer science track: Scratch, Scratch 2, Python 1,
         Python 2, and Web Development. Each course, with the exception of Scratch 1 and Python 1,
-        takes place in two parts: a fall "A" section, and a continuing spring "B" section. Note that
-        the A section must be taken before the B section. The A section is only offered in the fall,
-        and the B section is only offered in the spring. Scratch 1 and Python 1 are offered every
-        fall and every spring. Students should take the B class after the A class. Classes take a
-        project-based learning approach as students will learn through collaborating and working
-        with peers on mini-projects.
+        takes place in two parts: a fall &quot;A&quot; section, and a continuing spring
+        &quot;B&quot; section. Note that the A section must be taken before the B section. The A
+        section is only offered in the fall, and the B section is only offered in the spring.
+        Scratch 1 and Python 1 are offered every fall and every spring. Students should take the B
+        class after the A class. Classes take a project-based learning approach as students will
+        learn through collaborating and working with peers on mini-projects.
       </p>
 
       <TypicalClassProgression>

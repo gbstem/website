@@ -20,7 +20,7 @@ jest.mock('@/lib/constants', () => ({
 
 describe('Home Page', () => {
   it('renders all sections', () => {
-    const { container } = render(<Home />);
+    render(<Home />);
 
     // Test Hero Section presence
     expect(
