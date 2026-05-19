@@ -21,10 +21,13 @@ interface ClassItem {
 
 interface ClassProgressionProps {
   items: ClassItem[];
-  gradient: string[];
+  gradient?: string[];
 }
 
-export function ClassProgression({ items, gradient }: ClassProgressionProps) {
+export function ClassProgression({
+  items,
+  gradient = ['#66BB6A', '#67aeda', '#bf60bf'],
+}: ClassProgressionProps) {
   return (
     <div className="d-flex flex-nowrap justify-content-center align-items-center">
       {items.map((item, i) => {

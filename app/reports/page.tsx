@@ -1,6 +1,6 @@
 'use client';
-import Button from 'react-bootstrap/Button';
 import { Card } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 
 function Reports() {
   return (
@@ -34,7 +34,7 @@ function Reports() {
             href={'https://gbstem.org/reports/gbstem-impact.pdf'}
             style={{ width: 'fit-content', fontSize: '1rem', marginTop: '2rem' }}
           >
-            Read it here
+            Impact Report 2023-2024
           </Button>
         </Card>
       </div>

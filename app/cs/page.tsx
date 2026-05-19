@@ -29,7 +29,6 @@ const CS = () => {
 
       <TypicalClassProgression>
         <ClassProgression
-          gradient={['#ffd233', '#ff8c00']}
           items={[
             { link: '/cs/scratch1', name: 'Scratch 1' },
             { link: '/cs/scratch2', name: 'Scratch 2' },
@@ -38,7 +37,6 @@ const CS = () => {
         />
         <ClassProgressionDownArrow />
         <ClassProgression
-          gradient={['#66BB6A', '#67aeda', '#bf60bf']}
           items={[
             { link: '/cs/python1', name: 'Python 1' },
             { link: '/cs/python2', name: 'Python 2' },
@@ -47,7 +45,6 @@ const CS = () => {
         />
         <ClassProgressionOr />
         <ClassProgression
-          gradient={['#66BB6A', '#67aeda', '#bf60bf']}
           items={[
             { link: '/cs/python1', name: 'Python 1' },
             { link: '/cs/python2', name: 'Python 2' },

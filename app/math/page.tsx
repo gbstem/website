@@ -29,7 +29,6 @@ function Math() {
 
       <TypicalClassProgression>
         <ClassProgression
-          gradient={['#ffd233', '#ff8c00']}
           items={[
             { link: '/math/math1a', name: 'Math 1a' },
             { link: '/math/math1b', name: 'Math 1b' },
@@ -39,7 +38,6 @@ function Math() {
         />
         <ClassProgressionDownArrow />
         <ClassProgression
-          gradient={['#66BB6A', '#67aeda', '#bf60bf']}
           items={[
             { link: '/math/math3a', name: 'Math 3a' },
             { link: '/math/math3b', name: 'Math 3b' },

@@ -31,14 +31,14 @@ function HomeIntro() {
                 </Alert>
                 <p className={`mb-4 ${!REGISTRATION_OPEN ? '' : 'd-none'}`}>
                   If you are interested in gbSTEM&apos;s programs or hope to apply next semester as
-                  an instructor, please join our mailing list{' '}
+                  an instructor, please{' '}
                   <a
                     href={FORM_LINK}
                     className="fw-semibold"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    here
+                    join our mailing list
                   </a>
                   .
                 </p>

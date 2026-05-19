@@ -19,7 +19,6 @@ const Engineering = () => {
 
       <TypicalClassProgression>
         <ClassProgression
-          gradient={['#ffd233', '#ff8c00']}
           items={[
             { link: '/engineering/engineering1', name: 'Engineering 1' },
             { link: '/engineering/engineering2', name: 'Engineering 2' },
