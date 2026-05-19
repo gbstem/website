@@ -24,7 +24,6 @@ import ClassPage19 from '@/app/engineering/engineering3/page';
 import ClassPage20 from '@/app/science/science1/page';
 
 describe('Class Specific Pages', () => {
-
   it('renders @/app/cs/python1', () => {
     const { container } = render(<ClassPage0 />);
     expect(container).toBeInTheDocument();

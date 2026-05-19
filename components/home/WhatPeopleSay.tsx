@@ -1,25 +1,28 @@
-"use client";
-import Link from "next/link";
+'use client';
+import Link from 'next/link';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { ArrowRight } from "react-feather";
+import { ArrowRight } from 'react-feather';
 
 function WhatPeopleSay() {
   const testimonials = [
     {
-      quote: "My child came into coding without knowing what it really is. Now she is so excited about it and wants to keep doing it. Thank you gbSTEM for awakening that passion.",
-      author: "Parent of 3rd Grader",
-      role: "Parent"
+      quote:
+        'My child came into coding without knowing what it really is. Now she is so excited about it and wants to keep doing it. Thank you gbSTEM for awakening that passion.',
+      author: 'Parent of 3rd Grader',
+      role: 'Parent',
     },
     {
-      quote: "gbSTEM is an innovative program that met a need for out-of-school time enrichment for children. My son has learned so much in the computer science course.",
-      author: "Parent of 2nd Grader",
-      role: "Parent"
+      quote:
+        'gbSTEM is an innovative program that met a need for out-of-school time enrichment for children. My son has learned so much in the computer science course.',
+      author: 'Parent of 2nd Grader',
+      role: 'Parent',
     },
     {
-      quote: "They create curriculum to motivate students to love their classes. My daughter now wants to pursue engineering after taking their engineering class.",
-      author: "Parent of 3rd Grader",
-      role: "Parent"
-    }
+      quote:
+        'They create curriculum to motivate students to love their classes. My daughter now wants to pursue engineering after taking their engineering class.',
+      author: 'Parent of 3rd Grader',
+      role: 'Parent',
+    },
   ];
 
   return (
@@ -37,7 +40,16 @@ function WhatPeopleSay() {
             <Col lg={4} key={index}>
               <Card className="h-100 border-0 shadow-sm testimonial-card">
                 <Card.Body className="position-relative p-4">
-                  <div className="position-absolute" style={{ top: -15, right: 20, fontSize: '3rem', color: '#67aeda', opacity: 0.2 }}>
+                  <div
+                    className="position-absolute"
+                    style={{
+                      top: -15,
+                      right: 20,
+                      fontSize: '3rem',
+                      color: '#67aeda',
+                      opacity: 0.2,
+                    }}
+                  >
                     "
                   </div>
                   <Card.Text className="mb-4 fs-5" style={{ lineHeight: 1.7 }}>

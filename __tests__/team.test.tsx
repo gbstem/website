@@ -15,14 +15,14 @@ jest.mock('@/components/team/TeamMemberCard', () => {
 describe('Team Page', () => {
   it('renders the team page header', () => {
     render(<Team />);
-    
+
     expect(screen.getByRole('heading', { name: /Our Team/i })).toBeInTheDocument();
     expect(screen.getByText('Meet the dedicated people behind gbSTEM')).toBeInTheDocument();
   });
 
   it('renders all team sections', () => {
     render(<Team />);
-    
+
     expect(screen.getByText(/presidents/i)).toBeInTheDocument();
     expect(screen.getByText(/advisors/i)).toBeInTheDocument();
     expect(screen.getByText(/outreach & events/i)).toBeInTheDocument();

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -19,20 +19,19 @@ export default function DonationCalculator() {
     <div className="container">
       <h2>Donation Calculator</h2>
       <p>
-        We require $1500 each semester to fund our program. Please use the slider below to see how your donation will help us reach our goal.
+        We require $1500 each semester to fund our program. Please use the slider below to see how
+        your donation will help us reach our goal.
       </p>
       <div className="form-group mb-4 mt-4">
-        <label htmlFor="donationAmount" className="fw-semibold mb-2">Donation Amount: ${donationAmount}</label>
-        <Slider
-          min={0}
-          max={1500}
-          step={25}
-          value={donationAmount}
-          onChange={handleSliderChange}
-        />
+        <label htmlFor="donationAmount" className="fw-semibold mb-2">
+          Donation Amount: ${donationAmount}
+        </label>
+        <Slider min={0} max={1500} step={25} value={donationAmount} onChange={handleSliderChange} />
       </div>
       <div className="form-group">
-        <label htmlFor="semesterFunded" className="fw-semibold">Semester Funded: {percentageFunded}%</label>
+        <label htmlFor="semesterFunded" className="fw-semibold">
+          Semester Funded: {percentageFunded}%
+        </label>
       </div>
     </div>
   );

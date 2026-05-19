@@ -1,24 +1,62 @@
-"use client";
+'use client';
 import { Col, Container, Row } from 'react-bootstrap';
-
 
 function Colleges() {
   const colleges = [
     { name: 'Harvard', logo: 'https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo.png' },
-    { name: 'MIT', logo: 'https://download.logo.wine/logo/Massachusetts_Institute_of_Technology/Massachusetts_Institute_of_Technology-Logo.wine.png' },
-    { name: 'Tufts University', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Tufts_University_logo.png' },
-    { name: 'University of Chicago', logo: 'https://i0.wp.com/biocars.uchicago.edu/wp-content/uploads/2019/05/cropped-logo.png?ssl=1' },
-    { name: 'Brown University', logo: 'https://smartwatermagazine.com/sites/default/files/brown_university_logo.jpg' },
-    { name: 'Boston University', logo: 'https://content.sportslogos.net/logos/30/619/full/boston_university_terriers_logo_secondary_2015_sportslogosnet-5796.png//content.sportslogos.net/logos/30/619/full/boston_university_terriers_logo_secondary_2015_sportslogosnet-5796.png' },
-    { name: 'Northwestern University', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Northwestern_University.png' },
-    { name: 'Georgetown', logo: 'https://www.georgetown.edu/wp-content/uploads/2019/10/Georgetown_logo_blueRGB.jpg' },
-    { name: 'NYU', logo: 'https://yt3.ggpht.com/-RZYi5isxH_M/AAAAAAAAAAI/AAAAAAAAAAA/rmWpoe2qZzI/s900-c-k-no/photo.jpg' },
-    { name: 'Worcester Polytechnic Institute', logo: 'https://buildagrad.com/content/v2/images/wpi/WPI_Seal_FulClr.jpg' },
-    { name: 'Swarthmore College', logo: 'https://www.thecollegetour.com/wp-content/uploads/2022/08/swarthmore-college.png' },
+    {
+      name: 'MIT',
+      logo: 'https://download.logo.wine/logo/Massachusetts_Institute_of_Technology/Massachusetts_Institute_of_Technology-Logo.wine.png',
+    },
+    {
+      name: 'Tufts University',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Tufts_University_logo.png',
+    },
+    {
+      name: 'University of Chicago',
+      logo: 'https://i0.wp.com/biocars.uchicago.edu/wp-content/uploads/2019/05/cropped-logo.png?ssl=1',
+    },
+    {
+      name: 'Brown University',
+      logo: 'https://smartwatermagazine.com/sites/default/files/brown_university_logo.jpg',
+    },
+    {
+      name: 'Boston University',
+      logo: 'https://content.sportslogos.net/logos/30/619/full/boston_university_terriers_logo_secondary_2015_sportslogosnet-5796.png//content.sportslogos.net/logos/30/619/full/boston_university_terriers_logo_secondary_2015_sportslogosnet-5796.png',
+    },
+    {
+      name: 'Northwestern University',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Northwestern_University.png',
+    },
+    {
+      name: 'Georgetown',
+      logo: 'https://www.georgetown.edu/wp-content/uploads/2019/10/Georgetown_logo_blueRGB.jpg',
+    },
+    {
+      name: 'NYU',
+      logo: 'https://yt3.ggpht.com/-RZYi5isxH_M/AAAAAAAAAAI/AAAAAAAAAAA/rmWpoe2qZzI/s900-c-k-no/photo.jpg',
+    },
+    {
+      name: 'Worcester Polytechnic Institute',
+      logo: 'https://buildagrad.com/content/v2/images/wpi/WPI_Seal_FulClr.jpg',
+    },
+    {
+      name: 'Swarthmore College',
+      logo: 'https://www.thecollegetour.com/wp-content/uploads/2022/08/swarthmore-college.png',
+    },
     { name: 'UCLA', logo: 'https://1000logos.net/wp-content/uploads/2017/11/UCLA-Logo.png' },
-    { name: 'Columbia', logo: 'https://png.pngtree.com/png-clipart/20220530/original/pngtree-columbia-university-png-image_7775958.png' },
-    { name: 'Princeton', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Princeton_Tigers_logo.svg/960px-Princeton_Tigers_logo.svg.png' },
-    { name: 'UMass Amherst', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/UMass_Seal_Medium_PMS_202.png' },
+    {
+      name: 'Columbia',
+      logo: 'https://png.pngtree.com/png-clipart/20220530/original/pngtree-columbia-university-png-image_7775958.png',
+    },
+    {
+      name: 'Princeton',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Princeton_Tigers_logo.svg/960px-Princeton_Tigers_logo.svg.png',
+    },
+    {
+      name: 'UMass Amherst',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/UMass_Seal_Medium_PMS_202.png',
+    },
   ];
 
   return (
@@ -36,7 +74,10 @@ function Colleges() {
             <div className="logo-slide">
               {colleges.map((college, index) => (
                 <div key={`slide1-${index}`} className="logo-item">
-                  <div className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center" style={{ height: '120px', width: '200px' }}>
+                  <div
+                    className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center"
+                    style={{ height: '120px', width: '200px' }}
+                  >
                     <img
                       src={college.logo}
                       alt={`${college.name} Logo`}
@@ -52,7 +93,10 @@ function Colleges() {
             <div className="logo-slide">
               {colleges.map((college, index) => (
                 <div key={`slide2-${index}`} className="logo-item">
-                  <div className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center" style={{ height: '120px', width: '200px' }}>
+                  <div
+                    className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center"
+                    style={{ height: '120px', width: '200px' }}
+                  >
                     <img
                       src={college.logo}
                       alt={`${college.name} Logo`}
@@ -74,26 +118,30 @@ function Colleges() {
             margin: 0 auto;
             position: relative;
           }
-          
+
           .logo-carousel {
             display: flex;
             width: 100%;
           }
-          
+
           .logo-slide {
             display: flex;
             animation: scroll 30s linear infinite;
             padding-right: 0.5rem;
           }
-          
+
           .logo-item {
             flex: 0 0 auto;
             min-width: 200px;
           }
-          
+
           @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
           }
         `}</style>
       </Container>

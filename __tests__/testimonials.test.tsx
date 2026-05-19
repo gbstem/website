@@ -12,7 +12,9 @@ describe('Testimonials Page', () => {
   it('renders testimonials', () => {
     render(<Testimonials />);
     // Check for a specific quote excerpt
-    expect(screen.getByText(/"gbSTEM gave my daughter the opportunity to take her first steps/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/"gbSTEM gave my daughter the opportunity to take her first steps/i)
+    ).toBeInTheDocument();
     expect(screen.getByText('Parent of 3rd grade student', { exact: false })).toBeInTheDocument();
   });
 });

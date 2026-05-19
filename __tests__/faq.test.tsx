@@ -5,7 +5,9 @@ import Faq from '@/app/faq/page';
 describe('FAQ Page', () => {
   it('renders the FAQ header', () => {
     render(<Faq />);
-    expect(screen.getByRole('heading', { name: /Frequently Asked Questions/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /Frequently Asked Questions/i })
+    ).toBeInTheDocument();
   });
 
   it('renders all sections', () => {

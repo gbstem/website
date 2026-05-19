@@ -1,21 +1,21 @@
-"use client";
-import { useEffect, useState } from "react";
+'use client';
+import { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
 function Counter() {
   const [counters, setCounters] = useState([
-    { label: "Students", target: 2000, value: 0, suffix: "+" },
-    { label: "Instructors", target: 400, value: 0, suffix: "+" },
-    { label: "Courses Offered", target: 20, value: 0, suffix: "" },
-    { label: "Volunteer Driven", target: 100, value: 0, suffix: "%" }
+    { label: 'Students', target: 2000, value: 0, suffix: '+' },
+    { label: 'Instructors', target: 400, value: 0, suffix: '+' },
+    { label: 'Courses Offered', target: 20, value: 0, suffix: '' },
+    { label: 'Volunteer Driven', target: 100, value: 0, suffix: '%' },
   ]);
 
   useEffect(() => {
     // Start animation after a slight delay for better user experience
     const timer = setTimeout(() => {
       const updateCounters = () => {
-        setCounters(prevCounters => {
-          return prevCounters.map(counter => {
+        setCounters((prevCounters) => {
+          return prevCounters.map((counter) => {
             const { target, value } = counter;
             const step = Math.ceil(target / 100); // Increase the value in 100 steps
             const newValue = Math.min(value + step, target);
@@ -33,7 +33,14 @@ function Counter() {
   }, []);
 
   return (
-    <section className="py-5" style={{ backgroundColor: '#f8f9fa', borderTop: '1px solid #e9ecef', borderBottom: '1px solid #e9ecef' }}>
+    <section
+      className="py-5"
+      style={{
+        backgroundColor: '#f8f9fa',
+        borderTop: '1px solid #e9ecef',
+        borderBottom: '1px solid #e9ecef',
+      }}
+    >
       <Container>
         <Row className="mb-5">
           <Col className="text-center">
@@ -46,8 +53,12 @@ function Counter() {
             <Col md={6} lg={3} key={index}>
               <Card className="border-0 shadow-sm h-100 text-center">
                 <Card.Body className="d-flex flex-column justify-content-center p-4">
-                  <div className="counter-value display-4 fw-semibold mb-2" style={{ color: '#67aeda' }}>
-                    {counter.value}{counter.suffix}
+                  <div
+                    className="counter-value display-4 fw-semibold mb-2"
+                    style={{ color: '#67aeda' }}
+                  >
+                    {counter.value}
+                    {counter.suffix}
                   </div>
                   <Card.Title className="counter-label">{counter.label}</Card.Title>
                 </Card.Body>

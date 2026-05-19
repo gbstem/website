@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { testimonials } from '@/lib/testimonialsData';
 import { Card, Col, Container, Row } from 'react-bootstrap';
@@ -9,15 +9,17 @@ function TestimonialCard({ text, author }: { text: string; author: string }) {
     <Card className="h-100 border-0 shadow-sm testimonial-card hover-effect">
       <Card.Body className="p-4 d-flex flex-column">
         <div className="position-relative mb-4">
-          <div style={{
-            fontSize: '72px',
-            position: 'absolute',
-            top: '-30px',
-            left: '-10px',
-            color: '#f8f9fa',
-            zIndex: 0,
-            fontFamily: 'Georgia, serif'
-          }}>
+          <div
+            style={{
+              fontSize: '72px',
+              position: 'absolute',
+              top: '-30px',
+              left: '-10px',
+              color: '#f8f9fa',
+              zIndex: 0,
+              fontFamily: 'Georgia, serif',
+            }}
+          >
             "
           </div>
           <Card.Text
@@ -26,7 +28,7 @@ function TestimonialCard({ text, author }: { text: string; author: string }) {
               zIndex: 1,
               lineHeight: 1.6,
               fontSize: '1rem',
-              fontStyle: 'italic'
+              fontStyle: 'italic',
             }}
           >
             "{text}"
@@ -55,17 +57,16 @@ export default function Testimonials() {
         {testimonials.map((testimonial, index) => (
           <Col key={index} md={6} lg={4} className="mb-4 d-flex">
             <div className="w-100">
-              <TestimonialCard
-                text={testimonial.text}
-                author={testimonial.author}
-              />
+              <TestimonialCard text={testimonial.text} author={testimonial.author} />
             </div>
           </Col>
         ))}
       </Row>
       <style jsx>{`
         .hover-effect {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
         }
         .hover-effect:hover {
           transform: translateY(-5px);

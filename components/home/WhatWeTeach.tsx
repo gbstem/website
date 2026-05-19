@@ -1,42 +1,41 @@
-"use client";
-import Link from "next/link";
+'use client';
+import Link from 'next/link';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 const mathGraphic = '/images/homepage/math1.jpg';
 const csGraphic = '/images/homepage/cs1.png';
 const scienceGraphic = '/images/homepage/science1.svg';
 const engineeringGraphic = '/images/homepage/eng4.png';
 
-
 function WhatWeTeach() {
   const subjects = [
     {
-      name: "Computer Science",
+      name: 'Computer Science',
       image: csGraphic,
-      color: "#67aeda",
-      link: "/cs",
-      description: "Learn programming fundamentals, algorithms, and software development"
+      color: '#67aeda',
+      link: '/cs',
+      description: 'Learn programming fundamentals, algorithms, and software development',
     },
     {
-      name: "Mathematics",
+      name: 'Mathematics',
       image: mathGraphic,
-      color: "#aaaaaa",
-      link: "/math",
-      description: "Explore mathematical concepts, problem-solving, and critical thinking"
+      color: '#aaaaaa',
+      link: '/math',
+      description: 'Explore mathematical concepts, problem-solving, and critical thinking',
     },
     {
-      name: "Engineering",
+      name: 'Engineering',
       image: engineeringGraphic,
-      color: "#ffc819",
-      link: "/engineering",
-      description: "Design, build, and test creative engineering solutions"
+      color: '#ffc819',
+      link: '/engineering',
+      description: 'Design, build, and test creative engineering solutions',
     },
     {
-      name: "Science",
+      name: 'Science',
       image: scienceGraphic,
-      color: "#4CAF50",
-      link: "/science",
-      description: "Discover principles of natural sciences through hands-on experiments"
-    }
+      color: '#4CAF50',
+      link: '/science',
+      description: 'Discover principles of natural sciences through hands-on experiments',
+    },
   ];
 
   return (
@@ -47,28 +46,24 @@ function WhatWeTeach() {
           {subjects.map((subject, index) => (
             <Col md={6} key={index}>
               <Card className="h-100 shadow-sm hover-shadow border-0 overflow-hidden">
-                <div style={{ height: "220px", overflow: "hidden" }}>
+                <div style={{ height: '220px', overflow: 'hidden' }}>
                   <Card.Img
                     variant="top"
                     src={subject.image}
                     alt={subject.name}
-                    style={{ objectFit: "cover", height: "100%", width: "100%" }}
+                    style={{ objectFit: 'cover', height: '100%', width: '100%' }}
                   />
                 </div>
                 <Card.Body className="d-flex flex-column">
-                  <Card.Title
-                    className="fw-semibold mb-3"
-                    style={{ color: subject.color }}
-                  >
+                  <Card.Title className="fw-semibold mb-3" style={{ color: subject.color }}>
                     {subject.name}
                   </Card.Title>
-                  <Card.Text className="mb-4">
-                    {subject.description}
-                  </Card.Text>
+                  <Card.Text className="mb-4">{subject.description}</Card.Text>
                   <div className="mt-auto">
-                    <Link href={subject.link}
+                    <Link
+                      href={subject.link}
                       className="btn w-100"
-                      style={{ backgroundColor: subject.color, color: "white" }}
+                      style={{ backgroundColor: subject.color, color: 'white' }}
                     >
                       Learn More
                     </Link>

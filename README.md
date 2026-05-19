@@ -15,7 +15,7 @@ This website is the primary public face of gbSTEM.org, providing information abo
 This project relies on several key modern web technologies:
 
 - **[Next.js](https://nextjs.org)**: The core React framework used for building the site. We use the modern "App Router" (`app/` directory) for routing, server-side rendering, and static site generation.
-  - *Learn more*: [Next.js Documentation](https://nextjs.org/docs) or the [Learn Next.js](https://nextjs.org/learn) tutorial.
+  - _Learn more_: [Next.js Documentation](https://nextjs.org/docs) or the [Learn Next.js](https://nextjs.org/learn) tutorial.
 - **[React](https://react.dev/)**: The underlying JavaScript library for building user interfaces and component-based architecture.
 - **[TypeScript](https://www.typescriptlang.org/)**: A strongly typed programming language that builds on JavaScript, giving you better tooling and strict type-checking at any scale.
 - **[Bootstrap](https://getbootstrap.com/) & [React-Bootstrap](https://react-bootstrap.netlify.app/)**: Used for rapid, responsive UI development. React-Bootstrap replaces the standard Bootstrap JavaScript with native React components (like `Accordion`, `Carousel`, and `Modal`).

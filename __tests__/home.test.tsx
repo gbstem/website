@@ -15,19 +15,21 @@ jest.mock('@/lib/constants', () => ({
   registrationEndsDate: new Date('2026-03-16'),
   semesterInProgress: false,
   formLink: 'https://example.com/form',
-  gbSTEMSignup: 'https://portal.gbstem.org/signup'
+  gbSTEMSignup: 'https://portal.gbstem.org/signup',
 }));
 
 describe('Home Page', () => {
   it('renders all sections', () => {
     const { container } = render(<Home />);
-    
+
     // Test Hero Section presence
-    expect(screen.getByText('Inspiring the Next Generation of STEM Innovators')).toBeInTheDocument();
-    
+    expect(
+      screen.getByText('Inspiring the Next Generation of STEM Innovators')
+    ).toBeInTheDocument();
+
     // Test WhatWeTeach section
     expect(screen.getByText('What We Teach')).toBeInTheDocument();
-    
+
     // Test OurMission section
     expect(screen.getByText('Our Mission')).toBeInTheDocument();
   });
@@ -36,8 +38,13 @@ describe('Home Page', () => {
 describe('HeroSection Component', () => {
   it('renders properly with registration open', () => {
     render(<HeroSection />);
-    expect(screen.getByRole('heading', { name: /Inspiring the Next Generation of STEM Innovators/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /Inspiring the Next Generation of STEM Innovators/i })
+    ).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Register Here/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Register Here/i })).toHaveAttribute('href', 'https://portal.gbstem.org/signup');
+    expect(screen.getByRole('button', { name: /Register Here/i })).toHaveAttribute(
+      'href',
+      'https://portal.gbstem.org/signup'
+    );
   });
 });

@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
@@ -32,8 +33,11 @@
     "@types/react-dom": "^19",
     "eslint": "^10",
     "eslint-config-next": "16.2.6",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
+    "prettier": "^3.8.3",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.9",
     "typescript": "^6"

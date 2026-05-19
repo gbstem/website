@@ -1,5 +1,15 @@
-"use client";
-import { formLink, instructorAppsDueDate, latestSemester, registrationEndsDate, registrationOpen, registrationOpenDate, semesterEndDate, semesterStartDate, upcomingSemester } from "@/lib/constants";
+'use client';
+import {
+  formLink,
+  instructorAppsDueDate,
+  latestSemester,
+  registrationEndsDate,
+  registrationOpen,
+  registrationOpenDate,
+  semesterEndDate,
+  semesterStartDate,
+  upcomingSemester,
+} from '@/lib/constants';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 
 function HomeIntro() {
@@ -13,24 +23,52 @@ function HomeIntro() {
                 <h2 className="text-center mb-4">Registration Information</h2>
                 <p>{`The ${upcomingSemester} semester will run from ${semesterStartDate.toLocaleDateString()} to ${semesterEndDate.toLocaleDateString()}!`}</p>
                 <Alert variant="info">
-                  <p className="mb-0">{registrationOpen ? `Registration for the gbSTEM ${upcomingSemester} semester is currently underway. Register to be a student by ${registrationEndsDate.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${instructorAppsDueDate.toLocaleDateString()}.` : `The ${latestSemester} semester registration is now closed. Registrations for the ${upcomingSemester} semester will open on ${registrationOpenDate.toLocaleDateString()}.`}</p>
+                  <p className="mb-0">
+                    {registrationOpen
+                      ? `Registration for the gbSTEM ${upcomingSemester} semester is currently underway. Register to be a student by ${registrationEndsDate.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${instructorAppsDueDate.toLocaleDateString()}.`
+                      : `The ${latestSemester} semester registration is now closed. Registrations for the ${upcomingSemester} semester will open on ${registrationOpenDate.toLocaleDateString()}.`}
+                  </p>
                 </Alert>
-                <p className={`mb-4 ${!registrationOpen ? "" : "d-none"}`}>
-                  If you are interested in gbSTEM's programs or hope to apply next semester as an instructor, please join our mailing list <a href={formLink} className="fw-semibold" target="_blank" rel="noopener noreferrer">here</a>.
+                <p className={`mb-4 ${!registrationOpen ? '' : 'd-none'}`}>
+                  If you are interested in gbSTEM's programs or hope to apply next semester as an
+                  instructor, please join our mailing list{' '}
+                  <a
+                    href={formLink}
+                    className="fw-semibold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    here
+                  </a>
+                  .
                 </p>
-                <Row className={`g-4 ${registrationOpen ? "" : "d-none"}`}>
+                <Row className={`g-4 ${registrationOpen ? '' : 'd-none'}`}>
                   <Col md={6}>
                     <div className="text-center p-4 h-100 bg-light rounded">
                       <h5 className="mb-3">Parents and 1-8 Students</h5>
-                      <a className="btn btn-primary" href="https://portal.gbstem.org/signup" target="_blank" rel="noopener noreferrer">
+                      <a
+                        className="btn btn-primary"
+                        href="https://portal.gbstem.org/signup"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Register
                       </a>
                     </div>
                   </Col>
                   <Col md={6}>
                     <div className="text-center p-4 h-100 bg-light rounded">
-                      <h5 className="mb-3">Instructor Applicants<br />(High School or Older)</h5>
-                      <a className="btn btn-primary" href="https://portal.gbstem.org/signup" target="_blank" rel="noopener noreferrer">
+                      <h5 className="mb-3">
+                        Instructor Applicants
+                        <br />
+                        (High School or Older)
+                      </h5>
+                      <a
+                        className="btn btn-primary"
+                        href="https://portal.gbstem.org/signup"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Apply to teach
                       </a>
                     </div>
@@ -42,8 +80,7 @@ function HomeIntro() {
         </Row>
       </Container>
     </div>
-  )
+  );
 }
 
 export default HomeIntro;
-
