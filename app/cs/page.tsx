@@ -1,61 +1,63 @@
-const ArrowDown = '/images/icons/arrow-down.svg';
-import ClassHoverButton from '@/components/ClassHoverButton';
-import PageButton from '@/components/PageButton';
+import {
+  ClassProgression,
+  ClassProgressionDownArrow,
+  ClassProgressionOr,
+  TypicalClassProgression,
+} from '@/components/ClassProgression';
 import ExploreOtherTracks from '@/components/ExploreOtherTracks';
+import TrackPage from '@/components/TrackPage';
 
 const CS = () => {
   return (
-    <div>
-      <main>
-        <div style={{ backgroundColor: '#67aeda' }} className="text-center p-5">
-          <h1>Computer Science Track</h1>
-        </div>
+    <TrackPage trackName="Computer Science" color="#67aeda">
+      <p>
+        We offer five course levels in the computer science track: Scratch, Scratch 2, Python 1,
+        Python 2, and Web Development. Each course, with the exception of Scratch 1 and Python 1,
+        takes place in two parts: a fall "A" section, and a continuing spring "B" section. Note that
+        the A section must be taken before the B section. The A section is only offered in the fall,
+        and the B section is only offered in the spring. Scratch 1 and Python 1 are offered every
+        fall and every spring. Students should take the B class after the A class. Classes take a
+        project-based learning approach as students will learn through collaborating and working
+        with peers on mini-projects.
+      </p>
 
-        <section id="cs">
-          <div className="container my-5">
-            <p>
-              We offer five course levels in the computer science track: Scratch, Scratch 2, Python
-              1, Python 2, and Web Development. Each course, with the exception of Scratch 1 and
-              Python 1, takes place in two parts: a fall "A" section, and a continuing spring "B"
-              section. Note that the A section must be taken before the B section. The A section is
-              only offered in the fall, and the B section is only offered in the spring. Scratch 1
-              and Python 1 are offered every fall and every spring. Students should take the B class
-              after the A class. Classes take a project-based learning approach as students will
-              learn through collaborating and working with peers on mini-projects.
-            </p>
+      <TypicalClassProgression>
+        <ClassProgression
+          gradient={['#ffd233', '#ff8c00']}
+          items={[
+            { link: '/cs/scratch1', name: 'Scratch 1' },
+            { link: '/cs/scratch2', name: 'Scratch 2' },
+            { link: '/cs/scratch3', name: 'Scratch 3' },
+          ]}
+        />
+        <ClassProgressionDownArrow />
+        <ClassProgression
+          gradient={['#66BB6A', '#67aeda', '#bf60bf']}
+          items={[
+            { link: '/cs/python1', name: 'Python 1' },
+            { link: '/cs/python2', name: 'Python 2' },
+            { link: '/cs/python3', name: 'Python 3' },
+          ]}
+        />
+        <ClassProgressionOr />
+        <ClassProgression
+          gradient={['#66BB6A', '#67aeda', '#bf60bf']}
+          items={[
+            { link: '/cs/python1', name: 'Python 1' },
+            { link: '/cs/python2', name: 'Python 2' },
+            { link: '/cs/webdev', name: 'Web Development' },
+          ]}
+        />
+      </TypicalClassProgression>
 
-            <h2 className="text-center p-5">Typical Class Progression</h2>
-            <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="/cs/scratch1" color="#ffd233" className="Scratch 1" />
-              <ClassHoverButton link="/cs/scratch2" color="#ffb347" className="Scratch 2" />
-              <ClassHoverButton link="/cs/scratch3" color="#ff8c00" className="Scratch 3" />
-            </div>
-            <div className="d-flex justify-content-center my-3">
-              <img alt="down arrow" src={ArrowDown} style={{ width: '3rem', height: '5rem' }} />
-            </div>
-            <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="/cs/python1" color="#66BB6A" className="Python 1" />
-              <ClassHoverButton link="/cs/python2" color="#388E3C" className="Python 2" />
-              <ClassHoverButton link="/cs/python3" color="#2E7D32" className="Python 3" />
-            </div>
-            <div className="d-flex justify-content-center my-1 fs-3 fw-semibold">OR</div>
-            <div className="d-flex flex-nowrap justify-content-center align-items-center">
-              <ClassHoverButton link="/cs/python1" color="#66BB6A" className="Python 1" />
-              <ClassHoverButton link="/cs/python2" color="#388E3C" className="Python 2" />
-              <ClassHoverButton link="/cs/webdev" color="#2A7DBE" className="Web Development" />
-            </div>
-          </div>
+      <p>
+        We recommend students younger than 5th grade begin with Scratch, while those in 6th-8th
+        grade should begin with Python. Those who have completed Scratch 2b should proceed to Python
+        1a.
+      </p>
 
-          <p className="container my-5">
-            We recommend students younger than 5th grade begin with Scratch, while those in 6th-8th
-            grade should begin with Python. Those who have completed Scratch 2b should proceed to
-            Python 1a.
-          </p>
-
-          <ExploreOtherTracks trackToOmit="/cs" />
-        </section>
-      </main>
-    </div>
+      <ExploreOtherTracks trackToOmit="/cs" />
+    </TrackPage>
   );
 };
 

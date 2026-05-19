@@ -6,7 +6,7 @@ export default function ExploreOtherTracks({ trackToOmit }: { trackToOmit?: stri
     { link: '/math', color: '#aaaaaa', className: 'Math Track' },
     { link: '/engineering', color: '#ffc819', className: 'Engineering Track' },
     { link: '/science', color: '#4CAF50', className: 'Science Track' },
-    { link: '/robotics', color: '#bf60bf', className: 'Robotics Program' },
+    { link: '/robotics', color: '#bf60bf', className: 'Robotics Track' },
   ];
 
   const filteredTracks = tracks.filter((track) => track.link !== trackToOmit);

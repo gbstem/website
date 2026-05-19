@@ -97,10 +97,8 @@ export default function Navigation() {
               </div>
             </Nav.Link>
 
-            <Link href="/donate" passHref legacyBehavior>
-              <Nav.Link>
-                <div className="rounded-div-green">Donate</div>
-              </Nav.Link>
+            <Link href="/donate" className="nav-link">
+              <div className="rounded-div-green">Donate</div>
             </Link>
           </Nav>
         </Navbar.Collapse>
