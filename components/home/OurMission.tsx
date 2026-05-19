@@ -1,8 +1,6 @@
 'use client';
-import Link from 'next/link';
-import { Col, Container, Row } from 'react-bootstrap';
-import { ArrowRight } from 'react-feather';
 import Image from 'next/image';
+import { Col, Container, Row } from 'react-bootstrap';
 const slide1 = '/images/zoomScreenshots/Screenshot (1).png';
 
 function OurMission() {
@@ -64,11 +62,6 @@ function OurMission() {
                 preparing them for future academic and career success in an increasingly
                 technological world.
               </p>
-              <Link href="/mission" className="btn btn-primary px-4 py-2">
-                <span className="d-flex align-items-center">
-                  Learn More <ArrowRight size={18} className="ms-2" />
-                </span>
-              </Link>
             </div>
           </Col>
         </Row>

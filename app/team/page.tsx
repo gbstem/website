@@ -85,7 +85,7 @@ export default function Team() {
       <Container
         fluid
         className="py-5 bg-primary text-white text-center"
-        style={{ backgroundColor: '#67aeda !important' }}
+        style={{ backgroundColor: '#0D6EFD !important' }}
       >
         <h1 className="display-4 fw-semibold">Our Team</h1>
         <p className="lead">Meet the dedicated people behind gbSTEM</p>

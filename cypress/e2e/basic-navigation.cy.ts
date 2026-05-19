@@ -72,6 +72,54 @@ describe('Basic Navigation', () => {
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
+    // Testimonials
+    cy.get('#about-dropdown').click();
+    cy.contains('.dropdown-item', 'Testimonials').click();
+    cy.location('pathname').should('eq', '/testimonials');
+    cy.get('main h1, main h2').contains('What People Say').should('be.visible');
+    cy.go('back');
+    cy.location('pathname').should('eq', '/');
+
+    // Reports
+    cy.get('#about-dropdown').click();
+    cy.contains('.dropdown-item', 'Reports').click();
+    cy.location('pathname').should('eq', '/reports');
+    cy.get('main h1, main h2').contains('Reports & Posts').should('be.visible');
+    cy.go('back');
+    cy.location('pathname').should('eq', '/');
+
+    // Math
+    cy.get('#programs-dropdown').click();
+    cy.contains('.dropdown-item', 'Math').click();
+    cy.location('pathname').should('eq', '/math');
+    cy.get('main h1, main h2').contains('Math Track').should('be.visible');
+    cy.go('back');
+    cy.location('pathname').should('eq', '/');
+
+    // Engineering
+    cy.get('#programs-dropdown').click();
+    cy.contains('.dropdown-item', 'Engineering').click();
+    cy.location('pathname').should('eq', '/engineering');
+    cy.get('main h1, main h2').contains('Engineering Track').should('be.visible');
+    cy.go('back');
+    cy.location('pathname').should('eq', '/');
+
+    // Science
+    cy.get('#programs-dropdown').click();
+    cy.contains('.dropdown-item', /^Science$/).click();
+    cy.location('pathname').should('eq', '/science');
+    cy.get('main h1, main h2').contains('Science Track').should('be.visible');
+    cy.go('back');
+    cy.location('pathname').should('eq', '/');
+
+    // Robotics
+    cy.get('#programs-dropdown').click();
+    cy.contains('.dropdown-item', 'Robotics').click();
+    cy.location('pathname').should('eq', '/robotics');
+    cy.get('main h1, main h2').contains('Lego Robotics Track').should('be.visible');
+    cy.go('back');
+    cy.location('pathname').should('eq', '/');
+
     // Check external sign up links
     checkExternalLink('a:contains("sign up")', ['gbstem.org', 'docs.google.com']);
     checkExternalLink('a:contains("apply"), a:contains("portal")', [
@@ -96,14 +144,18 @@ describe('Basic Navigation', () => {
     );
 
     // Check program track cards
-    checkInternalLink('main a[href="/cs"], section a[href="/cs"]', '/cs', 'Computer Science');
-    checkInternalLink('main a[href="/math"], section a[href="/math"]', '/math', 'Math');
+    checkInternalLink('main a[href="/cs"], section a[href="/cs"]', '/cs', 'Computer Science Track');
+    checkInternalLink('main a[href="/math"], section a[href="/math"]', '/math', 'Math Track');
     checkInternalLink(
       'main a[href="/engineering"], section a[href="/engineering"]',
       '/engineering',
-      'Engineering'
+      'Engineering Track'
     );
-    checkInternalLink('main a[href="/science"], section a[href="/science"]', '/science', 'Science');
+    checkInternalLink(
+      'main a[href="/science"], section a[href="/science"]',
+      '/science',
+      'Science Track'
+    );
   });
 
   it('navigates from the Computer Science Track page', () => {
