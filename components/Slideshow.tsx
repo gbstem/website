@@ -51,7 +51,8 @@ export default function Slideshow({
             <div className="d-block w-100">
               <Image
                 src={slide}
-                alt={`Slide ${index + 1}`}
+                alt={captions?.[index] || ''}
+                aria-hidden={!captions?.[index]}
                 className="img-fluid banner"
                 width={1200}
                 height={800}

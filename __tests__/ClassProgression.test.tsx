@@ -58,8 +58,8 @@ describe('ClassProgression Components', () => {
   });
 
   it('renders ClassProgressionDownArrow', () => {
-    render(<ClassProgressionDownArrow />);
-    expect(screen.getByAltText('down arrow')).toBeInTheDocument();
+    const { container } = render(<ClassProgressionDownArrow />);
+    expect(container.querySelector('img')).toBeInTheDocument();
   });
 
   it('renders ClassProgressionOr', () => {

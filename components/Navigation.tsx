@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import { FORM_LINK, GBSTEM_SIGNUP, REGISTRATION_OPEN, SEMESTER_IN_PROGRESS } from '@/lib/constants';
 import Image from 'next/image';
-import { Navbar, Nav, NavDropdown, Modal } from 'react-bootstrap';
-import { REGISTRATION_OPEN, FORM_LINK, GBSTEM_SIGNUP, SEMESTER_IN_PROGRESS } from '@/lib/constants';
+import Link from 'next/link';
+import { useState } from 'react';
+import { Modal, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 export default function Navigation() {
   const [show, setShow] = useState(false);
@@ -100,6 +100,7 @@ export default function Navigation() {
         </Navbar.Collapse>
       </Navbar>
 
+      {/* This doesn't actually show up anywhere. */}
       <Modal show={show} backdrop="static" keyboard={false}>
         <Modal.Header closeButton onClick={() => setShow(false)}>
           <Modal.Title>
@@ -112,20 +113,19 @@ export default function Navigation() {
             for one semester. We understand that this is unaffordable for many families, which is
             why it is so important for our program to remain accessible to all, regardless of their
             ability to pay. At gbSTEM, a contribution of just $200 can fund nearly 15% of our
-            operating costs for one semester. All donations are tax-deductible. You can purchase our
-            merchandise to support us{' '}
+            operating costs for one semester. All donations are tax-deductible. You can{' '}
             <a href="https://gbstem.myspreadshop.com/all" target="_blank" rel="noreferrer">
-              here
-            </a>
-            , make a donation{' '}
+              purchase our merchandise
+            </a>{' '}
+            to support us,{' '}
             <a
               href="https://paypal.com/us/fundraiser/charity/4605663"
               target="_blank"
               rel="noreferrer"
             >
-              here
+              make a donation
             </a>
-            , or read more about the benefits of making a donation <Link href="/donate">here.</Link>
+            , or <Link href="/donate">read more about the benefits of making a donation.</Link>
           </p>
         </Modal.Body>
       </Modal>

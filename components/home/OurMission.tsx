@@ -45,6 +45,7 @@ function OurMission() {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}
+                aria-hidden="true"
               >
                 <span className="text-white fs-1">💡</span>
               </div>

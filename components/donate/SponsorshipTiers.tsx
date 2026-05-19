@@ -177,7 +177,14 @@ export default function SponsorshipTiers() {
                     fontWeight: '600',
                   }}
                 >
-                  {checked ? 'X' : ''}
+                  {checked ? (
+                    <>
+                      <span aria-hidden="true">X</span>
+                      <span className="visually-hidden">Included</span>
+                    </>
+                  ) : (
+                    ''
+                  )}
                 </div>
               </div>
             ))}

@@ -17,8 +17,8 @@ function Robotics() {
         colorful and educational yearly game. They then can compete with students from all across
         the globe. In addition to building robots, students build organization, research, and
         leadership skills by designing an innovative project to benefit their community. A high
-        majority of FLL alumni go on to pursue successful careers in STEM fields. Learn more{' '}
-        <a href="https://www.firstlegoleague.org/">here.</a>
+        majority of FLL alumni go on to pursue successful careers in STEM fields.{' '}
+        <a href="https://www.firstlegoleague.org/">Learn more about FIRST Lego League.</a>
       </p>
       <div style={{ paddingBottom: '2rem' }}>
         <h2 className="text-center p-3">Prerequisites</h2>

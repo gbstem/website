@@ -52,6 +52,7 @@ export default function TeamMemberCard({
           {!imageLoaded && (
             <div
               className="image-placeholder"
+              aria-hidden="true"
               style={{
                 position: 'absolute',
                 top: 0,
@@ -90,6 +91,7 @@ export default function TeamMemberCard({
             onClick={handleClick}
             className="rounded-pill px-4 py-1"
             style={{ backgroundColor: '#1D2256', borderColor: '#1D2256' }}
+            aria-label={`View bio for ${name}`}
           >
             View Bio
           </Button>

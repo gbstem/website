@@ -44,8 +44,9 @@ export function ClassProgressionDownArrow() {
   return (
     <div className="d-flex justify-content-center my-3">
       <Image
-        alt="down arrow"
+        alt=""
         src={ArrowDown}
+        aria-hidden="true"
         width={48}
         height={80}
         style={{ width: '3rem', height: '5rem' }}

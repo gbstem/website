@@ -20,18 +20,29 @@ const Footer = () => {
                   href="https://facebook.com/The-Greater-Boston-STEM-Program-104063908337961"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Facebook"
                 >
-                  <Facebook width={35} height={35} />
+                  <Facebook width={35} height={35} aria-hidden="true" />
                 </a>
               </li>
               <li className="mx-3">
-                <a href="https://twitter.com/gbstemprogram" target="_blank" rel="noreferrer">
-                  <Twitter width={35} height={35} />
+                <a
+                  href="https://twitter.com/gbstemprogram"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Twitter"
+                >
+                  <Twitter width={35} height={35} aria-hidden="true" />
                 </a>
               </li>
               <li className="mx-3">
-                <a href="https://www.instagram.com/gbstem/" target="_blank" rel="noreferrer">
-                  <Instagram width={35} height={35} />
+                <a
+                  href="https://www.instagram.com/gbstem/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                >
+                  <Instagram width={35} height={35} aria-hidden="true" />
                 </a>
               </li>
               <li className="mx-3">
@@ -39,8 +50,9 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/gbstem-program"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="LinkedIn"
                 >
-                  <Linkedin width={35} height={35} />
+                  <Linkedin width={35} height={35} aria-hidden="true" />
                 </a>
               </li>
             </ul>
