@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer';
+import HashRedirect from '@/components/HashRedirect';
 import Navigation from '@/components/Navigation';
 import { constructSEO } from '@/lib/seo';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${spaceMono.variable}`}>
       <body>
+        <HashRedirect />
         <Navigation />
         <main>{children}</main>
         <Footer />

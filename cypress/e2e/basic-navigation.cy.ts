@@ -16,7 +16,7 @@ describe('Basic Navigation', () => {
       cy.get(selector).filter(':visible').first().click();
       cy.location('pathname', { timeout: 10000 }).should('eq', expectedPath);
       if (expectedHeader) {
-        cy.get('h1, h2').contains(expectedHeader).should('be.visible');
+        cy.get('main h1, main h2').contains(expectedHeader).should('be.visible');
       }
       cy.go('back');
       cy.location('pathname', { timeout: 10000 }).should('eq', initialPath);
@@ -45,7 +45,7 @@ describe('Basic Navigation', () => {
     cy.get('#about-dropdown').click();
     cy.contains('.dropdown-item', 'Team').click();
     cy.location('pathname').should('eq', '/team');
-    cy.get('h1, h2').contains('Our Team').should('be.visible');
+    cy.get('main h1, main h2').contains('Our Team').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
@@ -53,7 +53,7 @@ describe('Basic Navigation', () => {
     cy.get('#about-dropdown').click();
     cy.contains('.dropdown-item', 'FAQ').click();
     cy.location('pathname').should('eq', '/faq');
-    cy.get('h1, h2').contains('Frequently Asked Questions').should('be.visible');
+    cy.get('main h1, main h2').contains('Frequently Asked Questions').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
@@ -61,14 +61,14 @@ describe('Basic Navigation', () => {
     cy.get('#programs-dropdown').click();
     cy.contains('.dropdown-item', 'Computer Science').click();
     cy.location('pathname').should('eq', '/cs');
-    cy.get('h1, h2').contains('Computer Science').should('be.visible');
+    cy.get('main h1, main h2').contains('Computer Science Track').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Donate
     cy.contains('.nav-link', 'Donate').click();
     cy.location('pathname').should('eq', '/donate');
-    cy.get('h1, h2').contains('Support Us').should('be.visible');
+    cy.get('main h1, main h2').contains('Support Us').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
