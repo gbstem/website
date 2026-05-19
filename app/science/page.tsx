@@ -18,11 +18,13 @@ const ScienceTrack = () => {
       <p>We recommend students between 2nd and 5th grade take Environmental Science.</p>
 
       <TypicalClassProgression>
+        {/* The destination page is the same, but this includes anchors that don't really
+        exist just to make them unique as the framework requires. */}
         <ClassProgression
           gradient={['#ffd233', '#ff8c00']}
           items={[
             { link: '/science/science1', name: 'Environmental Science A' },
-            { link: '/science/science1', name: 'Environmental Science B' },
+            { link: '/science/science1#b', name: 'Environmental Science B' },
           ]}
         />
       </TypicalClassProgression>

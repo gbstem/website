@@ -15,7 +15,7 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/$1',
   },
   testPathIgnorePatterns: ['/node_modules/', '/old/'],
-  collectCoverage: true,
+  collectCoverage: false,
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
