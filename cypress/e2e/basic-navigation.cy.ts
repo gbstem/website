@@ -13,6 +13,8 @@ describe('Basic Navigation', () => {
   ) => {
     cy.location('pathname').then((initialPath) => {
       // Click the visible link so we don't accidentally click hidden nav dropdowns
+      // We must scroll into view first, because wide horizontal progressions might be out of frame
+      cy.get(selector).first().scrollIntoView();
       cy.get(selector).filter(':visible').first().click();
       cy.location('pathname', { timeout: 10000 }).should('eq', expectedPath);
       if (expectedHeader) {

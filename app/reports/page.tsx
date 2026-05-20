@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 function Reports() {
   return (
     <div className="container">
-      <div className="text-center m-5">
+      <div className="m-5 text-center">
         <h1>Reports & Posts</h1>
       </div>
       <div

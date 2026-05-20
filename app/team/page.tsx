@@ -38,7 +38,7 @@ const TeamSection = ({
     <div className="team-section py-5">
       <Container>
         <h2
-          className="text-center mb-5"
+          className="mb-5 text-center"
           style={{
             textTransform: 'capitalize',
             position: 'relative',
@@ -84,7 +84,7 @@ export default function Team() {
     <div className="team-page bg-light">
       <Container
         fluid
-        className="py-5 bg-primary text-white text-center"
+        className="bg-primary py-5 text-center text-white"
         style={{ backgroundColor: '#0D6EFD !important' }}
       >
         <h1 className="display-4 fw-semibold">Our Team</h1>

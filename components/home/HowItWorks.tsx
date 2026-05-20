@@ -8,7 +8,7 @@ import { ArrowRight } from 'react-feather';
 function HowItWorks() {
   return (
     <div>
-      <div className="container pb-5 pt-5">
+      <div className="container pt-5 pb-5">
         <div className="row">
           <div className="col-md-6">
             <div

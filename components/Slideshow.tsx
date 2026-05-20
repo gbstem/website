@@ -53,7 +53,7 @@ export default function Slideshow({
                 src={slide}
                 alt={captions?.[index] || ''}
                 aria-hidden={!captions?.[index]}
-                className="img-fluid banner"
+                className="img-fluid object-cover"
                 width={1200}
                 height={800}
                 style={imageStyling}

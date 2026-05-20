@@ -32,21 +32,21 @@ export default function TeamMemberCard({
 
   return (
     <Card
-      className="team-member-card h-100 border-0 shadow-sm hover-effect"
+      className="group team-member-card h-100 border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_12px_20px_rgba(0,0,0,0.1)]"
       style={{ width: '300px' }}
     >
-      <div className="profile-circle mx-auto mt-4 mb-3 position-relative">
-        <div className="team-image-container h-100 w-100 position-relative">
+      <div className="relative mx-auto mt-4 mb-3 flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-full bg-[#f8f9fa]">
+        <div className="relative mx-auto aspect-square h-full w-full max-w-[180px] overflow-hidden rounded-full">
           <Image
             src={`/images/headshots/${profilePic}`}
             alt={name}
             fill
             sizes="180px"
             onLoad={handleImageLoad}
-            className="team-member-image object-fit-cover"
+            className="h-full w-full max-w-[300px]! object-cover group-hover:scale-108"
             style={{
               opacity: imageLoaded ? 1 : 0,
-              transition: 'opacity 0.3s ease-in-out',
+              transition: 'opacity 0.3s ease-in-out, transform 0.5s ease',
             }}
           />
           {!imageLoaded && (
@@ -78,7 +78,7 @@ export default function TeamMemberCard({
         </div>
       </div>
 
-      <Card.Body className="text-center pb-4 d-flex flex-column justify-content-between">
+      <Card.Body className="d-flex flex-column justify-content-between pb-4 text-center">
         <div style={{ height: '140px' }}>
           <Card.Title as="h4" className="fw-semibold mb-1">
             {name}

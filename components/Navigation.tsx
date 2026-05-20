@@ -12,7 +12,7 @@ export default function Navigation() {
   return (
     <>
       <Navbar variant="dark" expand="md" style={{ backgroundColor: '#1D2256' }} collapseOnSelect>
-        <Navbar.Brand as={Link} href="/" className="ms-2 ms-xl-5" style={{ fontWeight: 700 }}>
+        <Navbar.Brand as={Link} href="/" className="ms-xl-5 ms-2" style={{ fontWeight: 700 }}>
           <Image
             alt="gbSTEM logo"
             src="/images/icons/penguin.png"
@@ -23,44 +23,44 @@ export default function Navigation() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="me-auto align-items-center w-100 justify-content-end">
+          <Nav className="align-items-center justify-content-end me-auto w-100">
             <Nav.Link as={Link} href="/">
               Home
             </Nav.Link>
 
             <NavDropdown title="About" id="about-dropdown" className="text-center">
-              <NavDropdown.Item as={Link} href="/team" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/team" className="text-md-start text-center">
                 Team
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
                 href="/testimonials"
-                className="text-center text-md-start"
+                className="text-md-start text-center"
               >
                 Testimonials
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/reports" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/reports" className="text-md-start text-center">
                 Reports
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/faq" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/faq" className="text-md-start text-center">
                 FAQ
               </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Programs" id="programs-dropdown" className="text-center">
-              <NavDropdown.Item as={Link} href="/cs" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/cs" className="text-md-start text-center">
                 Computer Science
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/math" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/math" className="text-md-start text-center">
                 Math
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/engineering" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/engineering" className="text-md-start text-center">
                 Engineering
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/science" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/science" className="text-md-start text-center">
                 Science
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/robotics" className="text-center text-md-start">
+              <NavDropdown.Item as={Link} href="/robotics" className="text-md-start text-center">
                 Robotics
               </NavDropdown.Item>
             </NavDropdown>
@@ -74,7 +74,9 @@ export default function Navigation() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-div-blue align-center">sign up</div>
+              <div className="align-center inline-block rounded-[20px] bg-[#67aeda] p-2.5 whitespace-nowrap max-[850px]:px-2 max-[850px]:py-1.5">
+                sign up
+              </div>
             </Nav.Link>
 
             <Nav.Link
@@ -88,13 +90,15 @@ export default function Navigation() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-div-gray align-center">
+              <div className="align-center inline-block rounded-[20px] bg-[#aaaaaa] p-2.5 whitespace-nowrap max-[850px]:px-2 max-[850px]:py-1.5">
                 {SEMESTER_IN_PROGRESS ? 'portal' : 'apply'}
               </div>
             </Nav.Link>
 
             <Link href="/donate" className="nav-link">
-              <div className="rounded-div-green">Donate</div>
+              <div className="inline-block rounded-[20px] bg-[#4caf50] p-2.5 whitespace-nowrap max-[850px]:px-2 max-[850px]:py-1.5">
+                Donate
+              </div>
             </Link>
           </Nav>
         </Navbar.Collapse>

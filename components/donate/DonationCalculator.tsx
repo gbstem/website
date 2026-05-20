@@ -22,7 +22,7 @@ export default function DonationCalculator() {
         We require $1500 each semester to fund our program. Please use the slider below to see how
         your donation will help us reach our goal.
       </p>
-      <div className="form-group mb-4 mt-4">
+      <div className="form-group mt-4 mb-4">
         <label htmlFor="donationAmount" className="fw-semibold mb-2">
           Donation Amount: ${donationAmount}
         </label>

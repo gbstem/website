@@ -6,8 +6,8 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 // Testimonial card component
 function TestimonialCard({ text, author }: { text: string; author: string }) {
   return (
-    <Card className="h-100 border-0 shadow-sm testimonial-card hover-effect">
-      <Card.Body className="p-4 d-flex flex-column">
+    <Card className="testimonial-card h-100 border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-[5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
+      <Card.Body className="d-flex flex-column p-4">
         <div className="position-relative mb-4">
           <div
             style={{
@@ -35,7 +35,7 @@ function TestimonialCard({ text, author }: { text: string; author: string }) {
           </Card.Text>
         </div>
         <div className="mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>
-          <p className="mb-0 fw-semibold text-dark">{author}</p>
+          <p className="fw-semibold text-dark mb-0">{author}</p>
         </div>
       </Card.Body>
     </Card>
@@ -55,24 +55,13 @@ export default function Testimonials() {
 
       <Row className="g-4">
         {testimonials.map((testimonial, index) => (
-          <Col key={index} md={6} lg={4} className="mb-4 d-flex">
+          <Col key={index} md={6} lg={4} className="d-flex mb-4">
             <div className="w-100">
               <TestimonialCard text={testimonial.text} author={testimonial.author} />
             </div>
           </Col>
         ))}
       </Row>
-      <style jsx>{`
-        .hover-effect {
-          transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
-        }
-        .hover-effect:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-      `}</style>
     </Container>
   );
 }

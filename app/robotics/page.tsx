@@ -21,7 +21,7 @@ function Robotics() {
         <a href="https://www.firstlegoleague.org/">Learn more about FIRST Lego League.</a>
       </p>
       <div style={{ paddingBottom: '2rem' }}>
-        <h2 className="text-center p-3">Prerequisites</h2>
+        <h2 className="p-3 text-center">Prerequisites</h2>
         <p>
           It is recommended that students sign up for this program after having taken a CS or
           Engineering track course, but no experience is required. It is expected that students in
@@ -29,8 +29,8 @@ function Robotics() {
           will be depending on them.
         </p>
       </div>
-      <h2 className="text-center p-3">Skills Taught and Practiced</h2>
-      <div className="d-flex flex-wrap justify-content-center gap-3 mb-5">
+      <h2 className="p-3 text-center">Skills Taught and Practiced</h2>
+      <div className="d-flex justify-content-center mb-5 flex-wrap gap-3">
         {[
           'The Design Process',
           'Engineering Principles',
@@ -43,7 +43,7 @@ function Robotics() {
         ].map((skill, index, arr) => (
           <div
             key={skill}
-            className="rounded-3 shadow-sm d-flex align-items-center justify-content-center text-center p-3 fw-bold text-white"
+            className="rounded-3 d-flex align-items-center justify-content-center fw-bold p-3 text-center text-black shadow-sm"
             style={{
               backgroundColor: interpolateColor(
                 ['#66BB6A', '#67aeda', '#bf60bf'],

@@ -75,7 +75,7 @@ const benefits = [
 export default function SponsorshipTiers() {
   return (
     <div
-      className="overflow-auto mb-5"
+      className="mb-5 overflow-auto"
       style={{
         fontSize: 'clamp(0.6rem, 2vw, 1.5rem)',
         textAlign: 'center',

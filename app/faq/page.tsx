@@ -30,7 +30,7 @@ function QuestionAnswerAccordion({
 export default function Faq() {
   return (
     <div className="pb-5">
-      <div className="text-center m-5">
+      <div className="m-5 text-center">
         <h1 className="fw-semibold">Frequently Asked Questions</h1>
       </div>
       <Container>

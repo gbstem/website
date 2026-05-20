@@ -5,14 +5,14 @@ const COPYRIGHT_YEAR = new Date().getFullYear();
 const Footer = () => {
   return (
     <footer>
-      <section className="bg-dark text-center py-5">
+      <section className="bg-dark py-5 text-center">
         <div className="container">
           <a href="mailto:contact@gbstem.org" className="text-primary">
             <u>contact@gbstem.org</u>
           </a>
           <div className="row justify-content-center">
             <ul
-              className="clear socials mt-4 d-flex justify-content-center"
+              className="clear socials d-flex justify-content-center mt-4"
               style={{ color: 'blue', listStyleType: 'none', padding: 0 }}
             >
               <li className="mx-3">
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-white mt-4">
+        <p className="mt-4 text-white">
           The Greater Boston STEM Program is an independent non-profit 501(c)3 organization, EIN
           88-1760321
         </p>

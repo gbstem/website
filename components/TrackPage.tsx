@@ -11,7 +11,7 @@ export default function TrackPage({ trackName, color, subtitle, children }: Trac
   return (
     <div>
       <main>
-        <div style={{ backgroundColor: color }} className="text-center p-5">
+        <div style={{ backgroundColor: color }} className="p-5 text-center">
           <h1>{trackName} Track</h1>
           {subtitle && <h3 style={{ fontWeight: '200' }}>{subtitle}</h3>}
         </div>

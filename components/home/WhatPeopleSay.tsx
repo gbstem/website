@@ -38,7 +38,7 @@ function WhatPeopleSay() {
         <Row className="g-4">
           {testimonials.map((testimonial, index) => (
             <Col lg={4} key={index}>
-              <Card className="h-100 border-0 shadow-sm testimonial-card">
+              <Card className="testimonial-card h-100 border-0 shadow-sm">
                 <Card.Body className="position-relative p-4">
                   <div
                     className="position-absolute"
@@ -52,7 +52,7 @@ function WhatPeopleSay() {
                   >
                     &quot;
                   </div>
-                  <Card.Text className="mb-4 fs-5" style={{ lineHeight: 1.7 }}>
+                  <Card.Text className="fs-5 mb-4" style={{ lineHeight: 1.7 }}>
                     &quot;{testimonial.quote}&quot;
                   </Card.Text>
                   <div className="d-flex mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>

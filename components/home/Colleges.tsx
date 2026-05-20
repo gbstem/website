@@ -64,7 +64,7 @@ function Colleges() {
   ];
 
   return (
-    <section className="py-5 bg-white border-top">
+    <section className="border-top bg-white py-5">
       <Container>
         <Row className="mb-5">
           <Col className="text-center">
@@ -73,13 +73,13 @@ function Colleges() {
           </Col>
         </Row>
 
-        <div className="logo-carousel-container">
-          <div className="logo-carousel">
-            <div className="logo-slide">
+        <div className="relative mx-auto w-full overflow-hidden">
+          <div className="flex w-full">
+            <div className="flex animate-scroll pr-2">
               {colleges.map((college, index) => (
-                <div key={`slide1-${index}`} className="logo-item">
+                <div key={`slide1-${index}`} className="min-w-[200px] flex-none">
                   <div
-                    className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center"
+                    className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 rounded bg-white p-4 shadow-sm"
                     style={{ height: '120px', width: '200px' }}
                   >
                     <Image
@@ -102,11 +102,11 @@ function Colleges() {
               ))}
             </div>
 
-            <div className="logo-slide">
+            <div className="flex animate-scroll pr-2">
               {colleges.map((college, index) => (
-                <div key={`slide2-${index}`} className="logo-item">
+                <div key={`slide2-${index}`} className="min-w-[200px] flex-none">
                   <div
-                    className="college-logo-wrapper bg-white rounded shadow-sm p-4 mx-2 d-flex align-items-center justify-content-center"
+                    className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 rounded bg-white p-4 shadow-sm"
                     style={{ height: '120px', width: '200px' }}
                   >
                     <Image
@@ -130,40 +130,6 @@ function Colleges() {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          .logo-carousel-container {
-            width: 100%;
-            overflow: hidden;
-            margin: 0 auto;
-            position: relative;
-          }
-
-          .logo-carousel {
-            display: flex;
-            width: 100%;
-          }
-
-          .logo-slide {
-            display: flex;
-            animation: scroll 30s linear infinite;
-            padding-right: 0.5rem;
-          }
-
-          .logo-item {
-            flex: 0 0 auto;
-            min-width: 200px;
-          }
-
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-100%);
-            }
-          }
-        `}</style>
       </Container>
     </section>
   );

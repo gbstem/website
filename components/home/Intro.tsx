@@ -14,13 +14,13 @@ import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 
 function HomeIntro() {
   return (
-    <div className="py-5 bg-white">
+    <div className="bg-white py-5">
       <Container>
         <Row className="justify-content-center mb-4">
           <Col md={10} lg={8}>
             <Card className="border-0 shadow-sm">
               <Card.Body className="p-4">
-                <h2 className="text-center mb-4">Registration Information</h2>
+                <h2 className="mb-4 text-center">Registration Information</h2>
                 <p>{`The ${UPCOMING_SEMESTER} semester will run from ${SEMESTER_START_DATE.toLocaleDateString()} to ${SEMESTER_END_DATE.toLocaleDateString()}!`}</p>
                 <Alert variant="info">
                   <p className="mb-0">
@@ -44,7 +44,7 @@ function HomeIntro() {
                 </p>
                 <Row className={`g-4 ${REGISTRATION_OPEN ? '' : 'd-none'}`}>
                   <Col md={6}>
-                    <div className="text-center p-4 h-100 bg-light rounded">
+                    <div className="bg-light h-100 rounded p-4 text-center">
                       <h5 className="mb-3">Parents and 1-8 Students</h5>
                       <a
                         className="btn btn-primary"
@@ -57,7 +57,7 @@ function HomeIntro() {
                     </div>
                   </Col>
                   <Col md={6}>
-                    <div className="text-center p-4 h-100 bg-light rounded">
+                    <div className="bg-light h-100 rounded p-4 text-center">
                       <h5 className="mb-3">
                         Instructor Applicants
                         <br />

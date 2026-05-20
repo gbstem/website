@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /out/
+/.swc/
 public/sitemap*.xml
 public/robots.txt
 

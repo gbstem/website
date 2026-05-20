@@ -21,7 +21,7 @@ export default function ClassPage(props: ClassPageProps) {
   return (
     <div>
       <main>
-        <div style={{ backgroundColor: `${props.color}` }} className="text-center p-5">
+        <div style={{ backgroundColor: `${props.color}` }} className="p-5 text-center">
           <h1>{props.title}</h1>
           <h3 style={{ fontWeight: '200' }}>{props.classTitle}</h3>
         </div>
@@ -51,14 +51,14 @@ export default function ClassPage(props: ClassPageProps) {
           </div>
           <div className="container">
             <div style={{ paddingTop: '3rem' }}>
-              <h2 className="text-center p-3">Course Description</h2>
+              <h2 className="p-3 text-center">Course Description</h2>
               <p>{props.description}</p>
             </div>
             <div style={{ paddingBottom: '2rem' }}>
-              <h2 className="text-center p-3">Prerequisites</h2>
+              <h2 className="p-3 text-center">Prerequisites</h2>
               <p>{props.prerequisites}</p>
             </div>
-            <h2 className="text-center p-3">Syllabus</h2>
+            <h2 className="p-3 text-center">Syllabus</h2>
             <ul style={{ listStyleType: 'none', paddingLeft: '0' }}>
               {props.modules.map((module, index) => (
                 <li
@@ -77,7 +77,7 @@ export default function ClassPage(props: ClassPageProps) {
               ))}
             </ul>
           </div>
-          <div className="text-center p-5" style={{ marginTop: '3rem' }}>
+          <div className="p-5 text-center" style={{ marginTop: '3rem' }}>
             <h2>{props.includeExampleProjects ? 'Example Projects and Materials' : ''}</h2>
           </div>
           <div

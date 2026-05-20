@@ -51,7 +51,7 @@ function Counter() {
         <Row className="g-4">
           {counters.map((counter, index) => (
             <Col md={6} lg={3} key={index}>
-              <Card className="border-0 shadow-sm h-100 text-center">
+              <Card className="h-100 border-0 text-center shadow-sm">
                 <Card.Body className="d-flex flex-column justify-content-center p-4">
                   <div
                     className="counter-value display-4 fw-semibold mb-2"

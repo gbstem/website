@@ -5,13 +5,13 @@ const slide1 = '/images/zoomScreenshots/Screenshot (1).png';
 
 function OurMission() {
   return (
-    <section className="py-5 bg-white">
+    <section className="bg-white py-5">
       <Container>
         <Row className="align-items-center g-5">
           <Col lg={6}>
             <div className="position-relative">
               <div
-                className="bg-primary rounded position-absolute"
+                className="bg-primary position-absolute rounded"
                 style={{
                   width: '90%',
                   height: '90%',
@@ -24,7 +24,7 @@ function OurMission() {
               <Image
                 src={slide1}
                 alt="STEM Learning"
-                className="img-fluid rounded shadow position-relative"
+                className="img-fluid position-relative rounded shadow"
                 width={600}
                 height={400}
                 style={{ zIndex: 1, width: '100%', height: 'auto' }}
@@ -45,7 +45,7 @@ function OurMission() {
                 }}
                 aria-hidden="true"
               >
-                <span className="text-white fs-1">💡</span>
+                <span className="fs-1 text-white">💡</span>
               </div>
             </div>
           </Col>

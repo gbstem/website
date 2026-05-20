@@ -43,7 +43,7 @@ const contributionBenefits = [
 function Donate() {
   return (
     <div className="container">
-      <div className="text-center m-5">
+      <div className="m-5 text-center">
         <h1>Support Us</h1>
       </div>
 
@@ -64,7 +64,7 @@ function Donate() {
       </a>
 
       <div
-        className="m-3 m-md-5 p-3 p-md-5"
+        className="m-md-5 p-md-5 m-3 p-3"
         style={{
           borderRadius: '10px',
           borderWidth: '1px',
@@ -87,7 +87,7 @@ function Donate() {
 
       <SponsorshipTiers />
 
-      <h2 className="text-center p-3" style={{ marginTop: '3rem' }}>
+      <h2 className="p-3 text-center" style={{ marginTop: '3rem' }}>
         Your Contributions Will Help Us...
       </h2>
       <ol style={{ listStyleType: 'square' }}>

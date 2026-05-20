@@ -41,11 +41,11 @@ function WhatWeTeach() {
   return (
     <div className="py-5" style={{ backgroundColor: 'aliceblue' }}>
       <Container>
-        <h2 className="text-center fw-semibold mb-5">What We Teach</h2>
+        <h2 className="fw-semibold mb-5 text-center">What We Teach</h2>
         <Row className="g-4">
           {subjects.map((subject, index) => (
             <Col md={6} key={index}>
-              <Card className="h-100 shadow-sm hover-shadow border-0 overflow-hidden">
+              <Card className="hover-shadow h-100 overflow-hidden border-0 shadow-sm">
                 <div style={{ height: '220px', overflow: 'hidden' }}>
                   <Card.Img
                     variant="top"

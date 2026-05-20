@@ -10,7 +10,7 @@ interface ClassHoverButtonProps {
 export default function ClassHoverButton({ link, color, className }: ClassHoverButtonProps) {
   return (
     <Link href={link} className="arrow-step" style={{ backgroundColor: color }}>
-      <div className="arrow-button">{className}</div>
+      <div className="w-[70%] text-center leading-tight text-balance">{className}</div>
     </Link>
   );
 }
