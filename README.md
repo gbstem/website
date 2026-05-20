@@ -53,6 +53,39 @@ yarn start
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result for `yarn dev` or `yarn start`. You can start editing any page or component, and when running in `yarn dev` mode, your changes will be reflected in the browser automatically.
 
+## Updating Dependencies
+
+It is important to periodically update the project's dependencies to address security vulnerabilities, receive bug fixes, improve performance, and keep up with the latest Next.js and React features. Since this project is maintained by a rotating group of students, regular updates prevent the codebase from falling behind or becoming incompatible with modern deployment platforms like Vercel.
+
+We use the [npm-check-updates (ncu)](https://github.com/raineorshine/npm-check-updates) tool to check for and apply updates. Refer to the [installation instructions](https://github.com/raineorshine/npm-check-updates#installation) to install it.
+
+Once `ncu` is installed, follow this sequence of commands to update dependencies:
+
+```bash
+# Update the dependencies in package.json to the latest versions
+ncu -u
+
+# Install the updated packages and update yarn.lock
+yarn install
+
+# Run unit tests to verify no breaking changes were introduced
+yarn test
+
+# Start a development server and run the Cypress test suite
+yarn dev &
+yarn cypress
+
+# Run lint checks to ensure code style consistency
+yarn lint
+
+# Go to http://localhost:3000 and do manual visual checks and tests
+
+# Build the project for production to verify compatibility and compile-time checks
+yarn build
+```
+
+After verifying that the tests, linting, and build pass successfully, commit and submit both `package.json` and `yarn.lock` to the repository.
+
 ## Deploy on Vercel
 
 We use [Vercel](https://vercel.com/) for deployment. They are the creators and main sponsors of Next.js. You can preview changes by pushing branches to this repository, and preview and production URLs will automatically be provided by the Vercel bot.
