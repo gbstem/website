@@ -47,6 +47,7 @@
     "jest-environment-jsdom": "^30.4.1",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.8.3",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "start-server-and-test": "^3.0.5",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.10",
