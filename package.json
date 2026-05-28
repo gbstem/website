@@ -18,6 +18,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
     "next": "16.2.6",
     "rc-slider": "^11.1.9",
