@@ -25,6 +25,9 @@ This project relies on several key modern web technologies:
 
 ## Getting Started with Development
 
+> [!NOTE]
+> No environment variables are required to run the public website, so there is no `.env.example` file needed.
+
 First, run the development server:
 
 ```bash
