@@ -95,8 +95,6 @@ After verifying that the tests, linting, and build pass successfully, commit and
 
 We use [Vercel](https://vercel.com/) for deployment. They are the creators and main sponsors of Next.js. You can preview changes by pushing branches to this repository, and preview and production URLs will automatically be provided by the Vercel bot.
 
----
-
 ## Directory and File Index
 
 Below is an alphabetical list of the top-level directories and significant configuration files to help you navigate the codebase:
