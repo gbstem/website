@@ -6,7 +6,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 // Testimonial card component
 function TestimonialCard({ text, author }: { text: string; author: string }) {
   return (
-    <Card className="testimonial-card h-100 border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-[5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
+    <Card className="testimonial-card h-100 border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:translate-y-[-5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
       <Card.Body className="d-flex flex-column p-4">
         <div className="position-relative mb-4">
           <div
