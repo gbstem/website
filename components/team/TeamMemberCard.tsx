@@ -31,10 +31,7 @@ export default function TeamMemberCard({
   const handleImageLoad = () => setImageLoaded(true);
 
   return (
-    <Card
-      className="group team-member-card h-100 border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_12px_20px_rgba(0,0,0,0.1)]"
-      style={{ width: '300px' }}
-    >
+    <Card className="group team-member-card h-100 w-[300px] max-w-full border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_12px_20px_rgba(0,0,0,0.1)]">
       <div className="relative mx-auto mt-4 mb-3 flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-full bg-[#f8f9fa]">
         <div className="relative mx-auto aspect-square h-full w-full max-w-[180px] overflow-hidden rounded-full">
           <Image
@@ -51,23 +48,8 @@ export default function TeamMemberCard({
           />
           {!imageLoaded && (
             <div
-              className="image-placeholder"
+              className="image-placeholder absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-full bg-[#f1f1f1] text-[1.5rem] font-bold text-[#67aeda]"
               aria-hidden="true"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#f1f1f1',
-                color: '#67aeda',
-                fontSize: '1.5rem',
-                fontWeight: 'bold',
-                borderRadius: '50%',
-              }}
             >
               {name
                 .split(' ')
@@ -79,7 +61,7 @@ export default function TeamMemberCard({
       </div>
 
       <Card.Body className="d-flex flex-column justify-content-between pb-4 text-center">
-        <div style={{ height: '140px' }}>
+        <div className="h-[140px]">
           <Card.Title as="h4" className="fw-semibold mb-1">
             {name}
           </Card.Title>
@@ -89,8 +71,7 @@ export default function TeamMemberCard({
         <div>
           <Button
             onClick={handleClick}
-            className="rounded-pill px-4 py-1"
-            style={{ backgroundColor: '#1D2256', borderColor: '#1D2256' }}
+            className="rounded-pill border-[#1D2256] bg-[#1D2256] px-4 py-1"
             aria-label={`View bio for ${name}`}
           >
             View Bio
@@ -109,7 +90,7 @@ export default function TeamMemberCard({
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p style={{ lineHeight: '1.6' }}>{bio}</p>
+          <p className="leading-[1.6]">{bio}</p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

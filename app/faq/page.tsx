@@ -11,14 +11,11 @@ function QuestionAnswerAccordion({
   eventKeyPrefix: string;
 }) {
   return (
-    <Accordion className="mb-4" style={{ maxWidth: '60rem', margin: 'auto' }}>
+    <Accordion className="mx-auto mb-4 max-w-240">
       {data.map((pair, index) => (
         <Accordion.Item eventKey={`${eventKeyPrefix}-${index}`} key={index}>
           <Accordion.Header className="fs-5">{pair.question}</Accordion.Header>
-          <Accordion.Body
-            className="fw-semibold"
-            style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontSize: '19.2px' }}
-          >
+          <Accordion.Body className="fw-semibold text-[19.2px] font-(--font-montserrat)">
             {pair.answer}
           </Accordion.Body>
         </Accordion.Item>
@@ -34,24 +31,22 @@ export default function Faq() {
         <h1 className="fw-semibold">Frequently Asked Questions</h1>
       </div>
       <Container>
-        <h2 style={{ margin: 'auto', width: 'fit-content', padding: '1.5rem' }}>General</h2>
+        <h2 className="mx-auto w-fit p-6">General</h2>
         <QuestionAnswerAccordion data={general} eventKeyPrefix="general" />
 
-        <h2 style={{ margin: 'auto', width: 'fit-content', padding: '1.5rem' }}>
-          Computer Science
-        </h2>
+        <h2 className="mx-auto w-fit p-6">Computer Science</h2>
         <QuestionAnswerAccordion data={computerScience} eventKeyPrefix="cs" />
 
-        <h2 style={{ margin: 'auto', width: 'fit-content', padding: '1.5rem' }}>Mathematics</h2>
+        <h2 className="mx-auto w-fit p-6">Mathematics</h2>
         <QuestionAnswerAccordion data={math} eventKeyPrefix="math" />
 
-        <h2 style={{ margin: 'auto', width: 'fit-content', padding: '1.5rem' }}>Engineering</h2>
+        <h2 className="mx-auto w-fit p-6">Engineering</h2>
         <QuestionAnswerAccordion data={engineering} eventKeyPrefix="engineering" />
 
-        <h2 style={{ margin: 'auto', width: 'fit-content', padding: '1.5rem' }}>Science</h2>
+        <h2 className="mx-auto w-fit p-6">Science</h2>
         <QuestionAnswerAccordion data={science} eventKeyPrefix="science" />
 
-        <h2 style={{ margin: 'auto', width: 'fit-content', padding: '1.5rem' }}>Other</h2>
+        <h2 className="mx-auto w-fit p-6">Other</h2>
         <QuestionAnswerAccordion data={other} eventKeyPrefix="other" />
       </Container>
     </div>

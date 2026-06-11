@@ -26,7 +26,7 @@ function WhatPeopleSay() {
   ];
 
   return (
-    <section className="py-5" style={{ backgroundColor: 'aliceblue' }}>
+    <section className="bg-[aliceblue] py-5">
       <Container>
         <Row className="mb-5">
           <Col className="text-center">
@@ -40,22 +40,13 @@ function WhatPeopleSay() {
             <Col lg={4} key={index}>
               <Card className="testimonial-card h-100 border-0 shadow-sm">
                 <Card.Body className="position-relative p-4">
-                  <div
-                    className="position-absolute"
-                    style={{
-                      top: -15,
-                      right: 20,
-                      fontSize: '3rem',
-                      color: '#67aeda',
-                      opacity: 0.2,
-                    }}
-                  >
+                  <div className="position-absolute top-[-15px] right-5 text-[3rem] text-[#67aeda] opacity-20">
                     &quot;
                   </div>
-                  <Card.Text className="fs-5 mb-4" style={{ lineHeight: 1.7 }}>
+                  <Card.Text className="fs-5 mb-4 leading-[1.7]">
                     &quot;{testimonial.quote}&quot;
                   </Card.Text>
-                  <div className="d-flex mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>
+                  <div className="d-flex mt-auto border-t border-[#eee] pt-3">
                     <div>
                       <div className="fw-semibold">{testimonial.author}</div>
                       <div className="text-muted small">{testimonial.role}</div>

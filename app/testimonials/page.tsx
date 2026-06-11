@@ -9,32 +9,14 @@ function TestimonialCard({ text, author }: { text: string; author: string }) {
     <Card className="testimonial-card h-100 border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:translate-y-[-5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
       <Card.Body className="d-flex flex-column p-4">
         <div className="position-relative mb-4">
-          <div
-            style={{
-              fontSize: '72px',
-              position: 'absolute',
-              top: '-30px',
-              left: '-10px',
-              color: '#f8f9fa',
-              zIndex: 0,
-              fontFamily: 'Georgia, serif',
-            }}
-          >
+          <div className="absolute top-[-30px] left-[-10px] z-0 font-[Georgia,serif] text-[72px] text-[#f8f9fa]">
             &quot;
           </div>
-          <Card.Text
-            className="position-relative"
-            style={{
-              zIndex: 1,
-              lineHeight: 1.6,
-              fontSize: '1rem',
-              fontStyle: 'italic',
-            }}
-          >
+          <Card.Text className="position-relative z-1 text-base! leading-[1.6] italic">
             &quot;{text}&quot;
           </Card.Text>
         </div>
-        <div className="mt-auto pt-3" style={{ borderTop: '1px solid #eee' }}>
+        <div className="mt-auto border-t border-[#eee] pt-3">
           <p className="fw-semibold text-dark mb-0">{author}</p>
         </div>
       </Card.Body>

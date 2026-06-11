@@ -11,8 +11,8 @@ export default function Navigation() {
 
   return (
     <>
-      <Navbar variant="dark" expand="md" style={{ backgroundColor: '#1D2256' }} collapseOnSelect>
-        <Navbar.Brand as={Link} href="/" className="ms-xl-5 ms-2" style={{ fontWeight: 700 }}>
+      <Navbar variant="dark" expand="md" className="bg-[#1D2256]" collapseOnSelect>
+        <Navbar.Brand as={Link} href="/" className="ms-xl-5 ms-2 font-bold">
           <Image
             alt="gbSTEM logo"
             src="/images/icons/penguin.png"

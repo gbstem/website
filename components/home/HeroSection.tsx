@@ -6,15 +6,9 @@ const inperson1 = '/images/in-person/inperson1.jpeg';
 function HeroSection() {
   return (
     <div
-      className="hero-section"
+      className="hero-section flex min-h-[80vh] items-center bg-cover bg-center text-white"
       style={{
         background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${inperson1})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        color: 'white',
-        minHeight: '80vh',
-        display: 'flex',
-        alignItems: 'center',
       }}
     >
       <Container>

@@ -63,23 +63,12 @@ function Donate() {
         Make A Contribution
       </a>
 
-      <div
-        className="m-md-5 p-md-5 m-3 p-3"
-        style={{
-          borderRadius: '10px',
-          borderWidth: '1px',
-          boxShadow: '0px 1px 5px #1d2256',
-          backgroundColor: 'aliceblue',
-          borderStyle: 'solid',
-        }}
-      >
+      <div className="m-md-5 p-md-5 m-3 rounded-[10px] border bg-[aliceblue] p-3 shadow-[0_1px_5px_#1d2256]">
         <DonationCalculator />
       </div>
 
-      <h2 className="text-center" style={{ marginTop: '5rem' }}>
-        Sponsoring gbSTEM
-      </h2>
-      <p style={{ padding: '2rem' }}>
+      <h2 className="mt-20 text-center">Sponsoring gbSTEM</h2>
+      <p className="p-8">
         We thank significant monetary (typically corporate) sponsors with benefits that include
         brand visibility on gbSTEM merchandise and social media. More benefits become available with
         higher sponsorship tiers.
@@ -87,10 +76,8 @@ function Donate() {
 
       <SponsorshipTiers />
 
-      <h2 className="p-3 text-center" style={{ marginTop: '3rem' }}>
-        Your Contributions Will Help Us...
-      </h2>
-      <ol style={{ listStyleType: 'square' }}>
+      <h2 className="mt-12 p-3 text-center">Your Contributions Will Help Us...</h2>
+      <ol className="list-[square]">
         {contributionBenefits.map((benefit, index) => (
           <li key={index} className="mb-3">
             <strong>{benefit.title}</strong> {benefit.description}
@@ -98,7 +85,7 @@ function Donate() {
         ))}
       </ol>
 
-      <p style={{ marginTop: '2rem', marginBottom: '5rem' }}>
+      <p className="mt-8 mb-20">
         Together, we can empower the next generation of innovators and problem solvers. Join us in
         supporting STEM education by making a tax-deductible donation today. Your generosity will
         help us provide quality education, cultivate critical skills, and inspire students to pursue

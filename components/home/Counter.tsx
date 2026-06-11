@@ -33,14 +33,7 @@ function Counter() {
   }, []);
 
   return (
-    <section
-      className="py-5"
-      style={{
-        backgroundColor: '#f8f9fa',
-        borderTop: '1px solid #e9ecef',
-        borderBottom: '1px solid #e9ecef',
-      }}
-    >
+    <section className="border-t border-b border-[#e9ecef] bg-[#f8f9fa] py-5">
       <Container>
         <Row className="mb-5">
           <Col className="text-center">
@@ -53,10 +46,7 @@ function Counter() {
             <Col md={6} lg={3} key={index}>
               <Card className="h-100 border-0 text-center shadow-sm">
                 <Card.Body className="d-flex flex-column justify-content-center p-4">
-                  <div
-                    className="counter-value display-4 fw-semibold mb-2"
-                    style={{ color: '#67aeda' }}
-                  >
+                  <div className="counter-value display-4 fw-semibold mb-2 text-[#67aeda]">
                     {counter.value}
                     {counter.suffix}
                   </div>

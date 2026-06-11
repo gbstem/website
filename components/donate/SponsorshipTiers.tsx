@@ -74,39 +74,18 @@ const benefits = [
 
 export default function SponsorshipTiers() {
   return (
-    <div
-      className="mb-5 overflow-auto"
-      style={{
-        fontSize: 'clamp(0.6rem, 2vw, 1.5rem)',
-        textAlign: 'center',
-        margin: 'auto',
-      }}
-    >
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
-          gap: '0',
-          minWidth: '576px', // Forces scroll only on extra small screens (< sm breakpoint)
-          margin: '0 auto',
-        }}
-      >
+    <div className="mx-auto mb-5 overflow-auto text-center text-[clamp(0.6rem,2vw,1.5rem)]">
+      <div className="mx-auto grid min-w-[576px] grid-cols-5 gap-0">
         {/* Empty top-left cell */}
-        <div style={{ border: '1px solid black' }}></div>
+        <div className="border-[1px] border-solid border-black"></div>
 
         {/* Tier Headers */}
         {tiers.map((tier) => (
           <div
             key={tier.name}
+            className="flex flex-col items-center justify-end border-[1px] border-solid border-black px-4 py-6 shadow-[0_0_5px_black]"
             style={{
-              border: '1px solid black',
               backgroundColor: tier.bgColor,
-              boxShadow: '0px 0px 5px black',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'flex-end',
-              padding: '1.5rem 1rem',
             }}
           >
             <Image
@@ -117,7 +96,7 @@ export default function SponsorshipTiers() {
               style={{ ...tier.imgStyle, marginBottom: '1rem' }}
             />
             <div className="fw-bold">{tier.name}</div>
-            <div style={{ fontStyle: 'italic', fontSize: '0.85em' }}>{tier.price}</div>
+            <div className="text-[0.85em] italic">{tier.price}</div>
           </div>
         ))}
 
@@ -125,16 +104,7 @@ export default function SponsorshipTiers() {
         {benefits.map((benefit) => (
           <React.Fragment key={benefit.name}>
             {/* Row Header */}
-            <div
-              style={{
-                border: '1px solid black',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '0.85em',
-                padding: '1.5rem 1rem',
-              }}
-            >
+            <div className="flex items-center justify-center border-[1px] border-solid border-black px-4 py-6 text-[0.85em]">
               {benefit.name}
             </div>
 
@@ -142,16 +112,7 @@ export default function SponsorshipTiers() {
             {benefit.checks.map((checked, index) => (
               <div
                 key={index}
-                style={{
-                  border: '1px solid black',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#1d2256',
-                  fontSize: '2.5em',
-                  fontWeight: '600',
-                  padding: '1rem',
-                }}
+                className="flex items-center justify-center border-[1px] border-solid border-black p-4 text-[2.5em] font-semibold text-[#1d2256]"
               >
                 {checked ? (
                   <>

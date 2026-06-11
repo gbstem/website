@@ -9,7 +9,7 @@ export function TypicalClassProgression({ children }: { children: React.ReactNod
   return (
     <>
       <h2 className="p-5 text-center">Typical Class Progression</h2>
-      <div style={{ margin: 'auto', marginTop: '1rem', marginBottom: '6rem' }}>{children}</div>
+      <div className="mx-auto mt-4 mb-24">{children}</div>
     </>
   );
 }
@@ -62,7 +62,7 @@ export function ClassProgressionDownArrow() {
         aria-hidden="true"
         width={48}
         height={80}
-        style={{ width: '3rem', height: '5rem' }}
+        className="h-20 w-12"
       />
     </div>
   );

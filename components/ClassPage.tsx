@@ -23,21 +23,12 @@ export default function ClassPage(props: ClassPageProps) {
       <main>
         <div style={{ backgroundColor: `${props.color}` }} className="p-5 text-center">
           <h1>{props.title}</h1>
-          <h3 style={{ fontWeight: '200' }}>{props.classTitle}</h3>
+          <h3 className="font-extralight">{props.classTitle}</h3>
         </div>
         <div id="cs">
-          <div style={{ backgroundColor: '#f2f2f2', paddingTop: '1rem', paddingBottom: '0.25rem' }}>
+          <div className="bg-[#f2f2f2] pt-[1rem]! pb-[0.25rem]!">
             <div className="container">
-              <ul
-                style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '2rem',
-                  justifyContent: 'center',
-                  color: 'rgb(29, 34, 86)',
-                  listStyle: 'none',
-                }}
-              >
+              <ul className="flex list-none flex-wrap justify-center gap-8 text-[#1D2256]">
                 <li>16 Weeks</li>
                 <li>16 Classes</li>
                 <li>
@@ -50,26 +41,20 @@ export default function ClassPage(props: ClassPageProps) {
             </div>
           </div>
           <div className="container">
-            <div style={{ paddingTop: '3rem' }}>
+            <div className="pt-12">
               <h2 className="p-3 text-center">Course Description</h2>
               <p>{props.description}</p>
             </div>
-            <div style={{ paddingBottom: '2rem' }}>
+            <div className="pb-8">
               <h2 className="p-3 text-center">Prerequisites</h2>
               <p>{props.prerequisites}</p>
             </div>
             <h2 className="p-3 text-center">Syllabus</h2>
-            <ul style={{ listStyleType: 'none', paddingLeft: '0' }}>
+            <ul className="list-none pl-0">
               {props.modules.map((module, index) => (
                 <li
                   key={index}
-                  style={{
-                    borderWidth: '1px',
-                    borderColor: 'rgb(29, 34, 86)',
-                    borderStyle: 'solid',
-                    padding: '1rem',
-                    marginTop: '1rem',
-                  }}
+                  className="mt-[1rem]! border-[1px] border-solid border-[#1D2256]! p-[1rem]!"
                 >
                   <b>Module {index + 1}: </b>
                   {module}
@@ -77,7 +62,7 @@ export default function ClassPage(props: ClassPageProps) {
               ))}
             </ul>
           </div>
-          <div className="p-5 text-center" style={{ marginTop: '3rem' }}>
+          <div className="mt-12 p-5 text-center">
             <h2>{props.includeExampleProjects ? 'Example Projects and Materials' : ''}</h2>
           </div>
           <div
@@ -94,14 +79,7 @@ export default function ClassPage(props: ClassPageProps) {
               captionStyling={{ textAlign: 'center', fontSize: '1.125rem', fontStyle: 'italic' }}
             />
           </div>
-          <div
-            style={{
-              margin: 'auto',
-              width: 'fit-content',
-              marginTop: '7rem',
-              marginBottom: '2rem',
-            }}
-          >
+          <div className="mx-auto mt-28 mb-8 w-fit">
             <Link
               href="https://forms.gle/ejSvEu2cwwdovUg18"
               className="btn btn-primary"
@@ -110,9 +88,7 @@ export default function ClassPage(props: ClassPageProps) {
               Register For This Class
             </Link>
           </div>
-          <div
-            style={{ margin: 'auto', width: 'fit-content', marginBottom: '7rem', color: 'blue' }}
-          >
+          <div className="mx-auto mb-28 w-fit text-blue-600">
             <Link href={props.trackPage}>Back To Courses Page</Link>
           </div>
         </div>

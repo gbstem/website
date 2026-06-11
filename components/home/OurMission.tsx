@@ -10,39 +10,16 @@ function OurMission() {
         <Row className="align-items-center g-5">
           <Col lg={6}>
             <div className="position-relative">
-              <div
-                className="bg-primary position-absolute rounded"
-                style={{
-                  width: '90%',
-                  height: '90%',
-                  top: '10%',
-                  left: '10%',
-                  opacity: 0.1,
-                  zIndex: 0,
-                }}
-              ></div>
+              <div className="bg-primary position-absolute top-[10%] left-[10%] z-0 h-[90%] w-[90%] rounded opacity-10"></div>
               <Image
                 src={slide1}
                 alt="STEM Learning"
-                className="img-fluid position-relative rounded shadow"
+                className="img-fluid position-relative z-1 h-auto w-full rounded shadow"
                 width={600}
                 height={400}
-                style={{ zIndex: 1, width: '100%', height: 'auto' }}
               />
               <div
-                className="position-absolute"
-                style={{
-                  top: '-15px',
-                  left: '-15px',
-                  background: '#67aeda',
-                  width: '70px',
-                  height: '70px',
-                  borderRadius: '50%',
-                  zIndex: 2,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
+                className="position-absolute top-[-15px] left-[-15px] z-2 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#67aeda]"
                 aria-hidden="true"
               >
                 <span className="fs-1 text-white">💡</span>

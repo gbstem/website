@@ -39,19 +39,19 @@ function WhatWeTeach() {
   ];
 
   return (
-    <div className="py-5" style={{ backgroundColor: 'aliceblue' }}>
+    <div className="bg-[aliceblue] py-5">
       <Container>
         <h2 className="fw-semibold mb-5 text-center">What We Teach</h2>
         <Row className="g-4">
           {subjects.map((subject, index) => (
             <Col md={6} key={index}>
               <Card className="hover-shadow h-100 overflow-hidden border-0 shadow-sm">
-                <div style={{ height: '220px', overflow: 'hidden' }}>
+                <div className="h-[220px] overflow-hidden">
                   <Card.Img
                     variant="top"
                     src={subject.image}
                     alt={subject.name}
-                    style={{ objectFit: 'cover', height: '100%', width: '100%' }}
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 <Card.Body className="d-flex flex-column">
@@ -62,8 +62,8 @@ function WhatWeTeach() {
                   <div className="mt-auto">
                     <Link
                       href={subject.link}
-                      className="btn w-100"
-                      style={{ backgroundColor: subject.color, color: 'white' }}
+                      className="btn w-100 text-white"
+                      style={{ backgroundColor: subject.color }}
                     >
                       Learn More
                     </Link>

@@ -8,32 +8,12 @@ function Reports() {
       <div className="m-5 text-center">
         <h1>Reports & Posts</h1>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '3rem',
-          width: 'fit-content',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          marginBottom: '5rem',
-          alignItems: 'stretch',
-          justifyContent: 'center',
-          justifyItems: 'stretch',
-        }}
-      >
-        <Card
-          className="d-flex flex-column align-items-center text-center"
-          style={{
-            width: '18rem',
-            padding: '1rem',
-            boxShadow: '1px 2px 2px 2px rgba(20,20,20,0.4)',
-          }}
-        >
+      <div className="mx-auto mb-20 flex w-fit flex-wrap items-stretch justify-center justify-items-stretch gap-12">
+        <Card className="d-flex flex-column align-items-center w-[18rem] max-w-full p-4 text-center shadow-[1px_2px_2px_2px_rgba(20,20,20,0.4)]">
           <div>gbSTEM is pleased to present our Impact Report for the 2023-2024 school year!</div>
           <Button
             href={'https://gbstem.org/reports/gbstem-impact.pdf'}
-            style={{ width: 'fit-content', fontSize: '1rem', marginTop: '2rem' }}
+            className="mt-8 w-fit text-[1rem]!"
           >
             Impact Report 2023-2024
           </Button>
