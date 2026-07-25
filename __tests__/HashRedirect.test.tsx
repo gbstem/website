@@ -42,4 +42,22 @@ describe('HashRedirect', () => {
     render(<HashRedirect />);
     expect(mockReplace).toHaveBeenCalledWith('/cs/python1');
   });
+
+  it('does not redirect a protocol-relative host in the hash (open redirect)', () => {
+    window.location.hash = '#//evil.example/login';
+    render(<HashRedirect />);
+    expect(mockReplace).not.toHaveBeenCalled();
+  });
+
+  it('does not redirect a backslash-prefixed host in the hash (open redirect)', () => {
+    window.location.hash = '#/\\evil.example/login';
+    render(<HashRedirect />);
+    expect(mockReplace).not.toHaveBeenCalled();
+  });
+
+  it('does not redirect a path embedding a URL scheme in the hash (open redirect)', () => {
+    window.location.hash = '#/redirect://evil.example';
+    render(<HashRedirect />);
+    expect(mockReplace).not.toHaveBeenCalled();
+  });
 });
