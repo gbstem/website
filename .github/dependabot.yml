@@ -8,6 +8,13 @@ updates:
     groups:
       minor-and-patch:
         update-types: ['minor', 'patch']
+    # Pinned per README's ncu instructions (Next.js doesn't support TS7 yet,
+    # Vercel Node 24.x) - minor/patch only, bump majors by hand.
+    ignore:
+      - dependency-name: 'typescript'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: 'github-actions'
     directory: '/'
