@@ -54,5 +54,17 @@
     "tailwindcss": "^4.3.3",
     "ts-jest": "^29.4.12",
     "typescript": "^6"
-  }
+  },
+  "dependenciesMeta": {
+    "cypress": {
+      "built": true
+    },
+    "sharp": {
+      "built": true
+    },
+    "unrs-resolver": {
+      "built": true
+    }
+  },
+  "packageManager": "yarn@4.17.1"
 }
