@@ -1,0 +1,57 @@
+name: Dependabot auto-merge
+
+# Queues non-major Dependabot PRs for auto-merge. The merge itself is performed
+# by GitHub once the *required* status checks on `main` pass -- this workflow
+# only asks for it. The required checks are configured in the repo ruleset
+# (Settings > Rules), currently:
+#   - Lint, format, unit tests
+#   - Cypress e2e
+#   - Vercel                (the gb-stem-s-projects deployment)
+#
+# NOTE ON THAT LAST ONE: Vercel names its status context based on how many
+# projects are connected to THIS REPO -- not on how many exist in the Vercel
+# account. One project attached posts the bare context "Vercel"; connect a
+# second and both are renamed to the qualified "Vercel <en dash> <project>" form.
+# This repo is the only one of the four without a legacy duplicate project
+# attached, which is why its context is the bare word.
+#
+# Confirmed in gbstem/curriculum: through 2025 its lone project posted as
+# "Vercel"; when a second project was connected in 2026, that same project's
+# context was renamed to "Vercel - gbstem-curriculum".
+#
+# So if anyone attaches a second Vercel project here, the required "Vercel"
+# check below goes permanently pending and blocks every PR -- Dependabot and
+# human alike -- until the ruleset is updated to the new name.
+#
+# If auto-merge stops working, check that ruleset first: a check that is renamed
+# or removed leaves the PR waiting forever rather than failing loudly.
+
+on:
+  pull_request:
+    branches: [main]
+
+# Workflow runs triggered by Dependabot get a read-only token by default;
+# this raises it. Repository secrets are still unavailable to these runs.
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    name: Auto-merge Dependabot PR
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Dependabot metadata
+        id: meta
+        uses: dependabot/fetch-metadata@v3
+
+      # Majors still open a PR, they just wait for a human. For the grouped
+      # minor-and-patch PRs, update-type is the highest change across the whole
+      # group, so one major in the group holds back the rest.
+      - name: Enable auto-merge for non-major updates
+        if: steps.meta.outputs.update-type != 'version-update:semver-major'
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
