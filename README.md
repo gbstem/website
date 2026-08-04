@@ -115,6 +115,7 @@ Below is an alphabetical list of the top-level directories and significant confi
 
 ### Directories
 
+- **`.github/`**: Contains GitHub configuration for GitHub, including our Dependabot configuration for automating minor and patch package updates, and our Continuous Integration (CI) test workflows.
 - **`.husky/`**: Configuration for Husky, managing Git hooks like pre-commit formatting and linting.
 - **`__tests__/`**: Contains all of our Jest unit tests. Tests are organized generally by route or component domain (e.g. `programs.test.tsx`, `components.test.tsx`).
 - **`app/`**: The core Next.js App Router directory. This handles the application's URL routing. Each subdirectory (like `cs/`, `math/`) with a `page.tsx` file inside represents a distinct page on the site.
