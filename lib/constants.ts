@@ -1,8 +1,8 @@
-export const SEMESTER_START_DATE = new Date('2026-03-16');
-export const REGISTRATION_OPEN_DATE = new Date('2026-02-01');
-export const INSTRUCTOR_APPS_DUE_DATE = new Date('2026-02-28');
-export const REGISTRATION_ENDS_DATE = new Date('2026-03-16');
-export const SEMESTER_END_DATE = new Date('2026-06-14');
+export const SEMESTER_START_DATE = new Date('2026-09-27');
+export const REGISTRATION_OPEN_DATE = new Date('2026-08-05');
+export const INSTRUCTOR_APPS_DUE_DATE = new Date('2026-09-18');
+export const REGISTRATION_ENDS_DATE = new Date('2026-09-18');
+export const SEMESTER_END_DATE = new Date('2026-12-20');
 export const LATEST_SEMESTER =
   new Date().getMonth() < 9 && new Date().getMonth() >= 3 ? 'spring' : 'fall';
 export const UPCOMING_SEMESTER = LATEST_SEMESTER === 'fall' ? 'spring' : 'fall';
