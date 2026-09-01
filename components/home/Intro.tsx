@@ -1,16 +1,43 @@
 'use client';
+import MailingListLink from '@/components/MailingListLink';
 import {
-  FORM_LINK,
+  CURRENT_SEMESTER,
+  GBSTEM_SIGNUP,
   INSTRUCTOR_APPS_DUE_DATE,
-  LATEST_SEMESTER,
+  INSTRUCTOR_APPS_OPEN,
+  NEXT_SEMESTER,
   REGISTRATION_ENDS_DATE,
   REGISTRATION_OPEN,
   REGISTRATION_OPEN_DATE,
   SEMESTER_END_DATE,
+  SEMESTER_IN_PROGRESS,
+  SEMESTER_IS_OVER,
+  SEMESTER_PHASE,
   SEMESTER_START_DATE,
-  UPCOMING_SEMESTER,
+  formatDate,
 } from '@/lib/constants';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+
+/**
+ * The one sentence describing where the semester stands. Switching over SEMESTER_PHASE rather
+ * than rendering a paragraph per boolean is what guarantees the alert holds exactly one message:
+ * the phases can't overlap (no contradictory pair on the day registration closes and classes
+ * start) and can't all be false (no empty alert box during the days between them).
+ */
+function registrationStatus() {
+  switch (SEMESTER_PHASE) {
+    case 'before-registration':
+      return `Registration for the ${CURRENT_SEMESTER} semester has not opened yet. It opens on ${formatDate(REGISTRATION_OPEN_DATE)}.`;
+    case 'registration-open':
+      return `Registration for the gbSTEM ${CURRENT_SEMESTER} semester is currently underway. Register to be a student by ${formatDate(REGISTRATION_ENDS_DATE)} to participate in gbSTEM classes this semester!`;
+    case 'registration-closed':
+      return `Registration for the ${CURRENT_SEMESTER} semester has closed. Classes begin on ${formatDate(SEMESTER_START_DATE)}.`;
+    case 'classes-in-progress':
+      return `The ${CURRENT_SEMESTER} semester is currently underway! Registration is closed until the ${NEXT_SEMESTER} semester.`;
+    case 'semester-over':
+      return `The ${CURRENT_SEMESTER} semester is now over.`;
+  }
+}
 
 function HomeIntro() {
   return (
@@ -21,59 +48,82 @@ function HomeIntro() {
             <Card className="border-0 shadow-sm">
               <Card.Body className="p-4">
                 <h2 className="mb-4 text-center">Registration Information</h2>
-                <p>{`The ${UPCOMING_SEMESTER} semester will run from ${SEMESTER_START_DATE.toLocaleDateString()} to ${SEMESTER_END_DATE.toLocaleDateString()}!`}</p>
+
+                {!SEMESTER_IS_OVER && (
+                  <p className="mb-4">
+                    {`The ${CURRENT_SEMESTER} semester ${SEMESTER_IN_PROGRESS ? 'runs' : 'will run'} from ${formatDate(SEMESTER_START_DATE)} to ${formatDate(SEMESTER_END_DATE)}!`}
+                  </p>
+                )}
+
                 <Alert variant="info">
                   <p className="mb-0">
-                    {REGISTRATION_OPEN
-                      ? `Registration for the gbSTEM ${UPCOMING_SEMESTER} semester is currently underway. Register to be a student by ${REGISTRATION_ENDS_DATE.toLocaleDateString()} to participate in gbSTEM classes this semester! Applications to be an instructor are due ${INSTRUCTOR_APPS_DUE_DATE.toLocaleDateString()}.`
-                      : `The ${LATEST_SEMESTER} semester registration is now closed. Registrations for the ${UPCOMING_SEMESTER} semester will open on ${REGISTRATION_OPEN_DATE.toLocaleDateString()}.`}
+                    {registrationStatus()}
+                    {SEMESTER_IS_OVER && (
+                      <>
+                        {' '}
+                        <MailingListLink>Join our mailing list</MailingListLink> to be notified when
+                        registration for the {NEXT_SEMESTER} semester opens.
+                      </>
+                    )}
                   </p>
+                  {/* Instructor applications are a separate window that closes before registration
+                      does, so this is its own line rather than a clause on the sentence above. */}
+                  {INSTRUCTOR_APPS_OPEN && (
+                    <p className="mt-2 mb-0">
+                      {`Instructor applications for the ${CURRENT_SEMESTER} semester are also open. Apply to be an instructor by ${formatDate(INSTRUCTOR_APPS_DUE_DATE)}.`}
+                    </p>
+                  )}
                 </Alert>
-                <p className={`mb-4 ${!REGISTRATION_OPEN ? '' : 'd-none'}`}>
-                  If you are interested in gbSTEM&apos;s programs or hope to apply next semester as
-                  an instructor, please{' '}
-                  <a
-                    href={FORM_LINK}
-                    className="fw-semibold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    join our mailing list
-                  </a>
-                  .
-                </p>
-                <Row className={`g-4 ${REGISTRATION_OPEN ? '' : 'd-none'}`}>
-                  <Col md={6}>
-                    <div className="bg-light h-100 rounded p-4 text-center">
-                      <h5 className="mb-3">Parents and 1-8 Students</h5>
-                      <a
-                        className="btn btn-primary"
-                        href="https://portal.gbstem.org/signup"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Register
-                      </a>
-                    </div>
-                  </Col>
-                  <Col md={6}>
-                    <div className="bg-light h-100 rounded p-4 text-center">
-                      <h5 className="mb-3">
-                        Instructor Applicants
-                        <br />
-                        (High School or Older)
-                      </h5>
-                      <a
-                        className="btn btn-primary"
-                        href="https://portal.gbstem.org/signup"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Apply to teach
-                      </a>
-                    </div>
-                  </Col>
-                </Row>
+
+                {/* In the semester-over phase the alert already ends with this link; don't stack
+                    a second copy underneath it. */}
+                {!REGISTRATION_OPEN && !SEMESTER_IS_OVER && (
+                  <p className="mb-4">
+                    If you are interested in gbSTEM&apos;s programs or hope to apply as an
+                    instructor, please <MailingListLink className="fw-semibold" />.
+                  </p>
+                )}
+
+                {(REGISTRATION_OPEN || INSTRUCTOR_APPS_OPEN) && (
+                  <Row className="g-4">
+                    {REGISTRATION_OPEN && (
+                      <Col md={6}>
+                        <div className="bg-light h-100 rounded p-4 text-center">
+                          <h5 className="mb-3">Parents and 1-8 Students</h5>
+                          <a
+                            className="btn btn-primary"
+                            href={GBSTEM_SIGNUP}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Register
+                          </a>
+                        </div>
+                      </Col>
+                    )}
+                    {/* Gated on the instructor window, not the registration one: applications
+                        close nine days earlier, and this button used to outlive them. */}
+                    {INSTRUCTOR_APPS_OPEN && (
+                      <Col md={6}>
+                        <div className="bg-light h-100 rounded p-4 text-center">
+                          <h5 className="mb-3">
+                            Instructor Applicants
+                            <br />
+                            (High School or Older)
+                          </h5>
+                          <a
+                            className="btn btn-primary"
+                            href={GBSTEM_SIGNUP}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Apply to teach
+                          </a>
+                        </div>
+                      </Col>
+                    )}
+                  </Row>
+                )}
               </Card.Body>
             </Card>
           </Col>

@@ -1,7 +1,82 @@
+/**
+ * Answers may be plain strings or JSX (`app/faq/page.tsx` renders them as `React.ReactNode`).
+ * The three date-sensitive entries below - how to register, when the program runs, and how to
+ * apply as an instructor - are derived from `lib/semesterDates.json` via `lib/constants.ts`
+ * rather than hardcoded, so they stay correct across a semester rollover and offer the same
+ * register/apply links the home page and navigation bar do while those windows are open.
+ *
+ * The registration answer switches on SEMESTER_PHASE, the same way `components/home/Intro.tsx`
+ * does, so the FAQ and the home page can never describe the semester differently.
+ */
+
+import MailingListLink from '@/components/MailingListLink';
+import {
+  CURRENT_SEMESTER,
+  GBSTEM_SIGNUP,
+  INSTRUCTOR_APPS_DUE_DATE,
+  INSTRUCTOR_APPS_NOT_YET_OPEN,
+  INSTRUCTOR_APPS_OPEN,
+  INSTRUCTOR_APPS_OPEN_DATE,
+  NEXT_SEMESTER,
+  PARENT_ORIENTATION_DATE,
+  REGISTRATION_ENDS_DATE,
+  REGISTRATION_OPEN_DATE,
+  SEMESTER_END_DATE,
+  SEMESTER_IS_OVER,
+  SEMESTER_PHASE,
+  SEMESTER_START_DATE,
+  STUDENT_ORIENTATION_DATE,
+  formatDate,
+} from '@/lib/constants';
+
+// Every answer describing a closed window ends this way.
+const NotifyMe = () => (
+  <>
+    In the meantime, <MailingListLink /> to be notified when it opens.
+  </>
+);
+
+const PortalLink = ({ children }: { children: React.ReactNode }) => (
+  <a href={GBSTEM_SIGNUP} target="_blank" rel="noopener noreferrer">
+    {children}
+  </a>
+);
+
 export const general = [
   {
     question: 'How do I register for the program?',
-    answer: `Thank you for your interest! The spring semester registration is now closed, and registrations will open for the fall semester in August. In the meantime, fill out the form on our home page to be notified when registrations open!`,
+    answer: (
+      <>
+        Thank you for your interest!{' '}
+        {SEMESTER_PHASE === 'registration-open' ? (
+          <>
+            Registration for the {CURRENT_SEMESTER} semester is open through{' '}
+            {formatDate(REGISTRATION_ENDS_DATE)}. <PortalLink>Register here</PortalLink> to sign
+            your student up for classes.
+          </>
+        ) : SEMESTER_PHASE === 'before-registration' ? (
+          <>
+            Registration for the {CURRENT_SEMESTER} semester opens on{' '}
+            {formatDate(REGISTRATION_OPEN_DATE)}. <NotifyMe />
+          </>
+        ) : SEMESTER_PHASE === 'registration-closed' ? (
+          <>
+            Registration for the {CURRENT_SEMESTER} semester has closed and classes begin on{' '}
+            {formatDate(SEMESTER_START_DATE)}. <NotifyMe />
+          </>
+        ) : SEMESTER_PHASE === 'classes-in-progress' ? (
+          <>
+            The {CURRENT_SEMESTER} semester is already underway, so registration is closed until the{' '}
+            {NEXT_SEMESTER} semester. <NotifyMe />
+          </>
+        ) : (
+          <>
+            The {CURRENT_SEMESTER} semester is over, and registration for the {NEXT_SEMESTER}{' '}
+            semester has not opened yet. <NotifyMe />
+          </>
+        )}
+      </>
+    ),
   },
   {
     question: 'What subjects does gbSTEM offer?',
@@ -25,8 +100,17 @@ export const general = [
   },
   {
     question: 'When does the program start and end?',
-    answer:
-      "gbSTEM's Spring 2025 semester will run from March 16th, 2025 to June 14th, 2025. The final week will consist of final projects and events. We will also hold student and parent orientations the week before classes begin.",
+    answer: (
+      <>
+        gbSTEM&apos;s {CURRENT_SEMESTER} semester{' '}
+        {SEMESTER_IS_OVER ? 'ran' : SEMESTER_PHASE === 'classes-in-progress' ? 'runs' : 'will run'}{' '}
+        from {formatDate(SEMESTER_START_DATE)} to {formatDate(SEMESTER_END_DATE)}. The final week
+        {SEMESTER_IS_OVER ? ' consisted' : ' will consist'} of final projects and events. We also
+        hold orientations before classes begin: student orientation on{' '}
+        {formatDate(STUDENT_ORIENTATION_DATE)} and parent orientation on{' '}
+        {formatDate(PARENT_ORIENTATION_DATE)}.
+      </>
+    ),
   },
   {
     question: 'What grade levels is gbSTEM for?',
@@ -140,6 +224,28 @@ export const science = [
 export const other = [
   {
     question: 'I am a high school student. How can I apply to become an instructor for gbSTEM?',
-    answer: `Thank you for your interest! The spring semester application window is over now, and applications will open for the fall semester in August. In the meantime, fill out the form on our homepage to be notified when applications open!`,
+    answer: (
+      <>
+        Thank you for your interest!{' '}
+        {INSTRUCTOR_APPS_OPEN ? (
+          <>
+            Instructor applications for the {CURRENT_SEMESTER} semester are open through{' '}
+            {formatDate(INSTRUCTOR_APPS_DUE_DATE)}. <PortalLink>Apply to teach</PortalLink> &mdash;
+            the same &quot;apply&quot; link in the navigation bar above.
+          </>
+        ) : INSTRUCTOR_APPS_NOT_YET_OPEN ? (
+          <>
+            Instructor applications for the {CURRENT_SEMESTER} semester open on{' '}
+            {formatDate(INSTRUCTOR_APPS_OPEN_DATE)}. <NotifyMe />
+          </>
+        ) : (
+          <>
+            Instructor applications for the {CURRENT_SEMESTER} semester closed on{' '}
+            {formatDate(INSTRUCTOR_APPS_DUE_DATE)}, and applications for the {NEXT_SEMESTER}{' '}
+            semester have not opened yet. <NotifyMe />
+          </>
+        )}
+      </>
+    ),
   },
 ];

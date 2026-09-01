@@ -121,7 +121,8 @@ Below is an alphabetical list of the top-level directories and significant confi
 - **`app/`**: The core Next.js App Router directory. This handles the application's URL routing. Each subdirectory (like `cs/`, `math/`) with a `page.tsx` file inside represents a distinct page on the site.
 - **`components/`**: Reusable React UI components that are imported across multiple pages (e.g., `Navigation.tsx`, `Footer.tsx`, `ClassPage.tsx`). Keeping logic componentized keeps our page files clean.
 - **`cypress/`**: Contains our Cypress end-to-end integration tests and configurations, verifying the live site functions correctly in a real browser.
-- **`lib/`**: Contains library utilities and centralized static data constants (like the lists of FAQ questions in `faqData.ts` and the team member information in `teamMembers.ts`).
+- **`lib/`**: Contains library utilities and centralized static data constants (like the lists of FAQ questions in `faqData.tsx` and the team member information in `teamMembers.ts`).
+  - **`lib/semesterDates.json`**: The current semester's key dates, kept in sync across three repos. It is a verbatim copy of the admin repo's `src/lib/data/semesterDates.json`, which the portal repo also copies, so that the public site, the portal, and the admin tool never advertise different dates. Replace the whole file at each semester rollover following the "Adding a New Semester" section of the admin repo's README — do not hand-edit individual fields here. `lib/constants.ts` turns it into the `Date` objects and `REGISTRATION_OPEN`/`INSTRUCTOR_APPS_OPEN`/`SEMESTER_IN_PROGRESS` booleans that the home page, navigation bar, and FAQ branch on.
 - **`public/`**: Static assets such as images, logos, and icons that can be accessed publicly by the browser.
 - **`scripts/`**: Contains utility/tooling scripts (like test helper scripts).
 
