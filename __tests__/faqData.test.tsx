@@ -80,6 +80,18 @@ describe('FAQ data: how do I register', () => {
     expect(screen.queryByText(/opens on August 5, 2026/i)).not.toBeInTheDocument();
   });
 
+  // A bare "In the meantime... when it opens" reads as this semester's registration, which never
+  // reopens once closed. These two phases have to name the next semester instead.
+  it.each([['registration-closed'], ['classes-in-progress']])(
+    'names the next semester rather than a vague "it" in the %s phase',
+    async (phase) => {
+      await renderAnswer('general', REGISTER, { SEMESTER_PHASE: phase });
+
+      expect(screen.getByText(/when Spring registration opens/i)).toBeInTheDocument();
+      expect(screen.queryByText(/when it opens/i)).not.toBeInTheDocument();
+    }
+  );
+
   it('points at the following semester once classes are underway', async () => {
     await renderAnswer('general', REGISTER, { SEMESTER_PHASE: 'classes-in-progress' });
 
@@ -128,11 +140,49 @@ describe('FAQ data: when does the program start and end', () => {
     expect(screen.getByText(expected)).toBeInTheDocument();
   });
 
-  it('names the orientation dates', async () => {
+  // The orientations are before classesStart, so they are already past once classes run - the
+  // clause used to stay in the present tense next to a sentence that had switched to the past.
+  it.each([
+    [
+      'before-registration',
+      false,
+      /orientations are held before classes begin, on September 20, 2026/i,
+    ],
+    [
+      'classes-in-progress',
+      false,
+      /orientations were held before classes began, on September 20, 2026/i,
+    ],
+    ['semester-over', true, /orientations were held before classes began, on September 20, 2026/i],
+  ])(
+    'puts the orientation clause in the right tense in the %s phase',
+    async (phase, isOver, expected) => {
+      await renderAnswer('general', PROGRAM_DATES, {
+        SEMESTER_PHASE: phase,
+        SEMESTER_IS_OVER: isOver,
+      });
+
+      expect(screen.getByText(expected)).toBeInTheDocument();
+    }
+  );
+
+  // Student and parent orientation have shared a date every semester so far, so the common case
+  // must not read "on September 20, 2026 and September 20, 2026".
+  it('names one date when both orientations fall on the same day', async () => {
     await renderAnswer('general', PROGRAM_DATES, {});
 
-    expect(screen.getByText(/student orientation on September 20, 2026/i)).toBeInTheDocument();
-    expect(screen.getByText(/parent orientation on September 20, 2026/i)).toBeInTheDocument();
+    expect(screen.getByText(/on September 20, 2026\./i)).toBeInTheDocument();
+    expect(screen.queryByText(/respectively/i)).not.toBeInTheDocument();
+  });
+
+  it('names both dates when the orientations fall on different days', async () => {
+    await renderAnswer('general', PROGRAM_DATES, {
+      PARENT_ORIENTATION_DATE: new Date('09/21/26'),
+    });
+
+    expect(
+      screen.getByText(/on September 20, 2026 and September 21, 2026 respectively/i)
+    ).toBeInTheDocument();
   });
 });
 

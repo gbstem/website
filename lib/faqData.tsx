@@ -29,12 +29,23 @@ import {
   formatDate,
 } from '@/lib/constants';
 
-// Every answer describing a closed window ends this way.
-const NotifyMe = () => (
+/**
+ * Every answer describing a closed window ends this way. Pass `opens` whenever the preceding
+ * sentence does not already name something that will in fact open again - the bare "it" reads as
+ * this semester's registration, which never reopens once it has closed.
+ */
+const NotifyMe = ({ opens = 'it' }: { opens?: string }) => (
   <>
-    In the meantime, <MailingListLink /> to be notified when it opens.
+    In the meantime, <MailingListLink /> to be notified when {opens} opens.
   </>
 );
+
+// Both orientations happen before classesStart, so by the time classes are running they are past.
+const CLASSES_HAVE_STARTED = SEMESTER_PHASE === 'classes-in-progress' || SEMESTER_IS_OVER;
+
+// They have shared a date every semester so far, but semesterDates.json keeps them separate.
+const ORIENTATIONS_SHARE_A_DATE =
+  STUDENT_ORIENTATION_DATE.getTime() === PARENT_ORIENTATION_DATE.getTime();
 
 const PortalLink = ({ children }: { children: React.ReactNode }) => (
   <a href={GBSTEM_SIGNUP} target="_blank" rel="noopener noreferrer">
@@ -62,12 +73,12 @@ export const general = [
         ) : SEMESTER_PHASE === 'registration-closed' ? (
           <>
             Registration for the {CURRENT_SEMESTER} semester has closed and classes begin on{' '}
-            {formatDate(SEMESTER_START_DATE)}. <NotifyMe />
+            {formatDate(SEMESTER_START_DATE)}. <NotifyMe opens={`${NEXT_SEMESTER} registration`} />
           </>
         ) : SEMESTER_PHASE === 'classes-in-progress' ? (
           <>
             The {CURRENT_SEMESTER} semester is already underway, so registration is closed until the{' '}
-            {NEXT_SEMESTER} semester. <NotifyMe />
+            {NEXT_SEMESTER} semester. <NotifyMe opens={`${NEXT_SEMESTER} registration`} />
           </>
         ) : (
           <>
@@ -105,10 +116,17 @@ export const general = [
         gbSTEM&apos;s {CURRENT_SEMESTER} semester{' '}
         {SEMESTER_IS_OVER ? 'ran' : SEMESTER_PHASE === 'classes-in-progress' ? 'runs' : 'will run'}{' '}
         from {formatDate(SEMESTER_START_DATE)} to {formatDate(SEMESTER_END_DATE)}. The final week
-        {SEMESTER_IS_OVER ? ' consisted' : ' will consist'} of final projects and events. We also
-        hold orientations before classes begin: student orientation on{' '}
-        {formatDate(STUDENT_ORIENTATION_DATE)} and parent orientation on{' '}
-        {formatDate(PARENT_ORIENTATION_DATE)}.
+        {SEMESTER_IS_OVER ? ' consisted' : ' will consist'} of final projects and events. Student
+        and parent orientations{' '}
+        {CLASSES_HAVE_STARTED ? 'were held before classes began' : 'are held before classes begin'}
+        {ORIENTATIONS_SHARE_A_DATE ? (
+          <>, on {formatDate(STUDENT_ORIENTATION_DATE)}.</>
+        ) : (
+          <>
+            , on {formatDate(STUDENT_ORIENTATION_DATE)} and {formatDate(PARENT_ORIENTATION_DATE)}{' '}
+            respectively.
+          </>
+        )}
       </>
     ),
   },

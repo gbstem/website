@@ -85,7 +85,11 @@ function HomeIntro() {
                 )}
 
                 {(REGISTRATION_OPEN || INSTRUCTOR_APPS_OPEN) && (
-                  <Row className="g-4">
+                  /* Centered because the two windows close on different dates: for the nine days
+                     between them only the Register card renders, and a lone md={6} column would
+                     otherwise sit against the left edge with a hole beside it. No effect when
+                     both cards are present, since they fill the row. */
+                  <Row className="justify-content-center g-4">
                     {REGISTRATION_OPEN && (
                       <Col md={6}>
                         <div className="bg-light h-100 rounded p-4 text-center">
