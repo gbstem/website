@@ -4,28 +4,25 @@ import {
   CURRENT_SEMESTER,
   GBSTEM_SIGNUP,
   INSTRUCTOR_APPS_DUE_DATE,
-  INSTRUCTOR_APPS_OPEN,
   NEXT_SEMESTER,
   REGISTRATION_ENDS_DATE,
-  REGISTRATION_OPEN,
   REGISTRATION_OPEN_DATE,
   SEMESTER_END_DATE,
-  SEMESTER_IN_PROGRESS,
-  SEMESTER_IS_OVER,
-  SEMESTER_PHASE,
   SEMESTER_START_DATE,
+  type SemesterPhase,
+  currentSemesterStatus,
   formatDate,
 } from '@/lib/constants';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 
 /**
- * The one sentence describing where the semester stands. Switching over SEMESTER_PHASE rather
+ * The one sentence describing where the semester stands. Switching over the phase rather
  * than rendering a paragraph per boolean is what guarantees the alert holds exactly one message:
  * the phases can't overlap (no contradictory pair on the day registration closes and classes
  * start) and can't all be false (no empty alert box during the days between them).
  */
-function registrationStatus() {
-  switch (SEMESTER_PHASE) {
+function registrationStatus(phase: SemesterPhase) {
+  switch (phase) {
     case 'before-registration':
       return `Registration for the ${CURRENT_SEMESTER} semester has not opened yet. It opens on ${formatDate(REGISTRATION_OPEN_DATE)}.`;
     case 'registration-open':
@@ -40,6 +37,11 @@ function registrationStatus() {
 }
 
 function HomeIntro() {
+  // Read during render, not at module scope, so a prerendered page that is re-rendered picks up
+  // the new phase instead of serving the one that was true when the bundle was built.
+  const { phase, registrationOpen, instructorAppsOpen, semesterInProgress, semesterIsOver } =
+    currentSemesterStatus();
+
   return (
     <div className="bg-white py-5">
       <Container>
@@ -49,16 +51,16 @@ function HomeIntro() {
               <Card.Body className="p-4">
                 <h2 className="mb-4 text-center">Registration Information</h2>
 
-                {!SEMESTER_IS_OVER && (
+                {!semesterIsOver && (
                   <p className="mb-4">
-                    {`The ${CURRENT_SEMESTER} semester ${SEMESTER_IN_PROGRESS ? 'runs' : 'will run'} from ${formatDate(SEMESTER_START_DATE)} to ${formatDate(SEMESTER_END_DATE)}!`}
+                    {`The ${CURRENT_SEMESTER} semester ${semesterInProgress ? 'runs' : 'will run'} from ${formatDate(SEMESTER_START_DATE)} to ${formatDate(SEMESTER_END_DATE)}!`}
                   </p>
                 )}
 
                 <Alert variant="info">
                   <p className="mb-0">
-                    {registrationStatus()}
-                    {SEMESTER_IS_OVER && (
+                    {registrationStatus(phase)}
+                    {semesterIsOver && (
                       <>
                         {' '}
                         <MailingListLink>Join our mailing list</MailingListLink> to be notified when
@@ -68,7 +70,7 @@ function HomeIntro() {
                   </p>
                   {/* Instructor applications are a separate window that closes before registration
                       does, so this is its own line rather than a clause on the sentence above. */}
-                  {INSTRUCTOR_APPS_OPEN && (
+                  {instructorAppsOpen && (
                     <p className="mt-2 mb-0">
                       {`Instructor applications for the ${CURRENT_SEMESTER} semester are also open. Apply to be an instructor by ${formatDate(INSTRUCTOR_APPS_DUE_DATE)}.`}
                     </p>
@@ -77,20 +79,20 @@ function HomeIntro() {
 
                 {/* In the semester-over phase the alert already ends with this link; don't stack
                     a second copy underneath it. */}
-                {!REGISTRATION_OPEN && !SEMESTER_IS_OVER && (
+                {!registrationOpen && !semesterIsOver && (
                   <p className="mb-4">
                     If you are interested in gbSTEM&apos;s programs or hope to apply as an
                     instructor, please <MailingListLink className="fw-semibold" />.
                   </p>
                 )}
 
-                {(REGISTRATION_OPEN || INSTRUCTOR_APPS_OPEN) && (
+                {(registrationOpen || instructorAppsOpen) && (
                   /* Centered because the two windows close on different dates: for the nine days
                      between them only the Register card renders, and a lone md={6} column would
                      otherwise sit against the left edge with a hole beside it. No effect when
                      both cards are present, since they fill the row. */
                   <Row className="justify-content-center g-4">
-                    {REGISTRATION_OPEN && (
+                    {registrationOpen && (
                       <Col md={6}>
                         <div className="bg-light h-100 rounded p-4 text-center">
                           <h5 className="mb-3">Parents and 1-8 Students</h5>
@@ -107,7 +109,7 @@ function HomeIntro() {
                     )}
                     {/* Gated on the instructor window, not the registration one: applications
                         close nine days earlier, and this button used to outlive them. */}
-                    {INSTRUCTOR_APPS_OPEN && (
+                    {instructorAppsOpen && (
                       <Col md={6}>
                         <div className="bg-light h-100 rounded p-4 text-center">
                           <h5 className="mb-3">

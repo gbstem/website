@@ -221,3 +221,70 @@ describe('formatDate', () => {
     expect(formatDate(new Date('09/27/26'))).toBe('September 27, 2026');
   });
 });
+
+describe('semesterStatusOn / currentSemesterStatus', () => {
+  const FALL_26 = {
+    classesEnd: '12/20/26',
+    classesStart: '09/27/26',
+    instructorOrientation: '09/20/26',
+    newInstructorAppsDue: '09/18/26',
+    newInstructorAppsOpen: '08/05/26',
+    parentOrientation: '09/20/26',
+    registrationsDue: '09/27/26',
+    registrationsOpen: '08/05/26',
+    returningInstructorAppsDue: '09/18/26',
+    returningInstructorAppsOpen: '08/05/26',
+    studentOrientation: '09/20/26',
+  };
+
+  async function loadWithFall26() {
+    jest.resetModules();
+    jest.doMock('@/lib/semesterDates.json', () => FALL_26);
+    return import('@/lib/constants');
+  }
+
+  afterEach(() => {
+    jest.useRealTimers();
+    jest.resetModules();
+    jest.dontMock('@/lib/semesterDates.json');
+  });
+
+  it('agrees with semesterPhaseOn on every day of the year', async () => {
+    const { semesterStatusOn, semesterPhaseOn } = await loadWithFall26();
+
+    for (const d = new Date('01/01/26'); d <= new Date('12/31/26'); d.setDate(d.getDate() + 1)) {
+      const date = new Date(d);
+      const status = semesterStatusOn(date);
+
+      expect(status.phase).toBe(semesterPhaseOn(date));
+      expect(status.semesterIsOver).toBe(status.phase === 'semester-over');
+      if (status.phase === 'registration-open') expect(status.registrationOpen).toBe(true);
+      if (status.phase === 'before-registration') expect(status.registrationNotYetOpen).toBe(true);
+    }
+  });
+
+  /**
+   * The regression this whole shape exists for. These values used to be module-scope consts, so
+   * they were computed once per process - at build time for a statically prerendered page - and
+   * the site then served that answer until someone redeployed. Loading the module *once* and
+   * asking it three times across two phase boundaries is what proves the answer follows the
+   * clock rather than the deploy. If someone reverts these to `export const X = new Date() > ...`,
+   * this fails.
+   */
+  it('answers from the clock at call time, not from module load', async () => {
+    const { currentSemesterStatus } = await loadWithFall26();
+    jest.useFakeTimers();
+
+    jest.setSystemTime(new Date('08/04/26'));
+    expect(currentSemesterStatus().phase).toBe('before-registration');
+    expect(currentSemesterStatus().registrationOpen).toBe(false);
+
+    jest.setSystemTime(new Date('09/01/26'));
+    expect(currentSemesterStatus().phase).toBe('registration-open');
+    expect(currentSemesterStatus().registrationOpen).toBe(true);
+
+    jest.setSystemTime(new Date('12/21/26'));
+    expect(currentSemesterStatus().phase).toBe('semester-over');
+    expect(currentSemesterStatus().semesterIsOver).toBe(true);
+  });
+});

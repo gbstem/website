@@ -1,11 +1,6 @@
 'use client';
 
-import {
-  GBSTEM_SIGNUP,
-  MAILING_LIST_FORM_LINK,
-  REGISTRATION_OPEN,
-  SEMESTER_IN_PROGRESS,
-} from '@/lib/constants';
+import { GBSTEM_SIGNUP, MAILING_LIST_FORM_LINK, currentSemesterStatus } from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -13,6 +8,7 @@ import { Modal, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 export default function Navigation() {
   const [show, setShow] = useState(false);
+  const { registrationOpen, semesterInProgress } = currentSemesterStatus();
 
   return (
     <>
@@ -75,7 +71,7 @@ export default function Navigation() {
             </Nav.Link>
 
             <Nav.Link
-              href={REGISTRATION_OPEN ? GBSTEM_SIGNUP : MAILING_LIST_FORM_LINK}
+              href={registrationOpen ? GBSTEM_SIGNUP : MAILING_LIST_FORM_LINK}
               target="_blank"
               rel="noreferrer"
             >
@@ -86,9 +82,9 @@ export default function Navigation() {
 
             <Nav.Link
               href={
-                SEMESTER_IN_PROGRESS
+                semesterInProgress
                   ? 'https://portal.gbstem.org'
-                  : REGISTRATION_OPEN
+                  : registrationOpen
                     ? GBSTEM_SIGNUP
                     : MAILING_LIST_FORM_LINK
               }
@@ -96,7 +92,7 @@ export default function Navigation() {
               rel="noreferrer"
             >
               <div className="align-center inline-block rounded-[20px] bg-[#aaaaaa] p-2.5 whitespace-nowrap max-[850px]:px-2 max-[850px]:py-1.5">
-                {SEMESTER_IN_PROGRESS ? 'portal' : 'apply'}
+                {semesterInProgress ? 'portal' : 'apply'}
               </div>
             </Nav.Link>
 
