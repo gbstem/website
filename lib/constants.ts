@@ -49,23 +49,6 @@ export const CURRENT_SEMESTER = SEMESTER_START_DATE.getMonth() >= 6 ? 'Fall' : '
 export const NEXT_SEMESTER = CURRENT_SEMESTER === 'Fall' ? 'Spring' : 'Fall';
 
 /**
- * "Is this window open right now?" — independent questions, so more than one can be true at
- * once (instructor applications close before registration does, and both are open together for
- * most of August). Use these to gate a link, a button, or a card. For prose that describes where
- * the semester as a whole stands, use SEMESTER_PHASE below instead: these overlap, and a page
- * that renders one paragraph per boolean will show two of them at the same time.
- */
-export const REGISTRATION_NOT_YET_OPEN = new Date() < REGISTRATION_OPEN_DATE;
-export const REGISTRATION_OPEN =
-  new Date() >= REGISTRATION_OPEN_DATE && new Date() <= REGISTRATION_ENDS_DATE;
-export const INSTRUCTOR_APPS_NOT_YET_OPEN = new Date() < INSTRUCTOR_APPS_OPEN_DATE;
-export const INSTRUCTOR_APPS_OPEN =
-  new Date() >= INSTRUCTOR_APPS_OPEN_DATE && new Date() <= INSTRUCTOR_APPS_DUE_DATE;
-export const SEMESTER_IN_PROGRESS =
-  new Date() >= SEMESTER_START_DATE && new Date() <= SEMESTER_END_DATE;
-export const SEMESTER_IS_OVER = new Date() > SEMESTER_END_DATE;
-
-/**
  * Where the semester stands, as exactly one value — the thing a visitor needs a single sentence
  * about. Unlike the booleans above these are mutually exclusive and exhaustive, so a `switch`
  * over them always produces one message and never zero.
@@ -97,7 +80,49 @@ export const semesterPhaseOn = (now: Date): SemesterPhase => {
   return 'registration-closed';
 };
 
-export const SEMESTER_PHASE = semesterPhaseOn(new Date());
+/**
+ * Everything about the semester that depends on *when you ask* - the phase above plus the
+ * "is this window open right now?" booleans that gate a link, a button, or a card.
+ *
+ * The booleans are independent, so more than one can be true at once (instructor applications
+ * close before registration does, and both are open together for most of August). Use them to
+ * gate an element. For prose describing where the semester as a whole stands, switch on `phase`
+ * instead: the booleans overlap, and a page rendering one paragraph per boolean will show two of
+ * them at the same time.
+ *
+ * This is a function, and callers must invoke it *during render*, because that is the only thing
+ * that makes the answer track the calendar. An earlier version exported these as module-scope
+ * consts (`export const REGISTRATION_OPEN = new Date() >= ...`), which JavaScript evaluates once
+ * per process: at build time for a prerendered page, at first import for a server instance. The
+ * whole site is statically prerendered (`yarn build` marks every route "prerendered as static
+ * content"), so those values were frozen into the HTML on deploy day and only corrected once the
+ * client bundle rehydrated and recomputed them - a visitor saw the deploy-day copy until then.
+ * Re-rendering does not re-run module scope, so no amount of revalidation can refresh a
+ * module-scope const; it has to be computed per render.
+ */
+export interface SemesterStatus {
+  phase: SemesterPhase;
+  registrationNotYetOpen: boolean;
+  registrationOpen: boolean;
+  instructorAppsNotYetOpen: boolean;
+  instructorAppsOpen: boolean;
+  semesterInProgress: boolean;
+  semesterIsOver: boolean;
+}
+
+/** Pure, so tests can ask what the site says on any given day. */
+export const semesterStatusOn = (now: Date): SemesterStatus => ({
+  phase: semesterPhaseOn(now),
+  registrationNotYetOpen: now < REGISTRATION_OPEN_DATE,
+  registrationOpen: now >= REGISTRATION_OPEN_DATE && now <= REGISTRATION_ENDS_DATE,
+  instructorAppsNotYetOpen: now < INSTRUCTOR_APPS_OPEN_DATE,
+  instructorAppsOpen: now >= INSTRUCTOR_APPS_OPEN_DATE && now <= INSTRUCTOR_APPS_DUE_DATE,
+  semesterInProgress: now >= SEMESTER_START_DATE && now <= SEMESTER_END_DATE,
+  semesterIsOver: now > SEMESTER_END_DATE,
+});
+
+/** Call this in a component body - never at module scope. See SemesterStatus above for why. */
+export const currentSemesterStatus = (): SemesterStatus => semesterStatusOn(new Date());
 
 /**
  * Long-form date for prose ("September 27, 2026"). The locale is pinned rather than left to

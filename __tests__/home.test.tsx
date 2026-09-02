@@ -4,9 +4,10 @@ import HeroSection from '@/components/home/HeroSection';
 import '@testing-library/jest-dom';
 import { act, render, screen } from '@testing-library/react';
 
-// Mock Next.js constants and image components to simplify tests. Every constant Intro reads has
-// to appear here: the factory replaces the whole module, so a missing key arrives as `undefined`,
-// reads as falsy, and silently switches off the branch it gates.
+// Mock Next.js constants and image components to simplify tests. Every constant Intro, Navigation
+// and HeroSection read has to appear here: the factory replaces the whole module, so a missing key
+// arrives as `undefined`, reads as falsy, and silently switches off the branch it gates - which is
+// why the calendar arrives as one `currentSemesterStatus()` object rather than loose booleans.
 jest.mock('@/lib/constants', () => ({
   CURRENT_SEMESTER: 'Spring',
   NEXT_SEMESTER: 'Fall',
@@ -18,13 +19,15 @@ jest.mock('@/lib/constants', () => ({
   INSTRUCTOR_APPS_DUE_DATE: new Date('02/28/26'),
   STUDENT_ORIENTATION_DATE: new Date('03/09/26'),
   PARENT_ORIENTATION_DATE: new Date('03/09/26'),
-  SEMESTER_PHASE: 'registration-open',
-  REGISTRATION_OPEN: true,
-  REGISTRATION_NOT_YET_OPEN: false,
-  INSTRUCTOR_APPS_OPEN: true,
-  INSTRUCTOR_APPS_NOT_YET_OPEN: false,
-  SEMESTER_IN_PROGRESS: false,
-  SEMESTER_IS_OVER: false,
+  currentSemesterStatus: () => ({
+    phase: 'registration-open',
+    registrationNotYetOpen: false,
+    registrationOpen: true,
+    instructorAppsNotYetOpen: false,
+    instructorAppsOpen: true,
+    semesterInProgress: false,
+    semesterIsOver: false,
+  }),
   MAILING_LIST_FORM_LINK: 'https://example.com/form',
   GBSTEM_SIGNUP: 'https://portal.gbstem.org/signup',
   formatDate: (date: Date) =>

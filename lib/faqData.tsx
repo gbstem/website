@@ -5,7 +5,7 @@
  * rather than hardcoded, so they stay correct across a semester rollover and offer the same
  * register/apply links the home page and navigation bar do while those windows are open.
  *
- * The registration answer switches on SEMESTER_PHASE, the same way `components/home/Intro.tsx`
+ * The registration answer switches on the semester phase, the same way `components/home/Intro.tsx`
  * does, so the FAQ and the home page can never describe the semester differently.
  */
 
@@ -14,18 +14,15 @@ import {
   CURRENT_SEMESTER,
   GBSTEM_SIGNUP,
   INSTRUCTOR_APPS_DUE_DATE,
-  INSTRUCTOR_APPS_NOT_YET_OPEN,
-  INSTRUCTOR_APPS_OPEN,
   INSTRUCTOR_APPS_OPEN_DATE,
   NEXT_SEMESTER,
   PARENT_ORIENTATION_DATE,
   REGISTRATION_ENDS_DATE,
   REGISTRATION_OPEN_DATE,
   SEMESTER_END_DATE,
-  SEMESTER_IS_OVER,
-  SEMESTER_PHASE,
   SEMESTER_START_DATE,
   STUDENT_ORIENTATION_DATE,
+  type SemesterStatus,
   formatDate,
 } from '@/lib/constants';
 
@@ -40,9 +37,6 @@ const NotifyMe = ({ opens = 'it' }: { opens?: string }) => (
   </>
 );
 
-// Both orientations happen before classesStart, so by the time classes are running they are past.
-const CLASSES_HAVE_STARTED = SEMESTER_PHASE === 'classes-in-progress' || SEMESTER_IS_OVER;
-
 // They have shared a date every semester so far, but semesterDates.json keeps them separate.
 const ORIENTATIONS_SHARE_A_DATE =
   STUDENT_ORIENTATION_DATE.getTime() === PARENT_ORIENTATION_DATE.getTime();
@@ -53,95 +47,109 @@ const PortalLink = ({ children }: { children: React.ReactNode }) => (
   </a>
 );
 
-export const general = [
-  {
-    question: 'How do I register for the program?',
-    answer: (
-      <>
-        Thank you for your interest!{' '}
-        {SEMESTER_PHASE === 'registration-open' ? (
-          <>
-            Registration for the {CURRENT_SEMESTER} semester is open through{' '}
-            {formatDate(REGISTRATION_ENDS_DATE)}. <PortalLink>Register here</PortalLink> to sign
-            your student up for classes.
-          </>
-        ) : SEMESTER_PHASE === 'before-registration' ? (
-          <>
-            Registration for the {CURRENT_SEMESTER} semester opens on{' '}
-            {formatDate(REGISTRATION_OPEN_DATE)}. <NotifyMe />
-          </>
-        ) : SEMESTER_PHASE === 'registration-closed' ? (
-          <>
-            Registration for the {CURRENT_SEMESTER} semester has closed and classes begin on{' '}
-            {formatDate(SEMESTER_START_DATE)}. <NotifyMe opens={`${NEXT_SEMESTER} registration`} />
-          </>
-        ) : SEMESTER_PHASE === 'classes-in-progress' ? (
-          <>
-            The {CURRENT_SEMESTER} semester is already underway, so registration is closed until the{' '}
-            {NEXT_SEMESTER} semester. <NotifyMe opens={`${NEXT_SEMESTER} registration`} />
-          </>
-        ) : (
-          <>
-            The {CURRENT_SEMESTER} semester is over, and registration for the {NEXT_SEMESTER}{' '}
-            semester has not opened yet. <NotifyMe />
-          </>
-        )}
-      </>
-    ),
-  },
-  {
-    question: 'What subjects does gbSTEM offer?',
-    answer:
-      'We offer four different subjects (with many courses in each subject): computer science, mathematics, engineering, and science. Please refer to the Programs tab for details on all courses.',
-  },
-  {
-    question: 'How much do lessons cost?',
-    answer:
-      'All lessons are free of charge. We do not want tuition to be a deterrent for any student who is interested in participating in our program.',
-  },
-  {
-    question: 'How will lessons be conducted?',
-    answer:
-      'All sessions will be conducted remotely via Zoom, in groups of about 5-10 students. We will also be offering some in-person sessions, but this option will be limited. See our Programs tab to see what content is covered in each lesson. Visit our logistics tab for more information.',
-  },
-  {
-    question: 'How frequently do lessons take place?',
-    answer:
-      'Students are expected to be able to commit to two 45-60 minute sessions every week for each class they enroll in. So, if the student takes the maximum of two courses, the weekly time commitment will be at least 4 hours per week.',
-  },
-  {
-    question: 'When does the program start and end?',
-    answer: (
-      <>
-        gbSTEM&apos;s {CURRENT_SEMESTER} semester{' '}
-        {SEMESTER_IS_OVER ? 'ran' : SEMESTER_PHASE === 'classes-in-progress' ? 'runs' : 'will run'}{' '}
-        from {formatDate(SEMESTER_START_DATE)} to {formatDate(SEMESTER_END_DATE)}. The final week
-        {SEMESTER_IS_OVER ? ' consisted' : ' will consist'} of final projects and events. Student
-        and parent orientations{' '}
-        {CLASSES_HAVE_STARTED ? 'were held before classes began' : 'are held before classes begin'}
-        {ORIENTATIONS_SHARE_A_DATE ? (
-          <>, on {formatDate(STUDENT_ORIENTATION_DATE)}.</>
-        ) : (
-          <>
-            , on {formatDate(STUDENT_ORIENTATION_DATE)} and {formatDate(PARENT_ORIENTATION_DATE)}{' '}
-            respectively.
-          </>
-        )}
-      </>
-    ),
-  },
-  {
-    question: 'What grade levels is gbSTEM for?',
-    answer:
-      "We have various courses designed for students ranging from 1st-8th grade. You should choose courses that correspond with your student's age. Classes will be generally grouped by age.",
-  },
-  {
-    question:
-      'Can I join the Computer Science, Mathematics, Engineering, and Science track all at once?',
-    answer:
-      'You may register for up to two different courses. However, you need to be sure that you are able to manage the time commitment of at least 2 hours per week per course.',
-  },
-];
+/**
+ * Takes the render-time status rather than reading a module-scope const, so the answers track
+ * the calendar on a prerendered page. See `SemesterStatus` in lib/constants.ts.
+ */
+export const generalFaq = (status: SemesterStatus) => {
+  // Both orientations happen before classesStart, so by the time classes run they are past.
+  const classesHaveStarted = status.phase === 'classes-in-progress' || status.semesterIsOver;
+
+  return [
+    {
+      question: 'How do I register for the program?',
+      answer: (
+        <>
+          Thank you for your interest!{' '}
+          {status.phase === 'registration-open' ? (
+            <>
+              Registration for the {CURRENT_SEMESTER} semester is open through{' '}
+              {formatDate(REGISTRATION_ENDS_DATE)}. <PortalLink>Register here</PortalLink> to sign
+              your student up for classes.
+            </>
+          ) : status.phase === 'before-registration' ? (
+            <>
+              Registration for the {CURRENT_SEMESTER} semester opens on{' '}
+              {formatDate(REGISTRATION_OPEN_DATE)}. <NotifyMe />
+            </>
+          ) : status.phase === 'registration-closed' ? (
+            <>
+              Registration for the {CURRENT_SEMESTER} semester has closed and classes begin on{' '}
+              {formatDate(SEMESTER_START_DATE)}.{' '}
+              <NotifyMe opens={`${NEXT_SEMESTER} registration`} />
+            </>
+          ) : status.phase === 'classes-in-progress' ? (
+            <>
+              The {CURRENT_SEMESTER} semester is already underway, so registration is closed until
+              the {NEXT_SEMESTER} semester. <NotifyMe opens={`${NEXT_SEMESTER} registration`} />
+            </>
+          ) : (
+            <>
+              The {CURRENT_SEMESTER} semester is over, and registration for the {NEXT_SEMESTER}{' '}
+              semester has not opened yet. <NotifyMe />
+            </>
+          )}
+        </>
+      ),
+    },
+    {
+      question: 'What subjects does gbSTEM offer?',
+      answer:
+        'We offer four different subjects (with many courses in each subject): computer science, mathematics, engineering, and science. Please refer to the Programs tab for details on all courses.',
+    },
+    {
+      question: 'How much do lessons cost?',
+      answer:
+        'All lessons are free of charge. We do not want tuition to be a deterrent for any student who is interested in participating in our program.',
+    },
+    {
+      question: 'How will lessons be conducted?',
+      answer:
+        'All sessions will be conducted remotely via Zoom, in groups of about 5-10 students. We will also be offering some in-person sessions, but this option will be limited. See our Programs tab to see what content is covered in each lesson. Visit our logistics tab for more information.',
+    },
+    {
+      question: 'How frequently do lessons take place?',
+      answer:
+        'Students are expected to be able to commit to two 45-60 minute sessions every week for each class they enroll in. So, if the student takes the maximum of two courses, the weekly time commitment will be at least 4 hours per week.',
+    },
+    {
+      question: 'When does the program start and end?',
+      answer: (
+        <>
+          gbSTEM&apos;s {CURRENT_SEMESTER} semester{' '}
+          {status.semesterIsOver
+            ? 'ran'
+            : status.phase === 'classes-in-progress'
+              ? 'runs'
+              : 'will run'}{' '}
+          from {formatDate(SEMESTER_START_DATE)} to {formatDate(SEMESTER_END_DATE)}. The final week
+          {status.semesterIsOver ? ' consisted' : ' will consist'} of final projects and events.
+          Student and parent orientations{' '}
+          {classesHaveStarted ? 'were held before classes began' : 'are held before classes begin'}
+          {ORIENTATIONS_SHARE_A_DATE ? (
+            <>, on {formatDate(STUDENT_ORIENTATION_DATE)}.</>
+          ) : (
+            <>
+              , on {formatDate(STUDENT_ORIENTATION_DATE)} and {formatDate(PARENT_ORIENTATION_DATE)}{' '}
+              respectively.
+            </>
+          )}
+        </>
+      ),
+    },
+    {
+      question: 'What grade levels is gbSTEM for?',
+      answer:
+        "We have various courses designed for students ranging from 1st-8th grade. You should choose courses that correspond with your student's age. Classes will be generally grouped by age.",
+    },
+    {
+      question:
+        'Can I join the Computer Science, Mathematics, Engineering, and Science track all at once?',
+      answer:
+        'You may register for up to two different courses. However, you need to be sure that you are able to manage the time commitment of at least 2 hours per week per course.',
+    },
+  ];
+};
 
 export const computerScience = [
   {
@@ -239,19 +247,19 @@ export const science = [
   },
 ];
 
-export const other = [
+export const otherFaq = (status: SemesterStatus) => [
   {
     question: 'I am a high school student. How can I apply to become an instructor for gbSTEM?',
     answer: (
       <>
         Thank you for your interest!{' '}
-        {INSTRUCTOR_APPS_OPEN ? (
+        {status.instructorAppsOpen ? (
           <>
             Instructor applications for the {CURRENT_SEMESTER} semester are open through{' '}
             {formatDate(INSTRUCTOR_APPS_DUE_DATE)}. <PortalLink>Apply to teach</PortalLink> &mdash;
             the same &quot;apply&quot; link in the navigation bar above.
           </>
-        ) : INSTRUCTOR_APPS_NOT_YET_OPEN ? (
+        ) : status.instructorAppsNotYetOpen ? (
           <>
             Instructor applications for the {CURRENT_SEMESTER} semester open on{' '}
             {formatDate(INSTRUCTOR_APPS_OPEN_DATE)}. <NotifyMe />

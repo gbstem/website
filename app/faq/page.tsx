@@ -1,6 +1,7 @@
 'use client';
 
-import { computerScience, engineering, general, math, other, science } from '@/lib/faqData';
+import { currentSemesterStatus } from '@/lib/constants';
+import { computerScience, engineering, generalFaq, math, otherFaq, science } from '@/lib/faqData';
 import { Accordion, Container } from 'react-bootstrap';
 
 function QuestionAnswerAccordion({
@@ -25,6 +26,12 @@ function QuestionAnswerAccordion({
 }
 
 export default function Faq() {
+  // Built during render so the date-sensitive answers reflect today, not the day this page was
+  // prerendered. See `SemesterStatus` in lib/constants.ts.
+  const status = currentSemesterStatus();
+  const general = generalFaq(status);
+  const other = otherFaq(status);
+
   return (
     <div className="pb-5">
       <div className="m-5 text-center">
