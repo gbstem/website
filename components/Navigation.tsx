@@ -1,6 +1,11 @@
 'use client';
 
-import { FORM_LINK, GBSTEM_SIGNUP, REGISTRATION_OPEN, SEMESTER_IN_PROGRESS } from '@/lib/constants';
+import {
+  GBSTEM_SIGNUP,
+  MAILING_LIST_FORM_LINK,
+  REGISTRATION_OPEN,
+  SEMESTER_IN_PROGRESS,
+} from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -70,7 +75,7 @@ export default function Navigation() {
             </Nav.Link>
 
             <Nav.Link
-              href={REGISTRATION_OPEN ? GBSTEM_SIGNUP : FORM_LINK}
+              href={REGISTRATION_OPEN ? GBSTEM_SIGNUP : MAILING_LIST_FORM_LINK}
               target="_blank"
               rel="noreferrer"
             >
@@ -85,7 +90,7 @@ export default function Navigation() {
                   ? 'https://portal.gbstem.org'
                   : REGISTRATION_OPEN
                     ? GBSTEM_SIGNUP
-                    : FORM_LINK
+                    : MAILING_LIST_FORM_LINK
               }
               target="_blank"
               rel="noreferrer"

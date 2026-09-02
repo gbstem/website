@@ -1,22 +1,34 @@
+import Home from '@/app/page';
+import Counter from '@/components/home/Counter';
+import HeroSection from '@/components/home/HeroSection';
 import '@testing-library/jest-dom';
 import { act, render, screen } from '@testing-library/react';
-import Home from '@/app/page';
-import HeroSection from '@/components/home/HeroSection';
-import Counter from '@/components/home/Counter';
 
-// Mock Next.js constants and image components to simplify tests
+// Mock Next.js constants and image components to simplify tests. Every constant Intro reads has
+// to appear here: the factory replaces the whole module, so a missing key arrives as `undefined`,
+// reads as falsy, and silently switches off the branch it gates.
 jest.mock('@/lib/constants', () => ({
+  CURRENT_SEMESTER: 'Spring',
+  NEXT_SEMESTER: 'Fall',
+  SEMESTER_START_DATE: new Date('03/16/26'),
+  SEMESTER_END_DATE: new Date('06/14/26'),
+  REGISTRATION_OPEN_DATE: new Date('02/01/26'),
+  REGISTRATION_ENDS_DATE: new Date('03/16/26'),
+  INSTRUCTOR_APPS_OPEN_DATE: new Date('02/01/26'),
+  INSTRUCTOR_APPS_DUE_DATE: new Date('02/28/26'),
+  STUDENT_ORIENTATION_DATE: new Date('03/09/26'),
+  PARENT_ORIENTATION_DATE: new Date('03/09/26'),
+  SEMESTER_PHASE: 'registration-open',
   REGISTRATION_OPEN: true,
-  SEMESTER_START_DATE: new Date('2026-03-16'),
-  SEMESTER_END_DATE: new Date('2026-06-14'),
-  LATEST_SEMESTER: 'spring',
-  UPCOMING_SEMESTER: 'fall',
-  REGISTRATION_OPEN_DATE: new Date('2026-02-01'),
-  INSTRUCTOR_APPS_DUE_DATE: new Date('2026-02-28'),
-  REGISTRATION_ENDS_DATE: new Date('2026-03-16'),
+  REGISTRATION_NOT_YET_OPEN: false,
+  INSTRUCTOR_APPS_OPEN: true,
+  INSTRUCTOR_APPS_NOT_YET_OPEN: false,
   SEMESTER_IN_PROGRESS: false,
-  FORM_LINK: 'https://example.com/form',
+  SEMESTER_IS_OVER: false,
+  MAILING_LIST_FORM_LINK: 'https://example.com/form',
   GBSTEM_SIGNUP: 'https://portal.gbstem.org/signup',
+  formatDate: (date: Date) =>
+    date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
 }));
 
 describe('Home Page', () => {
