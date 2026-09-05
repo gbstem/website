@@ -2,6 +2,8 @@ import { defineConfig } from 'cypress';
 import installLogsPrinter from 'cypress-terminal-report/src/installLogsPrinter';
 
 export default defineConfig({
+  // Cypress 16 deprecated bundled Electron as the implicit default browser.
+  defaultBrowser: 'chrome',
   e2e: {
     baseUrl: 'http://localhost:3000',
     allowCypressEnv: false,
