@@ -15,7 +15,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "cypress:run": "start-server-and-test dev http://localhost:3000 cypress",
-    "cypress": "cypress run",
+    "cypress": "cypress run --browser chrome",
     "prepare": "husky"
   },
   "dependencies": {
