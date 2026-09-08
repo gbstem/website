@@ -12,16 +12,16 @@ const ScienceTrack = () => {
   return (
     <TrackPage trackName="Science" color="#5CBF60">
       <p>
-        The Science Track currently offers an in-depth Environmental Science course. Each course
+        The Science Track currently offers an in-depth Environmental Science course and a comprehensive Physics course. Each course
         takes place in two parts: a fall &quot;A&quot; section, and a continuing spring
         &quot;B&quot; section. Note that the A section must be taken before the B section. The A
         section is only offered in the fall, and the B section is only offered in the spring.
         Environmental Science revolves around the idea of cause and effect as it pertains to
         prevalent environmental issues. In the course, students are asked both to learn about the
         effects humanity has had upon the environment and to utilize their creativity to analyze
-        current solutions and brainstorm their own ideas.
+        current solutions and brainstorm their own ideas. The Physics course is a basic introduction to foundational physics concepts, including forces, motion, energy, and waves. Students will learn about and interact with these concepts through hands-on observations and labs.
       </p>
-      <p>We recommend students between 2nd and 5th grade take Environmental Science.</p>
+      <p>We recommend students between 2nd and 5th grade take Environmental Science. Students in 5th grade and above should consider taking Physics.</p>
 
       <TypicalClassProgression>
         {/* The destination page is the same, but this includes anchors that don't really
@@ -30,6 +30,7 @@ const ScienceTrack = () => {
           items={[
             { link: '/science/science1', name: 'Environmental Science A' },
             { link: '/science/science1#b', name: 'Environmental Science B' },
+            { link: '/science/physics1', name: 'Physics A' },
           ]}
         />
       </TypicalClassProgression>
