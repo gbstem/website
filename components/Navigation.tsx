@@ -1,6 +1,11 @@
 'use client';
 
-import { GBSTEM_SIGNUP, MAILING_LIST_FORM_LINK, currentSemesterStatus } from '@/lib/constants';
+import {
+  GBSTEM_PORTAL,
+  GBSTEM_SIGNUP,
+  MAILING_LIST_FORM_LINK,
+  currentSemesterStatus,
+} from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -83,7 +88,7 @@ export default function Navigation() {
             <Nav.Link
               href={
                 semesterInProgress
-                  ? 'https://portal.gbstem.org'
+                  ? GBSTEM_PORTAL
                   : registrationOpen
                     ? GBSTEM_SIGNUP
                     : MAILING_LIST_FORM_LINK

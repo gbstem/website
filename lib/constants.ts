@@ -143,3 +143,13 @@ export const MAILING_LIST_FORM_LINK =
  * Link to the sign-up page for the portal.
  */
 export const GBSTEM_SIGNUP = 'https://portal.gbstem.org/signup';
+
+/**
+ * The portal itself, for people who already have an account — the one link we show once the
+ * semester is under way and signing up is no longer the point.
+ *
+ * Separate from `GBSTEM_SIGNUP` because they are genuinely different destinations, not two
+ * spellings of one: sending a returning parent to `/signup` is a dead end. Both live here so the
+ * host is written once; `__tests__/constants.test.ts` fails if either URL reappears inline.
+ */
+export const GBSTEM_PORTAL = 'https://portal.gbstem.org';

@@ -1,0 +1,92 @@
+name: Shared data
+
+# `lib/courses.json` and `lib/semesterDates.json` are verbatim copies of the admin repo's
+# `src/lib/data/` originals, replaced wholesale at each semester rollover (see "Adding a New
+# Semester" in admin's README). Nothing in this repo can verify that: a Jest test can only see
+# this checkout, so `__tests__/courses.test.tsx` and `__tests__/constants.test.ts` check the
+# *shape* of the copies and how the site uses them, never whether they still match the master.
+# That is this job.
+#
+# It runs nightly as well as on PRs, and the nightly run is the one that matters. The failure mode
+# these files have actually shown is a rollover that updates admin and forgets a downstream repo —
+# and when nobody opens a PR here, a PR-triggered check never runs at all. A scheduled run turns
+# "silently stale until a family notices" into "red by the next morning".
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    # 06:17 America/New_York (11:17 UTC), a little after a typical rollover evening.
+    - cron: '17 11 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    name: Shared catalog and dates match admin
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v7
+        with:
+          path: website
+
+      # A change that spans both repos ships as two PRs on a same-named branch, and portal's CI
+      # already resolves its admin dependency this way (see the "Pick the admin branch to seed
+      # from" step in gbstem/portal's ci.yml). Pinning to `main` would deadlock a rollover: the
+      # website PR carrying the new copies could not go green until the admin PR merged, and the
+      # way out of that is always to merge admin unreviewed. Prefer a same-named admin branch when
+      # one exists; fall back to admin's default branch, which is what a solo website change and
+      # every scheduled run compare against.
+      - name: Pick the admin branch to compare against
+        id: admin-ref
+        env:
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          if [ -n "$BRANCH" ] && git ls-remote --exit-code --heads \
+              https://github.com/gbstem/admin.git "$BRANCH" >/dev/null 2>&1; then
+            echo "Found a matching admin branch: $BRANCH"
+            echo "ref=$BRANCH" >> "$GITHUB_OUTPUT"
+          else
+            echo "No admin branch named \"$BRANCH\"; comparing against admin's default branch."
+            echo "ref=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out admin (the source of truth for both files)
+        uses: actions/checkout@v7
+        with:
+          repository: gbstem/admin
+          path: admin
+          # Empty means actions/checkout's own default (admin's default branch).
+          ref: ${{ steps.admin-ref.outputs.ref }}
+
+      - name: Report which admin revision we are comparing against
+        working-directory: admin
+        run: git log --oneline -1
+
+      - name: Compare the copied files
+        run: |
+          status=0
+          compare() {
+            master="admin/src/lib/data/$1"
+            copy="website/lib/$1"
+            if diff -u "$master" "$copy"; then
+              echo "OK: lib/$1 matches admin."
+            else
+              echo "::error file=lib/$1::lib/$1 has drifted from admin's src/lib/data/$1."
+              echo "Copy it over rather than editing either side by hand:"
+              echo "    cp ../admin/src/lib/data/$1 lib/$1"
+              status=1
+            fi
+          }
+          compare courses.json
+          compare semesterDates.json
+          exit $status
