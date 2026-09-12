@@ -6,3 +6,10 @@ coverage/
 yarn.lock
 package-lock.json
 public/
+
+# Verbatim copies of the admin repo's src/lib/data/ originals, held byte-identical by
+# .github/workflows/shared-data.yml. Our printWidth is 100 and admin's is the 80 default, so
+# letting our formatter rewrite either one could turn a re-copy into a CI failure with no
+# substantive change in it. Replace them with `cp`, never by editing or reformatting.
+lib/courses.json
+lib/semesterDates.json

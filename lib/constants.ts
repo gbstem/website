@@ -143,3 +143,30 @@ export const MAILING_LIST_FORM_LINK =
  * Link to the sign-up page for the portal.
  */
 export const GBSTEM_SIGNUP = 'https://portal.gbstem.org/signup';
+
+/**
+ * The portal itself, for people who already have an account — the one link we show once the
+ * semester is under way and signing up is no longer the point.
+ *
+ * Separate from `GBSTEM_SIGNUP` because they are genuinely different destinations, not two
+ * spellings of one: sending a returning parent to `/signup` is a dead end. Both live here so the
+ * host is written once; `__tests__/constants.test.ts` fails if either URL reappears inline.
+ */
+export const GBSTEM_PORTAL = 'https://portal.gbstem.org';
+
+/**
+ * The merch shop. Linked from the nav bar and from the donate appeal, which is why it lives here.
+ */
+export const GBSTEM_SHOP = 'https://gbstem.myspreadshop.com/all';
+
+/**
+ * Our PayPal Giving Fund charity page — the one place money actually comes in, so the URL being
+ * right matters more here than anywhere else on the site.
+ *
+ * This had two spellings: the donate page's `www.paypal.com/fundraiser/charity/4605663` and the
+ * nav modal's `paypal.com/us/fundraiser/charity/4605663`. Both reach the right charity, but only
+ * the first answers 200 — the second is a 301 to a `/us`-locale path, so a donor took an extra
+ * redirect on the way to giving us money. Consolidated on the one that answers directly, which
+ * also drops the hardcoded locale.
+ */
+export const GBSTEM_DONATE = 'https://www.paypal.com/fundraiser/charity/4605663';

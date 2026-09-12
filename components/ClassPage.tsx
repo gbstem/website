@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import RegisterButton from '@/components/RegisterButton';
 import Slideshow from '@/components/Slideshow';
 
 interface ClassPageProps {
@@ -80,13 +81,7 @@ export default function ClassPage(props: ClassPageProps) {
             />
           </div>
           <div className="mx-auto mt-28 mb-8 w-fit">
-            <Link
-              href="https://forms.gle/ejSvEu2cwwdovUg18"
-              className="btn btn-primary"
-              target="_blank"
-            >
-              Register For This Class
-            </Link>
+            <RegisterButton />
           </div>
           <div className="mx-auto mb-28 w-fit text-blue-600">
             <Link href={props.trackPage}>Back To Courses Page</Link>

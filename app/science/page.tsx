@@ -37,6 +37,7 @@ const ScienceTrack = () => {
             { link: '/science/science1', name: 'Environmental Science A' },
             { link: '/science/science1#b', name: 'Environmental Science B' },
             { link: '/science/physics1', name: 'Physics A' },
+            { link: '/science/physics1#b', name: 'Physics B' },
           ]}
         />
       </TypicalClassProgression>

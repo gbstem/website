@@ -12,6 +12,8 @@ import {
   formatDate,
   semesterDates,
 } from '@/lib/constants';
+import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
 
 // `lib/semesterDates.json` is hand-copied from the admin repo at each semester rollover (see
 // "Adding a New Semester" in that repo's README). These assertions mirror the admin repo's
@@ -286,5 +288,58 @@ describe('semesterStatusOn / currentSemesterStatus', () => {
     jest.setSystemTime(new Date('12/21/26'));
     expect(currentSemesterStatus().phase).toBe('semester-over');
     expect(currentSemesterStatus().semesterIsOver).toBe(true);
+  });
+});
+
+/**
+ * Every external destination the site shares with the portal is declared once, here. That was not
+ * true until recently and the cost was not theoretical: `components/ClassPage.tsx` carried a
+ * `forms.gle` shortlink that resolved to the very same Google Form as `MAILING_LIST_FORM_LINK`,
+ * so the site had two spellings of one link and nobody grepping for the constant would have found
+ * the other. `components/home/HeroSection.tsx` likewise wrote out `portal.gbstem.org/signup`
+ * inline beside a `GBSTEM_SIGNUP` that already held it.
+ *
+ * This walks the real source tree rather than trusting a convention, because the convention is
+ * exactly what failed. It is deliberately narrow: it looks for the *hosts* we centralize, so a
+ * new page copying any of these links in by hand fails `yarn test` with the file named.
+ */
+describe('centralized link constants', () => {
+  const readSource = (dir: string): Array<[string, string]> =>
+    readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) return readSource(full);
+      if (!/\.tsx?$/.test(entry.name)) return [];
+      return [[path.relative(process.cwd(), full), readFileSync(full, 'utf8')] as [string, string]];
+    });
+
+  const sources = [
+    ...readSource(path.join(process.cwd(), 'app')),
+    ...readSource(path.join(process.cwd(), 'components')),
+  ];
+
+  it('reads the tree it means to check', () => {
+    // A typo'd path would make every assertion below vacuously pass.
+    expect(sources.length).toBeGreaterThan(20);
+    expect(sources.map(([file]) => file)).toContain(path.join('components', 'RegisterButton.tsx'));
+  });
+
+  it.each([
+    ['portal.gbstem.org', 'GBSTEM_SIGNUP or GBSTEM_PORTAL'],
+    ['docs.google.com/forms', 'MAILING_LIST_FORM_LINK'],
+    // The retired shortlink for the mailing-list form. Nothing should reintroduce a second
+    // spelling of a link we already have a constant for.
+    ['forms.gle', 'MAILING_LIST_FORM_LINK'],
+    ['myspreadshop.com', 'GBSTEM_SHOP'],
+    // This one had drifted into two spellings, and only one of them answered 200 - the other
+    // cost a donor a redirect on the way to giving us money. Worth failing loudly over.
+    ['paypal.com', 'GBSTEM_DONATE'],
+  ])('has no page or component writing %s inline', (host, constant) => {
+    const offenders = sources
+      // A comment explaining the history is not a link; only flag it where it could be an href.
+      .filter(([, source]) =>
+        source.split('\n').some((line) => line.includes(host) && !line.trimStart().startsWith('*'))
+      )
+      .map(([file]) => `${file} should use ${constant} from @/lib/constants`);
+    expect(offenders).toEqual([]);
   });
 });

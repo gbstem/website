@@ -1,5 +1,5 @@
 'use client';
-import { currentSemesterStatus } from '@/lib/constants';
+import { GBSTEM_SIGNUP, currentSemesterStatus } from '@/lib/constants';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 const inperson1 = '/images/in-person/inperson1.jpeg';
 
@@ -27,7 +27,7 @@ function HeroSection() {
               <Button
                 disabled={!registrationOpen}
                 size="lg"
-                href="https://portal.gbstem.org/signup"
+                href={GBSTEM_SIGNUP}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="primary"

@@ -22,6 +22,7 @@ import ClassPage17 from '@/app/engineering/engineering1/page';
 import ClassPage18 from '@/app/engineering/engineering2/page';
 import ClassPage19 from '@/app/engineering/engineering3/page';
 import ClassPage20 from '@/app/science/science1/page';
+import ClassPage21 from '@/app/science/physics1/page';
 
 describe('Class Specific Pages', () => {
   it('renders @/app/cs/python1', () => {
@@ -126,6 +127,11 @@ describe('Class Specific Pages', () => {
 
   it('renders @/app/science/science1', () => {
     const { container } = render(<ClassPage20 />);
+    expect(container).toBeInTheDocument();
+  });
+
+  it('renders @/app/science/physics1', () => {
+    const { container } = render(<ClassPage21 />);
     expect(container).toBeInTheDocument();
   });
 });

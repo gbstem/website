@@ -1,3 +1,4 @@
+import { GBSTEM_DONATE } from '@/lib/constants';
 import { constructSEO } from '@/lib/seo';
 import DonationCalculator from '@/components/donate/DonationCalculator';
 
@@ -56,7 +57,7 @@ function Donate() {
       <a
         type="button"
         className="btn btn-primary mb-4"
-        href="https://www.paypal.com/fundraiser/charity/4605663"
+        href={GBSTEM_DONATE}
         target="_blank"
         rel="noreferrer"
       >
