@@ -1,7 +1,9 @@
 'use client';
 
 import {
+  GBSTEM_DONATE,
   GBSTEM_PORTAL,
+  GBSTEM_SHOP,
   GBSTEM_SIGNUP,
   MAILING_LIST_FORM_LINK,
   currentSemesterStatus,
@@ -71,7 +73,7 @@ export default function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="https://gbstem.myspreadshop.com/all" target="_blank" rel="noreferrer">
+            <Nav.Link href={GBSTEM_SHOP} target="_blank" rel="noreferrer">
               Shop
             </Nav.Link>
 
@@ -124,15 +126,11 @@ export default function Navigation() {
             why it is so important for our program to remain accessible to all, regardless of their
             ability to pay. At gbSTEM, a contribution of just $200 can fund nearly 15% of our
             operating costs for one semester. All donations are tax-deductible. You can{' '}
-            <a href="https://gbstem.myspreadshop.com/all" target="_blank" rel="noreferrer">
+            <a href={GBSTEM_SHOP} target="_blank" rel="noreferrer">
               purchase our merchandise
             </a>{' '}
             to support us,{' '}
-            <a
-              href="https://paypal.com/us/fundraiser/charity/4605663"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={GBSTEM_DONATE} target="_blank" rel="noreferrer">
               make a donation
             </a>
             , or <Link href="/donate">read more about the benefits of making a donation.</Link>

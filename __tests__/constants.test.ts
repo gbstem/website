@@ -329,6 +329,10 @@ describe('centralized link constants', () => {
     // The retired shortlink for the mailing-list form. Nothing should reintroduce a second
     // spelling of a link we already have a constant for.
     ['forms.gle', 'MAILING_LIST_FORM_LINK'],
+    ['myspreadshop.com', 'GBSTEM_SHOP'],
+    // This one had drifted into two spellings, and only one of them answered 200 - the other
+    // cost a donor a redirect on the way to giving us money. Worth failing loudly over.
+    ['paypal.com', 'GBSTEM_DONATE'],
   ])('has no page or component writing %s inline', (host, constant) => {
     const offenders = sources
       // A comment explaining the history is not a link; only flag it where it could be an href.
