@@ -11,7 +11,8 @@ export const metadata = constructSEO({
 const teams = [
   'presidents',
   'advisors',
-  'outreach & events',
+  'recruitment',
+  'outreach'
   'math',
   'engineering',
   'computer science',
