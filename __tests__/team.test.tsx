@@ -1,6 +1,7 @@
+import Team from '@/app/team/page';
+import teamMembers from '@/lib/teamMembers';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import Team from '@/app/team/page';
 
 jest.mock('@/components/team/TeamMemberCard', () => {
   return function MockTeamMemberCard(props: { name: string; role: string }) {
@@ -23,12 +24,48 @@ describe('Team Page', () => {
   it('renders all team sections', () => {
     render(<Team />);
 
-    expect(screen.getByText(/presidents/i)).toBeInTheDocument();
-    expect(screen.getByText(/advisors/i)).toBeInTheDocument();
-    expect(screen.getByText(/outreach & events/i)).toBeInTheDocument();
-    expect(screen.getByText(/math Team/i)).toBeInTheDocument();
-    expect(screen.getByText(/engineering Team/i)).toBeInTheDocument();
-    expect(screen.getByText(/computer science Team/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/science Team/i).length).toBeGreaterThan(0);
+    const expectedTeams = Array.from(new Set(teamMembers.map((member) => member.team)));
+    const h2Elements = screen.getAllByRole('heading', { level: 2 });
+
+    expect(h2Elements.every((el) => el.tagName === 'H2')).toBe(true);
+
+    const renderedTeams = h2Elements.map((h2) =>
+      h2.textContent
+        ?.replace(/\s*team\s*$/i, '')
+        .trim()
+        .toLowerCase()
+    );
+
+    // Direction 1: Every de-duped team in teamMembers.ts has a corresponding <h2>
+    expectedTeams.forEach((team) => {
+      expect(renderedTeams).toContain(team);
+    });
+
+    // Direction 2: Every <h2> element corresponds to a team in teamMembers.ts
+    renderedTeams.forEach((renderedTeam) => {
+      expect(expectedTeams).toContain(renderedTeam);
+    });
+
+    // Full bi-directional set & length consistency
+    expect(renderedTeams.sort()).toEqual(expectedTeams.sort());
+    expect(h2Elements).toHaveLength(expectedTeams.length);
+  });
+
+  it('renders all team members', () => {
+    render(<Team />);
+
+    expect(screen.getAllByTestId('mock-team-member-card')).toHaveLength(teamMembers.length);
+
+    teamMembers.forEach((member) => {
+      expect(screen.getByText(member.name, { exact: false })).toBeInTheDocument();
+    });
+  });
+
+  it('verifies no team member name appears more than once in teamMembers', () => {
+    const names = teamMembers.map((member) => member.name);
+    const duplicates = names.filter((name, index) => names.indexOf(name) !== index);
+
+    expect(duplicates).toEqual([]);
+    expect(new Set(names).size).toBe(names.length);
   });
 });
