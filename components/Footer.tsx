@@ -2,6 +2,17 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'react-feather';
 
 const COPYRIGHT_YEAR = new Date().getFullYear();
 
+const SOCIAL_LINKS = [
+  {
+    href: 'https://facebook.com/The-Greater-Boston-STEM-Program-104063908337961',
+    label: 'Facebook',
+    Icon: Facebook,
+  },
+  { href: 'https://twitter.com/gbstemprogram', label: 'Twitter', Icon: Twitter },
+  { href: 'https://www.instagram.com/gbstem/', label: 'Instagram', Icon: Instagram },
+  { href: 'https://www.linkedin.com/company/gbstem-program', label: 'LinkedIn', Icon: Linkedin },
+];
+
 const Footer = () => {
   return (
     <footer>
@@ -12,46 +23,13 @@ const Footer = () => {
           </a>
           <div className="row justify-content-center">
             <ul className="clear socials d-flex justify-content-center mt-4 list-none p-0 text-blue-600">
-              <li className="mx-3">
-                <a
-                  href="https://facebook.com/The-Greater-Boston-STEM-Program-104063908337961"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Facebook"
-                >
-                  <Facebook width={35} height={35} aria-hidden="true" />
-                </a>
-              </li>
-              <li className="mx-3">
-                <a
-                  href="https://twitter.com/gbstemprogram"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Twitter"
-                >
-                  <Twitter width={35} height={35} aria-hidden="true" />
-                </a>
-              </li>
-              <li className="mx-3">
-                <a
-                  href="https://www.instagram.com/gbstem/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Instagram"
-                >
-                  <Instagram width={35} height={35} aria-hidden="true" />
-                </a>
-              </li>
-              <li className="mx-3">
-                <a
-                  href="https://www.linkedin.com/company/gbstem-program"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin width={35} height={35} aria-hidden="true" />
-                </a>
-              </li>
+              {SOCIAL_LINKS.map(({ href, label, Icon }) => (
+                <li key={label} className="mx-3">
+                  <a href={href} target="_blank" rel="noreferrer" aria-label={label}>
+                    <Icon size={35} aria-hidden="true" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
