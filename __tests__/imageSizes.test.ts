@@ -7,8 +7,13 @@ import path from 'path';
 // sharp is an optional peer dependency of next (used for image optimization).
 // It happens to be installed here, so we use it to catch oversized headshot
 // resolutions too, but we degrade gracefully to a size-only check if it's
-// ever unavailable rather than failing the whole suite.
-let sharp: typeof import('sharp') | null;
+// ever unavailable rather than failing the whole suite. Typed `any`: sharp's
+// published types resolve to a non-callable module namespace under some
+// TS/moduleResolution combinations (seen on Vercel's build), even though the
+// runtime export is callable, so a precise type here is more trouble than
+// it's worth for an optionally-loaded test dependency.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let sharp: any;
 try {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   sharp = require('sharp');
