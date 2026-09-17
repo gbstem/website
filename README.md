@@ -117,6 +117,8 @@ Below is an alphabetical list of the top-level directories and significant confi
 
 - **`.github/`**: Contains GitHub configuration for GitHub, including our Dependabot configuration for automating minor and patch package updates, and our Continuous Integration (CI) test workflows. Besides `ci.yml` (lint, format, unit tests, Cypress) there is `shared-data.yml`, which checks out the admin repo and diffs our copies of `lib/courses.json` and `lib/semesterDates.json` against the originals there. It runs on every PR **and nightly**, because a rollover that updates admin and forgets this repo produces no PR here for a PR-triggered check to run on.
 - **`.husky/`**: Configuration for Husky, managing Git hooks like pre-commit formatting and linting.
+- **`.next/`**: Automatically generated directory containing Next.js build output, route manifests, and cache.
+- **`.vscode/`**: Contains Visual Studio Code workspace configuration settings, recommended extensions, and tasks.
 - **`__tests__/`**: Contains all of our Jest unit tests. Tests are organized generally by route or component domain (e.g. `programs.test.tsx`, `components.test.tsx`).
 - **`app/`**: The core Next.js App Router directory. This handles the application's URL routing. Each subdirectory (like `cs/`, `math/`) with a `page.tsx` file inside represents a distinct page on the site.
 - **`components/`**: Reusable React UI components that are imported across multiple pages (e.g., `Navigation.tsx`, `Footer.tsx`, `ClassPage.tsx`). Keeping logic componentized keeps our page files clean.
@@ -124,6 +126,7 @@ Below is an alphabetical list of the top-level directories and significant confi
 - **`lib/`**: Contains library utilities and centralized static data constants (like the lists of FAQ questions in `faqData.tsx` and the team member information in `teamMembers.ts`).
   - **`lib/courses.json`**: The catalog of every course gbSTEM offers, in both halves of the year. Like `semesterDates.json` below it is a verbatim copy of the admin repo's original (`src/lib/data/courses.json`), which the portal and curriculum repos also copy — replace the whole file at each rollover, never hand-edit an entry. Nothing on this site reads it at runtime: the course and track pages hand-declare their own content (see [CLAUDE.md](CLAUDE.md)), and this file exists so `__tests__/courses.test.tsx` can check that every course the portal will let a family register for is actually advertised here, with a page that its track page links to. That was the one copy with no automated check, and the only thing standing between a new course and a marketing site that never mentions it was someone remembering the README.
   - **`lib/semesterDates.json`**: The current semester's key dates, kept in sync across three repos. It is a verbatim copy of the admin repo's `src/lib/data/semesterDates.json`, which the portal repo also copies, so that the public site, the portal, and the admin tool never advertise different dates. Replace the whole file at each semester rollover following the "Adding a New Semester" section of the admin repo's README — do not hand-edit individual fields here. `lib/constants.ts` turns it into the `Date` objects and `REGISTRATION_OPEN`/`INSTRUCTOR_APPS_OPEN`/`SEMESTER_IN_PROGRESS` booleans that the home page, navigation bar, and FAQ branch on.
+- **`node_modules/`**: Automatically generated directory containing the project's dependencies.
 - **`public/`**: Static assets such as images, logos, and icons that can be accessed publicly by the browser.
 - **`scripts/`**: Contains utility/tooling scripts (like test helper scripts).
 
@@ -132,11 +135,14 @@ Below is an alphabetical list of the top-level directories and significant confi
 - **`.gitignore`**: Specifies which files and directories Git should ignore (like `node_modules/` and `.next/`).
 - **`.prettierignore`**: Specifies which files and directories Prettier should ignore when formatting.
 - **`.prettierrc`**: Configuration rules for Prettier, ensuring consistent code formatting across the project.
+- **`.yarnrc.yml`**: Configuration file for Yarn Berry (v4 package manager), defining package management settings.
 - **`AGENTS.md`**: Custom rules and guidelines for AI coding agents interacting with the repository.
+- **`CLAUDE.md`**: Quick reference guide and developer instructions for AI coding assistants.
 - **`cypress.config.ts`**: The configuration file for our Cypress end-to-end testing environment.
 - **`eslint.config.mjs`**: Configuration rules for ESLint, ensuring consistent code style and checking for common errors across the project.
 - **`jest.config.ts`**: The configuration file for our Jest testing environment, specifically tailored to work alongside Next.js.
 - **`jest.setup.ts`**: Initial setup code that runs before our Jest tests, importing tools like `@testing-library/jest-dom` for custom DOM matchers.
+- **`LICENSE.md`**: License terms under which this project's code is distributed.
 - **`next-env.d.ts`**: Automatically generated TypeScript declaration file that ensures the Next.js types are picked up by the compiler. Do not edit manually.
 - **`next-sitemap.config.js`**: Configuration settings for `next-sitemap` to generate dynamic XML sitemaps and robots.txt.
 - **`next.config.ts`**: General Next.js build and server configuration file.
