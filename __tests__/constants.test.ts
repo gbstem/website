@@ -20,7 +20,9 @@ import path from 'path';
 // `__tests__/collections.test.ts` so a malformed date or a missing/renamed field fails loudly
 // here at `yarn test` time rather than silently rendering "Invalid Date" on the live site.
 describe('semesterDates.json', () => {
-  const entries = Object.entries(semesterDates) as Array<[string, string]>;
+  const dateEntries = (Object.entries(semesterDates) as Array<[string, string]>).filter(
+    ([field]) => field !== 'instructorOrientationLink'
+  );
 
   it('has exactly the fields the admin and portal repos define', () => {
     expect(Object.keys(semesterDates).sort()).toEqual(
@@ -28,6 +30,7 @@ describe('semesterDates.json', () => {
         'classesEnd',
         'classesStart',
         'instructorOrientation',
+        'instructorOrientationLink',
         'newInstructorAppsDue',
         'newInstructorAppsOpen',
         'parentOrientation',
@@ -40,15 +43,20 @@ describe('semesterDates.json', () => {
     );
   });
 
-  it.each(entries)('%s is a valid MM/DD/YY date', (_field, value) => {
+  it.each(dateEntries)('%s is a valid MM/DD/YY date', (_field, value) => {
     expect(value).toMatch(/^\d{2}\/\d{2}\/\d{2}$/);
     expect(new Date(value).toString()).not.toBe('Invalid Date');
   });
 
   // Every field describes a single semester, so a stray year is a copy/paste slip.
   it('has every date in the same year', () => {
-    const years = new Set(entries.map(([, value]) => value.slice(-2)));
+    const years = new Set(dateEntries.map(([, value]) => value.slice(-2)));
     expect(years.size).toBe(1);
+  });
+
+  it('instructorOrientationLink is a valid URL', () => {
+    expect(semesterDates.instructorOrientationLink).toMatch(/^https:\/\//);
+    expect(() => new URL(semesterDates.instructorOrientationLink)).not.toThrow();
   });
 
   it('orders the semester milestones sensibly', () => {
