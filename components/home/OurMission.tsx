@@ -10,7 +10,7 @@ function OurMission() {
         <Row className="align-items-center g-5">
           <Col lg={6}>
             <div className="position-relative">
-              <div className="bg-primary position-absolute top-[10%] left-[10%] z-0 h-[90%] w-[90%] rounded opacity-10"></div>
+              <div className="bg-primary position-absolute top-[10%] left-[10%] z-0 size-[90%] rounded opacity-10"></div>
               <Image
                 src={slide1}
                 alt="STEM Learning"
@@ -19,7 +19,7 @@ function OurMission() {
                 height={400}
               />
               <div
-                className="position-absolute top-[-15px] left-[-15px] z-2 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#67aeda]"
+                className="position-absolute top-[-15px] left-[-15px] z-2 flex size-[70px] items-center justify-center rounded-full bg-[#67aeda]"
                 aria-hidden="true"
               >
                 <span className="fs-1 text-white">💡</span>

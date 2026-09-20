@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { existsSync, readdirSync } from 'fs';
 import path from 'path';
 
@@ -117,11 +117,13 @@ const trackOf = (url: string) => `/${url.split('/')[1]}`;
 
 const hrefsIn = (container: HTMLElement) =>
   new Set(
-    [...container.querySelectorAll('a[href]')].map(
-      // The science track page links both halves of Environmental Science at the same page with
-      // a `#b` anchor to keep React keys unique, so compare paths and ignore the fragment.
-      (a) => a.getAttribute('href')!.split('#')[0]
-    )
+    within(container)
+      .queryAllByRole('link')
+      .map(
+        // The science track page links both halves of Environmental Science at the same page with
+        // a `#b` anchor to keep React keys unique, so compare paths and ignore the fragment.
+        (a) => a.getAttribute('href')!.split('#')[0]
+      )
   );
 
 describe('shared course catalog', () => {

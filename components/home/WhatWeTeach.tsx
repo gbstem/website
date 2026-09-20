@@ -46,12 +46,12 @@ function WhatWeTeach() {
           {subjects.map((subject, index) => (
             <Col md={6} key={index}>
               <Card className="hover-shadow h-100 overflow-hidden border-0 shadow-sm">
-                <div className="h-[220px] overflow-hidden">
+                <div className="h-55 overflow-hidden">
                   <Card.Img
                     variant="top"
                     src={subject.image}
                     alt={subject.name}
-                    className="h-full w-full object-cover"
+                    className="size-full object-cover"
                   />
                 </div>
                 <Card.Body className="d-flex flex-column">

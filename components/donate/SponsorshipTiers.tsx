@@ -75,15 +75,15 @@ const benefits = [
 export default function SponsorshipTiers() {
   return (
     <div className="mx-auto mb-5 overflow-auto text-center text-[clamp(0.6rem,2vw,1.5rem)]">
-      <div className="mx-auto grid min-w-[576px] grid-cols-5 gap-0">
+      <div className="mx-auto grid min-w-xl grid-cols-5 gap-0">
         {/* Empty top-left cell */}
-        <div className="border-[1px] border-solid border-black"></div>
+        <div className="border border-solid border-black"></div>
 
         {/* Tier Headers */}
         {tiers.map((tier) => (
           <div
             key={tier.name}
-            className="flex flex-col items-center justify-end border-[1px] border-solid border-black px-4 py-6 shadow-[0_0_5px_black]"
+            className="flex flex-col items-center justify-end border border-solid border-black px-4 py-6 shadow-[0_0_5px_black]"
             style={{
               backgroundColor: tier.bgColor,
             }}
@@ -104,7 +104,7 @@ export default function SponsorshipTiers() {
         {benefits.map((benefit) => (
           <React.Fragment key={benefit.name}>
             {/* Row Header */}
-            <div className="flex items-center justify-center border-[1px] border-solid border-black px-4 py-6 text-[0.85em]">
+            <div className="flex items-center justify-center border border-solid border-black px-4 py-6 text-[0.85em]">
               {benefit.name}
             </div>
 
@@ -112,7 +112,7 @@ export default function SponsorshipTiers() {
             {benefit.checks.map((checked, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center border-[1px] border-solid border-black p-4 text-[2.5em] font-semibold text-[#1d2256]"
+                className="flex items-center justify-center border border-solid border-black p-4 text-[2.5em] font-semibold text-[#1d2256]"
               >
                 {checked ? (
                   <>

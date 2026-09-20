@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { act, render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import TeamMemberCard from '@/components/team/TeamMemberCard';
 
 import { ImageProps } from 'next/image';
@@ -70,9 +70,7 @@ describe('TeamMemberCard', () => {
 
     // Fire load event on image
     const image = screen.getByAltText('Jane Doe');
-    act(() => {
-      fireEvent.load(image);
-    });
+    fireEvent.load(image);
 
     // After load, check style has updated
     await waitFor(() => {

@@ -8,7 +8,7 @@ import { ArrowRight } from 'react-feather';
 function HowItWorks() {
   return (
     <div>
-      <div className="container pt-5 pb-5">
+      <div className="container py-5">
         <div className="row">
           <div className="col-md-6">
             <div className="m-4 flex h-full grow flex-col justify-between pt-8 pb-16">
@@ -47,7 +47,7 @@ function HowItWorks() {
               <Image
                 src={glance}
                 alt="At a Glance"
-                className="img-fluid h-auto w-full max-w-[500px]"
+                className="img-fluid h-auto w-full max-w-125"
                 width={500}
                 height={480}
               />

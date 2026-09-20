@@ -39,7 +39,7 @@ const TeamSection = ({
       <Container>
         <h2 className="relative mb-5 pb-[15px] text-center capitalize">
           {teamName} {teamName === 'presidents' || teamName === 'advisors' ? '' : 'Team'}
-          <div className="absolute bottom-0 left-1/2 h-[3px] w-[80px] -translate-x-1/2 bg-[#67aeda]"></div>
+          <div className="absolute bottom-0 left-1/2 h-[3px] w-20 -translate-x-1/2 bg-[#67aeda]"></div>
         </h2>
 
         <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4 justify-content-center">

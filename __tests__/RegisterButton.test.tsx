@@ -24,8 +24,8 @@ const DAY = 24 * 60 * 60 * 1000;
 const renderOn = (when: Date) => {
   jest.useFakeTimers();
   jest.setSystemTime(when);
-  const result = render(<RegisterButton />);
-  return result;
+  const view = render(<RegisterButton />);
+  return view;
 };
 
 afterEach(() => {

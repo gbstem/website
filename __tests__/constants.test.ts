@@ -171,26 +171,27 @@ describe('semesterPhaseOn', () => {
   ])('never contradicts the dates it was given, across %s', async (_name, dates) => {
     for (const { date, phase } of await walkTheYear(dates)) {
       const on = (field: keyof typeof dates) => new Date(dates[field]);
-      switch (phase) {
-        case 'before-registration':
-          expect(date.getTime()).toBeLessThan(on('registrationsOpen').getTime());
-          break;
-        case 'registration-open':
+      // A lookup table dispatched unconditionally (rather than a switch) so every
+      // iteration's expect() call actually runs - a naked switch/case around
+      // expect() can't prove it isn't silently skipping an untested phase.
+      const assertBounds: Record<string, () => void> = {
+        'before-registration': () =>
+          expect(date.getTime()).toBeLessThan(on('registrationsOpen').getTime()),
+        'registration-open': () => {
           expect(date.getTime()).toBeGreaterThanOrEqual(on('registrationsOpen').getTime());
           expect(date.getTime()).toBeLessThanOrEqual(on('registrationsDue').getTime());
-          break;
-        case 'registration-closed':
+        },
+        'registration-closed': () => {
           expect(date.getTime()).toBeGreaterThan(on('registrationsDue').getTime());
           expect(date.getTime()).toBeLessThan(on('classesStart').getTime());
-          break;
-        case 'classes-in-progress':
+        },
+        'classes-in-progress': () => {
           expect(date.getTime()).toBeGreaterThanOrEqual(on('classesStart').getTime());
           expect(date.getTime()).toBeLessThanOrEqual(on('classesEnd').getTime());
-          break;
-        case 'semester-over':
-          expect(date.getTime()).toBeGreaterThan(on('classesEnd').getTime());
-          break;
-      }
+        },
+        'semester-over': () => expect(date.getTime()).toBeGreaterThan(on('classesEnd').getTime()),
+      };
+      assertBounds[phase]();
     }
   });
 
@@ -260,8 +261,10 @@ describe('semesterStatusOn / currentSemesterStatus', () => {
 
       expect(status.phase).toBe(semesterPhaseOn(date));
       expect(status.semesterIsOver).toBe(status.phase === 'semester-over');
-      if (status.phase === 'registration-open') expect(status.registrationOpen).toBe(true);
-      if (status.phase === 'before-registration') expect(status.registrationNotYetOpen).toBe(true);
+      // The booleans can overlap other phases by design (see lib/constants.ts), so these are
+      // one-directional implications, not a full equality with `phase`.
+      expect(status.phase !== 'registration-open' || status.registrationOpen).toBe(true);
+      expect(status.phase !== 'before-registration' || status.registrationNotYetOpen).toBe(true);
     }
   });
 
