@@ -40,10 +40,10 @@ function WhatPeopleSay() {
             <Col lg={4} key={index}>
               <Card className="testimonial-card h-100 border-0 shadow-sm">
                 <Card.Body className="position-relative p-4">
-                  <div className="position-absolute top-[-15px] right-5 text-[3rem] text-[#67aeda] opacity-20">
+                  <div className="position-absolute top-[-15px] right-5 text-5xl text-[#67aeda] opacity-20">
                     &quot;
                   </div>
-                  <Card.Text className="fs-5 mb-4 leading-[1.7]">
+                  <Card.Text className="fs-5 leading-1.7 mb-4">
                     &quot;{testimonial.quote}&quot;
                   </Card.Text>
                   <div className="d-flex mt-auto border-t border-[#eee] pt-3">

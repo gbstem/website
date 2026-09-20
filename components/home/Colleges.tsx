@@ -77,13 +77,13 @@ function Colleges() {
           <div className="flex w-full">
             <div className="flex animate-scroll pr-2">
               {colleges.map((college, index) => (
-                <div key={`slide1-${index}`} className="min-w-[200px] flex-none">
-                  <div className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 h-[120px] w-[200px] rounded bg-white p-4 shadow-sm">
+                <div key={`slide1-${index}`} className="min-w-50 flex-none">
+                  <div className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 h-30 w-50 rounded bg-white p-4 shadow-sm">
                     <Image
                       src={college.logo}
                       alt={`${college.name} Logo`}
                       title={college.name}
-                      className="img-fluid h-auto max-h-[80px] w-auto max-w-[160px] object-contain"
+                      className="img-fluid size-auto max-h-20 max-w-40 object-contain"
                       width={160}
                       height={80}
                     />
@@ -94,13 +94,13 @@ function Colleges() {
 
             <div className="flex animate-scroll pr-2">
               {colleges.map((college, index) => (
-                <div key={`slide2-${index}`} className="min-w-[200px] flex-none">
-                  <div className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 h-[120px] w-[200px] rounded bg-white p-4 shadow-sm">
+                <div key={`slide2-${index}`} className="min-w-50 flex-none">
+                  <div className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 h-30 w-50 rounded bg-white p-4 shadow-sm">
                     <Image
                       src={college.logo}
                       alt={`${college.name} Logo`}
                       title={college.name}
-                      className="img-fluid h-auto max-h-[80px] w-auto max-w-[160px] object-contain"
+                      className="img-fluid size-auto max-h-20 max-w-40 object-contain"
                       width={160}
                       height={80}
                     />

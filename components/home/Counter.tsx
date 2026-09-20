@@ -33,7 +33,7 @@ function Counter() {
   }, []);
 
   return (
-    <section className="border-t border-b border-[#e9ecef] bg-[#f8f9fa] py-5">
+    <section className="border-y border-[#e9ecef] bg-[#f8f9fa] py-5">
       <Container>
         <Row className="mb-5">
           <Col className="text-center">

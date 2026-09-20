@@ -65,11 +65,9 @@ describe('HomeIntro registration alert', () => {
     });
 
     for (const [candidate, probe] of Object.entries(PHASE_PROBES)) {
-      if (candidate === phase) {
-        expect(screen.getByText(probe, { exact: false })).toBeInTheDocument();
-      } else {
-        expect(screen.queryByText(probe, { exact: false })).not.toBeInTheDocument();
-      }
+      const isCurrentPhase = candidate === phase;
+      const found = screen.queryByText(probe, { exact: false }) !== null;
+      expect(found).toBe(isCurrentPhase);
     }
   });
 
@@ -80,7 +78,9 @@ describe('HomeIntro registration alert', () => {
 
   it('states the semester dates in the present tense while classes run', () => {
     renderIntro({ phase: 'classes-in-progress', semesterInProgress: true });
-    expect(screen.getByText(/semester runs from September 27, 2026 to December 20, 2026/i));
+    expect(
+      screen.getByText(/semester runs from September 27, 2026 to December 20, 2026/i)
+    ).toBeInTheDocument();
   });
 
   it('drops the semester dates line once the semester is over', () => {

@@ -12,7 +12,7 @@ function TestimonialCard({ text, author }: { text: string; author: string }) {
           <div className="absolute top-[-30px] left-[-10px] z-0 font-[Georgia,serif] text-[72px] text-[#f8f9fa]">
             &quot;
           </div>
-          <Card.Text className="position-relative z-1 text-base! leading-[1.6] italic">
+          <Card.Text className="position-relative leading-1.6 z-1 text-base! italic">
             &quot;{text}&quot;
           </Card.Text>
         </div>

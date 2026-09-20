@@ -43,7 +43,7 @@ function Robotics() {
         ].map((skill, index, arr) => (
           <div
             key={skill}
-            className="rounded-3 d-flex align-items-center justify-content-center fw-bold min-h-[80px] w-[200px] p-3 text-center text-lg font-(--font-montserrat) text-black shadow-sm"
+            className="rounded-3 d-flex align-items-center justify-content-center fw-bold min-h-20 w-50 p-3 text-center text-lg font-(--font-montserrat) text-black shadow-sm"
             style={{
               backgroundColor: interpolateColor(
                 ['#66BB6A', '#67aeda', '#bf60bf'],

@@ -58,7 +58,11 @@ describe('ClassProgression Components', () => {
   });
 
   it('renders ClassProgressionDownArrow', () => {
+    // The image is `alt=""` and `aria-hidden`, so it's unreachable by any
+    // Testing Library role query on purpose - direct DOM access is the only
+    // option.
     const { container } = render(<ClassProgressionDownArrow />);
+    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     expect(container.querySelector('img')).toBeInTheDocument();
   });
 

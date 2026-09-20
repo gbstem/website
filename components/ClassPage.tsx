@@ -27,7 +27,7 @@ export default function ClassPage(props: ClassPageProps) {
           <h3 className="font-extralight">{props.classTitle}</h3>
         </div>
         <div id="cs">
-          <div className="bg-[#f2f2f2] pt-[1rem]! pb-[0.25rem]!">
+          <div className="bg-[#f2f2f2] pt-4! pb-1!">
             <div className="container">
               <ul className="flex list-none flex-wrap justify-center gap-8 text-[#1D2256]">
                 <li>16 Weeks</li>
@@ -53,10 +53,7 @@ export default function ClassPage(props: ClassPageProps) {
             <h2 className="p-3 text-center">Syllabus</h2>
             <ul className="list-none pl-0">
               {props.modules.map((module, index) => (
-                <li
-                  key={index}
-                  className="mt-[1rem]! border-[1px] border-solid border-[#1D2256]! p-[1rem]!"
-                >
+                <li key={index} className="mt-4! border border-solid border-[#1D2256]! p-4!">
                   <b>Module {index + 1}: </b>
                   {module}
                 </li>
