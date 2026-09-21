@@ -21,7 +21,7 @@ import path from 'path';
 // here at `yarn test` time rather than silently rendering "Invalid Date" on the live site.
 describe('semesterDates.json', () => {
   const dateEntries = (Object.entries(semesterDates) as Array<[string, string]>).filter(
-    ([field]) => field !== 'instructorOrientationLink'
+    ([field]) => field !== 'instructorOrientationLink' && field !== 'instructorOrientationTime'
   );
 
   it('has exactly the fields the admin and portal repos define', () => {
@@ -31,6 +31,7 @@ describe('semesterDates.json', () => {
         'classesStart',
         'instructorOrientation',
         'instructorOrientationLink',
+        'instructorOrientationTime',
         'newInstructorAppsDue',
         'newInstructorAppsOpen',
         'parentOrientation',
@@ -57,6 +58,10 @@ describe('semesterDates.json', () => {
   it('instructorOrientationLink is a valid URL', () => {
     expect(semesterDates.instructorOrientationLink).toMatch(/^https:\/\//);
     expect(() => new URL(semesterDates.instructorOrientationLink)).not.toThrow();
+  });
+
+  it('instructorOrientationTime is a valid 24-hour HH:mm time', () => {
+    expect(semesterDates.instructorOrientationTime).toMatch(/^([01]\d|2[0-3]):[0-5]\d$/);
   });
 
   it('orders the semester milestones sensibly', () => {
