@@ -51,7 +51,7 @@ const teamMembers: TeamMember[] = [
     graduationYear: '‘27',
     profilePic: 'sarah.jpg',
     role: 'Advisor, Fundraising & Partnerships Manager',
-    bio: 'Sarah is a junior at WPI majoring in bioinformatics and computational biology. She started as a Scratch instructor during Spring 2021, and has been a part of the gbSTEM team ever since. She believes in making STEM education affordable and accessible for every family. Outside of gbSTEM, she enjoys coding, cooking, baking, and spending time with friends and family.',
+    bio: 'Sarah is a senior at WPI majoring in bioinformatics and computational biology. She started as a Scratch instructor during Spring 2021, and has been a part of the gbSTEM team ever since. She believes in making STEM education affordable and accessible for every family. Outside of gbSTEM, she enjoys coding, cooking, baking, and spending time with friends and family.',
     team: 'advisors',
   },
   {
