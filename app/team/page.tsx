@@ -1,6 +1,6 @@
 import TeamMemberCard from '@/components/team/TeamMemberCard';
 import { constructSEO } from '@/lib/seo';
-import teamMembers from '@/lib/teamMembers';
+import teamMembers, { TeamMember } from '@/lib/teamMembers';
 import { Col, Container, Row } from 'react-bootstrap';
 
 export const metadata = constructSEO({
@@ -11,7 +11,8 @@ export const metadata = constructSEO({
 const teams = [
   'presidents',
   'advisors',
-  'outreach & events',
+  'recruitment',
+  'outreach',
   'math',
   'engineering',
   'computer science',
@@ -19,27 +20,13 @@ const teams = [
 ];
 
 // Team Section component
-const TeamSection = ({
-  teamName,
-  members,
-}: {
-  teamName: string;
-  members: {
-    name: string;
-    school: string;
-    graduationYear: string;
-    profilePic: string;
-    bio: string;
-    role: string;
-    linkedin?: string;
-  }[];
-}) => {
+const TeamSection = ({ teamName, members }: { teamName: string; members: TeamMember[] }) => {
   return (
     <div className="team-section py-5">
       <Container>
-        <h2 className="relative mb-5 pb-[15px] text-center capitalize">
+        <h2 className="relative mb-5 pb-3.75 text-center capitalize">
           {teamName} {teamName === 'presidents' || teamName === 'advisors' ? '' : 'Team'}
-          <div className="absolute bottom-0 left-1/2 h-[3px] w-20 -translate-x-1/2 bg-[#67aeda]"></div>
+          <div className="absolute bottom-0 left-1/2 h-0.75 w-20 -translate-x-1/2 bg-[#67aeda]"></div>
         </h2>
 
         <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4 justify-content-center">
