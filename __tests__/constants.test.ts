@@ -32,6 +32,8 @@ describe('semesterDates.json', () => {
         'instructorOrientation',
         'instructorOrientationLink',
         'instructorOrientationTime',
+        'interviewsEnd',
+        'interviewsStart',
         'newInstructorAppsDue',
         'newInstructorAppsOpen',
         'parentOrientation',
