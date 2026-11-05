@@ -36,39 +36,90 @@ export default function Navigation() {
               Home
             </Nav.Link>
 
-            <NavDropdown title="About" id="about-dropdown" className="text-center">
-              <NavDropdown.Item as={Link} href="/team" className="text-md-start text-center">
+            <NavDropdown
+              title="About"
+              id="about-dropdown"
+              data-testid="nav-about"
+              className="text-center"
+            >
+              <NavDropdown.Item
+                as={Link}
+                href="/team"
+                data-testid="nav-team"
+                className="text-md-start text-center"
+              >
                 Team
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
                 href="/testimonials"
+                data-testid="nav-testimonials"
                 className="text-md-start text-center"
               >
                 Testimonials
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/reports" className="text-md-start text-center">
+              <NavDropdown.Item
+                as={Link}
+                href="/reports"
+                data-testid="nav-reports"
+                className="text-md-start text-center"
+              >
                 Reports
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/faq" className="text-md-start text-center">
+              <NavDropdown.Item
+                as={Link}
+                href="/faq"
+                data-testid="nav-faq"
+                className="text-md-start text-center"
+              >
                 FAQ
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Programs" id="programs-dropdown" className="text-center">
-              <NavDropdown.Item as={Link} href="/cs" className="text-md-start text-center">
+            <NavDropdown
+              title="Programs"
+              id="programs-dropdown"
+              data-testid="nav-programs"
+              className="text-center"
+            >
+              <NavDropdown.Item
+                as={Link}
+                href="/cs"
+                data-testid="nav-cs"
+                className="text-md-start text-center"
+              >
                 Computer Science
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/math" className="text-md-start text-center">
+              <NavDropdown.Item
+                as={Link}
+                href="/math"
+                data-testid="nav-math"
+                className="text-md-start text-center"
+              >
                 Math
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/engineering" className="text-md-start text-center">
+              <NavDropdown.Item
+                as={Link}
+                href="/engineering"
+                data-testid="nav-engineering"
+                className="text-md-start text-center"
+              >
                 Engineering
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/science" className="text-md-start text-center">
+              <NavDropdown.Item
+                as={Link}
+                href="/science"
+                data-testid="nav-science"
+                className="text-md-start text-center"
+              >
                 Science
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/robotics" className="text-md-start text-center">
+              <NavDropdown.Item
+                as={Link}
+                href="/robotics"
+                data-testid="nav-robotics"
+                className="text-md-start text-center"
+              >
                 Robotics
               </NavDropdown.Item>
             </NavDropdown>
@@ -103,7 +154,7 @@ export default function Navigation() {
               </div>
             </Nav.Link>
 
-            <Link href="/donate" className="nav-link">
+            <Link href="/donate" className="nav-link" data-testid="nav-donate">
               <div className="inline-block rounded-[20px] bg-[#4caf50] p-2.5 whitespace-nowrap max-[850px]:px-2 max-[850px]:py-1.5">
                 Donate
               </div>

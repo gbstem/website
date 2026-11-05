@@ -44,79 +44,79 @@ describe('Basic Navigation', () => {
     cy.visit('/');
 
     // Team
-    cy.get('#about-dropdown').click();
-    cy.contains('.dropdown-item', 'Team').click();
+    cy.get('[data-testid="nav-about"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-team"]').click();
     cy.location('pathname').should('eq', '/team');
     cy.get('main h1, main h2').contains('Our Team').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // FAQ
-    cy.get('#about-dropdown').click();
-    cy.contains('.dropdown-item', 'FAQ').click();
+    cy.get('[data-testid="nav-about"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-faq"]').click();
     cy.location('pathname').should('eq', '/faq');
     cy.get('main h1, main h2').contains('Frequently Asked Questions').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Programs -> CS
-    cy.get('#programs-dropdown').click();
-    cy.contains('.dropdown-item', 'Computer Science').click();
+    cy.get('[data-testid="nav-programs"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-cs"]').click();
     cy.location('pathname').should('eq', '/cs');
     cy.get('main h1, main h2').contains('Computer Science Track').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Donate
-    cy.contains('.nav-link', 'Donate').click();
+    cy.get('[data-testid="nav-donate"]').click();
     cy.location('pathname').should('eq', '/donate');
     cy.get('main h1, main h2').contains('Support Us').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Testimonials
-    cy.get('#about-dropdown').click();
-    cy.contains('.dropdown-item', 'Testimonials').click();
+    cy.get('[data-testid="nav-about"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-testimonials"]').click();
     cy.location('pathname').should('eq', '/testimonials');
     cy.get('main h1, main h2').contains('What People Say').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Reports
-    cy.get('#about-dropdown').click();
-    cy.contains('.dropdown-item', 'Reports').click();
+    cy.get('[data-testid="nav-about"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-reports"]').click();
     cy.location('pathname').should('eq', '/reports');
     cy.get('main h1, main h2').contains('Reports & Posts').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Math
-    cy.get('#programs-dropdown').click();
-    cy.contains('.dropdown-item', 'Math').click();
+    cy.get('[data-testid="nav-programs"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-math"]').click();
     cy.location('pathname').should('eq', '/math');
     cy.get('main h1, main h2').contains('Math Track').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Engineering
-    cy.get('#programs-dropdown').click();
-    cy.contains('.dropdown-item', 'Engineering').click();
+    cy.get('[data-testid="nav-programs"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-engineering"]').click();
     cy.location('pathname').should('eq', '/engineering');
     cy.get('main h1, main h2').contains('Engineering Track').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Science
-    cy.get('#programs-dropdown').click();
-    cy.contains('.dropdown-item', /^Science$/).click();
+    cy.get('[data-testid="nav-programs"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-science"]').click();
     cy.location('pathname').should('eq', '/science');
     cy.get('main h1, main h2').contains('Science Track').should('be.visible');
     cy.go('back');
     cy.location('pathname').should('eq', '/');
 
     // Robotics
-    cy.get('#programs-dropdown').click();
-    cy.contains('.dropdown-item', 'Robotics').click();
+    cy.get('[data-testid="nav-programs"] [aria-expanded]').click();
+    cy.get('[data-testid="nav-robotics"]').click();
     cy.location('pathname').should('eq', '/robotics');
     cy.get('main h1, main h2').contains('Lego Robotics Track').should('be.visible');
     cy.go('back');
