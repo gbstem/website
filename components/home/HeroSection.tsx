@@ -1,6 +1,5 @@
 'use client';
 import { GBSTEM_SIGNUP, currentSemesterStatus } from '@/lib/constants';
-import { Button, Col, Container, Row } from 'react-bootstrap';
 const inperson1 = '/images/in-person/inperson1.jpeg';
 
 function HeroSection() {
@@ -8,36 +7,36 @@ function HeroSection() {
 
   return (
     <div
-      className="hero-section flex min-h-[80vh] items-center bg-cover bg-center text-white"
+      className="flex min-h-[80vh] items-center bg-cover bg-center text-white"
       style={{
         background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${inperson1})`,
       }}
     >
-      <Container>
-        <Row className="py-5">
-          <Col lg={7} className="py-5">
-            <h1 className="display-3 fw-semibold mb-4">
+      <div className="site-container">
+        <div className="grid gap-x-6 py-12 lg:grid-cols-12">
+          <div className="py-12 lg:col-span-7">
+            <h1 className="mb-6 text-display-3 font-semibold">
               Inspiring the Next Generation of STEM Innovators
             </h1>
-            <p className="lead mb-4">
+            <p className="mb-6 text-lead font-light">
               The Greater Boston STEM Program delivers free introductory computer science, math,
               engineering, and science enrichment to elementary and middle school students.
             </p>
-            <div className="d-flex gap-3">
-              <Button
-                disabled={!registrationOpen}
-                size="lg"
-                href={GBSTEM_SIGNUP}
+            <div className="flex gap-4">
+              {/* No href while closed, so the disabled link can't be followed from the keyboard. */}
+              <a
+                className="btn btn-lg"
+                href={registrationOpen ? GBSTEM_SIGNUP : undefined}
+                aria-disabled={!registrationOpen}
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="primary"
               >
                 {registrationOpen ? 'Register Here' : 'Registration Closed'}
-              </Button>
+              </a>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

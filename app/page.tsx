@@ -10,7 +10,7 @@ import Colleges from '@/components/home/Colleges';
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <div>
       <HeroSection />
       <HomeIntro />
       <WhatWeTeach />

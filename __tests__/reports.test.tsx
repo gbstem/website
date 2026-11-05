@@ -28,9 +28,7 @@ describe('Impact Report download', () => {
 
   it('links the report by a relative path', () => {
     render(<Reports />);
-    // react-bootstrap's `Button href=` renders an anchor carrying `role="button"`, so query it
-    // the way home.test.tsx queries HeroSection's button rather than by the "link" role.
-    const link = screen.getByRole('button', { name: /Impact Report 2023-2024/i });
+    const link = screen.getByRole('link', { name: /Impact Report 2023-2024/i });
     // Not `toHaveAttribute('href', HREF)` alone: the point is that it is relative, so a future
     // absolute URL to our own domain fails here even if it happens to resolve today.
     expect(link.getAttribute('href')).toBe(HREF);

@@ -8,8 +8,8 @@ const ArrowDown = '/images/icons/arrow-down.svg';
 export function TypicalClassProgression({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <h2 className="p-5 text-center">Typical Class Progression</h2>
-      <div className="mx-auto mt-4 mb-24">{children}</div>
+      <h2 className="p-12 text-center">Typical Class Progression</h2>
+      <div className="mx-auto mt-6 mb-24">{children}</div>
     </>
   );
 }
@@ -30,7 +30,7 @@ export function ClassProgression({
 }: ClassProgressionProps) {
   return (
     <div
-      className="w-full overflow-x-auto pb-4 text-center"
+      className="w-full overflow-x-auto pb-6 text-center"
       style={{ '--item-count': items.length } as React.CSSProperties}
     >
       <div className="flex w-full min-w-fit flex-nowrap items-center justify-center">
@@ -55,7 +55,7 @@ export function ClassProgression({
 
 export function ClassProgressionDownArrow() {
   return (
-    <div className="d-flex justify-content-center my-3">
+    <div className="my-4 flex justify-center">
       <Image
         alt=""
         src={ArrowDown}
@@ -69,5 +69,5 @@ export function ClassProgressionDownArrow() {
 }
 
 export function ClassProgressionOr() {
-  return <div className="d-flex justify-content-center fs-3 fw-semibold my-1">OR</div>;
+  return <div className="my-1 flex justify-center text-h3 font-semibold">OR</div>;
 }

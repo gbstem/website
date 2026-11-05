@@ -2,7 +2,6 @@ import Footer from '@/components/Footer';
 import HashRedirect from '@/components/HashRedirect';
 import Navigation from '@/components/Navigation';
 import { constructSEO } from '@/lib/seo';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import type { Metadata } from 'next';
 import { Montserrat, Space_Mono } from 'next/font/google';
 import './globals.css';

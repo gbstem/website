@@ -27,7 +27,7 @@ const Engineering = () => {
         />
       </TypicalClassProgression>
 
-      <p className="mt-5">
+      <p className="mt-12">
         We recommend that students below 5th grade begin with Engineering I, while those in 6th-8th
         grade can begin with Engineering II.
       </p>

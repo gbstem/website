@@ -43,8 +43,8 @@ const contributionBenefits = [
 
 function Donate() {
   return (
-    <div className="container">
-      <div className="m-5 text-center">
+    <div className="site-container">
+      <div className="m-12 text-center">
         <h1>Support Us</h1>
       </div>
 
@@ -54,21 +54,15 @@ function Donate() {
         all donations to us are tax deductible.
       </p>
 
-      <a
-        type="button"
-        className="btn btn-primary mb-4"
-        href={GBSTEM_DONATE}
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a className="btn mb-6" href={GBSTEM_DONATE} target="_blank" rel="noreferrer">
         Make A Contribution
       </a>
 
-      <div className="m-md-5 p-md-5 m-3 rounded-[10px] border bg-[aliceblue] p-3 shadow-[0_1px_5px_#1d2256]">
+      <div className="m-4 rounded-[10px] border border-divider bg-[aliceblue] p-4 shadow-[0_1px_5px_#1d2256] md:m-12 md:p-12">
         <DonationCalculator />
       </div>
 
-      <h2 className="mt-20 text-center">Sponsoring gbSTEM</h2>
+      <h2 className="text-center">Sponsoring gbSTEM</h2>
       <p className="p-8">
         We thank significant monetary (typically corporate) sponsors with benefits that include
         brand visibility on gbSTEM merchandise and social media. More benefits become available with
@@ -77,16 +71,16 @@ function Donate() {
 
       <SponsorshipTiers />
 
-      <h2 className="mt-12 p-3 text-center">Your Contributions Will Help Us...</h2>
+      <h2 className="p-4 text-center">Your Contributions Will Help Us...</h2>
       <ol className="list-[square]">
         {contributionBenefits.map((benefit, index) => (
-          <li key={index} className="mb-3">
+          <li key={index} className="mb-4">
             <strong>{benefit.title}</strong> {benefit.description}
           </li>
         ))}
       </ol>
 
-      <p className="mt-8 mb-20">
+      <p>
         Together, we can empower the next generation of innovators and problem solvers. Join us in
         supporting STEM education by making a tax-deductible donation today. Your generosity will
         help us provide quality education, cultivate critical skills, and inspire students to pursue

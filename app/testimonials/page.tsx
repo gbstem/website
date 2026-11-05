@@ -1,49 +1,42 @@
 'use client';
 
 import { testimonials } from '@/lib/testimonialsData';
-import { Card, Col, Container, Row } from 'react-bootstrap';
 
 // Testimonial card component
 function TestimonialCard({ text, author }: { text: string; author: string }) {
   return (
-    <Card className="testimonial-card h-100 border-0 shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:translate-y-[-5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
-      <Card.Body className="d-flex flex-column p-4">
-        <div className="position-relative mb-4">
-          <div className="absolute top-[-30px] left-[-10px] z-0 font-[Georgia,serif] text-[72px] text-[#f8f9fa]">
+    <div className="relative flex h-full min-w-0 flex-col rounded-md bg-white wrap-break-word shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:translate-y-[-5px]">
+      <div className="flex flex-auto flex-col p-6">
+        <div className="relative mb-6">
+          <div className="absolute top-[-30px] left-[-10px] z-0 font-[Georgia,serif] text-[72px] text-light">
             &quot;
           </div>
-          <Card.Text className="position-relative leading-1.6 z-1 text-base! italic">
-            &quot;{text}&quot;
-          </Card.Text>
+          <p className="relative z-1 mb-0 text-base italic">&quot;{text}&quot;</p>
         </div>
-        <div className="mt-auto border-t border-[#eee] pt-3">
-          <p className="fw-semibold text-dark mb-0">{author}</p>
+        <div className="mt-auto border-t border-[#eee] pt-4">
+          <p className="mb-0 font-semibold text-dark">{author}</p>
         </div>
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 }
 
 // Main Testimonials component
 export default function Testimonials() {
   return (
-    <Container className="py-5">
-      <Row className="mb-5">
-        <Col className="text-center">
-          <h2 className="fw-semibold mb-3">What People Say</h2>
-          <p className="lead text-muted mb-5">Hear from our community of parents and students</p>
-        </Col>
-      </Row>
+    <div className="site-container py-12">
+      <div className="mb-12 flow-root text-center">
+        <h2 className="mb-4 font-semibold">What People Say</h2>
+        <p className="mb-12 text-lead font-light text-muted">
+          Hear from our community of parents and students
+        </p>
+      </div>
 
-      <Row className="g-4">
+      <div className="grid gap-x-6 gap-y-12 pb-6 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((testimonial, index) => (
-          <Col key={index} md={6} lg={4} className="d-flex mb-4">
-            <div className="w-100">
-              <TestimonialCard text={testimonial.text} author={testimonial.author} />
-            </div>
-          </Col>
+          <TestimonialCard key={index} text={testimonial.text} author={testimonial.author} />
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }

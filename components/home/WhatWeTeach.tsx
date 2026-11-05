@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import { Card, Col, Container, Row } from 'react-bootstrap';
 const mathGraphic = '/images/homepage/math1.jpg';
 const csGraphic = '/images/homepage/cs1.png';
 const scienceGraphic = '/images/homepage/science1.svg';
@@ -39,41 +38,46 @@ function WhatWeTeach() {
   ];
 
   return (
-    <div className="bg-[aliceblue] py-5">
-      <Container>
-        <h2 className="fw-semibold mb-5 text-center">What We Teach</h2>
-        <Row className="g-4">
+    <div className="bg-[aliceblue] py-12">
+      <div className="site-container">
+        <h2 className="mb-12 text-center font-semibold">What We Teach</h2>
+        <div className="grid gap-6 md:grid-cols-2">
           {subjects.map((subject, index) => (
-            <Col md={6} key={index}>
-              <Card className="hover-shadow h-100 overflow-hidden border-0 shadow-sm">
-                <div className="h-55 overflow-hidden">
-                  <Card.Img
-                    variant="top"
-                    src={subject.image}
-                    alt={subject.name}
-                    className="size-full object-cover"
-                  />
+            <div
+              key={index}
+              className="relative flex h-full min-w-0 flex-col overflow-hidden rounded-md bg-white wrap-break-word shadow-sm"
+            >
+              <div className="h-55 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element -- next/image would recompress these */}
+                <img
+                  src={subject.image}
+                  alt={subject.name}
+                  className="size-full rounded-t-[calc(0.375rem-1px)] object-cover"
+                />
+              </div>
+              <div className="flex flex-auto flex-col p-4">
+                <h3
+                  className="mb-4 text-h5 leading-heading font-semibold"
+                  style={{ color: subject.color }}
+                >
+                  {subject.name}
+                </h3>
+                <p className="mb-6">{subject.description}</p>
+                <div className="mt-auto">
+                  {/* Colored per subject, so not the navy `btn`. */}
+                  <Link
+                    href={subject.link}
+                    className="inline-block w-full rounded-[10px] border border-transparent px-3 py-1.5 text-center align-middle text-white no-underline transition-colors"
+                    style={{ backgroundColor: subject.color }}
+                  >
+                    Learn More
+                  </Link>
                 </div>
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title className="fw-semibold mb-3" style={{ color: subject.color }}>
-                    {subject.name}
-                  </Card.Title>
-                  <Card.Text className="mb-4">{subject.description}</Card.Text>
-                  <div className="mt-auto">
-                    <Link
-                      href={subject.link}
-                      className="btn w-100 text-white"
-                      style={{ backgroundColor: subject.color }}
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
+              </div>
+            </div>
           ))}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </div>
   );
 }

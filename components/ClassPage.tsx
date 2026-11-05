@@ -22,14 +22,14 @@ export default function ClassPage(props: ClassPageProps) {
   return (
     <div>
       <main>
-        <div style={{ backgroundColor: `${props.color}` }} className="p-5 text-center">
+        <div style={{ backgroundColor: `${props.color}` }} className="p-12 text-center">
           <h1>{props.title}</h1>
-          <h3 className="font-extralight">{props.classTitle}</h3>
+          <h3>{props.classTitle}</h3>
         </div>
         <div id="cs">
-          <div className="bg-[#f2f2f2] pt-4! pb-1!">
-            <div className="container">
-              <ul className="flex list-none flex-wrap justify-center gap-8 text-[#1D2256]">
+          <div className="bg-[#f2f2f2] pt-4 pb-1">
+            <div className="site-container">
+              <ul className="flex list-none flex-wrap justify-center gap-8 text-navy">
                 <li>16 Weeks</li>
                 <li>16 Classes</li>
                 <li>
@@ -41,26 +41,26 @@ export default function ClassPage(props: ClassPageProps) {
               </ul>
             </div>
           </div>
-          <div className="container">
+          <div className="site-container">
             <div className="pt-12">
-              <h2 className="p-3 text-center">Course Description</h2>
+              <h2 className="p-4 text-center">Course Description</h2>
               <p>{props.description}</p>
             </div>
             <div className="pb-8">
-              <h2 className="p-3 text-center">Prerequisites</h2>
+              <h2 className="p-4 text-center">Prerequisites</h2>
               <p>{props.prerequisites}</p>
             </div>
-            <h2 className="p-3 text-center">Syllabus</h2>
-            <ul className="list-none pl-0">
+            <h2 className="p-4 text-center">Syllabus</h2>
+            <ul className="list-none">
               {props.modules.map((module, index) => (
-                <li key={index} className="mt-4! border border-solid border-[#1D2256]! p-4!">
+                <li key={index} className="mt-4 border border-navy p-4">
                   <b>Module {index + 1}: </b>
                   {module}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="mt-12 p-5 text-center">
+          <div className="mt-12 p-12 text-center">
             <h2>{props.includeExampleProjects ? 'Example Projects and Materials' : ''}</h2>
           </div>
           <div

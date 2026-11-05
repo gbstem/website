@@ -13,7 +13,6 @@ import {
   currentSemesterStatus,
   formatDate,
 } from '@/lib/constants';
-import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 
 /**
  * The one sentence describing where the semester stands. Switching over the phase rather
@@ -43,21 +42,24 @@ function HomeIntro() {
     currentSemesterStatus();
 
   return (
-    <div className="bg-white py-5">
-      <Container>
-        <Row className="justify-content-center mb-4">
-          <Col md={10} lg={8}>
-            <Card className="border-0 shadow-sm">
-              <Card.Body className="p-4">
-                <h2 className="mb-4 text-center">Registration Information</h2>
+    <div className="bg-white py-12">
+      <div className="site-container">
+        <div className="mb-6 grid gap-x-6 md:grid-cols-12">
+          <div className="md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3">
+            <div className="relative flex min-w-0 flex-col rounded-md bg-white wrap-break-word shadow-sm">
+              <div className="flex-auto p-6">
+                <h2 className="mb-6 text-center">Registration Information</h2>
 
                 {!semesterIsOver && (
-                  <p className="mb-4">
+                  <p className="mb-6">
                     {`The ${CURRENT_SEMESTER} semester ${semesterInProgress ? 'runs' : 'will run'} from ${formatDate(SEMESTER_START_DATE)} to ${formatDate(SEMESTER_END_DATE)}!`}
                   </p>
                 )}
 
-                <Alert variant="info">
+                <div
+                  role="alert"
+                  className="relative mb-4 rounded-md border border-[#9eeaf9] bg-[#cff4fc] p-4 text-[#055160]"
+                >
                   <p className="mb-0">
                     {registrationStatus(phase)}
                     {semesterIsOver && (
@@ -75,14 +77,14 @@ function HomeIntro() {
                       {`Instructor applications for the ${CURRENT_SEMESTER} semester are also open. Apply to be an instructor by ${formatDate(INSTRUCTOR_APPS_DUE_DATE)}.`}
                     </p>
                   )}
-                </Alert>
+                </div>
 
                 {/* In the semester-over phase the alert already ends with this link; don't stack
                     a second copy underneath it. */}
                 {!registrationOpen && !semesterIsOver && (
-                  <p className="mb-4">
+                  <p className="mb-6">
                     If you are interested in gbSTEM&apos;s programs or hope to apply as an
-                    instructor, please <MailingListLink className="fw-semibold" />.
+                    instructor, please <MailingListLink className="font-semibold" />.
                   </p>
                 )}
 
@@ -91,13 +93,13 @@ function HomeIntro() {
                      between them only the Register card renders, and a lone md={6} column would
                      otherwise sit against the left edge with a hole beside it. No effect when
                      both cards are present, since they fill the row. */
-                  <Row className="justify-content-center g-4">
+                  <div className="flex flex-wrap justify-center gap-6">
                     {registrationOpen && (
-                      <Col md={6}>
-                        <div className="bg-light h-100 rounded p-4 text-center">
-                          <h5 className="mb-3">Parents and 1-8 Students</h5>
+                      <div className="w-full md:w-[calc((100%-1.5rem)/2)]">
+                        <div className="h-full rounded-md bg-light p-6 text-center">
+                          <h5 className="mb-4">Parents and 1-8 Students</h5>
                           <a
-                            className="btn btn-primary"
+                            className="btn"
                             href={GBSTEM_SIGNUP}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -105,20 +107,20 @@ function HomeIntro() {
                             Register
                           </a>
                         </div>
-                      </Col>
+                      </div>
                     )}
                     {/* Gated on the instructor window, not the registration one: applications
                         close nine days earlier, and this button used to outlive them. */}
                     {instructorAppsOpen && (
-                      <Col md={6}>
-                        <div className="bg-light h-100 rounded p-4 text-center">
-                          <h5 className="mb-3">
+                      <div className="w-full md:w-[calc((100%-1.5rem)/2)]">
+                        <div className="h-full rounded-md bg-light p-6 text-center">
+                          <h5 className="mb-4">
                             Instructor Applicants
                             <br />
                             (High School or Older)
                           </h5>
                           <a
-                            className="btn btn-primary"
+                            className="btn"
                             href={GBSTEM_SIGNUP}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -126,15 +128,15 @@ function HomeIntro() {
                             Apply to teach
                           </a>
                         </div>
-                      </Col>
+                      </div>
                     )}
-                  </Row>
+                  </div>
                 )}
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
