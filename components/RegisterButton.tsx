@@ -31,7 +31,7 @@ export default function RegisterButton() {
   return (
     <a
       href={registrationOpen ? GBSTEM_SIGNUP : MAILING_LIST_FORM_LINK}
-      className="btn btn-primary"
+      className="btn"
       target="_blank"
       rel="noopener noreferrer"
     >

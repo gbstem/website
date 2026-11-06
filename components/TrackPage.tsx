@@ -11,12 +11,12 @@ export default function TrackPage({ trackName, color, subtitle, children }: Trac
   return (
     <div>
       <main>
-        <div style={{ backgroundColor: color }} className="p-5 text-center">
+        <div style={{ backgroundColor: color }} className="p-12 text-center">
           <h1>{trackName} Track</h1>
-          {subtitle && <h3 className="font-extralight">{subtitle}</h3>}
+          {subtitle && <h3>{subtitle}</h3>}
         </div>
 
-        <div className="container my-5">{children}</div>
+        <div className="site-container my-12">{children}</div>
       </main>
     </div>
   );

@@ -57,8 +57,8 @@ describe('HeroSection Component', () => {
     expect(
       screen.getByRole('heading', { name: /Inspiring the Next Generation of STEM Innovators/i })
     ).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Register Here/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Register Here/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /Register Here/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Register Here/i })).toHaveAttribute(
       'href',
       'https://portal.gbstem.org/signup'
     );

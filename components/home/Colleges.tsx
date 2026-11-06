@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import { Col, Container, Row } from 'react-bootstrap';
 
 function Colleges() {
   // For each of these, find the image on the web, then download them into our images/colleges folder
@@ -64,26 +63,26 @@ function Colleges() {
   ];
 
   return (
-    <section className="border-top bg-white py-5">
-      <Container>
-        <Row className="mb-5">
-          <Col className="text-center">
-            <h2 className="fw-semibold">Our Instructors Have Attended</h2>
-            <p className="lead text-muted">Learn from talented high school students</p>
-          </Col>
-        </Row>
+    <section className="border-t border-divider bg-white py-12">
+      <div className="site-container">
+        <div className="mb-12 flow-root text-center">
+          <h2 className="font-semibold">Our Instructors Have Attended</h2>
+          <p className="text-lead font-light text-muted">
+            Learn from talented high school students
+          </p>
+        </div>
 
         <div className="relative mx-auto w-full overflow-hidden">
           <div className="flex w-full">
             <div className="flex animate-scroll pr-2">
               {colleges.map((college, index) => (
                 <div key={`slide1-${index}`} className="min-w-50 flex-none">
-                  <div className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 h-30 w-50 rounded bg-white p-4 shadow-sm">
+                  <div className="mx-2 flex h-30 w-1/2 items-center justify-center rounded-md bg-white p-6 shadow-sm">
                     <Image
                       src={college.logo}
                       alt={`${college.name} Logo`}
                       title={college.name}
-                      className="img-fluid size-auto max-h-20 max-w-40 object-contain"
+                      className="size-auto max-h-20 max-w-full object-contain"
                       width={160}
                       height={80}
                     />
@@ -95,12 +94,12 @@ function Colleges() {
             <div className="flex animate-scroll pr-2">
               {colleges.map((college, index) => (
                 <div key={`slide2-${index}`} className="min-w-50 flex-none">
-                  <div className="college-logo-wrapper d-flex align-items-center justify-content-center mx-2 h-30 w-50 rounded bg-white p-4 shadow-sm">
+                  <div className="mx-2 flex h-30 w-1/2 items-center justify-center rounded-md bg-white p-6 shadow-sm">
                     <Image
                       src={college.logo}
                       alt={`${college.name} Logo`}
                       title={college.name}
-                      className="img-fluid size-auto max-h-20 max-w-40 object-contain"
+                      className="size-auto max-h-20 max-w-full object-contain"
                       width={160}
                       height={80}
                     />
@@ -110,7 +109,7 @@ function Colleges() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

@@ -1,9 +1,75 @@
 @import 'tailwindcss';
 
+/*
+ * Design tokens. Every value here becomes Tailwind classes: `--color-muted` gives `text-muted`,
+ * `bg-muted`, `border-muted`; `--text-h2` gives `text-h2`; and so on.
+ *
+ * The values were carried over from the Bootstrap theme this site used to load, so the site
+ * looks the same as it did then. Change them here, not with one-off arbitrary values.
+ */
 @theme {
   --animate-scroll: scroll 30s linear infinite;
   --font-sans: var(--font-montserrat), sans-serif;
   --font-mono: var(--font-space-mono), monospace;
+
+  /* Bootstrap's breakpoints rather than Tailwind's defaults (640/768/1024/1280/1536). */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  --color-navy: #1d2256;
+  --color-primary: #0d6efd;
+  --color-dark: #212529;
+  --color-muted: rgb(33 37 41 / 0.75);
+  --color-light: #f8f9fa;
+  --color-divider: #dee2e6;
+
+  /* Heading sizes grow with the viewport up to a cap reached at 1200px wide. */
+  --text-h1: min(calc(1.375rem + 1.5vw), 2.5rem);
+  --text-h2: min(calc(1.325rem + 0.9vw), 2rem);
+  --text-h3: min(calc(1.3rem + 0.6vw), 1.75rem);
+  --text-h4: min(calc(1.275rem + 0.3vw), 1.5rem);
+  --text-h5: 1.25rem;
+  --text-display-3: min(calc(1.525rem + 3.3vw), 4rem);
+  --text-display-3--line-height: 1.2;
+  --text-display-4: min(calc(1.475rem + 2.7vw), 3.5rem);
+  --text-display-4--line-height: 1.2;
+  /* Bootstrap's line height for headings, also used by base h1-h6 below. */
+  --leading-heading: 1.2;
+  /* Introductory paragraph under a heading; pair with `font-light`. */
+  --text-lead: 1.25rem;
+
+  --shadow-sm: 0 0.125rem 0.25rem rgb(0 0 0 / 0.075);
+  --shadow-md: 0 0.5rem 1rem rgb(0 0 0 / 0.15);
+
+  /* Slideshow transitions: the incoming slide slides in as the outgoing one slides out. */
+  --animate-carousel-in-next: carousel-in-next 0.6s ease-in-out;
+  --animate-carousel-out-next: carousel-out-next 0.6s ease-in-out forwards;
+  --animate-carousel-in-prev: carousel-in-prev 0.6s ease-in-out;
+  --animate-carousel-out-prev: carousel-out-prev 0.6s ease-in-out forwards;
+
+  @keyframes carousel-in-next {
+    from {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes carousel-out-next {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes carousel-in-prev {
+    from {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes carousel-out-prev {
+    to {
+      transform: translateX(100%);
+    }
+  }
 
   @keyframes scroll {
     from {
@@ -15,116 +81,187 @@
   }
 }
 
-:root {
-  --bs-body-font-family: var(--font-sans);
-  --bs-heading-font-family: var(--font-sans);
-  --bs-font-sans-serif: var(--font-sans);
-  --bs-font-monospace: var(--font-mono);
-}
+/*
+ * Default styles for plain HTML elements. These sit in Tailwind's `base` layer, so any utility
+ * class on an element overrides them: `<p class="mb-0">` really has no bottom margin.
+ */
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
 
-body {
-  margin: 0;
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-dark);
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: var(--leading-heading);
+  }
+  h1 {
+    font-size: var(--text-h1);
+    font-weight: 700;
+  }
+  h2 {
+    font-size: var(--text-h2);
+    font-weight: 700;
+  }
+  h3 {
+    font-size: var(--text-h3);
+  }
+  h4 {
+    font-size: var(--text-h4);
+  }
+  h5 {
+    font-size: var(--text-h5);
+  }
+  h6 {
+    font-size: 1rem;
+  }
 
-.navbar-nav .nav-link {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 20px;
-  color: white;
-  text-transform: lowercase;
-  margin-right: 10px;
-  margin-left: 10px;
-}
+  p,
+  ol,
+  ul {
+    margin-bottom: 1rem;
+  }
+  ol,
+  ul {
+    padding-left: 2rem;
+  }
+  :is(ol, ul) :is(ol, ul) {
+    margin-bottom: 0;
+  }
 
-@media (max-width: 1200px) {
-  .navbar-nav .nav-link {
-    font-size: 16px;
-    margin-right: 2px;
-    margin-left: 2px;
+  p,
+  li,
+  label,
+  strong,
+  a {
+    font-size: 1.2rem;
+  }
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+
+  small {
+    font-size: 0.875em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.875em;
+    color: #d63384;
+    overflow-wrap: break-word;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  button:not(:disabled),
+  [role='button'] {
+    cursor: pointer;
+  }
+  button:focus:not(:focus-visible) {
+    outline: 0;
   }
 }
 
-@media (max-width: 850px) {
-  .navbar-nav .nav-link {
-    font-size: 13px;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-right: 4px !important;
-    padding-left: 4px !important;
+/* The site's button, for both <button> and links styled as one. Add `btn-lg` for a bigger one. */
+@layer components {
+  .btn {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--color-navy);
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      color: white;
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+    }
+    &:focus-visible {
+      outline: 0;
+      background-color: #0b5ed7;
+      border-color: #0a58ca;
+      box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 0.5);
+    }
+    &:active {
+      background-color: #0a58ca;
+      border-color: #0a53be;
+    }
+    &:disabled,
+    &[aria-disabled='true'] {
+      pointer-events: none;
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      opacity: 0.65;
+    }
+  }
+  .btn-lg {
+    padding: 0.5rem 1rem;
   }
 }
 
-.navbar-collapse {
-  justify-content: flex-end;
-}
+/* Centered, padded page column whose width steps up at each breakpoint. */
+@utility site-container {
+  width: 100%;
+  padding-inline: 0.75rem;
+  margin-inline: auto;
 
-.dropdown-item {
-  color: white;
-  font-family: var(--font-mono);
-  font-weight: 700;
-}
-
-.dropdown-menu {
-  background-color: #1d2256;
-  color: white;
-  font-family: var(--font-mono);
-  font-weight: 700;
-}
-
-@media (max-width: 767.98px) {
-  .dropdown-menu {
-    text-align: right;
+  @variant sm {
+    max-width: 540px;
   }
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-.accordion-button {
-  font-size: 1.2rem;
-}
-
-a {
-  font-size: 1.2rem;
-  color: inherit;
-}
-
-a:hover {
-  opacity: 0.8;
-}
-
-li {
-  font-size: 1.2rem;
-}
-
-h1 {
-  font-weight: 700;
-}
-
-h2 {
-  font-weight: 700;
-}
-
-label {
-  font-size: 1.2rem;
-}
-
-strong {
-  font-size: 1.2rem;
-}
-
-.btn {
-  font-size: 1.2rem;
-  background-color: #1d2256;
-  border-radius: 10px;
+  @variant md {
+    max-width: 720px;
+  }
+  @variant lg {
+    max-width: 960px;
+  }
+  @variant xl {
+    max-width: 1140px;
+  }
+  @variant 2xl {
+    max-width: 1320px;
+  }
 }
 
 @utility arrow-step {
@@ -134,7 +271,6 @@ strong {
   max-width: 350px;
   aspect-ratio: 20 / 9;
   clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%, 15% 50%);
-  color: black;
   display: flex;
   align-items: center;
   justify-content: center;

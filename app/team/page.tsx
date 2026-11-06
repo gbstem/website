@@ -1,7 +1,6 @@
 import TeamMemberCard from '@/components/team/TeamMemberCard';
 import { constructSEO } from '@/lib/seo';
 import teamMembers, { TeamMember } from '@/lib/teamMembers';
-import { Col, Container, Row } from 'react-bootstrap';
 
 export const metadata = constructSEO({
   title: 'Our Team',
@@ -22,16 +21,21 @@ const teams = [
 // Team Section component
 const TeamSection = ({ teamName, members }: { teamName: string; members: TeamMember[] }) => {
   return (
-    <div className="team-section py-5">
-      <Container>
-        <h2 className="relative mb-5 pb-3.75 text-center capitalize">
+    <div className="py-12">
+      <div className="site-container">
+        <h2 className="relative mb-12 pb-3.75 text-center capitalize">
           {teamName} {teamName === 'presidents' || teamName === 'advisors' ? '' : 'Team'}
           <div className="absolute bottom-0 left-1/2 h-0.75 w-20 -translate-x-1/2 bg-[#67aeda]"></div>
         </h2>
 
-        <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4 justify-content-center">
+        {/* Flex rather than grid so a part-filled last row is centered. Each width is its share of
+            the row minus its share of the gaps: 2 per row from sm, 3 from lg, 4 from xl. */}
+        <div className="flex flex-wrap justify-center gap-6">
           {members.map((member, index) => (
-            <Col key={index} className="d-flex justify-content-center">
+            <div
+              key={index}
+              className="flex w-full justify-center sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] xl:w-[calc((100%-4.5rem)/4)]"
+            >
               <TeamMemberCard
                 name={member.name}
                 school={member.school}
@@ -40,10 +44,10 @@ const TeamSection = ({ teamName, members }: { teamName: string; members: TeamMem
                 bio={member.bio}
                 role={member.role}
               />
-            </Col>
+            </div>
           ))}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </div>
   );
 };
@@ -51,11 +55,11 @@ const TeamSection = ({ teamName, members }: { teamName: string; members: TeamMem
 // Main Team component
 export default function Team() {
   return (
-    <div className="team-page bg-light">
-      <Container fluid className="bg-[#0D6EFD]! py-5 text-center text-white">
-        <h1 className="display-4 fw-semibold">Our Team</h1>
-        <p className="lead">Meet the dedicated people behind gbSTEM</p>
-      </Container>
+    <div className="bg-light">
+      <div className="w-full bg-primary px-3 py-12 text-center text-white">
+        <h1 className="text-display-4 font-semibold">Our Team</h1>
+        <p className="text-lead font-light">Meet the dedicated people behind gbSTEM</p>
+      </div>
 
       {/* Display all teams in sections */}
       {teams.map((team) => (

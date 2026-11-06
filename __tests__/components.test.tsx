@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import ClassPage from '@/components/ClassPage';
 import Slideshow from '@/components/Slideshow';
 
-// Mock matchMedia for rc-slider if needed or for bootstrap
+// Mock matchMedia for rc-slider if needed
 window.matchMedia =
   window.matchMedia ||
   function () {

@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import { existsSync, readdirSync } from 'fs';
 import path from 'path';
 
@@ -9,17 +9,6 @@ import MathTrack from '@/app/math/page';
 import Engineering from '@/app/engineering/page';
 import Science from '@/app/science/page';
 import Navigation from '@/components/Navigation';
-
-// react-bootstrap's dropdowns touch matchMedia, which jsdom doesn't implement.
-window.matchMedia =
-  window.matchMedia ||
-  function () {
-    return {
-      matches: false,
-      addListener: function () {},
-      removeListener: function () {},
-    };
-  };
 
 /**
  * `lib/courses.json` is a verbatim copy of the admin repo's
@@ -117,13 +106,15 @@ const trackOf = (url: string) => `/${url.split('/')[1]}`;
 
 const hrefsIn = (container: HTMLElement) =>
   new Set(
-    within(container)
-      .queryAllByRole('link')
-      .map(
-        // The science track page links both halves of Environmental Science at the same page with
-        // a `#b` anchor to keep React keys unique, so compare paths and ignore the fragment.
-        (a) => a.getAttribute('href')!.split('#')[0]
-      )
+    // The nav's dropdown entries are links with the `menuitem` role.
+    [
+      ...within(container).queryAllByRole('link'),
+      ...within(container).queryAllByRole('menuitem'),
+    ].map(
+      // The science track page links both halves of Environmental Science at the same page with
+      // a `#b` anchor to keep React keys unique, so compare paths and ignore the fragment.
+      (a) => a.getAttribute('href')!.split('#')[0]
+    )
   );
 
 describe('shared course catalog', () => {
@@ -173,10 +164,9 @@ describe('course pages are reachable', () => {
 
   it('links every track that hosts a course from the site navigation', () => {
     // `/robotics` is the one course URL no track page links, because it *is* its track page — the
-    // nav's Programs menu is the only route to it, so that menu is what has to list it. Bootstrap
-    // renders a dropdown's items only once it is open.
+    // nav's Programs menu is the only route to it, so that menu is what has to list it. Its links
+    // stay in the page while the menu is closed.
     const { container } = render(<Navigation />);
-    fireEvent.click(screen.getByRole('button', { name: /Programs/i }));
     const hrefs = hrefsIn(container);
     const tracks = [...new Set(pageUrls.map(trackOf))];
     expect(tracks.filter((track) => !hrefs.has(track))).toEqual([]);

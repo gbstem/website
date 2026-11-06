@@ -74,7 +74,7 @@ const benefits = [
 
 export default function SponsorshipTiers() {
   return (
-    <div className="mx-auto mb-5 overflow-auto text-center text-[clamp(0.6rem,2vw,1.5rem)]">
+    <div className="mx-auto mb-12 overflow-auto text-center text-[clamp(0.6rem,2vw,1.5rem)]">
       <div className="mx-auto grid min-w-xl grid-cols-5 gap-0">
         {/* Empty top-left cell */}
         <div className="border border-solid border-black"></div>
@@ -83,7 +83,7 @@ export default function SponsorshipTiers() {
         {tiers.map((tier) => (
           <div
             key={tier.name}
-            className="flex flex-col items-center justify-end border border-solid border-black px-4 py-6 shadow-[0_0_5px_black]"
+            className="flex flex-col items-center justify-end border border-solid border-black p-6 shadow-[0_0_5px_black]"
             style={{
               backgroundColor: tier.bgColor,
             }}
@@ -95,7 +95,7 @@ export default function SponsorshipTiers() {
               height={tier.height}
               style={{ ...tier.imgStyle, marginBottom: '1rem' }}
             />
-            <div className="fw-bold">{tier.name}</div>
+            <div className="font-bold">{tier.name}</div>
             <div className="text-[0.85em] italic">{tier.price}</div>
           </div>
         ))}
@@ -104,7 +104,7 @@ export default function SponsorshipTiers() {
         {benefits.map((benefit) => (
           <React.Fragment key={benefit.name}>
             {/* Row Header */}
-            <div className="flex items-center justify-center border border-solid border-black px-4 py-6 text-[0.85em]">
+            <div className="flex items-center justify-center border border-solid border-black p-6 text-[0.85em]">
               {benefit.name}
             </div>
 
@@ -112,12 +112,12 @@ export default function SponsorshipTiers() {
             {benefit.checks.map((checked, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center border border-solid border-black p-4 text-[2.5em] font-semibold text-[#1d2256]"
+                className="flex items-center justify-center border border-solid border-black p-6 text-[2.5em] font-semibold text-navy"
               >
                 {checked ? (
                   <>
                     <span aria-hidden="true">X</span>
-                    <span className="visually-hidden">Included</span>
+                    <span className="sr-only">Included</span>
                   </>
                 ) : (
                   ''

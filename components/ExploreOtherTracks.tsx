@@ -13,8 +13,8 @@ export default function ExploreOtherTracks({ trackToOmit }: { trackToOmit?: stri
 
   return (
     <>
-      <h2 className="p-5 text-center">Explore Other Tracks:</h2>
-      <div className="d-flex justify-content-center mb-5 flex-wrap gap-4">
+      <h2 className="p-12 text-center">Explore Other Tracks:</h2>
+      <div className="mb-12 flex flex-wrap justify-center gap-6">
         {filteredTracks.map((track) => (
           <PageButton
             key={track.link}

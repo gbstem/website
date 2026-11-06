@@ -1,36 +1,30 @@
 'use client';
-import { Col, Container, Row } from 'react-bootstrap';
+
+const STATS = [
+  { value: 'FREE', description: 'All our programs are completely free for students grades 1-8' },
+  { value: '4+', description: 'STEM subjects taught by qualified instructors' },
+  { value: 'K-8', description: 'Programs designed for elementary and middle school students' },
+];
 
 function KeyStats() {
   return (
-    <div className="bg-white py-5" id="learn-more">
-      <Container>
-        <Row className="mb-4 text-center">
-          <Col>
-            <h2 className="fw-semibold">Making STEM Education Accessible</h2>
-          </Col>
-        </Row>
-        <Row className="g-4 text-center">
-          <Col md={4}>
-            <div className="h-100 rounded border bg-[#f8f9fa] p-4 shadow-sm">
-              <div className="display-3 fw-semibold text-primary mb-3">FREE</div>
-              <p className="mb-0">All our programs are completely free for students grades 1-8</p>
+    <div className="bg-white py-12" id="learn-more">
+      <div className="site-container">
+        <div className="mb-6 flow-root text-center">
+          <h2 className="font-semibold">Making STEM Education Accessible</h2>
+        </div>
+        <div className="grid gap-6 text-center md:grid-cols-3">
+          {STATS.map(({ value, description }) => (
+            <div
+              key={value}
+              className="h-full rounded-md border border-divider bg-light p-6 shadow-sm"
+            >
+              <div className="mb-4 text-display-3 font-semibold text-primary">{value}</div>
+              <p className="mb-0">{description}</p>
             </div>
-          </Col>
-          <Col md={4}>
-            <div className="h-100 rounded border bg-[#f8f9fa] p-4 shadow-sm">
-              <div className="display-3 fw-semibold text-primary mb-3">4+</div>
-              <p className="mb-0">STEM subjects taught by qualified instructors</p>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className="h-100 rounded border bg-[#f8f9fa] p-4 shadow-sm">
-              <div className="display-3 fw-semibold text-primary mb-3">K-8</div>
-              <p className="mb-0">Programs designed for elementary and middle school students</p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

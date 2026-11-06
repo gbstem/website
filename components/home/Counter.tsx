@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
 
 function Counter() {
   const [counters, setCounters] = useState([
@@ -11,52 +10,52 @@ function Counter() {
   ]);
 
   useEffect(() => {
+    let interval: ReturnType<typeof setInterval> | undefined;
     // Start animation after a slight delay for better user experience
     const timer = setTimeout(() => {
-      const updateCounters = () => {
-        setCounters((prevCounters) => {
-          return prevCounters.map((counter) => {
-            const { target, value } = counter;
-            const step = Math.ceil(target / 100); // Increase the value in 100 steps
-            const newValue = Math.min(value + step, target);
-            return { ...counter, value: newValue };
-          });
-        });
-      };
-
-      const interval = setInterval(updateCounters, 20); // Update counters every 20 milliseconds
-
-      return () => clearInterval(interval); // Clear the interval when the component unmounts
+      // Count up in 100 steps of 20ms, then stop.
+      let steps = 0;
+      interval = setInterval(() => {
+        setCounters((prevCounters) =>
+          prevCounters.map((counter) => {
+            const step = Math.ceil(counter.target / 100);
+            return { ...counter, value: Math.min(counter.value + step, counter.target) };
+          })
+        );
+        if (++steps >= 100) clearInterval(interval);
+      }, 20);
     }, 500);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
-    <section className="border-y border-[#e9ecef] bg-[#f8f9fa] py-5">
-      <Container>
-        <Row className="mb-5">
-          <Col className="text-center">
-            <h2 className="fw-semibold">Our Impact</h2>
-            <p className="text-muted">Growing our community of STEM learners</p>
-          </Col>
-        </Row>
-        <Row className="g-4">
+    <section className="border-y border-[#e9ecef] bg-light py-12">
+      <div className="site-container">
+        <div className="mb-12 flow-root text-center">
+          <h2 className="font-semibold">Our Impact</h2>
+          <p className="text-muted">Growing our community of STEM learners</p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {counters.map((counter, index) => (
-            <Col md={6} lg={3} key={index}>
-              <Card className="h-100 border-0 text-center shadow-sm">
-                <Card.Body className="d-flex flex-column justify-content-center p-4">
-                  <div className="counter-value display-4 fw-semibold mb-2 text-[#67aeda]">
-                    {counter.value}
-                    {counter.suffix}
-                  </div>
-                  <Card.Title className="counter-label">{counter.label}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
+            <div
+              key={index}
+              className="relative flex h-full min-w-0 flex-col rounded-md bg-white text-center wrap-break-word shadow-sm"
+            >
+              <div className="flex flex-auto flex-col justify-center p-6">
+                <div className="mb-2 text-display-4 font-semibold text-[#67aeda]">
+                  {counter.value}
+                  {counter.suffix}
+                </div>
+                <h3 className="mb-2 text-h5 leading-heading">{counter.label}</h3>
+              </div>
+            </div>
           ))}
-        </Row>
-      </Container>
+        </div>
+      </div>
     </section>
   );
 }

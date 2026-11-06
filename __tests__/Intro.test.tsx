@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 /**
  * Intro reads the calendar through `currentSemesterStatus()` during render, so a test hands it a
  * status object and nothing else - no module-registry games, and in particular no
- * jest.resetModules(), which used to be needed here and handed react-bootstrap a second copy of
+ * jest.resetModules(), which used to be needed here and handed components a second copy of
  * React (a null-dispatcher failure on every useContext).
  *
  * The dates are pinned rather than read from semesterDates.json so a semester rollover cannot

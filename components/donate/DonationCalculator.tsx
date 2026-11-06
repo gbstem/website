@@ -16,20 +16,20 @@ export default function DonationCalculator() {
   };
 
   return (
-    <div className="container">
+    <div className="site-container">
       <h2>Donation Calculator</h2>
       <p>
         We require $1500 each semester to fund our program. Please use the slider below to see how
         your donation will help us reach our goal.
       </p>
-      <div className="form-group my-4">
-        <label htmlFor="donationAmount" className="fw-semibold mb-2">
+      <div className="my-6">
+        <label htmlFor="donationAmount" className="mb-2 font-semibold">
           Donation Amount: ${donationAmount}
         </label>
         <Slider min={0} max={1500} step={25} value={donationAmount} onChange={handleSliderChange} />
       </div>
-      <div className="form-group">
-        <label htmlFor="semesterFunded" className="fw-semibold">
+      <div>
+        <label htmlFor="semesterFunded" className="font-semibold">
           Semester Funded: {percentageFunded}%
         </label>
       </div>
