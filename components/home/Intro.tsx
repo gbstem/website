@@ -1,4 +1,5 @@
 'use client';
+import GivingSeasonPromo from '@/components/GivingSeasonPromo';
 import MailingListLink from '@/components/MailingListLink';
 import {
   CURRENT_SEMESTER,
@@ -46,6 +47,7 @@ function HomeIntro() {
       <div className="site-container">
         <div className="mb-6 grid gap-x-6 md:grid-cols-12">
           <div className="md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3">
+            <GivingSeasonPromo variant="compact" className="mb-6" />
             <div className="relative flex min-w-0 flex-col rounded-md bg-white wrap-break-word shadow-sm">
               <div className="flex-auto p-6">
                 <h2 className="mb-6 text-center">Registration Information</h2>

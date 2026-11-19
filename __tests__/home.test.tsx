@@ -1,4 +1,5 @@
 import Home from '@/app/page';
+import { GIVING_PROMO_START } from '@/components/GivingSeasonPromo';
 import Counter from '@/components/home/Counter';
 import HeroSection from '@/components/home/HeroSection';
 import '@testing-library/jest-dom';
@@ -29,6 +30,7 @@ jest.mock('@/lib/constants', () => ({
     semesterIsOver: false,
   }),
   MAILING_LIST_FORM_LINK: 'https://example.com/form',
+  GIVING_CAMPAIGN_URL: 'https://example.com/campaign',
   GBSTEM_SIGNUP: 'https://portal.gbstem.org/signup',
   formatDate: (date: Date) =>
     date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
@@ -48,6 +50,16 @@ describe('Home Page', () => {
 
     // Test OurMission section
     expect(screen.getByText('Our Mission')).toBeInTheDocument();
+  });
+
+  it('renders the giving season promo during the campaign', () => {
+    jest.useFakeTimers();
+    jest.setSystemTime(GIVING_PROMO_START);
+    render(<Home />);
+    expect(
+      screen.getByRole('heading', { name: /Celebrate Giving Season with gbSTEM/i })
+    ).toBeInTheDocument();
+    jest.useRealTimers();
   });
 });
 

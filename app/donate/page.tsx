@@ -1,6 +1,7 @@
 import { GBSTEM_DONATE } from '@/lib/constants';
 import { constructSEO } from '@/lib/seo';
 import DonationCalculator from '@/components/donate/DonationCalculator';
+import GivingSeasonPromo from '@/components/GivingSeasonPromo';
 
 export const metadata = constructSEO({
   title: 'Donate',
@@ -47,6 +48,8 @@ function Donate() {
       <div className="m-12 text-center">
         <h1>Support Us</h1>
       </div>
+
+      <GivingSeasonPromo variant="card" className="mb-6" />
 
       <p>
         The Greater Boston STEM Program relies on your support to provide enriching learning

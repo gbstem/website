@@ -2,6 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import Donate from '@/app/donate/page';
 import DonationCalculator from '@/components/donate/DonationCalculator';
+import { GIVING_PROMO_START } from '@/components/GivingSeasonPromo';
 import { fireEvent } from '@testing-library/react';
 
 jest.mock('rc-slider', () => {
@@ -22,6 +23,14 @@ describe('Donate Page', () => {
       'href',
       'https://www.paypal.com/fundraiser/charity/4605663'
     );
+  });
+
+  it('renders the giving season campaign card during the campaign', () => {
+    jest.useFakeTimers();
+    jest.setSystemTime(GIVING_PROMO_START);
+    render(<Donate />);
+    expect(screen.getByTitle('PayPal donate campaign card')).toBeInTheDocument();
+    jest.useRealTimers();
   });
 
   it('renders DonationCalculator correctly', () => {
