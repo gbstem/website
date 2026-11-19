@@ -170,3 +170,9 @@ export const GBSTEM_SHOP = 'https://gbstem.myspreadshop.com/all';
  * also drops the hardcoded locale.
  */
 export const GBSTEM_DONATE = 'https://www.paypal.com/fundraiser/charity/4605663';
+/**
+ * The current time-boxed PayPal fundraising campaign, promoted by `components/GivingSeasonPromo.tsx`,
+ * which also holds the campaign's dates and copy; replace them together.
+ */
+export const GIVING_CAMPAIGN_URL =
+  'https://www.paypal.com/giving/campaigns?campaign_id=QR5QV3F3E6EWN';
