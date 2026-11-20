@@ -173,6 +173,10 @@ export const GBSTEM_DONATE = 'https://www.paypal.com/fundraiser/charity/4605663'
 /**
  * The current time-boxed PayPal fundraising campaign, promoted by `components/GivingSeasonPromo.tsx`,
  * which also holds the campaign's dates and copy; replace them together.
+ *
+ * Links go straight to PayPal's donation form for the campaign. The `giving/campaigns` URL is
+ * only the embeddable summary card, whose own Donate button leads to that same form.
  */
-export const GIVING_CAMPAIGN_URL =
+export const GIVING_CAMPAIGN_URL = 'https://www.paypal.com/donate/?campaign_id=QR5QV3F3E6EWN';
+export const GIVING_CAMPAIGN_CARD_URL =
   'https://www.paypal.com/giving/campaigns?campaign_id=QR5QV3F3E6EWN';

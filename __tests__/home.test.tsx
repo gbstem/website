@@ -31,6 +31,7 @@ jest.mock('@/lib/constants', () => ({
   }),
   MAILING_LIST_FORM_LINK: 'https://example.com/form',
   GIVING_CAMPAIGN_URL: 'https://example.com/campaign',
+  GIVING_CAMPAIGN_CARD_URL: 'https://example.com/campaign-card',
   GBSTEM_SIGNUP: 'https://portal.gbstem.org/signup',
   formatDate: (date: Date) =>
     date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),

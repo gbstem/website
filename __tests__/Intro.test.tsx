@@ -27,6 +27,7 @@ jest.mock('@/lib/constants', () => ({
   GBSTEM_SIGNUP: 'https://portal.gbstem.org/signup',
   MAILING_LIST_FORM_LINK: 'https://example.com/mailing-list',
   GIVING_CAMPAIGN_URL: 'https://example.com/campaign',
+  GIVING_CAMPAIGN_CARD_URL: 'https://example.com/campaign-card',
   SEMESTER_START_DATE: new Date('09/27/26'),
   SEMESTER_END_DATE: new Date('12/20/26'),
   REGISTRATION_OPEN_DATE: new Date('08/05/26'),
