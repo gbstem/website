@@ -2,9 +2,10 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import GivingSeasonPromo, {
   GIVING_PROMO_END,
+  GIVING_PROMO_LAST_DAY,
   GIVING_PROMO_START,
 } from '@/components/GivingSeasonPromo';
-import { GIVING_CAMPAIGN_URL } from '@/lib/constants';
+import { GIVING_CAMPAIGN_CARD_URL, GIVING_CAMPAIGN_URL } from '@/lib/constants';
 
 /**
  * Like `RegisterButton.test.tsx`, this moves the system clock rather than mocking the window:
@@ -45,6 +46,18 @@ describe('GivingSeasonPromo Component', () => {
     expect(heading()).not.toBeInTheDocument();
   });
 
+  it('renders an end-date badge naming the last day the promo shows', () => {
+    // Derived from the exclusive GIVING_PROMO_END, so an off-by-one there would read "December 26".
+    expect(GIVING_PROMO_LAST_DAY).toBe('December 25');
+    renderOn(GIVING_PROMO_START);
+    expect(screen.getByText('Ends December 25')).toBeInTheDocument();
+  });
+
+  it('links straight to the PayPal donation form, not the campaign summary card', () => {
+    expect(GIVING_CAMPAIGN_URL).toContain('paypal.com/donate/');
+    expect(GIVING_CAMPAIGN_CARD_URL).toContain('paypal.com/giving/campaigns');
+  });
+
   it('renders a button linking to the campaign in the compact variant', () => {
     renderOn(GIVING_PROMO_START);
     const link = screen.getByRole('link', { name: /Donate to Our Campaign/i });
@@ -56,9 +69,10 @@ describe('GivingSeasonPromo Component', () => {
 
   it('renders the PayPal campaign card and a fallback link in the card variant', () => {
     renderOn(GIVING_PROMO_START, 'card');
+    // The embed is PayPal's summary card; links skip it and go straight to the donation form.
     expect(screen.getByTitle('PayPal donate campaign card')).toHaveAttribute(
       'src',
-      GIVING_CAMPAIGN_URL
+      GIVING_CAMPAIGN_CARD_URL
     );
     expect(screen.getByRole('link', { name: /Open the campaign on PayPal/i })).toHaveAttribute(
       'href',

@@ -350,7 +350,7 @@ describe('centralized link constants', () => {
     ['myspreadshop.com', 'GBSTEM_SHOP'],
     // This one had drifted into two spellings, and only one of them answered 200 - the other
     // cost a donor a redirect on the way to giving us money. Worth failing loudly over.
-    ['paypal.com', 'GBSTEM_DONATE or GIVING_CAMPAIGN_URL'],
+    ['paypal.com', 'GBSTEM_DONATE or a GIVING_CAMPAIGN_* URL'],
   ])('has no page or component writing %s inline', (host, constant) => {
     const offenders = sources
       // A comment explaining the history is not a link; only flag it where it could be an href.
