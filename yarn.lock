@@ -3984,16 +3984,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-terminal-report@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "cypress-terminal-report@npm:7.4.0"
+"cypress-terminal-report@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "cypress-terminal-report@npm:7.5.0"
   dependencies:
     chalk: "npm:^4.0.0"
     compare-versions: "npm:^6.1.1"
+    flatted: "npm:^3.4.4"
     superstruct: "npm:0.14.2"
   peerDependencies:
     cypress: ">=10.0.0"
-  checksum: 10c0/d96853c771d1bc11ecbcedaed68019d7c7604e6b2a928688766b7925b84042a9596b1b029653d02d7c84d935efe535a12ef13922eee24afbfd0f5f9cdf8440a7
+  checksum: 10c0/b48f45fe04603e0b8c38cd3413fbeb8646b2f0476af6299039e0dc01527845fe810c9b26970311c16901aee962152f89d48ff850692f2d39d436b6ad94795d01
   languageName: node
   linkType: hard
 
@@ -4611,9 +4612,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:^7.0.5":
-  version: 7.0.5
-  resolution: "eslint-plugin-cypress@npm:7.0.5"
+"eslint-plugin-cypress@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "eslint-plugin-cypress@npm:7.2.0"
   dependencies:
     globals: "npm:^17.14.0"
   peerDependencies:
@@ -4622,7 +4623,7 @@ __metadata:
   peerDependenciesMeta:
     "@typescript-eslint/parser":
       optional: true
-  checksum: 10c0/aa13ba2463ecebf1db332038f7ec3cabacf5c7e7b3ea4ccbcd8358355dcbd340d30b73886599fa983b8c354951378b45e246ddb3b7ce60372255f95eb375e0c3
+  checksum: 10c0/a60b0b6e347035b2d5627e484db2da5edd82c0f9d696f3057ab52b0f9f5dcc0c04dcf2547b6554899c5c0a906030063bd3d34a42e42bde682a61d7e1651a517c
   languageName: node
   linkType: hard
 
@@ -4783,15 +4784,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^7.16.2":
-  version: 7.16.2
-  resolution: "eslint-plugin-testing-library@npm:7.16.2"
+"eslint-plugin-testing-library@npm:^7.16.3":
+  version: 7.16.3
+  resolution: "eslint-plugin-testing-library@npm:7.16.3"
   dependencies:
     "@typescript-eslint/scope-manager": "npm:^8.56.0"
     "@typescript-eslint/utils": "npm:^8.56.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
-  checksum: 10c0/ea99f41eee929e0b139d927f8a89bef7ffe3bd33c51fc3c2c93d8e9d146e146395e1f7bb8a34d4b5bd9a1ffe7a1879959fc171e952c731e1e8310b079d9d5c97
+  checksum: 10c0/356ad4363102d34cf0280f8e6c098349aafed324cda5a4955dd366292183f92c7507079259783a37bf007b8d2f368be919a9d88508bb39e662d40f99def80ff1
   languageName: node
   linkType: hard
 
@@ -5179,7 +5180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flatted@npm:^3.4.2":
+"flatted@npm:^3.4.2, flatted@npm:^3.4.4":
   version: 3.4.4
   resolution: "flatted@npm:3.4.4"
   checksum: 10c0/a3a52a88ea5a4c333e5a1f097dcd87a037fa31c236a77cf46222c2aa4036ef895ab9bc76138a66d9dc22bdb3652128f9598cd26e7439561bf19f67276e2bc37e
@@ -5291,15 +5292,15 @@ __metadata:
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     cypress: "npm:^16.3.0"
-    cypress-terminal-report: "npm:^7.4.0"
+    cypress-terminal-report: "npm:^7.5.0"
     eslint: "npm:^10"
     eslint-config-next: "npm:16.4.6"
     eslint-config-prettier: "npm:^10.1.8"
-    eslint-plugin-cypress: "npm:^7.0.5"
+    eslint-plugin-cypress: "npm:^7.2.0"
     eslint-plugin-jest: "npm:^29.17.1"
     eslint-plugin-prettier: "npm:^5.5.7"
     eslint-plugin-tailwindcss: "npm:^4.4.0"
-    eslint-plugin-testing-library: "npm:^7.16.2"
+    eslint-plugin-testing-library: "npm:^7.16.3"
     husky: "npm:^9.1.7"
     jest: "npm:^30.5.2"
     jest-environment-jsdom: "npm:^30.5.2"
